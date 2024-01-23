@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8102268aab8b0145a7356ab2ad714ac
+guid: 56e59b48acbe00c49812c1f42e91a468
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel_0
+      name: woodlands 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,20 +144,20 @@ TextureImporter:
         width: 352
         height: 352
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cfa09db5a250aa4893979c97633f3a3
-      internalID: -480673108
+      spriteID: aa304d2cfdc3f5a41a07905753813885
+      internalID: 536265005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_1
+      name: woodlands 1_1
       rect:
         serializedVersion: 2
         x: 352
@@ -171,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 737f2ddc0779fd841af825188cc4633c
-      internalID: 2029773198
+      spriteID: ab448d7013ae1254dac42c3e62180e8e
+      internalID: 49348324
       vertices: []
       indices: 
       edges: []
@@ -188,8 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel_0: -480673108
-      New Piskel_1: 2029773198
+      woodlands 1_0: 536265005
+      woodlands 1_1: 49348324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
