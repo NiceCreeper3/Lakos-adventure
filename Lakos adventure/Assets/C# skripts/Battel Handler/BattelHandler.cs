@@ -4,35 +4,51 @@ using UnityEngine;
 
 public class BattelHandler : MonoBehaviour
 {
-    [SerializeField] private BattelLingMons player, enemy;
-
+    [SerializeField] private BattelLingMons _player, _enemy;
+    private delegate void fistMove();
+    private delegate void _lastMove();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
+
+    private void Turn()
+    {
+
+    }
 
     private void SpawnPomons()
     {
                                                                         
     }
 
-    private void AttackPomon()
+    private void AttackOrder()
     {
-        int dam = player.ReturnAttack(0);
-        enemy.TagesDamige(dam);
+        int playerSpeed = _player.ReturnSpeed();
+        int enemySpeed = _enemy.ReturnSpeed();
+        if (playerSpeed > enemySpeed)
+        {
+            //_fistMove = _player.ReturnAttack();
+            //_lastMove = _enemy.ReturnAttack();
+        }
+        else if (playerSpeed < enemySpeed)
+        {
+
+        }
+
+        else
+        {
+
+        }
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void AITurn()
     {
-        if (Input.GetKeyDown("3"))
-        {
-            AttackPomon();
-        }
+
     }
 }

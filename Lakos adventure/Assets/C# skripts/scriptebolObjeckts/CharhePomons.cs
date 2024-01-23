@@ -27,6 +27,7 @@ public class CharhePomons : ScriptableObject
     public int Defense;
 
     public List<Moves> PomonMoves = new List<Moves>();
+
     #endregion
 }
 

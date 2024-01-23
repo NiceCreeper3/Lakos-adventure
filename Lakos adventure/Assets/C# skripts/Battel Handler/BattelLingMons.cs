@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BattelLingMons : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class BattelLingMons : MonoBehaviour
     private int _attack;
     private int _speed;
     private int _defense;
+
+
+    [SerializeField] private UnityEvent _unityEvent;
     #endregion
 
     // Start is called before the first frame update
@@ -26,7 +30,7 @@ public class BattelLingMons : MonoBehaviour
         _currentMon.CurrentHealt = _currentMon.MaxHealt;//----------------------------------------------[ remove this after teasting]------------------------------------------------------
     }
 
-
+    #region
     // returns the base attack damige
     public int ReturnAttack(int AttackPiked)
     {
@@ -34,6 +38,11 @@ public class BattelLingMons : MonoBehaviour
 
         // returns the totall amount of damie the pomon does
         return totallDamige;
+    }
+
+    public int ReturnSpeed()
+    {
+        return _speed;
     }
 
     // damiges the pomons current HP
@@ -50,12 +59,13 @@ public class BattelLingMons : MonoBehaviour
         Debug.Log($"{_currentMon.PomonName} has takken {totaldamige} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         if (_currentMon.CurrentHealt <= 0)
-            IsDead();
+            SwichePomon();
     }
 
     // is goving to handel swithing ind a new pokemon
-    private void IsDead()
+    private void SwichePomon()
     {
         Debug.Log($"{_currentMon.PomonName} has fainted");
     }
+    #endregion
 }
