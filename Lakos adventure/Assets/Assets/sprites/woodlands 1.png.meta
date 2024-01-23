@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31bc581c17d43514882169fcd5acfa7d
+guid: 56e59b48acbe00c49812c1f42e91a468
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player placeholder_0
+      name: woodlands 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,71 +150,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa55e6ef67aec47488f2184d1b39a99c
-      internalID: -263431052
+      spriteID: aa304d2cfdc3f5a41a07905753813885
+      internalID: 536265005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player placeholder_1
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 352
-        width: 352
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f440db457840304089ab917dbd8e63b
-      internalID: -716381203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player placeholder_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 352
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fcc962dcfae4cd419e898827d485e3d
-      internalID: 1926157779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player placeholder_3
+      name: woodlands 1_1
       rect:
         serializedVersion: 2
         x: 352
         y: 0
         width: 352
-        height: 352
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 704
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45676e8a7cd22324d8d05e0a622f3773
-      internalID: -665633148
+      spriteID: ab448d7013ae1254dac42c3e62180e8e
+      internalID: 49348324
       vertices: []
       indices: 
       edges: []
@@ -230,10 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player placeholder_0: -263431052
-      player placeholder_1: -716381203
-      player placeholder_2: 1926157779
-      player placeholder_3: -665633148
+      woodlands 1_0: 536265005
+      woodlands 1_1: 49348324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
