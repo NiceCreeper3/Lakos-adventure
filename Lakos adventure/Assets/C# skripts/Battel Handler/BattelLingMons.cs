@@ -54,7 +54,7 @@ public class BattelLingMons : MonoBehaviour
         if (totaldamige < 0)
             totaldamige = 0;
 
-        // changes the pomons current HP diretlig as we want to save eng damige don
+        // changes the pomons current HP diretlig as we want to save eng damige don to the pomon
         _currentMon.CurrentHealt -= totaldamige;
         Debug.Log($"{_currentMon.PomonName} has takken {totaldamige} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 

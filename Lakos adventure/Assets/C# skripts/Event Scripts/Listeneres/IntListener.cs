@@ -1,0 +1,1 @@
+public class IntListener : BaseGameEventListner<int, IntEvent, UnityIntEvent> { }
