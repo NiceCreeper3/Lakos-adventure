@@ -7,6 +7,7 @@ public class PlayerMovemont : MonoBehaviour
     [SerializeField] private Vector3 movepoint;
     [SerializeField] private Grid grid;
     [SerializeField] private CircleCollider2D col;
+    [SerializeField] private playerinteract interact;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerMovemont : MonoBehaviour
             col.Raycast(new Vector2(0,(int)Input.GetAxis("Vertical")), hit, 3.52f);
             if (!hit[0])
             {
+                
                 movepoint += new Vector3(0, 3.52f * (int)Input.GetAxis("Vertical"), 0);
             }
             else
@@ -42,6 +44,7 @@ public class PlayerMovemont : MonoBehaviour
                 col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 3.52f);
                 if (!hit[0])
                 {
+
                     movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
                 }
                 else
@@ -50,6 +53,7 @@ public class PlayerMovemont : MonoBehaviour
                     {
                         if (hit2D.collider.isTrigger)
                         {
+                            
                             movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
                         }
                     }
@@ -63,6 +67,7 @@ public class PlayerMovemont : MonoBehaviour
         }
         else
         {
+            interact.direction = new Vector2((int)Input.GetAxis("Horizontal"), (int)Input.GetAxis("Vertical"));
             transform.position = Vector3.MoveTowards(transform.position, movepoint, 10 * Time.deltaTime);
         }
     }
