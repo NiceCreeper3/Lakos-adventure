@@ -44,7 +44,7 @@ public class PlayerMovemont : MonoBehaviour
                 col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 3.52f);
                 if (!hit[0])
                 {
-
+                    
                     movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
                 }
                 else
@@ -67,7 +67,7 @@ public class PlayerMovemont : MonoBehaviour
         }
         else
         {
-            interact.direction = new Vector2((int)Input.GetAxis("Horizontal"), (int)Input.GetAxis("Vertical"));
+            
             transform.position = Vector3.MoveTowards(transform.position, movepoint, 10 * Time.deltaTime);
         }
     }
