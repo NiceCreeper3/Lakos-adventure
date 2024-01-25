@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TeastMon
   m_EditorClassIdentifier: 
   PomonName: Snugems
+  PomonLook: {fileID: 0}
   Attack: 18
   MaxHealt: 84
   CurrentHealt: 84
@@ -20,6 +21,6 @@ MonoBehaviour:
   Defense: 6
   PomonMoves:
   - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
+  - {fileID: 11400000, guid: 58a5afae0cc6def48b4da08da5ac9878, type: 2}
+  - {fileID: 11400000, guid: 04a90a244a204d74f951822b60034a86, type: 2}
   - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}

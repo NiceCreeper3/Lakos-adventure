@@ -2,22 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /// <summary>
-/// this works as the tamplate to a pomon. keyword is that this is not a pomon. but merly the bluprints to create one
+/// this a cahte pomon. this meanes its one the game wille make.
+/// it is goving to use pomons scriptebol objeckt to deafine how its created
 /// </summary>
-[CreateAssetMenu(fileName = "Pomon", menuName = "ScriptableObjeckts/Pomon Bluprint")]
-public class pomons : ScriptableObject
+
+[CreateAssetMenu(fileName = "Pomon", menuName = "ScriptableObjeckts/Pomon")]
+public class Pomons : ScriptableObject
 {
-    public int MinAttack, MaxAttack;
+    // (Inprovement) make this (get, sets)
+    // nothing ind here exept CurrentHealt hvil be changed out side of lvling
 
-    public int MinHealt, MaxHealt;
+    // values
+    #region
+    //public imge PomonImg;
+    public string PomonName;
+    public Sprite PomonLook;
 
-    public int MinSpeed, MaxSpeed;
+    public int Attack;
 
-    public int MinDefense, MaxDefense; 
+    public int MaxHealt;
+    public int CurrentHealt;
 
-    public List<Moves> MovesCanLern = new List<Moves>();
+    public int Speed;
+
+    public int Defense;
+
+    public List<BasikMoves> PomonMoves = new List<BasikMoves>();
+
+    #endregion
 }
-
-

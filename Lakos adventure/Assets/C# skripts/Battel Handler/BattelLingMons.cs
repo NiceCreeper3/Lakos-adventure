@@ -8,7 +8,7 @@ public class BattelLingMons : MonoBehaviour
     #region
     //public imge PomonImg;
 
-    [SerializeField] private CharhePomons _currentMon;
+    [SerializeField] private Pomons _currentMon;
 
     // pomon uses this temprary battel valuse to battel
     private int _attack;
@@ -30,6 +30,10 @@ public class BattelLingMons : MonoBehaviour
         _currentMon.CurrentHealt = _currentMon.MaxHealt;//----------------------------------------------[ remove this after teasting]------------------------------------------------------
     }
 
+    // methods
+    #region
+
+    // returns
     #region
     // returns the base attack damige
     public int ReturnAttack(int AttackPiked)
@@ -44,6 +48,7 @@ public class BattelLingMons : MonoBehaviour
     {
         return _speed;
     }
+    #endregion
 
     // damiges the pomons current HP
     public void TagesDamige(int damige)
@@ -54,7 +59,7 @@ public class BattelLingMons : MonoBehaviour
         if (totaldamige < 0)
             totaldamige = 0;
 
-        // changes the pomons current HP diretlig as we want to save eng damige don to the pomon
+        // changes the pomons current HP diretlig as we want to reamber eng damige don to the pomon
         _currentMon.CurrentHealt -= totaldamige;
         Debug.Log($"{_currentMon.PomonName} has takken {totaldamige} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 

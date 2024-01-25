@@ -1,17 +1,14 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Moves", menuName = "ScriptableObjeckts/Pomon Moves")]
-public class Moves : ScriptableObject
+public class BasikMoves : ScriptableObject
 {
     public string MoveName;
 
     public int power;
 
-    // is goving to be how we add abilletes to moves potentuly
-    public delegate void abbilety();
-
-
+    // 
+    public virtual void Abilety(Pomons target) { }
 
     /// is goving to contain type and abilety if we have time
-
 }

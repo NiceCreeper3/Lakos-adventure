@@ -17,16 +17,32 @@ public class BattelHandler : MonoBehaviour
     private MoveOrder _moveOrder;
 
 
-    // Start is called before the first frame update
-    void Start()
+    public void Turn(int chosenAttack)
     {
+        int playerSpeed = _player.ReturnSpeed();
+        int enemySpeed = _enemy.ReturnSpeed();
 
-    }
+        int AIAttack = AITurn();
 
+        // gets the damige of both Pomons
+        int playerDamige = _player.ReturnAttack(chosenAttack);
+        int enemyDamige = _enemy.ReturnAttack(AIAttack);
 
-    private void Turn()
-    {
-
+        // compares the speed of both Pomons. the one with the higst gets to aket fhist
+        if (playerSpeed > enemySpeed)
+        {
+            _enemy.TagesDamige(playerDamige);
+            _player.TagesDamige(enemyDamige);
+        }
+        else if (playerSpeed < enemySpeed)
+        {
+            _player.TagesDamige(enemyDamige);
+            _enemy.TagesDamige(playerDamige);
+        }
+        else
+        {
+            // while chose at random ind case of tie
+        }
     }
 
     private void SpawnPomons()
@@ -36,26 +52,6 @@ public class BattelHandler : MonoBehaviour
 
     private void AttackOrder()
     {
-        int playerSpeed = _player.ReturnSpeed();
-        int enemySpeed = _enemy.ReturnSpeed();
-        if (playerSpeed > enemySpeed)
-        {
-            // mabye use a lambda epression to order them
-            _moveOrder += _player.ReturnAttack;
-            //_fistMove = 
-            //_lastMove = _enemy.ReturnAttack(1);
-        }
-        else if (playerSpeed < enemySpeed)
-        {
-
-        }
-
-        else
-        {
-
-        }
-
-        //_moveOrder = 
 
     }
 
