@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class wildencounter
+public class wildencounter : MonoBehaviour
 {
-    public static void enterencouter()
+    public void enterencouter()
     {
         Debug.Log("test");
     }
