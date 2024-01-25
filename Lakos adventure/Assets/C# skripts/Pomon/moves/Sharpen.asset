@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbed0bec32bf73848b76a1924afd7d86, type: 3}
-  m_Name: Knife Shot
+  m_Name: Sharpen
   m_EditorClassIdentifier: 
-  MoveName: Knife Shot
-  power: 10
-  buffAmount: 15
+  MoveName: Sharpen
+  power: 0
+  buffAmount: 40

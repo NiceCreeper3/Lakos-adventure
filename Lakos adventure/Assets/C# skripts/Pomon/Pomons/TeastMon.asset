@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: enemyPomon
+  m_Name: TeastMon
   m_EditorClassIdentifier: 
-  PomonName: bastered
-  Attack: 14
-  MaxHealt: 90
-  CurrentHealt: 31
-  Speed: 6
-  Defense: 4
+  PomonName: Snugems
+  PomonLook: {fileID: 0}
+  Attack: 18
+  MaxHealt: 84
+  CurrentHealt: -22
+  Speed: 12
+  Defense: 6
   PomonMoves:
   - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
+  - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -11,12 +11,11 @@ public class BattelLingMons : MonoBehaviour
     [SerializeField] private Pomons _currentMon;
 
     // pomon uses this temprary battel valuse to battel
-    private int _attack;
+    public int _attack;
     private int _speed;
     private int _defense;
 
-
-    [SerializeField] private UnityEvent _unityEvent;
+    [SerializeField] private IntEvent _onDamige;
     #endregion
 
     // Start is called before the first frame update
@@ -35,6 +34,7 @@ public class BattelLingMons : MonoBehaviour
 
     // returns
     #region
+
     // returns the base attack damige
     public int ReturnAttack(int AttackPiked)
     {
@@ -50,6 +50,32 @@ public class BattelLingMons : MonoBehaviour
     }
     #endregion
 
+    public int PomonUseMove(int MovePiked) 
+    {
+        int totallDamige = 0;
+
+        if (_currentMon.CurrentHealt > 0 )
+        {
+            totallDamige = _attack + _currentMon.PomonMoves[MovePiked].power;
+
+            _currentMon.PomonMoves[MovePiked].Abilety(this);
+        }
+
+        return totallDamige;
+    }
+
+
+    //make change helt that can heal of damige
+    public void ChangeHealt(int howToChange)
+    {
+        _currentMon.CurrentHealt += howToChange;
+        if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
+            _currentMon.CurrentHealt = _currentMon.MaxHealt;
+
+        _onDamige.Raise(_currentMon.CurrentHealt);
+    }
+
+
     // damiges the pomons current HP
     public void TagesDamige(int damige)
     {
@@ -60,7 +86,8 @@ public class BattelLingMons : MonoBehaviour
             totaldamige = 0;
 
         // changes the pomons current HP diretlig as we want to reamber eng damige don to the pomon
-        _currentMon.CurrentHealt -= totaldamige;
+        ChangeHealt(-totaldamige);
+        //_currentMon.CurrentHealt -= totaldamige;
         Debug.Log($"{_currentMon.PomonName} has takken {totaldamige} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         if (_currentMon.CurrentHealt <= 0)
@@ -70,6 +97,8 @@ public class BattelLingMons : MonoBehaviour
     // is goving to handel swithing ind a new pokemon
     private void SwichePomon()
     {
+
+
         Debug.Log($"{_currentMon.PomonName} has fainted");
     }
     #endregion

@@ -25,8 +25,8 @@ public class BattelHandler : MonoBehaviour
         int AIAttack = AITurn();
 
         // gets the damige of both Pomons
-        int playerDamige = _player.ReturnAttack(chosenAttack);
-        int enemyDamige = _enemy.ReturnAttack(AIAttack);
+        int playerDamige = _player.PomonUseMove(chosenAttack);
+        int enemyDamige = _enemy.PomonUseMove(AIAttack);
 
         // compares the speed of both Pomons. the one with the higst gets to aket fhist
         if (playerSpeed > enemySpeed)
@@ -43,16 +43,6 @@ public class BattelHandler : MonoBehaviour
         {
             // while chose at random ind case of tie
         }
-    }
-
-    private void SpawnPomons()
-    {
-                                                                        
-    }
-
-    private void AttackOrder()
-    {
-
     }
 
     /// <summary>

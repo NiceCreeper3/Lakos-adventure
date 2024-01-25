@@ -18,10 +18,23 @@ public class BattelUIHandler : MonoBehaviour
 
     private void SetMoveName()
     {
-        for(int i = 0; i <= _moves.Length; ++i)
+        for (int i = 0; i <= _moves.Length - 1; i++)
         {
-            _moves[i].text = _pomonInUse.PomonMoves[i].name;
+            try
+            {
+                _moves[i].text = _pomonInUse.PomonMoves[i].name;
+            }
+            catch
+            {
+                _moves[i].text = "";
+            }
+            Debug.Log(i);
         }
+    }
+
+    public void SetPomonHp(int HPToSet)
+    {
+
     }
 
 }

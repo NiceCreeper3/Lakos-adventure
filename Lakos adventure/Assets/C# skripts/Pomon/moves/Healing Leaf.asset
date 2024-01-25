@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc387cdafd19de4c9e50b65af84e974, type: 3}
-  m_Name: Healig leaf
+  m_Script: {fileID: 11500000, guid: 35225b45a1e0a10458ef27343aea8a5a, type: 3}
+  m_Name: Healing Leaf
   m_EditorClassIdentifier: 
-  MoveName: 
+  MoveName: Healing Leaf
   power: 0
+  healPower: 40
