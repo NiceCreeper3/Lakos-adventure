@@ -6,20 +6,14 @@ using TMPro;
 
 public class BattelUIHandler : MonoBehaviour
 {
-    [SerializeField] private Pomons _pomonInUse;
+    [SerializeField] private Pomons _pomonInUse, enemyPomon;
+
     [SerializeField] private TMP_Text[] _moves;
-
-    [SerializeField] private Slider _healhtSlider;
-    //[SerializeField] private List<TMP_Text> _moves = new List<TMP_Text>();
-
-    //[SerializeField] TextMeshPro _move0, _move1, _move2, _move3;
 
     private void Start()
     {
         SetMoveName();
-
-        _healhtSlider.maxValue = _pomonInUse.MaxHealt;
-        _healhtSlider.value = _pomonInUse.CurrentHealt;
+        SetPomonSprit();
     }
 
     private void SetMoveName()
@@ -36,11 +30,10 @@ public class BattelUIHandler : MonoBehaviour
             }
             Debug.Log(i);
         }
-    }
+    }   
 
-    public void SetPomonHp(int HPToSet)
+    private void SetPomonSprit()
     {
-        _healhtSlider.value -= HPToSet;
+        // sets a visebol pomon ind plase ind the cornores
     }
-
 }

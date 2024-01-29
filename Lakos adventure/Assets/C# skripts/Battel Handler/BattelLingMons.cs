@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +16,9 @@ public class BattelLingMons : MonoBehaviour
     private int _speed;
     private int _defense;
 
-    [SerializeField] private IntEvent _onDamage;
+    public event Action<int> OnHealhtChange;
+
+    //[SerializeField] private IntEvent _onDamage;
     #endregion
 
     // Start is called before the first frame update
@@ -69,10 +72,15 @@ public class BattelLingMons : MonoBehaviour
     public void ChangeHealt(int howToChange)
     {
         _currentMon.CurrentHealt += howToChange;
+
         if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
             _currentMon.CurrentHealt = _currentMon.MaxHealt;
 
-        _onDamage.Raise(_currentMon.CurrentHealt);
+        if (_currentMon.CurrentHealt < 0)
+            _currentMon.CurrentHealt = 0;
+
+        Debug.Log(howToChange);
+        OnHealhtChange?.Invoke(howToChange);
     }
 
 

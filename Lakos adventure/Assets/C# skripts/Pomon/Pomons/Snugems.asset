@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: TeastMon
+  m_Name: Snugems
   m_EditorClassIdentifier: 
   PomonName: Snugems
   PomonLook: {fileID: 0}
   Attack: 18
-  MaxHealt: 84
-  CurrentHealt: -22
+  MaxHealt: 110
+  CurrentHealt: 32
   Speed: 12
   Defense: 6
   PomonMoves:

@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: enemyPomon
+  m_Name: SiterRoTimesTo
   m_EditorClassIdentifier: 
-  PomonName: bastered
+  PomonName: 
   PomonLook: {fileID: 0}
   Attack: 0
-  MaxHealt: 90
+  MaxHealt: 0
   CurrentHealt: 0
-  Speed: 6
-  Defense: 4
-  PomonMoves:
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  Speed: 0
+  Defense: 0
+  PomonMoves: []
