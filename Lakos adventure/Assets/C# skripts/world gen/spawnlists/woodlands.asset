@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b99330f300ef56342b281bba808dffc5, type: 3}
   m_Name: woodlands
   m_EditorClassIdentifier: 
-  bluPrint: []
+  bluPrint:
+  - {fileID: 11400000, guid: ecd6a0a317784ac42a67976f2f407b86, type: 2}
