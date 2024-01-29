@@ -15,7 +15,7 @@ public class BattelLingMons : MonoBehaviour
     private int _speed;
     private int _defense;
 
-    [SerializeField] private IntEvent _onDamige;
+    [SerializeField] private IntEvent _onDamage;
     #endregion
 
     // Start is called before the first frame update
@@ -35,13 +35,13 @@ public class BattelLingMons : MonoBehaviour
     // returns
     #region
 
-    // returns the base attack damige
-    public int ReturnAttack(int AttackPiked)
+    // returns the base attack damage
+    public int ReturnAttack(int attackPicked)
     {
-        int totallDamige = _attack + _currentMon.PomonMoves[AttackPiked].power;
+        int totalDamage = _attack + _currentMon.PomonMoves[attackPicked].power;
 
         // returns the totall amount of damie the pomon does
-        return totallDamige;
+        return totalDamage;
     }
 
     public int ReturnSpeed()
@@ -50,52 +50,52 @@ public class BattelLingMons : MonoBehaviour
     }
     #endregion
 
-    public int PomonUseMove(int MovePiked) 
+    public int PomonUseMove(int movePicked) 
     {
-        int totallDamige = 0;
+        int totalDamage = 0;
 
         if (_currentMon.CurrentHealt > 0 )
         {
-            totallDamige = _attack + _currentMon.PomonMoves[MovePiked].power;
+            totalDamage = _attack + _currentMon.PomonMoves[movePicked].power;
 
-            _currentMon.PomonMoves[MovePiked].Abilety(this);
+            _currentMon.PomonMoves[movePicked].Ability(this);
         }
 
-        return totallDamige;
+        return totalDamage;
     }
 
 
-    //make changes ind the helt of the pomon. this can be healing of damige
+    //make changes ind the helt of the pomon. this can be healing of damage
     public void ChangeHealt(int howToChange)
     {
         _currentMon.CurrentHealt += howToChange;
         if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
             _currentMon.CurrentHealt = _currentMon.MaxHealt;
 
-        _onDamige.Raise(_currentMon.CurrentHealt);
+        _onDamage.Raise(_currentMon.CurrentHealt);
     }
 
 
     // damiges the pomons current HP
-    public void TagesDamige(int damige)
+    public void TakesDamage(int damage)
     {
-        int totaldamige = damige - _defense;
+        int totaldamage = damage - _defense;
 
-        // ind case Defense is higer then damige and then wood result ind the healing
-        if (totaldamige < 0)
-            totaldamige = 0;
+        // ind case Defense is higer then damage and then wood result ind the healing
+        if (totaldamage < 0)
+            totaldamage = 0;
 
-        // changes the pomons current HP diretlig as we want to reamber eng damige don to the pomon
-        ChangeHealt(-totaldamige);
-        //_currentMon.CurrentHealt -= totaldamige;
-        Debug.Log($"{_currentMon.PomonName} has takken {totaldamige} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
+        // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
+        ChangeHealt(-totaldamage);
+        //_currentMon.CurrentHealt -= totaldamage;
+        Debug.Log($"{_currentMon.PomonName} has taken {totaldamage} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         if (_currentMon.CurrentHealt <= 0)
-            SwichePomon();
+            SwitchPomon();
     }
 
     // is goving to handel swithing ind a new pokemon
-    private void SwichePomon()
+    private void SwitchPomon()
     {
 
 

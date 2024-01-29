@@ -8,7 +8,7 @@ public class BasikMoves : ScriptableObject
     public int power;
 
     // mite need to tage BattelLingMons
-    public virtual void Abilety(BattelLingMons interragsen) { }
+    public virtual void Ability(BattelLingMons interragsen) { }
 
     /// is goving to contain type and abilety if we have time
 }
