@@ -65,7 +65,7 @@ public class BattelLingMons : MonoBehaviour
     }
 
 
-    //make change helt that can heal of damige
+    //make changes ind the helt of the pomon. this can be healing of damige
     public void ChangeHealt(int howToChange)
     {
         _currentMon.CurrentHealt += howToChange;
