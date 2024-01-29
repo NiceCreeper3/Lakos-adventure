@@ -5,7 +5,10 @@ using UnityEngine;
 public class doesitBrack : MonoBehaviour
 {
     // K: endrer Navn, F: slet A: bruge i method
+<<<<<<< Updated upstream
     private int KeepThisValue;
+=======
+>>>>>>> Stashed changes
 
     void klaes()
     {
@@ -14,7 +17,7 @@ public class doesitBrack : MonoBehaviour
 
     void freja()
     {
-
+        System.Console.WriteLine("hey from meep");
     }
 
     void alex()
@@ -22,6 +25,7 @@ public class doesitBrack : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
 
     private void TangelThisMethod()
     {
@@ -33,5 +37,14 @@ public class doesitBrack : MonoBehaviour
         {
 
         }
+=======
+    // delethe this method
+
+
+
+    private void ThangeThisMethod()
+    {
+        // no
+>>>>>>> Stashed changes
     }
 }
