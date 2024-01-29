@@ -8,6 +8,8 @@ public class BattelUIHandler : MonoBehaviour
 {
     [SerializeField] private Pomons _pomonInUse;
     [SerializeField] private TMP_Text[] _moves;
+
+    [SerializeField] private Slider _healhtSlider;
     //[SerializeField] private List<TMP_Text> _moves = new List<TMP_Text>();
 
     //[SerializeField] TextMeshPro _move0, _move1, _move2, _move3;
@@ -15,6 +17,9 @@ public class BattelUIHandler : MonoBehaviour
     private void Start()
     {
         SetMoveName();
+
+        _healhtSlider.maxValue = _pomonInUse.MaxHealt;
+        _healhtSlider.value = _pomonInUse.CurrentHealt;
     }
 
     private void SetMoveName()
@@ -35,7 +40,7 @@ public class BattelUIHandler : MonoBehaviour
 
     public void SetPomonHp(int HPToSet)
     {
-
+        _healhtSlider.value -= HPToSet;
     }
 
 }
