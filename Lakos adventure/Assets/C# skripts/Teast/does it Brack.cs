@@ -5,11 +5,11 @@ using UnityEngine;
 public class doesitBrack : MonoBehaviour
 {
     // K: endrer Navn, F: slet A: bruge i method
-    private int RemoveThisValue;
+    private int KeepThisValue;
 
     void klaes()
     {
-
+        transform.position = new Vector3(); 
     }
 
     void freja()
@@ -17,27 +17,21 @@ public class doesitBrack : MonoBehaviour
 
     }
 
-    private int alex()
+    void alex()
     {
-        RemoveThisValue = 5;
 
-        int u = 4;
-
-        RemoveThisValue += u;
-
-        return RemoveThisValue;
-    }
-
-    // delethe this method
-    private void Delemethod()
-    {
-        // i did not delete this
     }
 
 
-    private void ThangeThisMethod()
+    private void TangelThisMethod()
     {
+        try
+        {
+            GetComponent<playerinteract>();
+        }
+        catch
+        {
 
-        Debug.LogError("somthing" + alex());
+        }
     }
 }
