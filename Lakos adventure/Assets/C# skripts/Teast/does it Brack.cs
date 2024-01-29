@@ -17,20 +17,27 @@ public class doesitBrack : MonoBehaviour
 
     }
 
-    void alex()
+    private int alex()
     {
+        RemoveThisValue = 5;
 
+        int u = 4;
+
+        RemoveThisValue += u;
+
+        return RemoveThisValue;
     }
 
     // delethe this method
     private void Delemethod()
     {
-
+        // i did not delete this
     }
 
 
     private void ThangeThisMethod()
     {
 
+        Debug.LogError("somthing" + alex());
     }
 }
