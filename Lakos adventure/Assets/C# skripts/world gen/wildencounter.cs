@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class wildencounter : MonoBehaviour
 {
-    public void enterencouter()
+    public void enterencouter(pomonlist pomons)
     {
-        Debug.Log("test");
+        PomonsBluPrint bluPrint = pomons.bluPrint[Random.Range(0,pomons.bluPrint.Length)];
+        Debug.Log(bluPrint.name);
     }
 }
