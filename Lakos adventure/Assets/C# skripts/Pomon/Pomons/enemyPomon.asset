@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
   m_Name: enemyPomon
   m_EditorClassIdentifier: 
-  PomonName: bastered
-  PomonLook: {fileID: 0}
+  PomonName: Danger Worm
+  PomonLook: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
   Attack: 0
   MaxHealt: 90
   CurrentHealt: 0

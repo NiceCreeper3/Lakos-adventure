@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6226415, g: 0.35691035, b: 0.008810949, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2705,6 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentMon: {fileID: 11400000, guid: 365acd6f33e004b49b589c7600c84e5a, type: 2}
   PicPomonUI: {fileID: 2127291031}
+  pomonImgeDissplay: {fileID: 345097783}
   _attack: 0
   TeastArrey:
   - {fileID: 11400000, guid: 365acd6f33e004b49b589c7600c84e5a, type: 2}
@@ -4880,6 +4881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentMon: {fileID: 11400000, guid: e776a56c0c3d6c349896de36cb425c2a, type: 2}
   PicPomonUI: {fileID: 0}
+  pomonImgeDissplay: {fileID: 1865353024}
   _attack: 0
   TeastArrey:
   - {fileID: 11400000, guid: e776a56c0c3d6c349896de36cb425c2a, type: 2}

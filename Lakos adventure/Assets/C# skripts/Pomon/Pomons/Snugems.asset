@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Snugems
   m_EditorClassIdentifier: 
   PomonName: Snugems
-  PomonLook: {fileID: 0}
+  PomonLook: {fileID: 21300000, guid: 770dabc15e47692498c28ed73e76ce4d, type: 3}
   Attack: 18
   MaxHealt: 110
   CurrentHealt: 82
