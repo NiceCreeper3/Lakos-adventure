@@ -19,4 +19,8 @@ MonoBehaviour:
   CurrentHealt: 0
   Speed: 0
   Defense: 0
-  PomonMoves: []
+  PomonMoves:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

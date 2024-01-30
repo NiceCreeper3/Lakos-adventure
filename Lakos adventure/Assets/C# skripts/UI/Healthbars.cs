@@ -36,10 +36,12 @@ public class Healthbars : MonoBehaviour
         else
             _healhtSlider.value += HPToSet;
 
+        Debug.Log("hafe presenteg" + _healhtSlider.maxValue * 0.20);
+
         // add color to endekate damige
         if (_healhtSlider.maxValue * 0.20 >= _healhtSlider.value)
             _fillColor.color = Color.red;
-        else if (_healhtSlider.maxValue * 0.50 <= _healhtSlider.value)
+        else if (_healhtSlider.maxValue * 0.50 >= _healhtSlider.value)
             _fillColor.color = Color.yellow;
         else
             _fillColor.color = Color.green;
