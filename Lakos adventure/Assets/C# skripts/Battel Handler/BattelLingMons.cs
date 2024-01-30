@@ -6,17 +6,21 @@ using UnityEngine.Events;
 
 public class BattelLingMons : MonoBehaviour
 {
+    // Values
     #region
-    //public imge PomonImg;
 
     [SerializeField] private Pomons _currentMon;
 
-    // pomon uses this temprary battel valuse to battel
-    public int _attack;
-    private int _speed;
-    private int _defense;
+    [SerializeField] private bool _isPlayerPomon;
 
+    // pomon uses this temprary battel valuse to battel
+    [HideInInspector] public int _attack;
+    [HideInInspector] private int _speed;
+    [HideInInspector] private int _defense;
+
+    // evnets
     public event Action<int> OnHealhtChange;
+    public event Action<Pomons> OnPomonSwiche;
 
     //[SerializeField] private IntEvent _onDamage;
     #endregion
@@ -105,9 +109,28 @@ public class BattelLingMons : MonoBehaviour
     // is goving to handel swithing ind a new pokemon
     private void SwitchPomon()
     {
+        // remove _currentMon here as its just to not get error
+        Pomons pomonSwichingTo = _currentMon;
 
+        if (_isPlayerPomon)
+        {
+
+        }
+        else
+        {
+
+        }
+
+        OnPomonSwiche?.Invoke(pomonSwichingTo);
 
         Debug.Log($"{_currentMon.PomonName} has fainted");
+    }
+
+    private Pomons AiPicPomon()
+    {
+
+        // remove _currentMon here as its just to not get error
+        return _currentMon;
     }
     #endregion
 }

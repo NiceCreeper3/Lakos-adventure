@@ -16,10 +16,9 @@ public class Healthbars : MonoBehaviour
 
     private void Start()
     {
-        _healhtSlider = GetComponent<Slider>(); 
+        _healhtSlider = GetComponent<Slider>();
 
-        _healhtSlider.maxValue = _pomonInUse.MaxHealt;
-        _healhtSlider.value = _pomonInUse.CurrentHealt;
+        PomonHPSlider(_pomonInUse);
 
         _battelLing.OnHealhtChange += BattelLing_OnHealhtChange;
     }
@@ -29,6 +28,13 @@ public class Healthbars : MonoBehaviour
         SetPomonHp(obj);
     }
 
+    private void PomonHPSlider(Pomons maxSet)
+    {
+        _healhtSlider.maxValue = maxSet.MaxHealt;
+        _healhtSlider.value = maxSet.CurrentHealt;
+        SetHealtColor();
+    }
+
     private void SetPomonHp(int HPToSet)
     {
         if (HPToSet > _healhtSlider.value)
@@ -36,16 +42,19 @@ public class Healthbars : MonoBehaviour
         else
             _healhtSlider.value += HPToSet;
 
-        Debug.Log("hafe presenteg" + _healhtSlider.maxValue * 0.20);
+        SetHealtColor();
+    }
 
-        // add color to endekate damige
+    // add color to endekate damige
+    private void SetHealtColor()
+    {
+        //sets the color of the fill depending on it the _healhtSlider.value is under a surten %
+        // Red = 20% | Yellow = 50% | Green = above 50%
         if (_healhtSlider.maxValue * 0.20 >= _healhtSlider.value)
             _fillColor.color = Color.red;
         else if (_healhtSlider.maxValue * 0.50 >= _healhtSlider.value)
             _fillColor.color = Color.yellow;
         else
             _fillColor.color = Color.green;
-
-
     }
 }
