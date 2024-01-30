@@ -13,7 +13,6 @@ public class BattelUIHandler : MonoBehaviour
     private void Start()
     {
         SetMoveName();
-        SetPomonSprit();
     }
 
     private void SetMoveName()
@@ -31,9 +30,4 @@ public class BattelUIHandler : MonoBehaviour
             Debug.Log(i);
         }
     }   
-
-    private void SetPomonSprit()
-    {
-        // sets a visebol pomon ind plase ind the cornores
-    }
 }

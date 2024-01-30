@@ -8,15 +8,6 @@ public class BattelHandler : MonoBehaviour
     [SerializeField] private BattelLingMons _player, _enemy;
     [SerializeField] private UnityEvent triggerAttacks;
 
-
-    // mite delethe
-    private delegate int firstMove(int i);
-    private delegate void lastMove();
-    private delegate int MoveOrder(int i);
-
-    private MoveOrder _moveOrder;
-
-
     public void Turn(int chosenAttack)
     {
         int playerSpeed = _player.ReturnSpeed();

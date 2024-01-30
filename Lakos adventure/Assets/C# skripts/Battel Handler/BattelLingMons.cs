@@ -9,9 +9,11 @@ public class BattelLingMons : MonoBehaviour
     // Values
     #region
 
-    [SerializeField] private Pomons _currentMon;
+    [SerializeField] protected Pomons _currentMon;
 
-    [SerializeField] private bool _isPlayerPomon;
+    [SerializeField] private GameObject PicPomonUI;
+
+    [SerializeField] private SpriteRenderer pomonImgeDissplay;
 
     // pomon uses this temprary battel valuse to battel
     [HideInInspector] public int _attack;
@@ -22,24 +24,22 @@ public class BattelLingMons : MonoBehaviour
     public event Action<int> OnHealhtChange;
     public event Action<Pomons> OnPomonSwiche;
 
-    //[SerializeField] private IntEvent _onDamage;
+    [SerializeField] protected Pomons[] TeastArrey; // ______________________________________________{Remove this after teasting}_______________________________________________________________
+  
+
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        // sets the starting valuse four the pomons to battel
-        _attack = _currentMon.Attack;
-        _speed = _currentMon.Speed;
-        _defense = _currentMon.Defense;
-
-        _currentMon.CurrentHealt = _currentMon.MaxHealt;//----------------------------------------------[ remove this after teasting]------------------------------------------------------
+        // sets up the Pomon to Fight
+        SwitchPomon(_currentMon);
     }
 
     // methods
     #region
 
-    // returns
+    // returns ________(we myt want to delete this after)__________________
     #region
 
     // returns the base attack damage
@@ -57,6 +57,7 @@ public class BattelLingMons : MonoBehaviour
     }
     #endregion
 
+    
     public int PomonUseMove(int movePicked) 
     {
         int totalDamage = 0;
@@ -71,15 +72,18 @@ public class BattelLingMons : MonoBehaviour
         return totalDamage;
     }
 
-
+    // health maipulason
+    #region
     //make changes ind the helt of the pomon. this can be healing of damage
     public void ChangeHealt(int howToChange)
     {
         _currentMon.CurrentHealt += howToChange;
 
+        // makes sure we a pomon does not have more then MaxHealth
         if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
             _currentMon.CurrentHealt = _currentMon.MaxHealt;
 
+        // makes sure we don,t hit negetive nummberes of health
         if (_currentMon.CurrentHealt < 0)
             _currentMon.CurrentHealt = 0;
 
@@ -99,38 +103,57 @@ public class BattelLingMons : MonoBehaviour
 
         // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
         ChangeHealt(-totaldamage);
-        //_currentMon.CurrentHealt -= totaldamage;
+
         Debug.Log($"{_currentMon.PomonName} has taken {totaldamage} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         if (_currentMon.CurrentHealt <= 0)
-            SwitchPomon();
+            SwichePomonLogic();
+    }
+    #endregion
+
+    // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
+    protected virtual void SwichePomonLogic()
+    {
+        // turnes on the Pomon pic UI
+        PicPomonUI.SetActive(true);
+    }
+
+    // SWICHING pomon
+    #region
+    // the buttons of picing a new Pomon is goving to be here
+    public void PlayerHaspiced(int pomonNummber)
+    {
+        Debug.Log("attemting to swiche Pomon");
+
+        if (TeastArrey[pomonNummber].CurrentHealt > 0)
+        {
+            //teales the SwitchPomon methond with Pomon we are swiching to. and turns off the Pomon pic UI
+            SwitchPomon(TeastArrey[pomonNummber]);
+            PicPomonUI.SetActive(false);      
+        }
     }
 
     // is goving to handel swithing ind a new pokemon
-    private void SwitchPomon()
+    protected void SwitchPomon(Pomons swichingPomons)
     {
-        // remove _currentMon here as its just to not get error
-        Pomons pomonSwichingTo = _currentMon;
+        // sets the new _currentMon Pomon to be the swithed ind one
+        _currentMon = swichingPomons;
 
-        if (_isPlayerPomon)
-        {
+        // sets the tempeary states of the swinced ind Pomon
+        _attack = _currentMon.Attack;
+        _speed = _currentMon.Speed;
+        _defense = _currentMon.Defense;
 
-        }
-        else
-        {
+        pomonImgeDissplay.sprite = _currentMon.PomonLook;
 
-        }
+        _currentMon.CurrentHealt = _currentMon.MaxHealt;//----------------------------------------------[ remove this after teasting]------------------------------------------------------
 
-        OnPomonSwiche?.Invoke(pomonSwichingTo);
+        // change sprite her maby?
 
-        Debug.Log($"{_currentMon.PomonName} has fainted");
+        // need to be swichingPomons as we mite need to update the Ui
+        OnPomonSwiche?.Invoke(swichingPomons);
     }
+    #endregion
 
-    private Pomons AiPicPomon()
-    {
-
-        // remove _currentMon here as its just to not get error
-        return _currentMon;
-    }
     #endregion
 }

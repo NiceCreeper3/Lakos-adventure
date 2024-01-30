@@ -16,7 +16,7 @@ MonoBehaviour:
   PomonLook: {fileID: 0}
   Attack: 18
   MaxHealt: 110
-  CurrentHealt: 32
+  CurrentHealt: 82
   Speed: 12
   Defense: 6
   PomonMoves:
