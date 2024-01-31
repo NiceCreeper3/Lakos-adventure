@@ -5,28 +5,26 @@ using UnityEngine;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField]private PlayerMovemont player;
-    private bool isopen = false;
-    private bool holding = false;
+    private bool isopen;
+    private bool holding;
     [SerializeField]private GameObject menu;
     void Update()
     {
-        if (Input.GetKey(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             if (!holding)
             {
-                if (isopen)
+                if (!isopen)
                 {
-
-                    menu.active = true ;
-                    player.enabled = true;
+                    menu.SetActive(true);
+                    player.enabled = false;
                     isopen = true;
 
                 }
                 else
                 {
-
-                    menu.active = false;
-                    player.enabled = false;
+                    menu.SetActive(false);
+                    player.enabled = true;
                     isopen = false;
 
                 }
@@ -37,7 +35,7 @@ public class MenuScript : MonoBehaviour
         }
         else
         {
-            holding = true;
+            holding = false;
         }
     }
 }
