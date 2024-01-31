@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
   m_Name: SwicheIndPomon
   m_EditorClassIdentifier: 
-  PomonName: 
-  PomonLook: {fileID: 0}
-  Attack: 0
-  MaxHealt: 0
-  CurrentHealt: 0
-  Speed: 0
-  Defense: 0
+  PomonName: Ender Off Worlds
+  PomonLook: {fileID: 21300000, guid: 6dbf24eea5453f84b92c5b710f1f1051, type: 3}
+  Attack: 1
+  MaxHealt: 1
+  CurrentHealt: 1
+  Speed: 1
+  Defense: 1
   PomonMoves:
   - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
   - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}

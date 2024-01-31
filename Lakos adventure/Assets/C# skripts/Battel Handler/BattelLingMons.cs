@@ -10,6 +10,7 @@ public class BattelLingMons : MonoBehaviour
     #region
 
     [SerializeField] protected Pomons _currentMon;
+    [SerializeField] private bool _isPlayerMon;
 
     [SerializeField] private GameObject PicPomonUI;
 
@@ -25,8 +26,6 @@ public class BattelLingMons : MonoBehaviour
     public event Action<Pomons> OnPomonSwiche;
 
     [SerializeField] protected Pomons[] TeastArrey; // ______________________________________________{Remove this after teasting}_______________________________________________________________
-  
-
     #endregion
 
     // Start is called before the first frame update
@@ -114,14 +113,30 @@ public class BattelLingMons : MonoBehaviour
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
     protected virtual void SwichePomonLogic()
     {
-        // turnes on the Pomon pic UI. so the player can deside what pomon to swiche to
-        PicPomonUI.SetActive(true);
+        // gives difrent logic four when a new pomon needs to be swiched ind
+        if (_isPlayerMon)
+        {
+            PicPomonUI.SetActive(true);
+        }
+        else
+        {
+            foreach (Pomons pomon in TeastArrey)
+            {
+                if (pomon.CurrentHealt > 0)
+                {
+
+                    SwitchPomon(pomon);
+                    break;
+                }
+            }
+        }
+
     }
 
     // SWICHING pomon
     #region
     // the buttons of picing a new Pomon is goving to be here
-    public void PlayerHaspiced(int pomonNummber)
+    public void PlayerHaspicked(int pomonNummber)
     {
         Debug.Log("attemting to swiche Pomon");
 
@@ -136,7 +151,7 @@ public class BattelLingMons : MonoBehaviour
     // is goving to handel swithing ind a new pokemon
     protected void SwitchPomon(Pomons swichingPomons)
     {
-        Debug.Log($"swichint {_currentMon.name} out with {swichingPomons.name}");
+        Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
         // sets the new _currentMon Pomon to be the swithed ind one
         _currentMon = swichingPomons;
 

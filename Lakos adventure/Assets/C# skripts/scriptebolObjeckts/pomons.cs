@@ -15,10 +15,13 @@ public class Pomons : ScriptableObject
 
     // values
     #region
-    //public imge PomonImg;
+
+    [Header("Falver info")]
     public string PomonName;
     public Sprite PomonLook;
+    public bool IsDude;
 
+    [Header("States and Moves")]
     public int Attack;
 
     public int MaxHealt;

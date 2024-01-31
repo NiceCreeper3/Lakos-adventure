@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: SiterRoTimesTo
   m_EditorClassIdentifier: 
   PomonName: Card bord box
-  PomonLook: {fileID: 21300000, guid: 770dabc15e47692498c28ed73e76ce4d, type: 3}
+  PomonLook: {fileID: 21300000, guid: 63b8a60870ce56a49b7897fa80c721e1, type: 3}
+  IsDude: 0
   Attack: 1
-  MaxHealt: 100000
-  CurrentHealt: 100000
+  MaxHealt: 10
+  CurrentHealt: 0
   Speed: 1
   Defense: 1
   PomonMoves:

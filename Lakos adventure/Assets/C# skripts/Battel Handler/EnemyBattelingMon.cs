@@ -12,8 +12,9 @@ public class EnemyBattelingMon : BattelLingMons
 
     protected override void SwichePomonLogic()
     {
+        Debug.Log(2);
         AiPicPomon();
-        SwitchPomon(_pomonPiced); // this brackes?
+
     }
 
 
@@ -21,15 +22,19 @@ public class EnemyBattelingMon : BattelLingMons
     {
         pomonfound = false;
 
-        Debug.Log(TeastArrey);
+        Debug.Log("teast if array is full" + TeastArrey[1].PomonName);
         foreach (Pomons pomon in TeastArrey)
         {
             Debug.Log("is lokking four Pomon");
-            if (pomon.CurrentHealt !<= 0 && !pomonfound)
+            if (pomon.CurrentHealt > 0 && !pomonfound)
             {
-                Debug.Log(pomon);
+                Debug.Log(pomon.name);
+
                 _currentMon = _pomonPiced;
+                SwitchPomon(pomon);
+
                 pomonfound = true;
+                break;
             }
         }
     }
