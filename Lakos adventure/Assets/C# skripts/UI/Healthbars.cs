@@ -9,7 +9,7 @@ public class Healthbars : MonoBehaviour
     [SerializeField] private Pomons _pomonInUse;
 
     [Header("The health bar parts")]
-    [SerializeField] private BattelLingMons _battelLing;
+    [SerializeField] private BattelLingMons _battelLingEvents;
     [SerializeField] private Slider _healhtSlider;
     [SerializeField] private Image _fillColor;
     #endregion
@@ -18,13 +18,10 @@ public class Healthbars : MonoBehaviour
     {
         // gets the slider componet from the object this script is on
         _healhtSlider = GetComponent<Slider>();
-    }
 
-    private void Start()
-    {
         // subskribes to the BattelLingMons events 
-        _battelLing.OnHealhtChange += BattelLing_OnHealhtChange;
-        _battelLing.OnPomonSwiche += _battelLing_OnPomonSwiche;
+        _battelLingEvents.OnHealhtChange += BattelLing_OnHealhtChange;
+        _battelLingEvents.OnPomonSwiche += _battelLing_OnPomonSwiche;
     }
 
     // mehtdos four when a event trigger 
@@ -50,6 +47,8 @@ public class Healthbars : MonoBehaviour
     {
         _healhtSlider.maxValue = maxSet.MaxHealt;
         _healhtSlider.value = maxSet.CurrentHealt;
+
+        Debug.Log($"Pomon {maxSet.name} has bean set op with {maxSet.CurrentHealt}/{maxSet.MaxHealt} Health");
 
         SetHealtColor();
     }

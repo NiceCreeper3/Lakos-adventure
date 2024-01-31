@@ -17,6 +17,7 @@ public class BattelUIHandler : MonoBehaviour
 
     private void SetMoveName()
     {
+        // sets op so eathe moves name is represendit on a button
         for (int i = 0; i <= _moves.Length - 1; i++)
         {
             try
@@ -27,7 +28,6 @@ public class BattelUIHandler : MonoBehaviour
             {
                 _moves[i].text = "";
             }
-            Debug.Log(i);
         }
     }   
 }

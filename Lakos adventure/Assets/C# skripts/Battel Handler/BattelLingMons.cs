@@ -30,7 +30,7 @@ public class BattelLingMons : MonoBehaviour
     #endregion
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // sets up the Pomon to Fight
         SwitchPomon(_currentMon);
@@ -62,7 +62,7 @@ public class BattelLingMons : MonoBehaviour
     {
         int totalDamage = 0;
 
-        if (_currentMon.CurrentHealt > 0 )
+        if (_currentMon.CurrentHealt > 0 ) // is problem
         {
             totalDamage = _attack + _currentMon.PomonMoves[movePicked].power;
 
@@ -114,7 +114,7 @@ public class BattelLingMons : MonoBehaviour
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
     protected virtual void SwichePomonLogic()
     {
-        // turnes on the Pomon pic UI
+        // turnes on the Pomon pic UI. so the player can deside what pomon to swiche to
         PicPomonUI.SetActive(true);
     }
 
@@ -136,11 +136,13 @@ public class BattelLingMons : MonoBehaviour
     // is goving to handel swithing ind a new pokemon
     protected void SwitchPomon(Pomons swichingPomons)
     {
+        Debug.Log($"swichint {_currentMon.name} out with {swichingPomons.name}");
         // sets the new _currentMon Pomon to be the swithed ind one
         _currentMon = swichingPomons;
 
+        Debug.Log(_currentMon.name);
         // sets the tempeary states of the swinced ind Pomon
-        _attack = _currentMon.Attack;
+        _attack = _currentMon.Attack;                            // is having problems
         _speed = _currentMon.Speed;
         _defense = _currentMon.Defense;
 
