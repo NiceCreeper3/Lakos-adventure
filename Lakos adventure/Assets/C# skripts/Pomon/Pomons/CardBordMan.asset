@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: SiterRoTimesTo
+  m_Name: CardBordMan
   m_EditorClassIdentifier: 
-  PomonName: Card bord box
+  PomonName: Cardmordium
   PomonLook: {fileID: 21300000, guid: 63b8a60870ce56a49b7897fa80c721e1, type: 3}
   IsDude: 0
-  Attack: 1
-  MaxHealt: 10
-  CurrentHealt: 0
-  Speed: 1
-  Defense: 1
+  Attack: 100
+  MaxHealt: 100
+  CurrentHealt: 100
+  Speed: 100
+  Defense: 100
   PomonMoves:
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
-  - {fileID: 11400000, guid: 04a90a244a204d74f951822b60034a86, type: 2}
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 71eb2806e620dce42ad83eee17bb1ce4, type: 2}

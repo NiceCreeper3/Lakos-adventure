@@ -3,11 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BattelHandler : MonoBehaviour
+public class TrunHandler : MonoBehaviour
 {
     [SerializeField] private BattelLingMons _player, _enemy;
     [SerializeField] private UnityEvent triggerAttacks;
 
+    // _________________________________________________(rewrite this)________________________________________________
+
+
+    public void PlayerAction(int chosenAttack)
+    {
+
+    }
+
+    public void BeatterTurn()
+    {
+
+    }
+
+    // use new method
     public void Turn(int chosenAttack)
     {
         int playerSpeed = _player.ReturnSpeed();

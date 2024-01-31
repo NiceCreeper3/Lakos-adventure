@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PomonName: Ender Off Worlds
   PomonLook: {fileID: 21300000, guid: 6dbf24eea5453f84b92c5b710f1f1051, type: 3}
+  IsDude: 0
   Attack: 1
   MaxHealt: 1
   CurrentHealt: 1

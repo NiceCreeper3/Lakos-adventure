@@ -9,14 +9,18 @@ public class BattelLingMons : MonoBehaviour
     // Values
     #region
 
-    [SerializeField] protected Pomons _currentMon;
+    [Header("Checkes if swiching pomon needs player logic of AI logic")]
     [SerializeField] private bool _isPlayerMon;
 
+    [Header("refrense to astetik stuff")]
     [SerializeField] private GameObject PicPomonUI;
-
     [SerializeField] private SpriteRenderer pomonImgeDissplay;
 
+    [Header("the team of pomon chosen to battel")]
+    [SerializeField] protected Pomons[] PomonTeam;
+
     // pomon uses this temprary battel valuse to battel
+    protected Pomons _currentMon;
     [HideInInspector] public int _attack;
     [HideInInspector] private int _speed;
     [HideInInspector] private int _defense;
@@ -25,14 +29,25 @@ public class BattelLingMons : MonoBehaviour
     public event Action<int> OnHealhtChange;
     public event Action<Pomons> OnPomonSwiche;
 
-    [SerializeField] protected Pomons[] TeastArrey; // ______________________________________________{Remove this after teasting}_______________________________________________________________
     #endregion
 
     // Start is called before the first frame update
     private void Start()
     {
+        FullHealTeam();
+
         // sets up the Pomon to Fight
-        SwitchPomon(_currentMon);
+        SwitchPomon(PomonTeam[0]); // ________________________(out side of teasting indklude a way to check the Pomon does not have 0 HP)__________________________
+    }
+
+    
+    void FullHealTeam() //----------------------------------------------[ remove this after teasting]------------------------------------------------------
+    {
+        // full heales the team. so you don,t have to do it manuly
+        foreach (Pomons pomons in PomonTeam)
+        {
+            pomons.CurrentHealt = pomons.MaxHealt;
+        }
     }
 
     // methods
@@ -56,7 +71,26 @@ public class BattelLingMons : MonoBehaviour
     }
     #endregion
 
-    
+    public void PomonAttacks(ushort attackPicked, BattelLingMons attckTarget)
+    {
+        if (_currentMon.CurrentHealt > 0)
+        {
+            // the math of the chosen attack
+            int damageMultiPlajer = _currentMon.Attack + _attack;
+            int totalDamage = _currentMon.PomonMoves[attackPicked].power * damageMultiPlajer;
+
+            // actevates the Ability after the Damage math as to not give buff damige amidetly
+            _currentMon.PomonMoves[attackPicked].Ability(this);
+
+            attckTarget.TakesDamage(totalDamage);
+        }
+        else
+        {
+            Debug.Log("you dumb boy? this Pomon has fainted");
+        }
+    }
+
+
     public int PomonUseMove(int movePicked) 
     {
         int totalDamage = 0;
@@ -73,23 +107,6 @@ public class BattelLingMons : MonoBehaviour
 
     // health maipulason
     #region
-    //make changes ind the helt of the pomon. this can be healing of damage
-    public void ChangeHealt(int howToChange)
-    {
-        _currentMon.CurrentHealt += howToChange;
-
-        // makes sure we a pomon does not have more then MaxHealth
-        if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
-            _currentMon.CurrentHealt = _currentMon.MaxHealt;
-
-        // makes sure we don,t hit negetive nummberes of health
-        if (_currentMon.CurrentHealt < 0)
-            _currentMon.CurrentHealt = 0;
-
-        Debug.Log(howToChange);
-        OnHealhtChange?.Invoke(howToChange);
-    }
-
 
     // damiges the pomons current HP
     public void TakesDamage(int damage)
@@ -108,6 +125,22 @@ public class BattelLingMons : MonoBehaviour
         if (_currentMon.CurrentHealt <= 0)
             SwichePomonLogic();
     }
+
+    //make changes ind the helt of the pomon. this can be healing of damage
+    public void ChangeHealt(int howToChange)
+    {
+        _currentMon.CurrentHealt += howToChange;
+
+        // makes sure we a pomon does not have more then MaxHealth
+        if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
+            _currentMon.CurrentHealt = _currentMon.MaxHealt;
+
+        // makes sure we don,t hit negetive nummberes of health
+        if (_currentMon.CurrentHealt < 0)
+            _currentMon.CurrentHealt = 0;
+
+        OnHealhtChange?.Invoke(howToChange);
+    }
     #endregion
 
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
@@ -120,11 +153,10 @@ public class BattelLingMons : MonoBehaviour
         }
         else
         {
-            foreach (Pomons pomon in TeastArrey)
+            foreach (Pomons pomon in PomonTeam)
             {
                 if (pomon.CurrentHealt > 0)
                 {
-
                     SwitchPomon(pomon);
                     break;
                 }
@@ -140,10 +172,10 @@ public class BattelLingMons : MonoBehaviour
     {
         Debug.Log("attemting to swiche Pomon");
 
-        if (TeastArrey[pomonNummber].CurrentHealt > 0)
+        if (PomonTeam[pomonNummber].CurrentHealt > 0)
         {
             //teales the SwitchPomon methond with Pomon we are swiching to. and turns off the Pomon pic UI
-            SwitchPomon(TeastArrey[pomonNummber]);
+            SwitchPomon(PomonTeam[pomonNummber]);
             PicPomonUI.SetActive(false);      
         }
     }
@@ -155,15 +187,12 @@ public class BattelLingMons : MonoBehaviour
         // sets the new _currentMon Pomon to be the swithed ind one
         _currentMon = swichingPomons;
 
-        Debug.Log(_currentMon.name);
         // sets the tempeary states of the swinced ind Pomon
-        _attack = _currentMon.Attack;                            // is having problems
+        _attack = _currentMon.Attack;
         _speed = _currentMon.Speed;
         _defense = _currentMon.Defense;
 
         pomonImgeDissplay.sprite = _currentMon.PomonLook;
-
-        _currentMon.CurrentHealt = _currentMon.MaxHealt;//----------------------------------------------[ remove this after teasting]------------------------------------------------------
 
         // change sprite her maby?
 

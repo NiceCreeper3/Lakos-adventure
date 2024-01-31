@@ -22,8 +22,8 @@ public class EnemyBattelingMon : BattelLingMons
     {
         pomonfound = false;
 
-        Debug.Log("teast if array is full" + TeastArrey[1].PomonName);
-        foreach (Pomons pomon in TeastArrey)
+        Debug.Log("teast if array is full" + PomonTeam[1].PomonName);
+        foreach (Pomons pomon in PomonTeam)
         {
             Debug.Log("is lokking four Pomon");
             if (pomon.CurrentHealt > 0 && !pomonfound)
