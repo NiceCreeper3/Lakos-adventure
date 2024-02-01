@@ -18,7 +18,7 @@ public class Pomons : ScriptableObject
 
     [Header("Falver info")]
     public string PomonName;
-    public Sprite PomonLook;
+    public PomonsBluPrint Spesies;
     public bool IsDude;
 
     [Header("States and Moves")]
