@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Evil Snake
   m_EditorClassIdentifier: Assembly-CSharp::Pomons
-  PomonName: 
-  Spesies: {fileID: 0}
-  IsDude: 0
-  Attack: 0
-  MaxHealt: 0
+  PomonName: bigus maxsemus
+  Spesies: {fileID: 11400000, guid: 66cb5918757cc9e49a99e7416e506a2f, type: 2}
+  IsDude: 1
+  Attack: 17
+  MaxHealt: 90
   CurrentHealt: 0
-  Speed: 0
-  Defense: 0
-  PomonMoves: []
+  Speed: 5
+  Defense: 2
+  PomonMoves:
+  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
+  - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 04a90a244a204d74f951822b60034a86, type: 2}

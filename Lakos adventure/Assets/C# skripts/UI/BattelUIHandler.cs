@@ -7,18 +7,18 @@ using TMPro;
 public class BattelUIHandler : MonoBehaviour
 {
     //[SerializeField] private Pomons _pomonInUse, enemyPomon;
-    [SerializeField] private BattelLingMons _onPlayerSwiching;
+    [SerializeField] private SwichePomon _onPlayerSwiching;
 
     [SerializeField] private TMP_Text[] _moves;
 
     private void Awake()
     {
-        _onPlayerSwiching.OnPomonSwiche += OnPlayerSwiching_OnPomonSwiche;
+        _onPlayerSwiching.OnPomonSwiching += _onPlayerSwiching_OnPomonSwiching;
     }
 
-    private void OnPlayerSwiching_OnPomonSwiche(Pomons swichedIndPomon)
+    private void _onPlayerSwiching_OnPomonSwiching(Pomons arg1, bool arg2)
     {
-        SetMoveName(swichedIndPomon);
+        SetMoveName(arg1);
     }
 
     private void SetMoveName(Pomons pomonInUse)

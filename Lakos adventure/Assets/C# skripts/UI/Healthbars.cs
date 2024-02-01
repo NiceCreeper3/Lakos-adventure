@@ -5,11 +5,9 @@ public class Healthbars : MonoBehaviour
 {
     //Values
     #region
-    [Header("Pomon to refrens")]
-    [SerializeField] private Pomons _pomonInUse;
-
     [Header("The health bar parts")]
     [SerializeField] private BattelLingMons _battelLingEvents;
+    [SerializeField] private SwichePomon _omSwiche;
     [SerializeField] private Slider _healhtSlider;
     [SerializeField] private Image _fillColor;
     #endregion
@@ -21,7 +19,13 @@ public class Healthbars : MonoBehaviour
 
         // subskribes to the BattelLingMons events 
         _battelLingEvents.OnHealhtChange += BattelLing_OnHealhtChange;
-        _battelLingEvents.OnPomonSwiche += _battelLing_OnPomonSwiche;
+        _omSwiche.OnPomonSwiching += _omSwiche_OnPomonSwiching;
+        //_battelLingEvents.OnPomonSwiche += _battelLing_OnPomonSwiche;
+    }
+
+    private void _omSwiche_OnPomonSwiching(Pomons arg1, bool arg2)
+    {
+        SetSlider(arg1);
     }
 
     // mehtdos four when a event trigger 

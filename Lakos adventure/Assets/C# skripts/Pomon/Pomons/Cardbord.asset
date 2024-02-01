@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Cardbord
   m_EditorClassIdentifier: Assembly-CSharp::Pomons
-  PomonName: 
-  Spesies: {fileID: 0}
-  IsDude: 0
-  Attack: 0
-  MaxHealt: 0
-  CurrentHealt: 0
-  Speed: 0
-  Defense: 0
-  PomonMoves: []
+  PomonName: Bob
+  Spesies: {fileID: 11400000, guid: 3d33a9eaf8868ee48baf348107e4eab5, type: 2}
+  IsDude: 1
+  Attack: 100
+  MaxHealt: 100
+  CurrentHealt: 100
+  Speed: 100
+  Defense: 100
+  PomonMoves:
+  - {fileID: 11400000, guid: 71eb2806e620dce42ad83eee17bb1ce4, type: 2}
+  - {fileID: 11400000, guid: 71eb2806e620dce42ad83eee17bb1ce4, type: 2}
+  - {fileID: 11400000, guid: 71eb2806e620dce42ad83eee17bb1ce4, type: 2}
+  - {fileID: 11400000, guid: 71eb2806e620dce42ad83eee17bb1ce4, type: 2}

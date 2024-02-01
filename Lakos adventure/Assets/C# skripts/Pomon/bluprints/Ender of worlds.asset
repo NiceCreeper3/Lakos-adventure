@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a05b522ffd455148a94b9bc1f767917, type: 3}
   m_Name: Ender of worlds
   m_EditorClassIdentifier: 
-  name: 
-  front: {fileID: 0}
-  back: {fileID: 0}
+  name: Ender Of Worlds
+  front: {fileID: 21300000, guid: 6dbf24eea5453f84b92c5b710f1f1051, type: 3}
+  back: {fileID: 21300000, guid: 6dbf24eea5453f84b92c5b710f1f1051, type: 3}
   MinAttack: 0
   MaxAttack: 0
   MinHealt: 0

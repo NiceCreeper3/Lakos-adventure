@@ -14,10 +14,10 @@ public class BattelLingMons : MonoBehaviour
 
     [Header("refrense to astetik stuff")]
     [SerializeField] private GameObject PicPomonUI;
-    [SerializeField] private SpriteRenderer pomonImgeDissplay;
+    [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
     [Header("the team of pomon chosen to battel")]
-    [SerializeField] private Pomons[] PomonTeam;
+    //[SerializeField] private Pomons[] PomonTeam;
 
     [SerializeField] private Pomons _currentMon;
 
@@ -30,26 +30,28 @@ public class BattelLingMons : MonoBehaviour
     public event Action<int> OnHealhtChange;
     public event Action<Pomons> OnPomonSwiche;
 
+    private SwichePomon OnSwiche;
+
+
     #endregion
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
-        FullHealTeam();
+        OnSwiche = GetComponent<SwichePomon>();
 
-        // sets up the Pomon to Fight
-        SwitchPomon(_currentMon); // ________________________(out side of teasting indklude a way to check the Pomon does not have 0 HP)__________________________
+        // gets a refrends to Pomon swiching
+        OnSwiche.OnPomonSwiching += OnSwiche_OnPomonSwiching;
+
+        //SwitchPomon(_currentMon); // ________________________(out side of teasting indklude a way to check the Pomon does not have 0 HP)__________________________
     }
 
-    
-    void FullHealTeam() //----------------------------------------------[ remove this after teasting]------------------------------------------------------
+    private void OnSwiche_OnPomonSwiching(Pomons arg1, bool arg2)
     {
-        // full heales the team. so you don,t have to do it manuly
-        foreach (Pomons pomons in PomonTeam)
-        {
-            pomons.CurrentHealt = pomons.MaxHealt;
-        }
+        SwitchPomon(arg1);
     }
+
+
 
     // methods
     #region
@@ -118,7 +120,7 @@ public class BattelLingMons : MonoBehaviour
     #endregion
 
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
-    protected virtual void SwichePomonLogic()
+    private void SwichePomonLogic()
     {
         // gives difrent logic four when a new pomon needs to be swiched ind
         if (_isPlayerMon)
@@ -127,32 +129,25 @@ public class BattelLingMons : MonoBehaviour
         }
         else
         {
-            foreach (Pomons pomon in PomonTeam)
-            {
-                if (pomon.CurrentHealt > 0)
-                {
-                    SwitchPomon(pomon);
-                    break;
-                }
-            }
+            OnSwiche.AIPickMon();
         }
 
     }
-
     // SWICHING pomon
     #region
-    // the buttons of picing a new Pomon is goving to be here
-    public void PlayerHaspicked(int pomonNummber)
-    {
-        Debug.Log("attemting to swiche Pomon");
-
-        if (PomonTeam[pomonNummber].CurrentHealt > 0)
+    /*
+        // the buttons of picing a new Pomon is goving to be here
+        public void PlayerHaspicked(int pomonNummber)
         {
-            //teales the SwitchPomon methond with Pomon we are swiching to. and turns off the Pomon pic UI
-            SwitchPomon(PomonTeam[pomonNummber]);
-            PicPomonUI.SetActive(false);      
-        }
-    }
+            Debug.Log("attemting to swiche Pomon");
+
+            if (PomonTeam[pomonNummber].CurrentHealt > 0)
+            {
+                //teales the SwitchPomon methond with Pomon we are swiching to. and turns off the Pomon pic UI
+                SwitchPomon(PomonTeam[pomonNummber]);
+                PicPomonUI.SetActive(false);      
+            }
+        }*/
 
     // is goving to handel swithing ind a new pokemon
     protected void SwitchPomon(Pomons swichingPomons)
@@ -175,7 +170,7 @@ public class BattelLingMons : MonoBehaviour
         // change sprite her maby?
 
         // need to be swichingPomons as we mite need to update the Ui
-        OnPomonSwiche?.Invoke(swichingPomons);
+        //OnPomonSwiche?.Invoke(swichingPomons);
     }
     #endregion
 

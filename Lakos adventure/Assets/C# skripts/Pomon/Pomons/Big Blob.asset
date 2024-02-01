@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Big Blob
   m_EditorClassIdentifier: Assembly-CSharp::Pomons
-  PomonName: 
-  Spesies: {fileID: 0}
+  PomonName: Fluffels
+  Spesies: {fileID: 11400000, guid: 8926be2df3deca74492cd91f28749b87, type: 2}
   IsDude: 0
-  Attack: 0
-  MaxHealt: 0
-  CurrentHealt: 0
-  Speed: 0
-  Defense: 0
-  PomonMoves: []
+  Attack: 1
+  MaxHealt: 1
+  CurrentHealt: 1
+  Speed: 1
+  Defense: 1
+  PomonMoves:
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 04a90a244a204d74f951822b60034a86, type: 2}

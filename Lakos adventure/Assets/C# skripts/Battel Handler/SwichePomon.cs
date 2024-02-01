@@ -14,6 +14,43 @@ public class SwichePomon : MonoBehaviour
 
     private int _seletedPomon;
 
+    private void Start()
+    {
+
+        FullHealTeam();
+
+        _seletedPomon = 0; // seltes one that does not have Zero HP
+        SwitchPomonConfurmt();
+    }
+
+    void FullHealTeam() //----------------------------------------------[ remove this after teasting]------------------------------------------------------
+    {
+        // full heales the team. so you don,t have to do it manuly
+        foreach (Pomons pomons in _pomonTeam)
+        {
+            pomons.CurrentHealt = pomons.MaxHealt;
+        }
+    }
+
+
+
+    // is goving to handel swithing ind a new pokemon
+    public void SwitchPomonConfurmt()
+    {
+        OnPomonSwiching?.Invoke(_pomonTeam[_seletedPomon], false);
+    }
+
+    public void AIPickMon()
+    {
+        for (int i = 0; i == _pomonTeam.Length ; i++)
+        {
+            if (_pomonTeam[i].CurrentHealt < 0)
+                _seletedPomon = i;
+
+        }
+        SwitchPomonConfurmt();
+    }
+
     // the buttons of picing a new Pomon is goving to be here
     public void SeltedPomon(int pomonNummber)
     {
@@ -24,12 +61,5 @@ public class SwichePomon : MonoBehaviour
             _seletedPomon = pomonNummber;
         }
     }
-
-    // is goving to handel swithing ind a new pokemon
-    public void SwitchPomonConfurmt()
-    {
-        OnPomonSwiching?.Invoke(_pomonTeam[_seletedPomon], false);
-    }
-
 
 }
