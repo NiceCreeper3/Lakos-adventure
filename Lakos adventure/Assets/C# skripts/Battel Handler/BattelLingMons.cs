@@ -17,9 +17,9 @@ public class BattelLingMons : MonoBehaviour
     [SerializeField] private SpriteRenderer pomonImgeDissplay;
 
     [Header("the team of pomon chosen to battel")]
-    [SerializeField] protected Pomons[] PomonTeam;
+    [SerializeField] private Pomons[] PomonTeam;
 
-    protected Pomons _currentMon;
+    [SerializeField] private Pomons _currentMon;
 
     // represents the buffes to a state
     [HideInInspector] public int _attack;
@@ -38,7 +38,7 @@ public class BattelLingMons : MonoBehaviour
         FullHealTeam();
 
         // sets up the Pomon to Fight
-        SwitchPomon(PomonTeam[0]); // ________________________(out side of teasting indklude a way to check the Pomon does not have 0 HP)__________________________
+        SwitchPomon(_currentMon); // ________________________(out side of teasting indklude a way to check the Pomon does not have 0 HP)__________________________
     }
 
     
@@ -56,7 +56,7 @@ public class BattelLingMons : MonoBehaviour
 
     public int ReturnSpeed()
     {
-        return _speed;
+        return _currentMon.Speed * _speed;
     }
 
     public void PomonAttacks(int attackPicked, BattelLingMons attckTarget)
@@ -166,7 +166,11 @@ public class BattelLingMons : MonoBehaviour
         _speed = 1;
         _defense = 1;
 
-        pomonImgeDissplay.sprite = _currentMon.Spesies.front;
+        if (_isPlayerMon)
+            pomonImgeDissplay.sprite = _currentMon.Spesies.back;
+        else
+            pomonImgeDissplay.sprite = _currentMon.Spesies.front;
+
 
         // change sprite her maby?
 

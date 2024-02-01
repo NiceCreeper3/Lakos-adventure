@@ -32,6 +32,8 @@ public class TrunHandler : MonoBehaviour
         int playerSpeed = _player.ReturnSpeed();
         int enemySpeed = _enemy.ReturnSpeed();
 
+        Debug.Log("enemy speed:" + enemySpeed + " Player Speed" + playerSpeed);
+
         if (_dovingActionOnTurn)
         {
             EnemyTurn();
@@ -52,7 +54,7 @@ public class TrunHandler : MonoBehaviour
         }
         else
         {
-            // while chose at random in case of tie
+
         }
     }
 
