@@ -19,8 +19,9 @@ public class BattelLingMons : MonoBehaviour
     [Header("the team of pomon chosen to battel")]
     [SerializeField] protected Pomons[] PomonTeam;
 
-    // pomon uses this temprary battel valuse to battel
     protected Pomons _currentMon;
+
+    // represents the buffes to a state
     [HideInInspector] public int _attack;
     [HideInInspector] private int _speed;
     [HideInInspector] private int _defense;
@@ -53,31 +54,18 @@ public class BattelLingMons : MonoBehaviour
     // methods
     #region
 
-    // returns ________(we myt want to delete this after)__________________
-    #region
-
-    // returns the base attack damage
-    public int ReturnAttack(int attackPicked)
-    {
-        int totalDamage = _attack + _currentMon.PomonMoves[attackPicked].power;
-
-        // returns the totall amount of damie the pomon does
-        return totalDamage;
-    }
-
     public int ReturnSpeed()
     {
         return _speed;
     }
-    #endregion
 
-    public void PomonAttacks(ushort attackPicked, BattelLingMons attckTarget)
+    public void PomonAttacks(int attackPicked, BattelLingMons attckTarget)
     {
         if (_currentMon.CurrentHealt > 0)
         {
             // the math of the chosen attack
             int damageMultiPlajer = _currentMon.Attack + _attack;
-            int totalDamage = _currentMon.PomonMoves[attackPicked].power * damageMultiPlajer;
+            int totalDamage = _currentMon.PomonMoves[attackPicked].power * damageMultiPlajer; // its a times to makes it so a 0power move does not do damage
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
             _currentMon.PomonMoves[attackPicked].Ability(this);
@@ -90,28 +78,14 @@ public class BattelLingMons : MonoBehaviour
         }
     }
 
-
-    public int PomonUseMove(int movePicked) 
-    {
-        int totalDamage = 0;
-
-        if (_currentMon.CurrentHealt > 0 ) // is problem
-        {
-            totalDamage = _attack + _currentMon.PomonMoves[movePicked].power;
-
-            _currentMon.PomonMoves[movePicked].Ability(this);
-        }
-
-        return totalDamage;
-    }
-
     // health maipulason
     #region
 
     // damiges the pomons current HP
     public void TakesDamage(int damage)
     {
-        int totaldamage = damage - _defense;
+        // aclkulates kow muthe damage is dealt
+        int totaldamage = 2 * _defense - damage;
 
         // ind case Defense is higer then damage and then wood result ind the healing
         if (totaldamage < 0)
@@ -119,8 +93,6 @@ public class BattelLingMons : MonoBehaviour
 
         // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
         ChangeHealt(-totaldamage);
-
-        Debug.Log($"{_currentMon.PomonName} has taken {totaldamage} and is at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         if (_currentMon.CurrentHealt <= 0)
             SwichePomonLogic();
@@ -138,6 +110,8 @@ public class BattelLingMons : MonoBehaviour
         // makes sure we don,t hit negetive nummberes of health
         if (_currentMon.CurrentHealt < 0)
             _currentMon.CurrentHealt = 0;
+
+        Debug.Log($"{_currentMon.PomonName} has had its health changed by {howToChange} and is now at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         OnHealhtChange?.Invoke(howToChange);
     }
@@ -188,11 +162,11 @@ public class BattelLingMons : MonoBehaviour
         _currentMon = swichingPomons;
 
         // sets the tempeary states of the swinced ind Pomon
-        _attack = _currentMon.Attack;
-        _speed = _currentMon.Speed;
-        _defense = _currentMon.Defense;
+        _attack = 1;
+        _speed = 1;
+        _defense = 1;
 
-        pomonImgeDissplay.sprite = _currentMon.PomonLook;
+        pomonImgeDissplay.sprite = _currentMon.Spesies.front;
 
         // change sprite her maby?
 

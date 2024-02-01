@@ -1,48 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class TrunHandler : MonoBehaviour
 {
     [SerializeField] private BattelLingMons _player, _enemy;
-    [SerializeField] private UnityEvent triggerAttacks;
+    private int _playerChoseAttack;
+    private bool _dovingActionOnTurn = false;
 
-    // _________________________________________________(rewrite this)________________________________________________
+    // makes it so the player can swiche with aot the aponet getting to hit back
+    [HideInInspector] public static bool FreeSwiche;
 
 
-    public void PlayerAction(int chosenAttack)
+    // player has picked a attack to do
+    public void PlayerAttack(int chosenAttack)
     {
-
+        _playerChoseAttack = chosenAttack;
+        Turn();
     }
 
-    public void BeatterTurn()
+    // both turn on and off
+    // makes it so if player is doving a action then that is what there are doving that trun
+    public void PlayerAction(bool isActionTurn)
     {
-
+        _dovingActionOnTurn = isActionTurn;
     }
 
-    // use new method
-    public void Turn(int chosenAttack)
+    public void Turn()
     {
+        // getes the speed of moboe player and enemy
         int playerSpeed = _player.ReturnSpeed();
         int enemySpeed = _enemy.ReturnSpeed();
 
-        int AIAttack = AITurn();
+        if (_dovingActionOnTurn)
+        {
+            EnemyTurn();
 
-        // gets the damige of both Pomons
-        int playerDamage = _player.PomonUseMove(chosenAttack);
-        int enemyDamage = _enemy.PomonUseMove(AIAttack);
+        }
 
         // compares the speed of both Pomons. the one with the higst gets to aket fhist
-        if (playerSpeed > enemySpeed)
+        else if (playerSpeed > enemySpeed)
         {
-            _enemy.TakesDamage(playerDamage);
-            _player.TakesDamage(enemyDamage);
+            // Player does move first
+            _player.PomonAttacks(_playerChoseAttack, _enemy);
+            EnemyTurn();
         }
         else if (playerSpeed < enemySpeed)
         {
-            _player.TakesDamage(enemyDamage);
-            _enemy.TakesDamage(playerDamage);
+            EnemyTurn();
+            _player.PomonAttacks(_playerChoseAttack, _enemy);
         }
         else
         {
@@ -50,13 +56,20 @@ public class TrunHandler : MonoBehaviour
         }
     }
 
+    private void EnemyTurn()
+    {
+        // makes the AI pick what move to use
+        int AIAttack = AITurn();
+        _enemy.PomonAttacks(AIAttack, _player);
+    }
+
     /// <summary>
     /// makes the AI desice what attack to use
     /// </summary>
     /// <returns></returns>
-    private int AITurn()
+    private ushort AITurn()
     {
-        int whatAttackToPick = 0;
+        ushort whatAttackToPick = 0;
 
         // is meant to sent with attack the Ai is goving four
         return whatAttackToPick;

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Knife Shot
   power: 10
-  buffAmount: 5
+  buffAmount: 1
