@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a05b522ffd455148a94b9bc1f767917, type: 3}
   m_Name: jajaja
   m_EditorClassIdentifier: 
+  name: Cream
+  front: {fileID: 21300000, guid: 63b8a60870ce56a49b7897fa80c721e1, type: 3}
+  back: {fileID: 21300000, guid: 6dbf24eea5453f84b92c5b710f1f1051, type: 3}
   MinAttack: 0
   MaxAttack: 0
   MinHealt: 0
@@ -20,4 +23,6 @@ MonoBehaviour:
   MaxSpeed: 0
   MinDefense: 0
   MaxDefense: 0
+  description: if you see Creams real body you will die a horroble death
+  genderratio: 12
   MovesCanLern: []

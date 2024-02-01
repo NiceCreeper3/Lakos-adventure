@@ -9,13 +9,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pomon", menuName = "ScriptableObjeckts/Pomon Bluprint")]
 public class PomonsBluPrint : ScriptableObject
 {
+    public new string name;
+    public Sprite front;
+    public Sprite back;
     public int MinAttack, MaxAttack;
 
     public int MinHealt, MaxHealt;
 
     public int MinSpeed, MaxSpeed;
 
-    public int MinDefense, MaxDefense; 
+    public int MinDefense, MaxDefense;
+
+    public string description;
+
+    public int genderratio;
 
     public List<BasikMoves> MovesCanLern = new List<BasikMoves>();
 }
