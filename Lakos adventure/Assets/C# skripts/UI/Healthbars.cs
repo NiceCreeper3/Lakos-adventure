@@ -35,11 +35,6 @@ public class Healthbars : MonoBehaviour
         SetPomonHp(obj);
     }
 
-    private void _battelLing_OnPomonSwiche(Pomons obj)
-    {
-        SetSlider(obj);
-    }
-
     #endregion
 
     // Methodes

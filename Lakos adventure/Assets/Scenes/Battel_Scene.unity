@@ -6862,6 +6862,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13a7df937dcf07458609ba185d1ce27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _seleketPannel: {fileID: 913169859}
+  swichePomon: {fileID: 854951185}
+  _pomonNameText:
+  - {fileID: 1950858551}
+  - {fileID: 1338578121}
+  - {fileID: 617841500}
+  - {fileID: 609200665}
+  - {fileID: 17070426}
+  - {fileID: 914931530}
+  Teast:
+  - {fileID: 11400000, guid: 748eda076f97502449fd1fc43ef5a339, type: 2}
+  - {fileID: 11400000, guid: 87be023a8b35b15468f1b7b6e642786d, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -28,7 +28,6 @@ public class BattelLingMons : MonoBehaviour
 
     // evnets
     public event Action<int> OnHealhtChange;
-    public event Action<Pomons> OnPomonSwiche;
 
     private SwichePomon OnSwiche;
 
@@ -65,9 +64,17 @@ public class BattelLingMons : MonoBehaviour
     {
         if (_currentMon.CurrentHealt > 0)
         {
-            // the math of the chosen attack
-            int damageMultiPlajer = _currentMon.Attack + _attack;
-            int totalDamage = _currentMon.PomonMoves[attackPicked].power * damageMultiPlajer; // its a times to makes it so a 0power move does not do damage
+            int rawDamage = 0;
+
+            if (_currentMon.PomonMoves[attackPicked].power != 0) // makes sure buff moves don,t end up doving damige
+                rawDamage = _currentMon.PomonMoves[attackPicked].power + _currentMon.Attack;
+             
+            int totalDamage = rawDamage * _attack;
+
+            Debug.Log($"_______________{_currentMon.PomonName}_______________");
+            Debug.Log(
+                $"raw damage is {rawDamage} geainde by {_currentMon.PomonMoves[attackPicked].power} + {_currentMon.Attack} \n" +
+                $"Total damage is {totalDamage} geainde by {rawDamage} * {_attack}");
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
             _currentMon.PomonMoves[attackPicked].Ability(this);
@@ -86,8 +93,13 @@ public class BattelLingMons : MonoBehaviour
     // damiges the pomons current HP
     public void TakesDamage(int damage)
     {
+        
         // aclkulates kow muthe damage is dealt
-        int totaldamage = 2 * _defense - damage;
+        int totaldamage = damage - (_currentMon.Defense * _defense);
+
+        Debug.Log(
+            $"{_currentMon.PomonName} \n" +
+            $"damge defended is {totaldamage} given by {_defense} - {damage}");
 
         // ind case Defense is higer then damage and then wood result ind the healing
         if (totaldamage < 0)
@@ -103,9 +115,11 @@ public class BattelLingMons : MonoBehaviour
     //make changes ind the helt of the pomon. this can be healing of damage
     public void ChangeHealt(int howToChange)
     {
-        _currentMon.CurrentHealt += howToChange;
 
-        // makes sure we a pomon does not have more then MaxHealth
+        _currentMon.CurrentHealt += howToChange;
+        Debug.Log(howToChange + " " + _currentMon.CurrentHealt);
+
+        // makes sure a pomon does not have more health then MaxHealth
         if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
             _currentMon.CurrentHealt = _currentMon.MaxHealt;
 

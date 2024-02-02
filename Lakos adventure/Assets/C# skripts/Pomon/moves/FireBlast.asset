@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FireBlast
   m_EditorClassIdentifier: 
   MoveName: FireBlast
-  power: 30
+  power: 45

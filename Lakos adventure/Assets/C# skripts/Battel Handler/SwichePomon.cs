@@ -59,6 +59,7 @@ public class SwichePomon : MonoBehaviour
         if (_pomonTeam[pomonNummber].CurrentHealt > 0)
         {
             _seletedPomon = pomonNummber;
+            OnPomonSelket?.Invoke(_pomonTeam[pomonNummber]);
         }
     }
 

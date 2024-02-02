@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pyskeshroom
   front: {fileID: 21300000, guid: 9f98a5b0b1a8beb4696e767ee10aea8c, type: 3}
-  back: {fileID: 21300000, guid: 4617dec0f46d6b54cbbd79748d6add06, type: 3}
+  back: {fileID: 21300000, guid: 4229bf03871bc334bbcf179305c31ceb, type: 3}
   MinAttack: 0
   MaxAttack: 0
   MinHealt: 0
