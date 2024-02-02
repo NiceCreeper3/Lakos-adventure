@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49.999985, y: -9.2715}
-  m_SizeDelta: {x: -100, y: -25.8864}
+  m_AnchoredPosition: {x: 49.999985, y: -20.950394}
+  m_SizeDelta: {x: -100, y: -49.244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2637348861611293754
 CanvasRenderer:
@@ -283,6 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bluPrint: {fileID: 0}
+  id: 0
+  Pomondisplay: {fileID: 0}
+  image: {fileID: 4645396525593762152}
+  spesies: {fileID: 777494731567371153}
+  id_text: {fileID: 1778256281597482759}
 --- !u!1 &7010911454978317634
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,8 +397,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49.999985, y: 17.9426}
-  m_SizeDelta: {x: -100, y: -35.8852}
+  m_AnchoredPosition: {x: 49.999985, y: 27.214}
+  m_SizeDelta: {x: -100, y: -54.427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6265759974514906639
 CanvasRenderer:
@@ -460,7 +465,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
