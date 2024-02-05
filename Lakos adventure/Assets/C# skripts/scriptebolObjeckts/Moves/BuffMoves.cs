@@ -9,6 +9,6 @@ public class BuffMoves : BasikMoves
 
     public override void Ability(BattelLingMons interragsen)
     {
-        interragsen._attack += buffAmount;
+        interragsen._attackBuff += buffAmount;
     }
 }

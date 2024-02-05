@@ -58,7 +58,7 @@ public class TrunHandler : MonoBehaviour
         }
     }
 
-    private void EnemyTurn()
+    public void EnemyTurn()
     {
         // makes the AI pick what move to use
         int AIAttack = AITurn();

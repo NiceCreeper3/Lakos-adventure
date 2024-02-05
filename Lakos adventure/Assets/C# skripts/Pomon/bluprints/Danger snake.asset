@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Snappersapper
   front: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
   back: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
+  description: 
+  genderratio: 0
   MinAttack: 0
   MaxAttack: 0
   MinHealt: 0
@@ -23,6 +25,5 @@ MonoBehaviour:
   MaxSpeed: 0
   MinDefense: 0
   MaxDefense: 0
-  description: 
-  genderratio: 0
+  CaptureChanse: 99
   MovesCanLern: []

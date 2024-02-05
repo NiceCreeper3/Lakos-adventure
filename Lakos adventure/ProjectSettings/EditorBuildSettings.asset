@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/outdoors.unity
+    guid: 77584f29bace7a44faf256f8c5bfd549
+  - enabled: 1
+    path: Assets/Scenes/podex.unity
+    guid: 3bfa30e068cb0fd4294f522d504eceea
+  - enabled: 1
+    path: Assets/Scenes/Battel_Scene.unity
+    guid: 8593b14bac1a48749a49988f90531bd7
   m_configObjects: {}

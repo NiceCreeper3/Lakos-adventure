@@ -45,10 +45,14 @@ public class SwichePomon : MonoBehaviour
         for (int i = 0; i == _pomonTeam.Length ; i++)
         {
             if (_pomonTeam[i].CurrentHealt < 0)
+            {
                 _seletedPomon = i;
+                SwitchPomonConfurmt();
+                break;
+            }      
+        }   
 
-        }
-        SwitchPomonConfurmt();
+        // calles if 
     }
 
     // the buttons of picing a new Pomon is goving to be here

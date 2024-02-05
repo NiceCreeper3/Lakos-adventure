@@ -7,7 +7,7 @@ using UnityEngine;
 /// it is goving to use pomons scriptebol objeckt to deafine how its created
 /// </summary>
 
-[CreateAssetMenu(fileName = "Pomon", menuName = "ScriptableObjeckts/Pomon")]
+[CreateAssetMenu(fileName = "Pomon", menuName = "Pomon/Pomon")]
 public class Pomons : ScriptableObject
 {
     // (Inprovement) make this (get, sets)
@@ -22,6 +22,7 @@ public class Pomons : ScriptableObject
     public bool IsDude;
 
     [Header("States and Moves")]
+
     public int Attack;
 
     public int MaxHealt;

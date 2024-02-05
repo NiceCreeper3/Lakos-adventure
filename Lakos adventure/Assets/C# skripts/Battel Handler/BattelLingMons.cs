@@ -4,6 +4,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+using Random = UnityEngine.Random;
+
 public class BattelLingMons : MonoBehaviour
 {
     // Values
@@ -16,21 +18,18 @@ public class BattelLingMons : MonoBehaviour
     [SerializeField] private GameObject PicPomonUI;
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
-    [Header("the team of pomon chosen to battel")]
-    //[SerializeField] private Pomons[] PomonTeam;
-
-    [SerializeField] private Pomons _currentMon;
-
     // represents the buffes to a state
-    [HideInInspector] public int _attack;
-    [HideInInspector] private int _speed;
-    [HideInInspector] private int _defense;
+    [HideInInspector] public int _attackBuff;
+    [HideInInspector] private int _speedBuff;
+    [HideInInspector] private int _defenseBuff;
 
-    // evnets
-    public event Action<int> OnHealhtChange;
+    private Pomons _currentMon;
 
     private SwichePomon OnSwiche;
 
+    // evnets
+    public event Action<int> OnHealhtChange;
+    public static string PreaviseScene;
 
     #endregion
 
@@ -41,8 +40,6 @@ public class BattelLingMons : MonoBehaviour
 
         // gets a refrends to Pomon swiching
         OnSwiche.OnPomonSwiching += OnSwiche_OnPomonSwiching;
-
-        //SwitchPomon(_currentMon); // ________________________(out side of teasting indklude a way to check the Pomon does not have 0 HP)__________________________
     }
 
     private void OnSwiche_OnPomonSwiching(Pomons arg1, bool arg2)
@@ -50,14 +47,12 @@ public class BattelLingMons : MonoBehaviour
         SwitchPomon(arg1);
     }
 
-
-
     // methods
     #region
 
     public int ReturnSpeed()
     {
-        return _currentMon.Speed * _speed;
+        return _currentMon.Speed * _speedBuff;
     }
 
     public void PomonAttacks(int attackPicked, BattelLingMons attckTarget)
@@ -69,12 +64,12 @@ public class BattelLingMons : MonoBehaviour
             if (_currentMon.PomonMoves[attackPicked].power != 0) // makes sure buff moves don,t end up doving damige
                 rawDamage = _currentMon.PomonMoves[attackPicked].power + _currentMon.Attack;
              
-            int totalDamage = rawDamage * _attack;
+            int totalDamage = rawDamage * _attackBuff;
 
             Debug.Log($"_______________{_currentMon.PomonName}_______________");
             Debug.Log(
                 $"raw damage is {rawDamage} geainde by {_currentMon.PomonMoves[attackPicked].power} + {_currentMon.Attack} \n" +
-                $"Total damage is {totalDamage} geainde by {rawDamage} * {_attack}");
+                $"Total damage is {totalDamage} geainde by {rawDamage} * {_attackBuff}");
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
             _currentMon.PomonMoves[attackPicked].Ability(this);
@@ -91,15 +86,15 @@ public class BattelLingMons : MonoBehaviour
     #region
 
     // damiges the pomons current HP
-    public void TakesDamage(int damage)
+    private void TakesDamage(int damage)
     {
         
         // aclkulates kow muthe damage is dealt
-        int totaldamage = damage - (_currentMon.Defense * _defense);
+        int totaldamage = damage - (_currentMon.Defense * _defenseBuff);
 
         Debug.Log(
             $"{_currentMon.PomonName} \n" +
-            $"damge defended is {totaldamage} given by {_defense} - {damage}");
+            $"damge defended is {totaldamage} given by {_defenseBuff} - {damage}");
 
         // ind case Defense is higer then damage and then wood result ind the healing
         if (totaldamage < 0)
@@ -147,46 +142,27 @@ public class BattelLingMons : MonoBehaviour
         }
 
     }
-    // SWICHING pomon
-    #region
-    /*
-        // the buttons of picing a new Pomon is goving to be here
-        public void PlayerHaspicked(int pomonNummber)
-        {
-            Debug.Log("attemting to swiche Pomon");
-
-            if (PomonTeam[pomonNummber].CurrentHealt > 0)
-            {
-                //teales the SwitchPomon methond with Pomon we are swiching to. and turns off the Pomon pic UI
-                SwitchPomon(PomonTeam[pomonNummber]);
-                PicPomonUI.SetActive(false);      
-            }
-        }*/
 
     // is goving to handel swithing ind a new pokemon
-    protected void SwitchPomon(Pomons swichingPomons)
+    private void SwitchPomon(Pomons swichingPomons)
     {
-        Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
+        if (_currentMon != null)
+            Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
+
+
         // sets the new _currentMon Pomon to be the swithed ind one
         _currentMon = swichingPomons;
 
         // sets the tempeary states of the swinced ind Pomon
-        _attack = 1;
-        _speed = 1;
-        _defense = 1;
+        _attackBuff = 1;
+        _speedBuff = 1;
+        _defenseBuff = 1;
 
+        // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
         if (_isPlayerMon)
             pomonImgeDissplay.sprite = _currentMon.Spesies.back;
         else
             pomonImgeDissplay.sprite = _currentMon.Spesies.front;
-
-
-        // change sprite her maby?
-
-        // need to be swichingPomons as we mite need to update the Ui
-        //OnPomonSwiche?.Invoke(swichingPomons);
     }
-    #endregion
-
     #endregion
 }
