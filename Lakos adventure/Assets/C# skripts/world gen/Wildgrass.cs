@@ -15,7 +15,7 @@ public class Wildgrass : MonoBehaviour
     private void FixedUpdate()
     {
         Collider2D[] coll = new Collider2D[1];
-        GetComponent<TilemapCollider2D>().OverlapCollider(new ContactFilter2D(),coll);
+        GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(),coll);
         foreach (Collider2D col in coll)
         {
             if (col == player)

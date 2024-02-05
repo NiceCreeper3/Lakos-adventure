@@ -11,7 +11,8 @@ public class PlayerMovemont : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movepoint = grid.CellToWorld(grid.WorldToCell(transform.position)) + new Vector3(1.76f, 1.76f, 0);
+        movepoint = grid.CellToWorld(InfoSaved.playerlocation) + new Vector3(1.76f, 1.76f, 0);
+        gameObject.transform.position = movepoint;
     }
 
     // Update is called once per frame
@@ -19,44 +20,47 @@ public class PlayerMovemont : MonoBehaviour
     {
         if (transform.position == movepoint)
         {
-            RaycastHit2D[] hit = new RaycastHit2D[1];
+            bool isempty = true;
+            RaycastHit2D[] hit = new RaycastHit2D[2];
             col.Raycast(new Vector2(0,(int)Input.GetAxis("Vertical")), hit, 3.52f);
-            if (!hit[0])
+            foreach (RaycastHit2D raycastHit in hit)
             {
-                
-                movepoint += new Vector3(0, 3.52f * (int)Input.GetAxis("Vertical"), 0);
-            }
-            else
-            {
-                foreach (RaycastHit2D hit2D in hit)
+                if (raycastHit)
                 {
-                    if (hit2D.collider.isTrigger)
+                    if (!raycastHit.collider.isTrigger)
                     {
-                        movepoint += new Vector3(0, 3.52f * (int)Input.GetAxis("Vertical"), 0);
+                        isempty = false;
                         break;
                     }
+                   
                 }
             }
+            if (isempty)
+            {
+                movepoint += new Vector3(0, 3.52f * (int)Input.GetAxis("Vertical"), 0);
+            }
             
-            
+
+
             if (transform.position == movepoint)
             {
+                isempty = true;
                 col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 3.52f);
-                if (!hit[0])
+                foreach (RaycastHit2D raycastHit in hit)
                 {
-                    
-                    movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
-                }
-                else
-                {
-                    foreach (RaycastHit2D hit2D in hit)
+                    if (raycastHit)
                     {
-                        if (hit2D.collider.isTrigger)
+                        if (!raycastHit.collider.isTrigger)
                         {
-                            
-                            movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
+                            isempty = false;
+                            break;
                         }
+
                     }
+                }
+                if (isempty)
+                {
+                    movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
                 }
                 
                 
