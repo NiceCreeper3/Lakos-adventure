@@ -32,8 +32,6 @@ public class SwichePomon : MonoBehaviour
         }
     }
 
-
-
     // is goving to handel swithing ind a new pokemon
     public void SwitchPomonConfurmt()
     {
@@ -60,11 +58,29 @@ public class SwichePomon : MonoBehaviour
     {
         Debug.Log("attemting to swiche Pomon");
 
-        if (_pomonTeam[pomonNummber].CurrentHealt > 0)
+        try
         {
-            _seletedPomon = pomonNummber;
-            OnPomonSelket?.Invoke(_pomonTeam[pomonNummber]);
+            if (_pomonTeam[pomonNummber].CurrentHealt > 0)
+            {
+                _seletedPomon = pomonNummber;
+                OnPomonSelket?.Invoke(_pomonTeam[pomonNummber]);
+            }
         }
+        catch
+        {
+
+        }
+    }
+
+    private void IsBattelOver()
+    {
+
+    }
+
+
+    private void battelWIn()
+    {
+
     }
 
 }

@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
   m_Name: Big Blob
-  m_EditorClassIdentifier: Assembly-CSharp::Pomons
-  PomonName: Fluffels
+  m_EditorClassIdentifier: 
+  PomonName: Fluffeles
   Spesies: {fileID: 11400000, guid: 8926be2df3deca74492cd91f28749b87, type: 2}
   IsDude: 0
-  Attack: 1
-  MaxHealt: 1
-  CurrentHealt: 1
-  Speed: 1
-  Defense: 1
+  Attack: 15
+  MaxHealt: 90
+  CurrentHealt: 0
+  Speed: 16
+  Defense: 20
   PomonMoves:
   - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
   - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
