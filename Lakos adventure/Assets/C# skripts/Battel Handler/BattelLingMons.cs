@@ -17,6 +17,7 @@ public class BattelLingMons : MonoBehaviour
     [Header("refrense to astetik stuff")]
     [SerializeField] private GameObject PicPomonUI;
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
+    [SerializeField] private AudioAssets _audio;
 
     // represents the buffes to a state
     [HideInInspector] public int _attackBuff;
@@ -157,6 +158,7 @@ public class BattelLingMons : MonoBehaviour
         if (_currentMon != null)
             Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
 
+        SoundManger.Playsound(SoundManger.Sound.OnPomonEnterBattel);
 
         // sets the new _currentMon Pomon to be the swithed ind one
         _currentMon = swichingPomons;

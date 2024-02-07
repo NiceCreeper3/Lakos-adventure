@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 150407652196745552}
   - component: {fileID: 6487533530921912099}
   m_Layer: 0
-  m_Name: AudioSystem
+  m_Name: AduioAssets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundAudioClips:
   - sound: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}

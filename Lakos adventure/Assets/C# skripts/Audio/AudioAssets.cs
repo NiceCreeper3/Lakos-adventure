@@ -11,7 +11,7 @@ public class AudioAssets : MonoBehaviour
         get
         {
             // makes a audio AduioAssets objeckt if one is not pressent
-            if (instans == null) _instans = (Instantiate(Resources.Load("AduioAssets")) as GameObject).GetComponent<AudioAssets>();
+            if (_instans == null) _instans = (Instantiate(Resources.Load("AduioAssets")) as GameObject).GetComponent<AudioAssets>();
             return _instans;
         }
     }

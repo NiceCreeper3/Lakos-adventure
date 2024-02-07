@@ -6,13 +6,15 @@ using UnityEngine;
 
 public class SwichePomon : MonoBehaviour
 {
-    public event Action<Pomons> OnPomonSelket;
-    public event Action<Pomons, bool> OnPomonSwiching;
+
 
     [Header("the team of pomon chosen to battel")]
     [SerializeField] private Pomons[] _pomonTeam;
 
     private int _seletedPomon;
+
+    public event Action<Pomons> OnPomonSelket;
+    public event Action<Pomons, bool> OnPomonSwiching;
 
     private void Start()
     {
