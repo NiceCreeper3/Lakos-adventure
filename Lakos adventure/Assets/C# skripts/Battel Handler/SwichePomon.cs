@@ -40,9 +40,10 @@ public class SwichePomon : MonoBehaviour
 
     public void AIPickMon()
     {
-        for (int i = 0; i == _pomonTeam.Length ; i++)
+        for (int i = 0; i < _pomonTeam.Length ; i++)
         {
-            if (_pomonTeam[i].CurrentHealt < 0)
+            Debug.Log("RRRRRRRRRR");
+            if (_pomonTeam[i].CurrentHealt > 0)
             {
                 _seletedPomon = i;
                 SwitchPomonConfurmt();

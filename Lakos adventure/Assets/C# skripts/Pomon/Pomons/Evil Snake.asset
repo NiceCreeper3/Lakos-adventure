@@ -15,11 +15,11 @@ MonoBehaviour:
   PomonName: Bastered
   Spesies: {fileID: 11400000, guid: 66cb5918757cc9e49a99e7416e506a2f, type: 2}
   IsDude: 0
-  Attack: 0
-  MaxHealt: 0
-  CurrentHealt: 0
-  Speed: 0
-  Defense: 0
+  Attack: 16
+  MaxHealt: 90
+  CurrentHealt: 39
+  Speed: 34
+  Defense: 10
   PomonMoves:
   - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
   - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}

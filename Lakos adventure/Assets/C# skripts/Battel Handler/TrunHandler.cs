@@ -54,7 +54,18 @@ public class TrunHandler : MonoBehaviour
         }
         else
         {
+            int Chapture = Random.Range(1, 2);
 
+            if(Chapture == 1)
+            {
+                _player.PomonAttacks(_playerChoseAttack, _enemy);
+                EnemyTurn();
+            }
+            else
+            {
+                EnemyTurn();
+                _player.PomonAttacks(_playerChoseAttack, _enemy);
+            }
         }
     }
 
@@ -63,6 +74,12 @@ public class TrunHandler : MonoBehaviour
         // makes the AI pick what move to use
         int AIAttack = AITurn();
         _enemy.PomonAttacks(AIAttack, _player);
+    }
+
+    private IEnumerator TurnOrder(BattelLingMons firstTurn, BattelLingMons lastTrun)
+    {
+        //yield return new WaitUntil
+        yield return new WaitForSecondsRealtime(5);
     }
 
     /// <summary>

@@ -104,7 +104,12 @@ public class BattelLingMons : MonoBehaviour
         ChangeHealt(-totaldamage);
 
         if (_currentMon.CurrentHealt <= 0)
+        {
+            Debug.Log("attevated");
             SwichePomonLogic();
+
+        }
+            
     }
 
     //make changes ind the helt of the pomon. this can be healing of damage
@@ -131,13 +136,16 @@ public class BattelLingMons : MonoBehaviour
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
     private void SwichePomonLogic()
     {
+        
         // gives difrent logic four when a new pomon needs to be swiched ind
         if (_isPlayerMon)
         {
+            Debug.Log(" 13141 415 1 4514 1");
             PicPomonUI.SetActive(true);
         }
         else
         {
+            Debug.Log(" yyyyyyyyyyyyyyy");
             OnSwiche.AIPickMon();
         }
 

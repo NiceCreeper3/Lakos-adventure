@@ -17,11 +17,11 @@ MonoBehaviour:
   IsDude: 0
   Attack: 15
   MaxHealt: 90
-  CurrentHealt: 0
+  CurrentHealt: 49
   Speed: 16
   Defense: 20
   PomonMoves:
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
   - {fileID: 11400000, guid: 04a90a244a204d74f951822b60034a86, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}

@@ -54,6 +54,8 @@ public class CaptureWildPomon : MonoBehaviour
     {
         PomonTeamList.Add(_currentCapture);
         Debug.Log(PomonTeamList);
-        SceneManger.ChageScene("SampleScene");
+
+
+        SceneManger.ChageScene("outdoors"); // __________________________[Reaplase with the return to previes]_______________________________________
     }
 }
