@@ -11,10 +11,10 @@ public class BattelLingMons : MonoBehaviour
     // Values
     #region
 
-    [Header("Checkes if swiching pomon needs player logic of AI logic")]
+    [Header("Checks if swiching pomon needs player logic or AI logic")]
     [SerializeField] private bool _isPlayerMon;
 
-    [Header("refrense to astetik stuff")]
+    [Header("Reference to aesthetic stuff")]
     [SerializeField] private GameObject PicPomonUI;
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
     [SerializeField] private AudioAssets _audio;
@@ -26,7 +26,7 @@ public class BattelLingMons : MonoBehaviour
 
     private Pomons _currentMon;
 
-    private SwichePomon OnSwiche;
+    private SwichePomon OnSwitch;
 
     // evnets
     public event Action<int> OnHealhtChange;
@@ -37,10 +37,10 @@ public class BattelLingMons : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        OnSwiche = GetComponent<SwichePomon>();
+        OnSwitch = GetComponent<SwichePomon>();
 
         // gets a refrends to Pomon swiching
-        OnSwiche.OnPomonSwiching += OnSwiche_OnPomonSwiching;
+        OnSwitch.OnPomonSwiching += OnSwiche_OnPomonSwiching;
     }
 
     private void OnSwiche_OnPomonSwiching(Pomons arg1, bool arg2)
@@ -147,7 +147,7 @@ public class BattelLingMons : MonoBehaviour
         else
         {
             Debug.Log(" yyyyyyyyyyyyyyy");
-            OnSwiche.AIPickMon();
+            OnSwitch.AIPickMon();
         }
 
     }
