@@ -32,10 +32,11 @@ public class DisplayCaughtPomon : MonoBehaviour
     public void loadmon(Pomons entry)
     {
         pomon = entry;
+        name_text.text = pomon.PomonName;
         monportraitfront.sprite = pomon.Spesies.front;
         attack.text = "Attack:" + pomon.Attack;
-        defece.text = "Defence:" + pomon;
-        speed.text = "speed:" + pomon;
+        defece.text = "Defence:" + pomon.Defense;
+        speed.text = "speed:" + pomon.Speed;
         if (pomon.IsDude)
         {
             gender.sprite = dude;
