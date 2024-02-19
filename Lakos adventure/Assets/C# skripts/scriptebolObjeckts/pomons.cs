@@ -22,6 +22,7 @@ public class Pomons : ScriptableObject
     public bool IsDude;
 
     [Header("States and Moves")]
+    public int level;
 
     public int Attack;
 

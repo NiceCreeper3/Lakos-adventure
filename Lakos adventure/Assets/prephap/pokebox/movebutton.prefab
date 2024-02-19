@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6603981213400830207}
   - component: {fileID: 7295328924562177687}
   m_Layer: 5
-  m_Name: Button
+  m_Name: movebutton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,6 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6186d03eb6f241b86433a85c0e0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: {fileID: 0}
+  nametext: {fileID: 6110030540729027186}
+  powertext: {fileID: 5049099927484717142}
 --- !u!1 &3176449945801506015
 GameObject:
   m_ObjectHideFlags: 0

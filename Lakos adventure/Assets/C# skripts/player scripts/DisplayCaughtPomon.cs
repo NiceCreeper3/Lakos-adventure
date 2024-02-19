@@ -15,6 +15,7 @@ public class DisplayCaughtPomon : MonoBehaviour
     [SerializeField] private TMP_Text name_text;
     [SerializeField] private showHealth health;
     [SerializeField] private TMP_Text spesies;
+    [SerializeField] private MoveInitialize moveInitializer;
     [SerializeField] private Image gender;
 
     [SerializeField] private Sprite dude;
@@ -47,6 +48,6 @@ public class DisplayCaughtPomon : MonoBehaviour
         }
         health.SetSlider(entry);
         spesies.text = "species:" + pomon.Spesies.name;
-        name_text.text = pomon.name;
+        moveInitializer.Updatemoves(pomon.PomonMoves);
     }
 }

@@ -12,7 +12,10 @@ public class showHealth : MonoBehaviour
     [SerializeField] private Image _fillColor;
     public void SetSlider(Pomons maxSet)
     {
-        health.text = maxSet.CurrentHealt + "/" + maxSet.MaxHealt;
+        if (health != null)
+            health.text = maxSet.CurrentHealt + "/" + maxSet.MaxHealt;
+
+
         _healhtSlider.maxValue = maxSet.MaxHealt;
         _healhtSlider.value = maxSet.CurrentHealt;
 

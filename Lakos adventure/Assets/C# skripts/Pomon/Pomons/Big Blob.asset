@@ -15,6 +15,7 @@ MonoBehaviour:
   PomonName: Fluffeles
   Spesies: {fileID: 11400000, guid: 8926be2df3deca74492cd91f28749b87, type: 2}
   IsDude: 0
+  level: 10
   Attack: 15
   MaxHealt: 90
   CurrentHealt: 49
