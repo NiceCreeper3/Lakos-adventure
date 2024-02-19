@@ -751,6 +751,7 @@ GameObject:
   - component: {fileID: 548534194}
   - component: {fileID: 548534195}
   - component: {fileID: 548534196}
+  - component: {fileID: 548534197}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -806,11 +807,25 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &548534197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548534193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed3ea7aa8820924f8d5bfa332bd1dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moves: []
+  movebutton: {fileID: 2945474209874953967, guid: 3ddf7a75b1c90a74ab26b1928d931ab2, type: 3}
 --- !u!1 &569722919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2673,6 @@ GameObject:
   - component: {fileID: 586753565296520366}
   - component: {fileID: 2156572151957531514}
   - component: {fileID: 4537039747263054739}
-  - component: {fileID: 4537039747263054740}
   m_Layer: 5
   m_Name: moves
   m_TagString: Untagged
@@ -2772,6 +2786,7 @@ GameObject:
   - component: {fileID: 7174060409866875855}
   - component: {fileID: 3024429974863273196}
   - component: {fileID: 631933808893730636}
+  - component: {fileID: 7174060409866875856}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -3201,18 +3216,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4537039747263054740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259927296383743483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bed3ea7aa8820924f8d5bfa332bd1dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &4702365385177943166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3469,6 +3472,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &7174060409866875856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391018348904015790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdacbad495495274699bd64688eae879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayCaught: {fileID: 9122084631564029548}
+  allpomon: {fileID: 11400000, guid: 3ba0a4240fa0a1f4285a90ad61a4dc6a, type: 2}
+  entry: {fileID: 405790971084956710, guid: fa3747ae1ded2424dac33af82deffd07, type: 3}
 --- !u!224 &7340053327785223649
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3620,6 +3638,7 @@ MonoBehaviour:
   name_text: {fileID: 4348716575331150252}
   health: {fileID: 906286075}
   spesies: {fileID: 281162604}
+  moveInitializer: {fileID: 548534197}
   gender: {fileID: 541443965}
   dude: {fileID: 21300000, guid: c2328089770632a44a7c3e596e71ad0f, type: 3}
   dudette: {fileID: 21300000, guid: 490abe3373f6a534d871d5c28fb22065, type: 3}

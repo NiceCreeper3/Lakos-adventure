@@ -24,11 +24,6 @@ public class DisplayCaughtPomon : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        loadmon(pomon);
-    }
 
     public void loadmon(Pomons entry)
     {

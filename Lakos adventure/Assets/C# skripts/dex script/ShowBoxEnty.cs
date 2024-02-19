@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ShowBoxEnty : MonoBehaviour
 {
-    [SerializeField] private Pomons pomon;
+    [SerializeField] public DisplayCaughtPomon displayCaught;
+    [SerializeField] public Pomons pomon;
     [SerializeField] private Image monportraitfront;
     [SerializeField] private TMP_Text name_text;
     [SerializeField] private showHealth health;
@@ -17,5 +18,10 @@ public class ShowBoxEnty : MonoBehaviour
         name_text.text = pomon.PomonName;
         monportraitfront.sprite = pomon.Spesies.front;
         health.SetSlider(entry);
+    }
+
+    public void pressed()
+    {
+        displayCaught.loadmon(pomon);
     }
 }
