@@ -1,2 +1,2 @@
-# Lakos
- poke riff
+# Lakos Adventure
+ Poke Rip Off
