@@ -15,10 +15,9 @@ public class BattelLingMons : MonoBehaviour
     [SerializeField] private bool _isPlayerMon;
 
     [Header("Reference to aesthetic stuff")]
-    [SerializeField] private GameObject PicPomonUI;
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
-    // represents the buffes to a state
+    // represents the buffes to a state. are public so arracks can modefi them
     [HideInInspector] public int _attackBuff;
     [HideInInspector] private int _speedBuff;
     [HideInInspector] private int _defenseBuff;
@@ -29,12 +28,14 @@ public class BattelLingMons : MonoBehaviour
 
     // evnets
     public event Action<int> OnHealhtChange;
+    public event Action OnPomonSwicheNeeded;
 
     #endregion
 
     // Start is called before the first frame update
     private void Awake()
     {
+        // gets refrends to swichePomon
         OnSwitch = GetComponent<SwichePomon>();
 
         // gets a refrends to Pomon swiching
@@ -43,7 +44,7 @@ public class BattelLingMons : MonoBehaviour
 
     private void OnSwiche_OnPomonSwiching(Pomons arg1, bool arg2)
     {
-        SwitchPomon(arg1);
+        SwitchPomon(arg1, arg2);
     }
 
     // methods
@@ -104,20 +105,11 @@ public class BattelLingMons : MonoBehaviour
 
         // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
         ChangeHealt(-totaldamage);
-
-        if (_currentMon.CurrentHealt <= 0)
-        {
-            Debug.Log("attevated");
-            SwichePomonLogic();
-
-        }
-            
     }
 
     //make changes ind the helt of the pomon. this can be healing of damage
     public void ChangeHealt(int howToChange)
     {
-
         _currentMon.CurrentHealt += howToChange;
         Debug.Log(howToChange + " " + _currentMon.CurrentHealt);
 
@@ -132,29 +124,16 @@ public class BattelLingMons : MonoBehaviour
         Debug.Log($"{_currentMon.PomonName} has had its health changed by {howToChange} and is now at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         OnHealhtChange?.Invoke(howToChange);
+
+
+        if (_currentMon.CurrentHealt <= 0)
+            OnPomonSwicheNeeded?.Invoke();
     }
     #endregion
 
-    // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
-    private void SwichePomonLogic()
-    {
-        
-        // gives difrent logic four when a new pomon needs to be swiched ind
-        if (_isPlayerMon)
-        {
-            Debug.Log(" 13141 415 1 4514 1");
-            PicPomonUI.SetActive(true);
-        }
-        else
-        {
-            Debug.Log(" yyyyyyyyyyyyyyy");
-            OnSwitch.AIPickMon();
-        }
-
-    }
 
     // is goving to handel swithing ind a new pokemon
-    private void SwitchPomon(Pomons swichingPomons)
+    private void SwitchPomon(Pomons swichingPomons, bool isPlayerMon)
     {
         if (_currentMon != null)
             Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
@@ -170,7 +149,7 @@ public class BattelLingMons : MonoBehaviour
         _defenseBuff = 1;
 
         // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
-        if (_isPlayerMon)
+        if (isPlayerMon)
             pomonImgeDissplay.sprite = _currentMon.Spesies.back;
         else
             pomonImgeDissplay.sprite = _currentMon.Spesies.front;

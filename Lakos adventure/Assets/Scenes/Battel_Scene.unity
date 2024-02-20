@@ -3653,8 +3653,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854951184}
-  - component: {fileID: 854951183}
   - component: {fileID: 854951185}
+  - component: {fileID: 854951183}
   m_Layer: 0
   m_Name: PlayerMon
   m_TagString: Untagged
@@ -3675,7 +3675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPlayerMon: 1
-  PicPomonUI: {fileID: 2127291031}
   pomonImgeDissplay: {fileID: 345097783}
   _attackBuff: 0
 --- !u!4 &854951184
@@ -3706,9 +3705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f533d62913f2e054082725fe936335f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pomonTeam:
-  - {fileID: 11400000, guid: dad5c77742f08f1438de9ecb02eafe1f, type: 2}
-  - {fileID: 11400000, guid: 68d91f1034d36ae44a5f11066eda8056, type: 2}
+  _pomonTeam: {fileID: 11400000, guid: 3ba0a4240fa0a1f4285a90ad61a4dc6a, type: 2}
+  PicPomonUI: {fileID: 0}
 --- !u!1 &873307199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,6 +5539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 854951183}
   _enemy: {fileID: 2083093380}
+  OnEnemySwiche: {fileID: 0}
 --- !u!4 &1325205492
 Transform:
   m_ObjectHideFlags: 0
@@ -7702,8 +7701,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2083093379}
+  - component: {fileID: 2083093383}
   - component: {fileID: 2083093380}
-  - component: {fileID: 2083093381}
   - component: {fileID: 2083093382}
   m_Layer: 0
   m_Name: EnemyMon
@@ -7741,23 +7740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isPlayerMon: 0
-  PicPomonUI: {fileID: 2127291031}
   pomonImgeDissplay: {fileID: 1865353024}
   _attackBuff: 0
---- !u!114 &2083093381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083093377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f533d62913f2e054082725fe936335f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pomonTeam:
-  - {fileID: 11400000, guid: f9542c0efe3055e45a5c72fda72bfebc, type: 2}
 --- !u!114 &2083093382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7771,6 +7755,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trainerBattel: 0
+--- !u!114 &2083093383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083093377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f6be9bb054f2540be32be632179ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pomonTeam: {fileID: 11400000, guid: 3b884149adcbdd64b938d8c1bc8a1cde, type: 2}
+  PicPomonUI: {fileID: 0}
 --- !u!1 &2089643338
 GameObject:
   m_ObjectHideFlags: 0
@@ -8085,7 +8083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _battelLingEvents: {fileID: 2083093380}
-  _omSwiche: {fileID: 2083093381}
+  _omSwiche: {fileID: 2083093383}
   _healhtSlider: {fileID: 0}
   _fillColor: {fileID: 1079619259}
 --- !u!1 &2127291031
@@ -8149,7 +8147,7 @@ MonoBehaviour:
   - {fileID: 914931530}
   Teast:
   - {fileID: 11400000, guid: dad5c77742f08f1438de9ecb02eafe1f, type: 2}
-  - {fileID: 11400000, guid: 87be023a8b35b15468f1b7b6e642786d, type: 2}
+  - {fileID: 11400000, guid: a4d9713d2e8300c4ba1a2e990533e0df, type: 2}
 --- !u!114 &2127291034
 MonoBehaviour:
   m_ObjectHideFlags: 0

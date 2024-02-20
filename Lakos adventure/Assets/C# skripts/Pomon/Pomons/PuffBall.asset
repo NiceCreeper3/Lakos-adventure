@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: Snugems
+  m_Name: PuffBall
   m_EditorClassIdentifier: 
-  PomonName: Snugems
-  Spesies: {fileID: 11400000, guid: d21fdbdf38ff8fb4da5152e76987fa99, type: 2}
+  PomonName: Puffball
+  Spesies: {fileID: 11400000, guid: eaab8cbdbd111b644b6d77542b92adc0, type: 2}
   IsDude: 0
   level: 0
-  Attack: 16
-  MaxHealt: 100
-  CurrentHealt: 100
-  Speed: 16
-  Defense: 12
+  Attack: 10
+  MaxHealt: 60
+  CurrentHealt: 0
+  Speed: 20
+  Defense: 10
   PomonMoves:
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
   - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
+  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
+  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
   - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}

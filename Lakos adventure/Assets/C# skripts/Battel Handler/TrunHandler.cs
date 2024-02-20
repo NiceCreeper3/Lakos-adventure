@@ -5,11 +5,26 @@ using UnityEngine;
 public class TrunHandler : MonoBehaviour
 {
     [SerializeField] private BattelLingMons _player, _enemy;
+
+    [Header("refrends to event")]
+    [SerializeField] private SwichePomon OnEnemySwiche;
+
+    private ushort _enemyMoves; 
     private int _playerChoseAttack;
     private bool _dovingActionOnTurn = false;
 
     // makes it so the player can swiche with aot the aponet getting to hit back
     [HideInInspector] public static bool FreeSwiche;
+
+    private void Awake()
+    {
+        OnEnemySwiche.OnPomonSwiching += OnEnemySwiche_OnPomonSwiching;
+    }
+
+    private void OnEnemySwiche_OnPomonSwiching(Pomons arg1, bool arg2)
+    {
+        _enemyMoves = (ushort)arg1.PomonMoves.Count; 
+    }
 
 
     // player has picked a attack to do
@@ -88,7 +103,8 @@ public class TrunHandler : MonoBehaviour
     /// <returns></returns>
     private int AITurn()
     {
-        int whatAttackToPick = Random.Range(0, 5);
+        // giver et tall mellem 0 til 3
+        int whatAttackToPick = Random.Range(0, _enemyMoves);
         Debug.Log("ran" + whatAttackToPick);
 
         // is meant to sent with attack the Ai is goving four

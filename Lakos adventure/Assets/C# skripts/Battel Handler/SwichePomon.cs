@@ -1,20 +1,24 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
 
 public class SwichePomon : MonoBehaviour
 {
-
-
     [Header("the team of pomon chosen to battel")]
-    [SerializeField] private Pomons[] _pomonTeam;
+    [SerializeField] protected pomonteam _pomonTeam;
+    [SerializeField] private GameObject PicPomonUI;
 
-    private int _seletedPomon;
+    protected int _seletedPomon;
 
     public event Action<Pomons> OnPomonSelket;
     public event Action<Pomons, bool> OnPomonSwiching;
+
+    private BattelLingMons onNeededSwiche;
+
+    protected virtual void Awake()
+    {
+        onNeededSwiche = GetComponent<BattelLingMons>();
+        onNeededSwiche.OnPomonSwicheNeeded += OnNeededSwiche_OnPomonSwicheNeeded;
+    }
 
     private void Start()
     {
@@ -22,39 +26,35 @@ public class SwichePomon : MonoBehaviour
         FullHealTeam();
 
         _seletedPomon = 0; // seltes one that does not have Zero HP
-        SwitchPomonConfurmt();
+        SwitchPomonConfurmt(true);
+    }
+    private void OnNeededSwiche_OnPomonSwicheNeeded()
+    {
+        // turns on the swiche UI
+        SwichePickMetthod();
+    }
+
+    // Methodes
+    #region
+    // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
+    protected virtual void SwichePickMetthod()
+    {
+        PicPomonUI.SetActive(true);
     }
 
     void FullHealTeam() //----------------------------------------------[ remove this after teasting]------------------------------------------------------
     {
         // full heales the team. so you don,t have to do it manuly
-        foreach (Pomons pomons in _pomonTeam)
-        {
+        foreach (Pomons pomons in _pomonTeam.team)
             pomons.CurrentHealt = pomons.MaxHealt;
-        }
     }
 
     // is goving to handel swithing ind a new pokemon
-    public void SwitchPomonConfurmt()
+    public void SwitchPomonConfurmt(bool isPlayer)
     {
-        OnPomonSwiching?.Invoke(_pomonTeam[_seletedPomon], false);
+        OnPomonSwiching?.Invoke(_pomonTeam.team[_seletedPomon], isPlayer);
     }
 
-    public void AIPickMon()
-    {
-        for (int i = 0; i < _pomonTeam.Length ; i++)
-        {
-            Debug.Log("RRRRRRRRRR");
-            if (_pomonTeam[i].CurrentHealt > 0)
-            {
-                _seletedPomon = i;
-                SwitchPomonConfurmt();
-                break;
-            }      
-        }   
-
-        // calles if 
-    }
 
     // the buttons of picing a new Pomon is goving to be here
     public void SeltedPomon(int pomonNummber)
@@ -63,10 +63,10 @@ public class SwichePomon : MonoBehaviour
 
         try
         {
-            if (_pomonTeam[pomonNummber].CurrentHealt > 0)
+            if (_pomonTeam.team[pomonNummber].CurrentHealt > 0)
             {
                 _seletedPomon = pomonNummber;
-                OnPomonSelket?.Invoke(_pomonTeam[pomonNummber]);
+                OnPomonSelket?.Invoke(_pomonTeam.team[pomonNummber]);
             }
         }
         catch
@@ -75,15 +75,16 @@ public class SwichePomon : MonoBehaviour
         }
     }
 
-    private void IsBattelOver()
+    protected void IsBattelOver()
     {
 
     }
 
 
-    private void battelWIn()
+    protected void battelWIn()
     {
 
     }
+    #endregion
 
 }

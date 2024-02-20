@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbed0bec32bf73848b76a1924afd7d86, type: 3}
-  m_Name: Knife shot
+  m_Script: {fileID: 11500000, guid: 5102f1f28945aa249a733b202ed4946c, type: 3}
+  m_Name: Bob the drunke
   m_EditorClassIdentifier: 
-  MoveName: Knife Shot
-  MoveDiskrepseon: 
-  power: 10
-  MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  buffAmount: 1
+  team:
+  - {fileID: 11400000, guid: a4d9713d2e8300c4ba1a2e990533e0df, type: 2}
