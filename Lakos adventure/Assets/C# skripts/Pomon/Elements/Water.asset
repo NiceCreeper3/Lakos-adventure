@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   Element: Water
-  ElementColor: {r: 0.2978373, g: 0.86010265, b: 0.9150943, a: 0}
+  ElementColor: {r: 0.2978373, g: 0.86010265, b: 0.9150943, a: 1}
   _strongAgenst: []
   _weakAgenst: []

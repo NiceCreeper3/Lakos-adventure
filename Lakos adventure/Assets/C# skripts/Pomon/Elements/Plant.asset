@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Plant
   m_EditorClassIdentifier: 
   Element: Plant
-  ElementColor: {r: 0.6531249, g: 0.8207547, b: 0.36779103, a: 0}
+  ElementColor: {r: 0.6531249, g: 0.8207547, b: 0.36779103, a: 1}
   _strongAgenst: []
   _weakAgenst: []

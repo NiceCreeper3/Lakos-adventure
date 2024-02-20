@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   Element: Fire
-  ElementColor: {r: 0, g: 0, b: 0, a: 0}
+  ElementColor: {r: 0, g: 0, b: 0, a: 1}
   _strongAgenst: []
   _weakAgenst: []

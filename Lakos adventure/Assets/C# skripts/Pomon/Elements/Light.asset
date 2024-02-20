@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Light
   m_EditorClassIdentifier: 
   Element: Light
-  ElementColor: {r: 0.9622642, g: 0.87222874, b: 0.5764507, a: 0}
+  ElementColor: {r: 0.9622642, g: 0.87222874, b: 0.5764507, a: 1}
   _strongAgenst: []
   _weakAgenst: []
