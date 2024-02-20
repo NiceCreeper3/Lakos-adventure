@@ -15,6 +15,7 @@ public class DisplayCaughtPomon : MonoBehaviour
     [SerializeField] private TMP_Text name_text;
     [SerializeField] private showHealth health;
     [SerializeField] private TMP_Text spesies;
+    [SerializeField] private TMP_Text level_text;
     [SerializeField] private MoveInitialize moveInitializer;
     [SerializeField] private Image gender;
 
@@ -33,6 +34,7 @@ public class DisplayCaughtPomon : MonoBehaviour
         attack.text = "Attack:" + pomon.Attack;
         defece.text = "Defence:" + pomon.Defense;
         speed.text = "speed:" + pomon.Speed;
+        level_text.text = pomon.level + " lv.";
         if (pomon.IsDude)
         {
             gender.sprite = dude;

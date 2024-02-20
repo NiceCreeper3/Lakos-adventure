@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class VisualMove : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class VisualMove : MonoBehaviour
 
     [SerializeField] private TMP_Text nametext;
     [SerializeField] private TMP_Text powertext;
+    [SerializeField] private TMP_Text disc;
+    [SerializeField] private Image typeIMG;
 
-    
+
+
     public void Visulize(BasikMoves newmove)
     {
         move = newmove;
@@ -20,5 +24,7 @@ public class VisualMove : MonoBehaviour
         {
             powertext.text = move.power.ToString();
         }
+        disc.text = move.MoveDiskrepseon;
+        typeIMG.color = move.MoveElement.ElementColor;
     }
 }

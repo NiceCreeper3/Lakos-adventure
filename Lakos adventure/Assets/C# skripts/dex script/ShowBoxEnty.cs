@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ShowBoxEnty : MonoBehaviour
 {
     [SerializeField] public DisplayCaughtPomon displayCaught;
-    [SerializeField] public Pomons pomon;
+    [SerializeField] private Pomons pomon;
     [SerializeField] private Image monportraitfront;
     [SerializeField] private TMP_Text name_text;
     [SerializeField] private showHealth health;

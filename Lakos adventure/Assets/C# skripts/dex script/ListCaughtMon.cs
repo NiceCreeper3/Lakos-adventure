@@ -12,11 +12,13 @@ public class ListCaughtMon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        displayCaught.loadmon(allpomon.team[0]);
         for (int i = 0; i < allpomon.team.Count; i++)
         {
             ShowBoxEnty dex = Instantiate(entry, transform).GetComponent<ShowBoxEnty>();
-            dex.pomon = allpomon.team[i];
+            dex.loadmon(allpomon.team[i]);
             dex.displayCaught = displayCaught;
+            
         }
     }
 
