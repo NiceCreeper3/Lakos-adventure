@@ -126,11 +126,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9126483671581630854}
         m_TargetAssemblyTypeName: ShowBoxEnty, Assembly-CSharp
-        m_MethodName: loadmon
-        m_Mode: 2
+        m_MethodName: pressed
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Pomons, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c097b47f2b63d3a4a8eb74c7919f39db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayCaught: {fileID: 0}
   pomon: {fileID: 0}
   monportraitfront: {fileID: 3215306807928027296}
   name_text: {fileID: 8385810401424822612}
