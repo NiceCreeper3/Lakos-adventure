@@ -17,7 +17,6 @@ public class BattelLingMons : MonoBehaviour
     [Header("Reference to aesthetic stuff")]
     [SerializeField] private GameObject PicPomonUI;
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
-    [SerializeField] private AudioAssets _audio;
 
     // represents the buffes to a state
     [HideInInspector] public int _attackBuff;
@@ -30,7 +29,6 @@ public class BattelLingMons : MonoBehaviour
 
     // evnets
     public event Action<int> OnHealhtChange;
-    public static string PreaviseScene;
 
     #endregion
 
@@ -58,24 +56,27 @@ public class BattelLingMons : MonoBehaviour
 
     public void PomonAttacks(int attackPicked, BattelLingMons attckTarget)
     {
+        // checkes if the Pomon is stil alive 
         if (_currentMon.CurrentHealt > 0)
         {
+            // makes a short refrens to the Move
+            BasikMoves move = _currentMon.PomonMoves[attackPicked];
             int rawDamage = 0;
 
-            if (_currentMon.PomonMoves[attackPicked].power != 0) // makes sure buff moves don,t end up doving damige
-                rawDamage = _currentMon.PomonMoves[attackPicked].power + _currentMon.Attack;
+            if (move.power != 0) // makes sure buff moves don,t end up doving damige
+                rawDamage = move.power + _currentMon.Attack;
              
-            int totalDamage = rawDamage * _attackBuff;
+            double totalDamage = rawDamage * move.MoveElement.ElementMultiplier(attckTarget._currentMon.Spesies) * _attackBuff;
 
             Debug.Log($"_______________{_currentMon.PomonName}_______________");
             Debug.Log(
-                $"raw damage is {rawDamage} geainde by {_currentMon.PomonMoves[attackPicked].power} + {_currentMon.Attack} \n" +
-                $"Total damage is {totalDamage} geainde by {rawDamage} * {_attackBuff}");
+                $"raw damage is {rawDamage} geainde by {move.power} + {_currentMon.Attack} \n" +
+                $"Total damage is {totalDamage} geainde by {rawDamage} *{move.MoveElement.ElementMultiplier(attckTarget._currentMon.Spesies)} * {_attackBuff}");
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
-            _currentMon.PomonMoves[attackPicked].Ability(this);
+            move.Ability(this);
 
-            attckTarget.TakesDamage(totalDamage);
+            attckTarget.TakesDamage((int)totalDamage);
         }
         else
         {

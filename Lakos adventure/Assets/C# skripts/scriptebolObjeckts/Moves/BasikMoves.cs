@@ -3,11 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Moves", menuName = "PomonMoves/No abilty")]
 public class BasikMoves : ScriptableObject
 {
-    [Header("Attack name")]
+    [Header("Flaver")]
     public string MoveName;
+    public string MoveDiskrepseon;
 
-    [Header("attack base damige")]
+    [Header("attack")]
     public int power;
+    public ElementObjecks MoveElement;
 
     // mite need to tage BattelLingMons
     public virtual void Ability(BattelLingMons interragsen) { }

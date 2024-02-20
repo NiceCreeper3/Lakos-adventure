@@ -3677,7 +3677,6 @@ MonoBehaviour:
   _isPlayerMon: 1
   PicPomonUI: {fileID: 2127291031}
   pomonImgeDissplay: {fileID: 345097783}
-  _audio: {fileID: 0}
   _attackBuff: 0
 --- !u!4 &854951184
 Transform:
@@ -3709,7 +3708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pomonTeam:
   - {fileID: 11400000, guid: dad5c77742f08f1438de9ecb02eafe1f, type: 2}
-  - {fileID: 11400000, guid: 87be023a8b35b15468f1b7b6e642786d, type: 2}
+  - {fileID: 11400000, guid: 68d91f1034d36ae44a5f11066eda8056, type: 2}
 --- !u!1 &873307199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,7 +4791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ba961fef9e89a6646aa1160900c86414, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7744,7 +7743,6 @@ MonoBehaviour:
   _isPlayerMon: 0
   PicPomonUI: {fileID: 2127291031}
   pomonImgeDissplay: {fileID: 1865353024}
-  _audio: {fileID: 0}
   _attackBuff: 0
 --- !u!114 &2083093381
 MonoBehaviour:
@@ -7760,7 +7758,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pomonTeam:
   - {fileID: 11400000, guid: f9542c0efe3055e45a5c72fda72bfebc, type: 2}
-  - {fileID: 11400000, guid: 68d91f1034d36ae44a5f11066eda8056, type: 2}
 --- !u!114 &2083093382
 MonoBehaviour:
   m_ObjectHideFlags: 0

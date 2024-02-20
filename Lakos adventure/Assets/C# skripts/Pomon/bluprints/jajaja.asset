@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Cream
   front: {fileID: 21300000, guid: 63b8a60870ce56a49b7897fa80c721e1, type: 3}
   back: {fileID: 21300000, guid: 6dbf24eea5453f84b92c5b710f1f1051, type: 3}
+  description: if you see Creams real body you will die a horroble death
+  genderratio: 12
   MinAttack: 0
   MaxAttack: 0
   MinHealt: 0
@@ -23,6 +25,8 @@ MonoBehaviour:
   MaxSpeed: 0
   MinDefense: 0
   MaxDefense: 0
-  description: if you see Creams real body you will die a horroble death
-  genderratio: 12
+  CaptureChanse: 0
+  PomonElemet:
+  - {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
+  - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern: []

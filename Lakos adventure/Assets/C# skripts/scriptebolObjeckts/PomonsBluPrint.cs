@@ -30,6 +30,8 @@ public class PomonsBluPrint : ScriptableObject
 
     public int CaptureChanse;
 
+    public ElementObjecks[] PomonElemet;
+
     [Header("On Level")]
     public List<BasikMoves> MovesCanLern = new List<BasikMoves>();
 

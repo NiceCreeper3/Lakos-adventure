@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CaptureWildPomon : MonoBehaviour
 {
-
-
     [SerializeField] private bool _trainerBattel = false;
 
     public static List<Pomons> PomonTeamList = new List<Pomons>();
@@ -38,11 +36,11 @@ public class CaptureWildPomon : MonoBehaviour
         {
             for (int i = 0; i <= chansesToCapture; i++)
             {
-                int Chapture = Random.Range(_currentCapture.Spesies.CaptureChanse, 100);
+                int Chapture = Random.Range(_currentCapture.Spesies.CaptureChanse, 101);
 
                 Debug.Log("player rolled " + Chapture + " On Chapture");
 
-                if (Chapture == 99)
+                if (Chapture == 100)
                 {
                     PomonCaptured();
                 }

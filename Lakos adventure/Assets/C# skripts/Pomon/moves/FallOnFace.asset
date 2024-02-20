@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: FallOnFace
   m_EditorClassIdentifier: 
   MoveName: Face plant
+  MoveDiskrepseon: 
   power: 0
+  MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   healPower: -20

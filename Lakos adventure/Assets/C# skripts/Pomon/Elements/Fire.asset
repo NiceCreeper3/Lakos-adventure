@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35225b45a1e0a10458ef27343aea8a5a, type: 3}
-  m_Name: Healing Leaf
+  m_Script: {fileID: 11500000, guid: 897e4be6abe2ef9408568371da22df7f, type: 3}
+  m_Name: Fire
   m_EditorClassIdentifier: 
-  MoveName: Healing Leaf
-  MoveDiskrepseon: 
-  power: 0
-  MoveElement: {fileID: 11400000, guid: 4930f80a56d820a47935db6c66786141, type: 2}
-  healPower: 40
+  Element: Fire
+  ElementColor: {r: 0, g: 0, b: 0, a: 0}
+  _strongAgenst: []
+  _weakAgenst: []

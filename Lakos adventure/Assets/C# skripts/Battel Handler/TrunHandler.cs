@@ -86,9 +86,10 @@ public class TrunHandler : MonoBehaviour
     /// makes the AI desice what attack to use
     /// </summary>
     /// <returns></returns>
-    private ushort AITurn()
+    private int AITurn()
     {
-        ushort whatAttackToPick = 0;
+        int whatAttackToPick = Random.Range(0, 5);
+        Debug.Log("ran" + whatAttackToPick);
 
         // is meant to sent with attack the Ai is goving four
         return whatAttackToPick;

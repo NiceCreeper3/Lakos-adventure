@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: FireBlast
   m_EditorClassIdentifier: 
   MoveName: FireBlast
+  MoveDiskrepseon: 
   power: 45
+  MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
