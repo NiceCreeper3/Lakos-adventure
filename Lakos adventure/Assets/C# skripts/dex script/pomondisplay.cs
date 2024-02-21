@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class pomondisplay : MonoBehaviour
 {
     [SerializeField] private PomonsBluPrint pomon;
+    [SerializeField] public int id;
     [SerializeField] private Image monportraitfront;
     [SerializeField] private Image monportraitback;
     [SerializeField] private TMP_Text nameandid;
@@ -27,6 +28,6 @@ public class pomondisplay : MonoBehaviour
         monportraitback.sprite = pomon.back;
         desc.text = pomon.description;
         genderRatio.ratio = pomon.genderratio;
-        nameandid.text = "0# " + pomon.name;
+        nameandid.text = id + "#" + pomon.name;
     }
 }

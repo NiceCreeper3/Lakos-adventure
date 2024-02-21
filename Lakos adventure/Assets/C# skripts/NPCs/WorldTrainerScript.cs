@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WorldTrainerScript : MonoBehaviour
 {
-    [SerializeField] bool issearching = true;
-    [SerializeField]Vector2 diretion;
-    [SerializeField] Pomons[] team;
+    [SerializeField] private trainer Trainer;
+    [SerializeField] private Transform player;
+    [SerializeField] private Vector2 diretion;
 
 
     void Update()
     {
-        if (issearching)
+        if (Trainer.Seaching)
         {
             RaycastHit2D[] coll = new RaycastHit2D[1];
             GetComponent<Collider2D>().Raycast(diretion, coll);
@@ -29,7 +29,12 @@ public class WorldTrainerScript : MonoBehaviour
     }
     public void triggeractive()
     {
-        issearching = false;
-        Debug.Log("trainer active");
+
+        Trainer.Seaching = false;
+        if (!Trainer.defeated)
+        {
+            Debug.Log("trainer active");
+        }
+        
     }
 }

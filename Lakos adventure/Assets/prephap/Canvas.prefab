@@ -92,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.5
+  m_fontSize: 40.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.5
+  m_fontSize: 40.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -302,10 +302,10 @@ RectTransform:
   - {fileID: 7761965807938314849}
   m_Father: {fileID: 2680900382062064014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 214.63528, y: -153.22809}
+  m_SizeDelta: {x: 429.27057, y: 45.291237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1616469869830402873
 CanvasRenderer:
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.5
+  m_fontSize: 40.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -557,10 +557,10 @@ RectTransform:
   - {fileID: 1926965998058638908}
   m_Father: {fileID: 2680900382062064014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 214.63528, y: -218.51933}
+  m_SizeDelta: {x: 429.27057, y: 45.291237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3411746992557531346
 CanvasRenderer:
@@ -662,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3304737697675159848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -734,7 +734,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2596971886316377996}
-  dex: {fileID: 3780640266717666492, guid: 6ceedc4f9a469954ca10472681147ab4, type: 3}
 --- !u!1 &4626717874453584244
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,10 +768,10 @@ RectTransform:
   - {fileID: 801679862212211449}
   m_Father: {fileID: 2680900382062064014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 214.63528, y: -22.645618}
+  m_SizeDelta: {x: 429.27057, y: 45.291237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3755729344017674814
 CanvasRenderer:
@@ -890,10 +889,10 @@ RectTransform:
   - {fileID: 7004502257719562311}
   m_Father: {fileID: 2680900382062064014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 214.63528, y: -283.81058}
+  m_SizeDelta: {x: 429.27057, y: 45.291237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6550445705849242105
 CanvasRenderer:
@@ -976,7 +975,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2048627391118950349}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7751654478348436877}
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
+        m_MethodName: Dexopen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8855795017530962524, guid: 8ff9fd8e20d76e54ab0db24420a04c76, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5235509665073985104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1182,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.5
+  m_fontSize: 40.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1247,10 +1258,10 @@ RectTransform:
   - {fileID: 1050065713636796603}
   m_Father: {fileID: 2680900382062064014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 214.63528, y: -87.93686}
+  m_SizeDelta: {x: 429.27057, y: 45.291237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7789726151213622762
 CanvasRenderer:
@@ -1337,10 +1348,10 @@ MonoBehaviour:
       - m_Target: {fileID: 7751654478348436877}
         m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
         m_MethodName: Dexopen
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 3780640266717666492, guid: 6ceedc4f9a469954ca10472681147ab4, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1438,7 +1449,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.5
+  m_fontSize: 40.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1520,8 +1531,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -271.99997}
-  m_SizeDelta: {x: -951.5151, y: -601.0373}
+  m_AnchoredPosition: {x: -0.00012207031, y: -244.05086}
+  m_SizeDelta: {x: -951.5151, y: -656.9355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8468267146204792334
 CanvasRenderer:

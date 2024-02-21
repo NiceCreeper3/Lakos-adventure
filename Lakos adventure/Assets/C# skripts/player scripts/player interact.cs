@@ -7,6 +7,7 @@ public class playerinteract : MonoBehaviour
     public Vector2 direction;
     [SerializeField] private CircleCollider2D col;
 
+
     // Update is called once per frame
     void Update()
     {

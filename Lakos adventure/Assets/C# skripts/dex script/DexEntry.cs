@@ -26,6 +26,7 @@ public class DexEntry : MonoBehaviour
     // Update is called once per frame
     public void pressed()
     {
+        Pomondisplay.id = id;
         Pomondisplay.loadmon(bluPrint);
     }
 }

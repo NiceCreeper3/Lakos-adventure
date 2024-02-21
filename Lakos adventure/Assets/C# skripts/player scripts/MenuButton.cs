@@ -5,9 +5,8 @@ using UnityEngine;
 public class MenuButton : MonoBehaviour
 {
     [SerializeField] private Canvas canvas;
-    [SerializeField] private GameObject dex;
-    public void Dexopen()
+    public void Dexopen(GameObject thisdex)
     {
-        Instantiate(dex, canvas.transform);
+        Instantiate(thisdex, canvas.transform);
     }
 }
