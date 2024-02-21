@@ -4,5 +4,5 @@ public static class MapToBattel
 {
     // is info to be sent from map to battle
     public static pomonteam enemyPomons;
-    public static Sprite IsTranerBattle;
+    public static trainer IsTranerBattle;
 }

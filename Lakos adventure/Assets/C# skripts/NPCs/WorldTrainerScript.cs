@@ -33,7 +33,9 @@ public class WorldTrainerScript : MonoBehaviour
         Trainer.Seaching = false;
         if (!Trainer.defeated)
         {
-            Debug.Log("trainer active");
+            MapToBattel.IsTranerBattle = Trainer;
+            MapToBattel.enemyPomons = Trainer.trainerTeam;
+            SceneManger.ChageScene("Battle_Scene");
         }
         
     }
