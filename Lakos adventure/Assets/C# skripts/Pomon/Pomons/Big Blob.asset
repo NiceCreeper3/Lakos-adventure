@@ -18,7 +18,7 @@ MonoBehaviour:
   level: 10
   Attack: 15
   MaxHealt: 90
-  CurrentHealt: 49
+  CurrentHealt: 90
   Speed: 16
   Defense: 20
   PomonMoves:

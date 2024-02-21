@@ -13,16 +13,9 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   Element: Water
-<<<<<<< Updated upstream
-  ElementColor: {r: 0.2978373, g: 0.86010265, b: 0.9150943, a: 1}
-  _strongAgenst: []
-  _weakAgenst: []
-=======
-  ElementColor: {r: 0.2978373, g: 0.86010265, b: 0.9150943, a: 0}
+  ElementColor: {r: 0.28346387, g: 0.7899416, b: 0.9245283, a: 0}
   _effetive:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
-  - {fileID: 11400000, guid: 3688267fcdb4ff84c9e8f7d1883ff4f7, type: 2}
   _resestes:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
-  - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
->>>>>>> Stashed changes
+  - {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}

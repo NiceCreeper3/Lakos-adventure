@@ -13,19 +13,8 @@ MonoBehaviour:
   m_Name: Void
   m_EditorClassIdentifier: 
   Element: Void
-<<<<<<< Updated upstream
-  ElementColor: {r: 0.0513973, g: 0.12211518, b: 0.3301887, a: 1}
-  _strongAgenst:
-  - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
-  - {fileID: 11400000, guid: 8dff9aef3988abb4d8a4340390acd6c1, type: 2}
-  - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
-  - {fileID: 11400000, guid: 8dff9aef3988abb4d8a4340390acd6c1, type: 2}
-=======
-  ElementColor: {r: 0.07876469, g: 0.13054746, b: 0.2830189, a: 0}
+  ElementColor: {r: 0.109336056, g: 0.17484963, b: 0.3679245, a: 0}
   _effetive:
   - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
->>>>>>> Stashed changes
-  - {fileID: 11400000, guid: 3688267fcdb4ff84c9e8f7d1883ff4f7, type: 2}
-  - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
-  _resestes: []
+  _resestes:
+  - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

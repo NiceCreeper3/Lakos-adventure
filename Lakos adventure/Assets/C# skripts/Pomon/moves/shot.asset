@@ -15,4 +15,4 @@ MonoBehaviour:
   MoveName: 
   MoveDiskrepseon: 
   power: 0
-  MoveElement: {fileID: 0}
+  MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

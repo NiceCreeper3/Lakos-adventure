@@ -27,6 +27,6 @@ MonoBehaviour:
   MaxDefense: 0
   CaptureChanse: 0
   PomonElemet:
-  - {fileID: 11400000, guid: 4930f80a56d820a47935db6c66786141, type: 2}
-  - {fileID: 11400000, guid: 3688267fcdb4ff84c9e8f7d1883ff4f7, type: 2}
+  - {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
+  - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
   MovesCanLern: []
