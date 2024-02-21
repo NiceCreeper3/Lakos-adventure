@@ -1,6 +1,6 @@
 using UnityEngine.SceneManagement;
 
-public static class SceneManger
+public static class SceneLoader
 {
     private static string PreviesScene;
 
@@ -13,16 +13,13 @@ public static class SceneManger
     }
 
     // returns you to what the prives scene was 
-    public static void ReturnToPreiesScene()
+    public static void ChageScene()
     {
         if (PreviesScene != null)
         {
             Scene currentScene = SceneManager.GetActiveScene();
             PreviesScene = currentScene.name;
-            SceneManager.LoadScene(PreviesScene);
-            
+            SceneManager.LoadScene(PreviesScene);          
         }
     }
-
-
 }

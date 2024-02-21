@@ -5,29 +5,33 @@ public class CaptureWildPomon : MonoBehaviour
 {
     public static List<Pomons> PomonTeamList = new List<Pomons>();
 
-    private Pomons _currentCapture;
+    private static Pomons _currentCapture;
 
     private SwichePomon OnPomonSwich;
 
     private void Awake()
     {
+        // subscribs to the event
         OnPomonSwich = GetComponent<SwichePomon>();
 
         OnPomonSwich.OnPomonSwiching += OnPomonSwich_OnPomonSwiching;
     }
 
-    private void OnPomonSwich_OnPomonSwiching(Pomons arg1, bool arg2)
+    // updates what pomon we are etmting to capture
+    private void OnPomonSwich_OnPomonSwiching(Pomons pomonToChapture, bool arg2)
     {
-        _currentCapture = arg1;
+        _currentCapture = pomonToChapture;
     }
 
-    // maby Move this to its oven script
-    public void CapturePomon()
+    // is called when player clikes on the capture button
+    public static void CapturePomon()
     {
         int chansesToCapture = 3;
 
+        // attempts to chapture. as long as this is not a trainer battle indekated by where or not there is a trainer sprite
         if (MapToBattel.IsTranerBattle != null)
         {
+            // rolles 3 times randomly to see if pomon got chapured
             for (int i = 0; i <= chansesToCapture; i++)
             {
                 int Chapture = Random.Range(_currentCapture.Spesies.CaptureChanse, 101);
@@ -42,12 +46,12 @@ public class CaptureWildPomon : MonoBehaviour
         }
     }
 
-    private void PomonCaptured()
+    private static void PomonCaptured()
     {
         PomonTeamList.Add(_currentCapture);
         Debug.Log(PomonTeamList);
 
 
-        SceneManger.ChageScene("outdoors"); // __________________________[Reaplase with the return to previes]_______________________________________
+        SceneLoader.ChageScene("outdoors"); // __________________________[Reaplase with the return to previes]_______________________________________
     }
 }

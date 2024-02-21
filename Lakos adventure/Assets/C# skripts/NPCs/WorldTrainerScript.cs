@@ -35,7 +35,7 @@ public class WorldTrainerScript : MonoBehaviour
         {
             MapToBattel.IsTranerBattle = Trainer;
             MapToBattel.enemyPomons = Trainer.trainerTeam;
-            SceneManger.ChageScene("Battle_Scene");
+            SceneLoader.ChageScene("Battle_Scene");
         }
         
     }

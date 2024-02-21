@@ -8,6 +8,6 @@ public class Run : MonoBehaviour
     {
         // maby indklude a chanse or mini game
 
-        SceneManger.ReturnToPreiesScene();
+        SceneLoader.ChageScene();
     }
 }
