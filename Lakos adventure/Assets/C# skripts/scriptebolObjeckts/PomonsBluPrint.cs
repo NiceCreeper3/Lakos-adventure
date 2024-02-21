@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 
 /// <summary>
 /// this works as the tamplate to a pomon. keyword is that this is not a pomon. but merly the bluprints to create one

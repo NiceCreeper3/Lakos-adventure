@@ -4,7 +4,11 @@ public class EnemySwiching : SwichePomon
 {
     protected override void Awake()
     {
+        _isPlayer = false;
+
+        //____________________________________________________________________________________[Add this after Teasting]____________________________________________
         //_pomonTeam = MapToBattel.enemyPomons;
+
         base.Awake();
     }
 
@@ -16,7 +20,7 @@ public class EnemySwiching : SwichePomon
             if (_pomonTeam.team[i].CurrentHealt > 0)
             {
                 _seletedPomon = i;
-                //SwitchPomonConfurmt();
+                SwitchPomonConfurmt();
                 break;
             }
         }

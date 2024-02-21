@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5102f1f28945aa249a733b202ed4946c, type: 3}
-  m_Name: Bob the drunke
+  m_Script: {fileID: 11500000, guid: 5bc387cdafd19de4c9e50b65af84e974, type: 3}
+  m_Name: shot
   m_EditorClassIdentifier: 
-  team:
-  - {fileID: 11400000, guid: a4d9713d2e8300c4ba1a2e990533e0df, type: 2}
-  - {fileID: 11400000, guid: b779e3581bc468048a5ea9c8f7b5e20d, type: 2}
+  MoveName: 
+  MoveDiskrepseon: 
+  power: 0
+  MoveElement: {fileID: 0}

@@ -5,7 +5,7 @@ public class Healing : BasikMoves
 {
     public int healPower;
 
-    public override void Ability(BattelLingMons interragsen)
+    public override void AbilityBefore(BattelLingMons interragsen)
     {
         
     }

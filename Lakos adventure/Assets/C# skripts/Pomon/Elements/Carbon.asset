@@ -13,6 +13,18 @@ MonoBehaviour:
   m_Name: Carbon
   m_EditorClassIdentifier: 
   Element: Carbon
+<<<<<<< Updated upstream
   ElementColor: {r: 0.20452328, g: 0.18525274, b: 0.21698111, a: 1}
   _strongAgenst: []
   _weakAgenst: []
+=======
+  ElementColor: {r: 0.20452328, g: 0.18525274, b: 0.21698111, a: 0}
+  _effetive:
+  - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
+  - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
+  _resestes:
+  - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
+  - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
+  - {fileID: 11400000, guid: 8dff9aef3988abb4d8a4340390acd6c1, type: 2}
+  - {fileID: 11400000, guid: 4930f80a56d820a47935db6c66786141, type: 2}
+>>>>>>> Stashed changes

@@ -1,15 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CaptureWildPomon : MonoBehaviour
 {
-    [SerializeField] private bool _trainerBattel = false;
-
     public static List<Pomons> PomonTeamList = new List<Pomons>();
 
     private Pomons _currentCapture;
-
 
     private SwichePomon OnPomonSwich;
 
@@ -25,14 +21,12 @@ public class CaptureWildPomon : MonoBehaviour
         _currentCapture = arg1;
     }
 
-
-
     // maby Move this to its oven script
     public void CapturePomon()
     {
         int chansesToCapture = 3;
 
-        if (!_trainerBattel)
+        if (MapToBattel.IsTranerBattle != null)
         {
             for (int i = 0; i <= chansesToCapture; i++)
             {

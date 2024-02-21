@@ -13,6 +13,17 @@ MonoBehaviour:
   m_Name: Plant
   m_EditorClassIdentifier: 
   Element: Plant
+<<<<<<< Updated upstream
   ElementColor: {r: 0.6531249, g: 0.8207547, b: 0.36779103, a: 1}
   _strongAgenst: []
   _weakAgenst: []
+=======
+  ElementColor: {r: 0.6531249, g: 0.8207547, b: 0.36779103, a: 0}
+  _effetive:
+  - {fileID: 11400000, guid: 4930f80a56d820a47935db6c66786141, type: 2}
+  - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
+  - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
+  _resestes:
+  - {fileID: 11400000, guid: 4930f80a56d820a47935db6c66786141, type: 2}
+  - {fileID: 11400000, guid: 3688267fcdb4ff84c9e8f7d1883ff4f7, type: 2}
+>>>>>>> Stashed changes

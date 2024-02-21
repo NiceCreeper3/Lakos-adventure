@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Healing Leaf
   m_EditorClassIdentifier: 
   MoveName: Healing Leaf
-  MoveDiskrepseon: 
+  MoveDiskrepseon: Chanelling the Pomons inder rots. /and also haveing free healt
+    care/ the pomon heals 40Hp
   power: 0
-  MoveElement: {fileID: 11400000, guid: 4930f80a56d820a47935db6c66786141, type: 2}
+  MoveElement: {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   healPower: 40

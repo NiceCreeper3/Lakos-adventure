@@ -3706,7 +3706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pomonTeam: {fileID: 11400000, guid: 3ba0a4240fa0a1f4285a90ad61a4dc6a, type: 2}
-  PicPomonUI: {fileID: 0}
+  PicPomonUI: {fileID: 2127291031}
 --- !u!1 &873307199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5456,7 +5456,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 2127291031}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -5539,7 +5539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 854951183}
   _enemy: {fileID: 2083093380}
-  OnEnemySwiche: {fileID: 0}
+  OnEnemySwiche: {fileID: 2083093383}
 --- !u!4 &1325205492
 Transform:
   m_ObjectHideFlags: 0
@@ -7754,7 +7754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0360ccefb6412454ab1bd76c4e1b7024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trainerBattel: 0
 --- !u!114 &2083093383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8145,9 +8144,7 @@ MonoBehaviour:
   - {fileID: 609200665}
   - {fileID: 17070426}
   - {fileID: 914931530}
-  Teast:
-  - {fileID: 11400000, guid: dad5c77742f08f1438de9ecb02eafe1f, type: 2}
-  - {fileID: 11400000, guid: a4d9713d2e8300c4ba1a2e990533e0df, type: 2}
+  _playerPomonTeam: {fileID: 11400000, guid: 3ba0a4240fa0a1f4285a90ad61a4dc6a, type: 2}
 --- !u!114 &2127291034
 MonoBehaviour:
   m_ObjectHideFlags: 0

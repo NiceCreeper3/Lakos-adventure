@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Cardmordium
   front: {fileID: 21300000, guid: 63b8a60870ce56a49b7897fa80c721e1, type: 3}
   back: {fileID: 21300000, guid: 4617dec0f46d6b54cbbd79748d6add06, type: 3}
+  description: 
+  genderratio: 0
   MinAttack: 0
   MaxAttack: 0
   MinHealt: 0
@@ -23,6 +25,7 @@ MonoBehaviour:
   MaxSpeed: 0
   MinDefense: 0
   MaxDefense: 0
-  description: 
-  genderratio: 0
+  CaptureChanse: 0
+  PomonElemet:
+  - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   MovesCanLern: []

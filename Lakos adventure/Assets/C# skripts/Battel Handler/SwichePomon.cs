@@ -8,6 +8,7 @@ public class SwichePomon : MonoBehaviour
     [SerializeField] private GameObject PicPomonUI;
 
     protected int _seletedPomon;
+    protected bool _isPlayer = true;
 
     public event Action<Pomons> OnPomonSelket;
     public event Action<Pomons, bool> OnPomonSwiching;
@@ -26,7 +27,7 @@ public class SwichePomon : MonoBehaviour
         FullHealTeam();
 
         _seletedPomon = 0; // seltes one that does not have Zero HP
-        SwitchPomonConfurmt(true);
+        SwitchPomonConfurmt();
     }
     private void OnNeededSwiche_OnPomonSwicheNeeded()
     {
@@ -50,9 +51,9 @@ public class SwichePomon : MonoBehaviour
     }
 
     // is goving to handel swithing ind a new pokemon
-    public void SwitchPomonConfurmt(bool isPlayer)
+    public void SwitchPomonConfurmt()
     {
-        OnPomonSwiching?.Invoke(_pomonTeam.team[_seletedPomon], isPlayer);
+        OnPomonSwiching?.Invoke(_pomonTeam.team[_seletedPomon], _isPlayer);
     }
 
 

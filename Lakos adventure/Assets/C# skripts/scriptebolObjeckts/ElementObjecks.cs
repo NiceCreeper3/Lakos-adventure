@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Elemets", menuName = "Type/Elemets")]
@@ -8,10 +6,13 @@ public class ElementObjecks : ScriptableObject
     public string Element;
     public Color ElementColor;
 
-    private double buff = 0.5;
+    [Header("does 0.5 extra damge")]
+    [SerializeField] private ElementObjecks[] _effetive;
 
-    [SerializeField] private ElementObjecks[] _strongAgenst;
-    [SerializeField] private ElementObjecks[] _weakAgenst;
+    [Header("Resistes 0.5 damage")]
+    [SerializeField] private ElementObjecks[] _resestes;
+
+    private double buff = 0.5;
 
     public double ElementMultiplier(PomonsBluPrint defenderElemts)
     {
@@ -21,18 +22,19 @@ public class ElementObjecks : ScriptableObject
         // if eny are ind _strongAgenst then it adds to moddefiher and does the oppsind if ind _weakAgenst
         foreach (ElementObjecks elemt in defenderElemts.PomonElemet)
         {
-            // runs frug all of the elemts its it srong agenst. if eny defending elemts mathe with one ind _strongAgenst. then it adds to moddefiher
-            foreach (ElementObjecks strong in _strongAgenst)
-                if (elemt == strong)
+            // runs fruge all the elemt this Element is strong agenst. and if then it adds bounes damige
+            foreach (ElementObjecks attack in _effetive)
+                if (elemt == attack)
                     moddefiher += buff;
 
-            foreach (ElementObjecks defend in _weakAgenst)
-                if (elemt == defend)
+            // runs fruge defenderes elemetal resistenses. and checks if this elemt is ind there resistenses
+            foreach (ElementObjecks resists in elemt._resestes)
+                if (resists == this)
                     moddefiher -= buff;
         }
 
 
-
+        // returns the moddefiher
         return moddefiher;
     }
 

@@ -9,7 +9,7 @@ public class SwichingMonsUI : MonoBehaviour
     [SerializeField] private SwichePomon swichePomon;
     [SerializeField] private TMP_Text[] _pomonNameText;
 
-    [SerializeField] private Pomons[] Teast; // ________________________________[remove or change after teast]______________________________
+    [SerializeField] private pomonteam _playerPomonTeam; // ________________________________[remove or change after teast]______________________________
     private Transform[] _pomonNameButton;
     
 
@@ -56,14 +56,13 @@ public class SwichingMonsUI : MonoBehaviour
         {
             try
             {
-                _pomonNameText[i].text = Teast[i].PomonName;
+                _pomonNameText[i].text = _playerPomonTeam.team[i].PomonName;
             }
             catch
             {
                 _pomonNameText[i].text = "";
             }
         }
-
     }
 
     private void ShowPomonInfo()

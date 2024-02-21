@@ -12,7 +12,9 @@ public class BasikMoves : ScriptableObject
     public ElementObjecks MoveElement;
 
     // mite need to tage BattelLingMons
-    public virtual void Ability(BattelLingMons interragsen) { }
+    public virtual void AbilityBefore(BattelLingMons interragsen) { }
+
+    public virtual void AbilityAfter(BattelLingMons interragsen) { }
 
     /// is goving to contain type and abilety if we have time
 }

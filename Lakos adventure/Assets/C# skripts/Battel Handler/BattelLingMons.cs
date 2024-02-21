@@ -75,7 +75,7 @@ public class BattelLingMons : MonoBehaviour
                 $"Total damage is {totalDamage} geainde by {rawDamage} *{move.MoveElement.ElementMultiplier(attckTarget._currentMon.Spesies)} * {_attackBuff}");
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
-            move.Ability(this);
+            move.AbilityBefore(this);
 
             attckTarget.TakesDamage((int)totalDamage);
         }
@@ -99,7 +99,7 @@ public class BattelLingMons : MonoBehaviour
             $"{_currentMon.PomonName} \n" +
             $"damge defended is {totaldamage} given by {_defenseBuff} - {damage}");
 
-        // ind case Defense is higer then damage and then wood result ind the healing
+        // ind case Defense is higer then damage and then wood result ind healing
         if (totaldamage < 0)
             totaldamage = 0;
 
@@ -107,7 +107,7 @@ public class BattelLingMons : MonoBehaviour
         ChangeHealt(-totaldamage);
     }
 
-    //make changes ind the helt of the pomon. this can be healing of damage
+    //make changes ind the helt of the pomon. this can be healing or damage
     public void ChangeHealt(int howToChange)
     {
         _currentMon.CurrentHealt += howToChange;
@@ -117,17 +117,17 @@ public class BattelLingMons : MonoBehaviour
         if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
             _currentMon.CurrentHealt = _currentMon.MaxHealt;
 
-        // makes sure we don,t hit negetive nummberes of health
-        if (_currentMon.CurrentHealt < 0)
-            _currentMon.CurrentHealt = 0;
-
         Debug.Log($"{_currentMon.PomonName} has had its health changed by {howToChange} and is now at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
 
         OnHealhtChange?.Invoke(howToChange);
 
 
+        // makes sure we don,t hit negetive nummberes of health
         if (_currentMon.CurrentHealt <= 0)
+        {
+            _currentMon.CurrentHealt = 0;
             OnPomonSwicheNeeded?.Invoke();
+        }
     }
     #endregion
 
