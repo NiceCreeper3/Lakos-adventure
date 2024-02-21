@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Tilemaps;
 
 public class EnterArea : MonoBehaviour
 {
@@ -11,6 +9,6 @@ public class EnterArea : MonoBehaviour
     public void Enter(string warparea)
     {
         InfoSaved.playerlocation = grid.WorldToCell(player.position);
-        SceneManager.LoadScene(warparea);
+        SceneLoader.ChageScene(warparea);
     }
 }

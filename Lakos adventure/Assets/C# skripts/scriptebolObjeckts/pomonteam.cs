@@ -7,4 +7,5 @@ using UnityEngine;
 public class pomonteam : ScriptableObject
 {
     public List<Pomons> team;
+
 }
