@@ -8,6 +8,8 @@ public class Wildgrass : MonoBehaviour
     [SerializeField] private UnityEvent ontrigger;
     [SerializeField] private Collider2D player;
     [SerializeField] int propability;
+    [SerializeField] public int minlevel, maxlevel;
+    [SerializeField] public pomonlist posiblemons;
 
 
 

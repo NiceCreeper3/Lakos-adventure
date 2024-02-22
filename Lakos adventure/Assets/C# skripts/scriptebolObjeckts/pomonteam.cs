@@ -8,4 +8,11 @@ public class pomonteam : ScriptableObject
 {
     public List<Pomons> team;
 
+    public pomonteam(Pomons[] pomons)
+    {
+        foreach(Pomons pomon in pomons)
+        {
+            team.Add(pomon);
+        }
+    }
 }

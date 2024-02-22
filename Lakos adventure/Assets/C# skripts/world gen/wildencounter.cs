@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class wildencounter : MonoBehaviour
 {
-    public void enterencouter(pomonlist pomons)
+
+    public void enterencouter(Wildgrass grass)
     {
-        PomonsBluPrint bluPrint = pomons.bluPrint[Random.Range(0,pomons.bluPrint.Length)];
-        MapToBattel.IsTranerBattle = null;
-        MapToBattel.enemyPomons = new pomonteam();
-        SceneLoader.ChageScene("Battle_Scene");
+        PomonsBluPrint[] bluPrints = grass.posiblemons.bluPrint;
+        PomonsBluPrint bluPrint = bluPrints[Random.Range(0,bluPrints.Length)];
+        Pomons[] enemyPomons = new Pomons[]{ bluPrint.generateMon(Random.Range(grass.minlevel,grass.maxlevel+1)) } ;
+        SceneLoader.Battle(enemyPomons);
     }
 }

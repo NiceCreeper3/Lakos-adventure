@@ -22,4 +22,18 @@ public static class SceneLoader
             SceneManager.LoadScene(PreviesScene);          
         }
     }
+
+    public static void Battle(Pomons[] pomons)
+    {
+        MapToBattel.IsTranerBattle = null;
+        MapToBattel.enemyPomons = new pomonteam(pomons);
+        ChageScene("Battle_Scene");
+    }
+
+    public static void Battle(trainer Trainer)
+    {
+        MapToBattel.IsTranerBattle = Trainer;
+        MapToBattel.enemyPomons = Trainer.trainerTeam;
+        ChageScene("Battle_Scene");
+    }
 }

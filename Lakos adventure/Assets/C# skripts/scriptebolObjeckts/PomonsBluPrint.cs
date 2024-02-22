@@ -18,13 +18,13 @@ public class PomonsBluPrint : ScriptableObject
     public int genderratio;
 
     [Header("Genral states")]
-    public int MinAttack, MaxAttack;
+    public int MinAttack, MaxAttack, attackgrow;
 
-    public int MinHealt, MaxHealt;
+    public int MinHealt, MaxHealt, healthgrow;
 
-    public int MinSpeed, MaxSpeed;
+    public int MinSpeed, MaxSpeed, speedgrow;
 
-    public int MinDefense, MaxDefense;
+    public int MinDefense, MaxDefense, Defensegrow;
 
     public int CaptureChanse;
 
@@ -33,10 +33,10 @@ public class PomonsBluPrint : ScriptableObject
     [Header("On Level")]
     public List<BasikMoves> MovesCanLern = new List<BasikMoves>();
 
-    public Pomons generateMon()
+    public Pomons generateMon(int level)
     {
-        Pomons mon = new Pomons();
-        mon.Spesies = this;
+        Pomons mon = new Pomons(this);
+
         return mon;
     }
 
