@@ -92,26 +92,6 @@ public class TrunHandler : MonoBehaviour
         _enemy.PomonAttacks(_AiAttack, _player);
     }
 
-    private IEnumerator TurnOrder(BattelLingMons firstTurn, BattelLingMons lastTrun)
-    {
-
-        yield return new WaitForSecondsRealtime(1);
-        
-
-        // insert battel is over 
-        while (true)
-        {
-            
-
-            //if ()
-
-            //yield return new WaitUntil();
-        }
-
-        //yield return new WaitUntil
-        yield return new WaitForSecondsRealtime(5);
-    }
-
     /// <summary>
     /// makes the AI desice what attack to use
     /// </summary>
