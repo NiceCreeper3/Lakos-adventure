@@ -6,15 +6,19 @@ public class WorldTrainerScript : MonoBehaviour
 {
     [SerializeField] private trainer Trainer;
     [SerializeField] private Transform player;
-    [SerializeField] private Vector2 diretion;
+    private Actorscript actorscript;
 
 
+    private void Start()
+    {
+        actorscript.actor = Trainer;
+    }
     void Update()
     {
         if (Trainer.Seaching)
         {
             RaycastHit2D[] coll = new RaycastHit2D[1];
-            GetComponent<Collider2D>().Raycast(diretion, coll);
+            GetComponent<Collider2D>().Raycast(actorscript.diretion, coll);
             foreach (RaycastHit2D col in coll)
             {
                 if (col.collider.tag == "Player")
@@ -30,13 +34,7 @@ public class WorldTrainerScript : MonoBehaviour
     public void triggeractive()
     {
 
-        Trainer.Seaching = false;
-        if (!Trainer.defeated)
-        {
-            MapToBattel.IsTranerBattle = Trainer;
-            MapToBattel.enemyPomons = Trainer.trainerTeam;
-            SceneLoader.ChageScene("Battle_Scene");
-        }
+        
         
     }
 }

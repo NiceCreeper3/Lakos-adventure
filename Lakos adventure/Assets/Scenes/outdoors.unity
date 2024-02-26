@@ -6689,6 +6689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277674334}
   - component: {fileID: 1277674333}
+  - component: {fileID: 1277674335}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -6726,6 +6727,27 @@ Transform:
   - {fileID: 1460601049}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1277674335
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277674332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1460601048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6975,11 +6997,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6153628437896410851, guid: 288a68b4b84742c48a2d0b4947c0346e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.75
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 6153628437896410851, guid: 288a68b4b84742c48a2d0b4947c0346e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.72
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 6153628437896410851, guid: 288a68b4b84742c48a2d0b4947c0346e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7091,6 +7113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trainer
       objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3835068500105258429}
     - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: Trainer
       value: 
@@ -7381,7 +7407,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 176195889992924619, guid: 3542a358f3ede7d4685299eb1445496a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3542a358f3ede7d4685299eb1445496a, type: 3}

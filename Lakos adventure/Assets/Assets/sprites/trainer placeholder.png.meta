@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trainer placeholder_0
+      name: back
       rect:
         serializedVersion: 2
         x: 0
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trainer placeholder_1
+      name: foward
       rect:
         serializedVersion: 2
         x: 352
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trainer placeholder_2
+      name: left
       rect:
         serializedVersion: 2
         x: 0
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trainer placeholder_3
+      name: right
       rect:
         serializedVersion: 2
         x: 352
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      trainer placeholder_0: 859353918
-      trainer placeholder_1: -626840361
-      trainer placeholder_2: -712862093
-      trainer placeholder_3: 1424064128
+      back: 859353918
+      foward: -626840361
+      left: -712862093
+      right: 1424064128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

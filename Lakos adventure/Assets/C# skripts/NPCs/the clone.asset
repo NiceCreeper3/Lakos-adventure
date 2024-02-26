@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3850a751faf0ba4baf31918090612d4, type: 3}
   m_Name: the clone
   m_EditorClassIdentifier: 
+  Name: 
+  sprites: []
+  body: {fileID: 0}
   battlesprite: {fileID: 21300000, guid: 784aa7fc24b85f647918d7e5f5134c9f, type: 3}
-  sprite: {fileID: 2800000, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
   Seaching: 1
   defeated: 0
   trainerTeam: {fileID: 0}
