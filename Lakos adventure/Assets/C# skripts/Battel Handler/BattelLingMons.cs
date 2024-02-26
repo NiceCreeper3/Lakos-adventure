@@ -55,6 +55,13 @@ public class BattelLingMons : MonoBehaviour
         return _currentMon.Speed * _speedBuff;
     }
 
+    // triggeres chosen attacks BeforeAblity
+    public void BeforeBattle(int attackPicked)
+    {
+        _currentMon.PomonMoves[attackPicked].AbilityBefore(this);
+    }
+
+    // calkulates damige and and  sends it to the (attckTarget)
     public void PomonAttacks(int attackPicked, BattelLingMons attckTarget)
     {
         // checkes if the Pomon is stil alive 
@@ -75,7 +82,7 @@ public class BattelLingMons : MonoBehaviour
                 $"Total damage is {totalDamage} geainde by {rawDamage} *{move.MoveElement.ElementMultiplier(attckTarget._currentMon.Spesies)} * {_attackBuff}");
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
-            move.AbilityBefore(this);
+            move.AbilityAfter(this);
 
             attckTarget.TakesDamage((int)totalDamage);
         }
@@ -121,8 +128,8 @@ public class BattelLingMons : MonoBehaviour
 
         OnHealhtChange?.Invoke(howToChange);
 
-
-        // makes sure we don,t hit negetive nummberes of health
+        // checks if the pomon has negetive healt. if so then its considered dead.
+        // and its hp is put to 0 as it is nicer to look at
         if (_currentMon.CurrentHealt <= 0)
         {
             _currentMon.CurrentHealt = 0;

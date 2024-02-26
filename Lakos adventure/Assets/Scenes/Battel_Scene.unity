@@ -660,6 +660,7 @@ GameObject:
   - component: {fileID: 170597477}
   - component: {fileID: 170597476}
   - component: {fileID: 170597475}
+  - component: {fileID: 170597478}
   m_Layer: 5
   m_Name: Move0.bth
   m_TagString: Untagged
@@ -731,10 +732,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1325205491}
-        m_TargetAssemblyTypeName: TrunHandler, Assembly-CSharp
-        m_MethodName: PlayerAttack
-        m_Mode: 3
+      - m_Target: {fileID: 170597478}
+        m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
+        m_MethodName: CustumActionButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -781,6 +782,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170597473}
   m_CullTransparentMesh: 1
+--- !u!114 &170597478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170597473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dd4ba7bd4151444a154353d8fd552e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnHandler2: {fileID: 1325205493}
+  _buttonAction: 0
+  _buttonNummber: 0
 --- !u!1001 &176031037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -850,6 +866,7 @@ GameObject:
   - component: {fileID: 188330608}
   - component: {fileID: 188330607}
   - component: {fileID: 188330606}
+  - component: {fileID: 188330609}
   m_Layer: 5
   m_Name: Move3.bth
   m_TagString: Untagged
@@ -921,10 +938,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1325205491}
-        m_TargetAssemblyTypeName: TrunHandler, Assembly-CSharp
-        m_MethodName: PlayerAttack
-        m_Mode: 3
+      - m_Target: {fileID: 1058054448}
+        m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
+        m_MethodName: CustumActionButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -971,6 +988,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188330604}
   m_CullTransparentMesh: 1
+--- !u!114 &188330609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188330604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dd4ba7bd4151444a154353d8fd552e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnHandler2: {fileID: 1325205493}
+  _buttonAction: 0
+  _buttonNummber: 3
 --- !u!1 &188930218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1612,7 @@ GameObject:
   - component: {fileID: 236271215}
   - component: {fileID: 236271214}
   - component: {fileID: 236271213}
+  - component: {fileID: 236271216}
   m_Layer: 5
   m_Name: Move2.bth
   m_TagString: Untagged
@@ -1651,10 +1684,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1325205491}
-        m_TargetAssemblyTypeName: TrunHandler, Assembly-CSharp
-        m_MethodName: PlayerAttack
-        m_Mode: 3
+      - m_Target: {fileID: 1058054448}
+        m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
+        m_MethodName: CustumActionButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1701,6 +1734,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236271211}
   m_CullTransparentMesh: 1
+--- !u!114 &236271216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236271211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dd4ba7bd4151444a154353d8fd552e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnHandler2: {fileID: 1325205493}
+  _buttonAction: 0
+  _buttonNummber: 2
 --- !u!1 &241450494
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,6 +4859,7 @@ GameObject:
   - component: {fileID: 1058054447}
   - component: {fileID: 1058054446}
   - component: {fileID: 1058054445}
+  - component: {fileID: 1058054448}
   m_Layer: 5
   m_Name: Move1.bth
   m_TagString: Untagged
@@ -4882,10 +4931,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1325205491}
-        m_TargetAssemblyTypeName: TrunHandler, Assembly-CSharp
-        m_MethodName: PlayerAttack
-        m_Mode: 3
+      - m_Target: {fileID: 1058054448}
+        m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
+        m_MethodName: CustumActionButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4932,6 +4981,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058054443}
   m_CullTransparentMesh: 1
+--- !u!114 &1058054448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058054443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dd4ba7bd4151444a154353d8fd552e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnHandler2: {fileID: 1325205493}
+  _buttonAction: 0
+  _buttonNummber: 1
 --- !u!1 &1079619257
 GameObject:
   m_ObjectHideFlags: 0
@@ -5518,6 +5582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325205492}
   - component: {fileID: 1325205491}
+  - component: {fileID: 1325205493}
   m_Layer: 0
   m_Name: BattelHandler
   m_TagString: Untagged
@@ -5555,6 +5620,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325205493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325205490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c56343532acb5448b93c1377e1b445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 854951183}
+  _enemy: {fileID: 2083093380}
+  _onEnemySwiche: {fileID: 2083093383}
 --- !u!1 &1338578119
 GameObject:
   m_ObjectHideFlags: 0
