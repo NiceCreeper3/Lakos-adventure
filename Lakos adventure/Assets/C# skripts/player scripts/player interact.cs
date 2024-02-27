@@ -30,7 +30,7 @@ public class playerinteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RaycastHit2D[] hit = new RaycastHit2D[1];
-            col.Raycast(direction.diretion, hit, 3.52f);
+            col.Raycast(direction.diretion, hit, 0.63f);
             interactreciver ireciver;
             if (hit[0])
             {
