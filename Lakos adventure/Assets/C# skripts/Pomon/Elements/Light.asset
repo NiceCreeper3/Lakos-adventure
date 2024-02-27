@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Light
   m_EditorClassIdentifier: 
   Element: Light
-  ElementColor: {r: 0.97220683, g: 0.990566, b: 0.61209506, a: 0}
+  ElementColor: {r: 0.9150943, g: 0.9150943, b: 0.5481933, a: 1}
   _effetive:
   - {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   _resestes:

@@ -9,6 +9,7 @@ public class BattelUIHandler : MonoBehaviour
     //[SerializeField] private Pomons _pomonInUse, enemyPomon;
     [SerializeField] private SwichePomon _onPlayerSwiching;
 
+    [SerializeField] private Button[] _buttonPlate;
     [SerializeField] private TMP_Text[] _moves;
 
     private void Awake()
@@ -24,16 +25,22 @@ public class BattelUIHandler : MonoBehaviour
     private void SetMoveName(Pomons pomonInUse)
     {
         // sets op so eathe moves name is represendit on a button
-        for (int i = 0; i <= _moves.Length - 1; i++)
+        for (int i = 0; i <= _buttonPlate.Length - 1; i++)
         {
             try
             {
+                _buttonPlate[i].gameObject.SetActive(true);
+                // sets color and name of the attacks
                 _moves[i].text = pomonInUse.PomonMoves[i].name;
+                _buttonPlate[i].GetComponent<Image>().color = pomonInUse.PomonMoves[i].MoveElement.ElementColor;
             }
             catch
             {
-                _moves[i].text = "";
+                _buttonPlate[i].gameObject.SetActive(false);
+                //_moves[i].text = "";
+                //_buttonPlate[i].GetComponent<Image>().color = new Color(200, 200, 200);
             }
+
         }
     }   
 }

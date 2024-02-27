@@ -6,35 +6,37 @@ using TMPro;
 public class SwichingMonsUI : MonoBehaviour
 {
     [SerializeField] private Transform _seleketPannel;
-    [SerializeField] private SwichePomon swichePomon;
-    [SerializeField] private TMP_Text[] _pomonNameText;
+    [SerializeField] private SwichePomon _swichePomon;
+    [SerializeField] private GameObject[] _PomonTextPlate;
+    private List<TMP_Text> _pomonNameText;
 
     [SerializeField] private pomonteam _playerPomonTeam; // ________________________________[remove or change after teast]______________________________
-    private Transform[] _pomonNameButton;
-    
 
     private void Start()
     {
-        /*
-        // make this use (_seleketPannel) to get the Text
-        foreach (Transform button in _seleketPannel)
-        {
-            _pomonName = button.GetChild(0).gameObject.transform.
-        }*/
+        _pomonNameText = new List<TMP_Text>();
+
+        // garabes all the text values by getting the child of the gameobjeck
+        foreach (GameObject plate in _PomonTextPlate)
+            try
+            {
+                _pomonNameText.Add(plate.transform.GetChild(0).GetComponent<TMP_Text>()); 
+            }
+            catch { }
     }
 
     private void OnEnable()
     {
-        swichePomon.OnPomonSwiching += SwichePomon_OnPomonSwiching;
-        swichePomon.OnPomonSelket += SwichePomon_OnPomonSelket;
+        _swichePomon.OnPomonSwiching += SwichePomon_OnPomonSwiching;
+        _swichePomon.OnPomonSelket += SwichePomon_OnPomonSelket;
 
         FillMonNames();
     }
 
     private void OnDisable()
     {
-        swichePomon.OnPomonSwiching -= SwichePomon_OnPomonSwiching;
-        swichePomon.OnPomonSelket -= SwichePomon_OnPomonSelket;
+        _swichePomon.OnPomonSwiching -= SwichePomon_OnPomonSwiching;
+        _swichePomon.OnPomonSelket -= SwichePomon_OnPomonSelket;
     }
 
     private void SwichePomon_OnPomonSwiching(Pomons arg1, bool arg2)
@@ -52,15 +54,29 @@ public class SwichingMonsUI : MonoBehaviour
     private void FillMonNames()
     {
         // sets op so eathe moves name is represendit on a button
-        for (int i = 0; i <= _pomonNameText.Length - 1; i++)
+        for (int i = 0; i <= _PomonTextPlate.Length - 1; i++)
         {
+            Debug.Log(_pomonNameText[i]);
+            
             try
             {
-                _pomonNameText[i].text = _playerPomonTeam.team[i].PomonName;
+                // checkes if the Pomon is on full HP
+                if (_playerPomonTeam.team[i].CurrentHealt > 0)
+                {
+                    // sets the name of the pomon on the button
+                    _PomonTextPlate[i].SetActive(true);
+                    _pomonNameText[i].text = _playerPomonTeam.team[i].PomonName;               
+                }
+                else
+                {
+                    // perhaps make it insted turn the button gray and disabel cliking on it
+                      
+                }
+
             }
             catch
             {
-                _pomonNameText[i].text = "";
+                _PomonTextPlate[i].SetActive(false);
             }
         }
     }

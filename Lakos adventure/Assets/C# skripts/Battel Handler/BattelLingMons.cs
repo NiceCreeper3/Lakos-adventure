@@ -133,6 +133,7 @@ public class BattelLingMons : MonoBehaviour
         if (_currentMon.CurrentHealt <= 0)
         {
             _currentMon.CurrentHealt = 0;
+            TurnHandler.FreeAction = true;
             OnPomonSwicheNeeded?.Invoke();
         }
     }

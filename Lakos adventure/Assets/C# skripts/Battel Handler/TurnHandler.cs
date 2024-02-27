@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnHandler2 : MonoBehaviour
+public class TurnHandler : MonoBehaviour
 {
     /// <summary>
     /// Perhapes make it a Enum that deturmens what akkson the player is takking
     /// make enemy tage turn after 
     /// </summary>
-
     public enum PlayerActionType
     {
         Attack,
@@ -148,7 +147,7 @@ public class TurnHandler2 : MonoBehaviour
     private IEnumerator Turn(TurnAction fistsOrder, TurnAction sekundOrder)
     {
         fistsOrder();
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(1); // time four animason to play
         sekundOrder();
     }
 

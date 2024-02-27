@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   Element: Fire
-  ElementColor: {r: 0.8396226, g: 0.6028193, b: 0.2811944, a: 0}
+  ElementColor: {r: 0.8679245, g: 0.52343744, b: 0.20060521, a: 1}
   _effetive:
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   - {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carbon
   m_EditorClassIdentifier: 
   Element: Carbon
-  ElementColor: {r: 0.3018868, g: 0.2748309, b: 0.2748309, a: 0}
+  ElementColor: {r: 0.254717, g: 0.21506765, b: 0.21506765, a: 1}
   _effetive:
   - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
   _resestes:

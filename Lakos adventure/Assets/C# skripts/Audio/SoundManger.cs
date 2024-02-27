@@ -8,6 +8,8 @@ public static class SoundManger
     public enum Sound
     {
         OnPomonEnterBattel,
+        BattelAttackBtb,
+        BattelSwicheButtonsBtb,
         teast
          
     }

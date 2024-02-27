@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class CustumButton : MonoBehaviour
 {
-    [SerializeField] private TurnHandler2 turnHandler2;
+    [SerializeField] private TurnHandler turnHandler;
 
-    [SerializeField] private TurnHandler2.PlayerActionType _buttonAction;
+    [SerializeField] private TurnHandler.PlayerActionType _buttonAction;
     [SerializeField] private int _buttonNummber;
 
-
+    // works as the peramter four the button
     public void CustumActionButton()
     {
-        turnHandler2.PlayerChosenAction(_buttonAction, _buttonNummber);
+        turnHandler.PlayerChosenAction(_buttonAction, _buttonNummber);
     }
 }

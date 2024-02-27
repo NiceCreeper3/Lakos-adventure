@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Bob the drunke
   m_EditorClassIdentifier: 
   team:
+  - {fileID: 11400000, guid: 8f452acc66941a94d980ad12b8847986, type: 2}
   - {fileID: 11400000, guid: a4d9713d2e8300c4ba1a2e990533e0df, type: 2}
   - {fileID: 11400000, guid: b779e3581bc468048a5ea9c8f7b5e20d, type: 2}

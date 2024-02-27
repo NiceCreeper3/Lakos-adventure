@@ -9,10 +9,11 @@ public class ElementObjecks : ScriptableObject
     [Header("does 0.5 extra damge")]
     [SerializeField] private ElementObjecks[] _effetive;
 
-    [Header("Resistes 0.5 damage")]
+    [Header("Resistes 0.25 damage")]
     [SerializeField] private ElementObjecks[] _resestes;
 
     private double buff = 0.5;
+    private double deBuff = 0.25;
 
     public double ElementMultiplier(PomonsBluPrint defenderElemts)
     {
@@ -30,7 +31,7 @@ public class ElementObjecks : ScriptableObject
             // runs fruge defenderes elemetal resistenses. and checks if this elemt is ind there resistenses
             foreach (ElementObjecks resists in elemt._resestes)
                 if (resists == this)
-                    moddefiher -= buff;
+                    moddefiher -= deBuff;
         }
 
 

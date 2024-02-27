@@ -76,13 +76,13 @@ public class SwichePomon : MonoBehaviour
         }
     }
 
-    protected void IsBattelOver()
+    protected void BattleLost()
     {
 
     }
 
 
-    protected void battelWIn()
+    protected void BattelWin()
     {
 
     }

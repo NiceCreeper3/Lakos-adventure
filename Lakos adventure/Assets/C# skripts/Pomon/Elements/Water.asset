@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   Element: Water
-  ElementColor: {r: 0.28346387, g: 0.7899416, b: 0.9245283, a: 0}
+  ElementColor: {r: 0.28346387, g: 0.7899416, b: 0.9245283, a: 1}
   _effetive:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   _resestes:
