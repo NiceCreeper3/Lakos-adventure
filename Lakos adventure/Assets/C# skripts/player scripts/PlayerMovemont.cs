@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class PlayerMovemont : MonoBehaviour
 {
-    [SerializeField] private Vector3 movepoint;
-    [SerializeField] private Grid grid;
+    [SerializeField] private Actorscript movepoint;
     [SerializeField] private CircleCollider2D col;
     [SerializeField] private playerinteract interact;
     // Start is called before the first frame update
     void Start()
     {
-        movepoint = grid.CellToWorld(InfoSaved.playerlocation) + new Vector3(1.76f, 1.76f, 0);
-        gameObject.transform.position = movepoint;
+        movepoint.movepoint = movepoint.grid.CellToWorld(InfoSaved.playerlocation) + new Vector3(0.31f, 0.31f, 0);
+        movepoint.load();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position == movepoint)
+        if (transform.position == movepoint.movepoint)
         {
             bool isempty = true;
             RaycastHit2D[] hit = new RaycastHit2D[2];
-            col.Raycast(new Vector2(0,(int)Input.GetAxis("Vertical")), hit, 3.52f);
+            col.Raycast(new Vector2(0,(int)Input.GetAxis("Vertical")), hit, 0.63f);
             foreach (RaycastHit2D raycastHit in hit)
             {
                 if (raycastHit)
@@ -37,15 +36,15 @@ public class PlayerMovemont : MonoBehaviour
             }
             if (isempty)
             {
-                movepoint += new Vector3(0, 3.52f * (int)Input.GetAxis("Vertical"), 0);
+                movepoint.actor.movey((int)Input.GetAxis("Vertical"));
             }
             
 
 
-            if (transform.position == movepoint)
+            if (transform.position == movepoint.movepoint)
             {
                 isempty = true;
-                col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 3.52f);
+                col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 0.63f);
                 foreach (RaycastHit2D raycastHit in hit)
                 {
                     if (raycastHit)
@@ -60,7 +59,7 @@ public class PlayerMovemont : MonoBehaviour
                 }
                 if (isempty)
                 {
-                    movepoint += new Vector3(3.52f * (int)Input.GetAxis("Horizontal"), 0, 0);
+                    movepoint.actor.movex((int)Input.GetAxis("Horizontal"));
                 }
                 
                 
@@ -72,7 +71,7 @@ public class PlayerMovemont : MonoBehaviour
         else
         {
             
-            transform.position = Vector3.MoveTowards(transform.position, movepoint, 10 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, movepoint.movepoint, 1 * Time.deltaTime);
         }
     }
 }

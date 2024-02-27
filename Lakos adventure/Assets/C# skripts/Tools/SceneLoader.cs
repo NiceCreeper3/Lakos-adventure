@@ -23,10 +23,10 @@ public static class SceneLoader
         }
     }
 
-    public static void Battle(Pomons[] pomons)
+    public static void Battle(pomonteam pomons)
     {
         MapToBattel.IsTranerBattle = null;
-        MapToBattel.enemyPomons = new pomonteam(pomons);
+        MapToBattel.enemyPomons = pomons;
         ChageScene("Battle_Scene");
     }
 

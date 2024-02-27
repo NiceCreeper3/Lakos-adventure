@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pomon: {fileID: 11400000, guid: ecd6a0a317784ac42a67976f2f407b86, type: 2}
+  id: 0
   monportraitfront: {fileID: 6961783844427804118}
   monportraitback: {fileID: 4632733400369519830}
   nameandid: {fileID: 4947761092839498840}
@@ -1784,7 +1785,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 8.3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

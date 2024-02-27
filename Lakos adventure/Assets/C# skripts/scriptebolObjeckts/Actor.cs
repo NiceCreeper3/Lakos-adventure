@@ -17,16 +17,25 @@ public class Actor : ScriptableObject
     {
         if (length <= 0)
         {
-
+            turn(3);
         }
         else if (length > 0)
         {
-
+            turn(4);
         }
+        body.movepoint += new Vector3(0.63f * length, 0, 0);
     }
     public void movey(int length)
     {
-        
+        if (length <= 0)
+        {
+            turn(2);
+        }
+        else if (length > 0)
+        {
+            turn(1);
+        }
+        body.movepoint += new Vector3(0, 0.63f * length, 0);
     }
 
     public void turn(int direction)
@@ -35,18 +44,22 @@ public class Actor : ScriptableObject
         switch(direction)
         {
             case 1:
-                renderer.sprite = Getsprite("foward");
+                body.diretion = new Vector2(0,1);
+                renderer.sprite = Getsprite("forward");
                 break;
 
             case 2:
+                body.diretion = new Vector2(0, -1);
                 renderer.sprite = Getsprite("back");
                 break;
 
             case 3:
+                body.diretion = new Vector2(-1, 0);
                 renderer.sprite = Getsprite("left");
                 break;
 
             case 4:
+                body.diretion = new Vector2(1, 0);
                 renderer.sprite = Getsprite("right");
                 break;
         }

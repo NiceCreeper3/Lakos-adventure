@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Trainer: {fileID: 0}
   player: {fileID: 0}
-  diretion: {x: 0, y: -1}
+  actorscript: {fileID: 2385406756148309533}
 --- !u!114 &2385406756148309533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910323ff4014260438b09027623155e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actor: {fileID: 0}
+  diretion: {x: 0, y: 0}
+  grid: {fileID: 0}
+  movepoint: {x: 0.31, y: 0.31, z: 0}
 --- !u!1 &6985249691758791174
 GameObject:
   m_ObjectHideFlags: 0

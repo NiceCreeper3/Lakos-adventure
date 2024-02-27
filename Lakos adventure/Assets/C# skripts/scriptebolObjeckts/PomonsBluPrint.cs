@@ -35,7 +35,15 @@ public class PomonsBluPrint : ScriptableObject
 
     public Pomons generateMon(int level)
     {
-        Pomons mon = new Pomons(this);
+        Pomons mon = CreateInstance<Pomons>();
+        mon.name = name + level;
+        mon.IsDude = true;
+        if (Random.Range(0,(float)genderratio) < genderratio)
+        {
+            mon.IsDude = false;
+        }
+
+        
 
         return mon;
     }

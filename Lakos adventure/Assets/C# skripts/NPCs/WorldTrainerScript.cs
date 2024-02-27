@@ -6,12 +6,13 @@ public class WorldTrainerScript : MonoBehaviour
 {
     [SerializeField] private trainer Trainer;
     [SerializeField] private Transform player;
-    private Actorscript actorscript;
+    [SerializeField] private Actorscript actorscript;
 
 
     private void Start()
     {
-        actorscript.actor = Trainer;
+        actorscript.movepoint = actorscript.grid.CellToWorld(actorscript.grid.WorldToCell(transform.position)) + new Vector3(0.31f, 0.31f, 0);
+        actorscript.load();
     }
     void Update()
     {
@@ -19,15 +20,19 @@ public class WorldTrainerScript : MonoBehaviour
         {
             RaycastHit2D[] coll = new RaycastHit2D[1];
             GetComponent<Collider2D>().Raycast(actorscript.diretion, coll);
-            foreach (RaycastHit2D col in coll)
+            if (coll[0])
             {
-                if (col.collider.tag == "Player")
+                foreach (RaycastHit2D col in coll)
                 {
-                    
-                    triggeractive();
+                    if (col.collider.tag == "Player")
+                    {
+
+                        triggeractive();
+                    }
+
                 }
-                    
             }
+            
         }
         
     }
