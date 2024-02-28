@@ -27,13 +27,13 @@ public static class SceneLoader
     {
         MapToBattel.IsTranerBattle = null;
         MapToBattel.enemyPomons = pomons;
-        ChageScene("Battle_Scene");
+        ChageScene("Battel_Scene");
     }
 
     public static void Battle(trainer Trainer)
     {
         MapToBattel.IsTranerBattle = Trainer;
         MapToBattel.enemyPomons = Trainer.trainerTeam;
-        ChageScene("Battle_Scene");
+        ChageScene("Battel_Scene");
     }
 }

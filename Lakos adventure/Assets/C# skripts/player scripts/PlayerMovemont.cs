@@ -68,10 +68,5 @@ public class PlayerMovemont : MonoBehaviour
 
 
         }
-        else
-        {
-            
-            transform.position = Vector3.MoveTowards(transform.position, movepoint.movepoint, 1 * Time.deltaTime);
-        }
     }
 }

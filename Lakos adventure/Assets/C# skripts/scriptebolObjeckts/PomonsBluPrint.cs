@@ -37,13 +37,19 @@ public class PomonsBluPrint : ScriptableObject
     {
         Pomons mon = CreateInstance<Pomons>();
         mon.name = name + level;
+        mon.Spesies = this;
+        mon.PomonName = name;
         mon.IsDude = true;
-        if (Random.Range(0,(float)genderratio) < genderratio)
+        if (Random.Range(0,100) < genderratio)
         {
             mon.IsDude = false;
         }
+        mon.Attack = Random.Range(MinAttack, MaxAttack) + (attackgrow * (level - 1));
+        mon.Defense = Random.Range(MinDefense, MaxDefense) + (Defensegrow * (level - 1));
+        mon.MaxHealt = Random.Range(MinHealt, MaxHealt) + (healthgrow * (level-1));
+        mon.MaxHealt = Random.Range(MinSpeed, MaxSpeed) + (speedgrow * (level - 1));
+        mon.CurrentHealt = mon.MaxHealt;
 
-        
 
         return mon;
     }
