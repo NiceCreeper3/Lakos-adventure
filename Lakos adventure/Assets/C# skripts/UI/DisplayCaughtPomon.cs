@@ -26,7 +26,7 @@ public class DisplayCaughtPomon : MonoBehaviour
 
 
 
-    public void loadmon(Pomons entry)
+    public virtual void loadmon(Pomons entry)
     {
         pomon = entry;
         name_text.text = pomon.PomonName;

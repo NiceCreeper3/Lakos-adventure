@@ -8,7 +8,7 @@ public class SwichingMonsUI : MonoBehaviour
     [SerializeField] private Transform _seleketPannel;
     [SerializeField] private SwichePomon _swichePomon;
     [SerializeField] private GameObject[] _PomonTextPlate;
-    private List<TMP_Text> _pomonNameText;
+    [SerializeField] private List<TMP_Text> _pomonNameText;
 
     [SerializeField] private pomonteam _playerPomonTeam; // ________________________________[remove or change after teast]______________________________
 
@@ -18,11 +18,11 @@ public class SwichingMonsUI : MonoBehaviour
 
         // garabes all the text values by getting the child of the gameobjeck
         foreach (GameObject plate in _PomonTextPlate)
-            try
-            {
-                _pomonNameText.Add(plate.transform.GetChild(0).GetComponent<TMP_Text>()); 
-            }
-            catch { }
+        {
+            //_pomonNameText.Add(plate.transform.GetChild(0).GetComponent<TMP_Text>());
+            _pomonNameText.Add(plate.GetComponentInChildren<TMP_Text>());
+        }
+            
     }
 
     private void OnEnable()
@@ -53,16 +53,19 @@ public class SwichingMonsUI : MonoBehaviour
 
     private void FillMonNames()
     {
+        Debug.Log("ggg");
+
         // sets op so eathe moves name is represendit on a button
-        for (int i = 0; i <= _PomonTextPlate.Length - 1; i++)
+        for (int i = 0; i < _PomonTextPlate.Length; i++)
         {
-            Debug.Log(_pomonNameText[i]);
+            
             
             try
             {
                 // checkes if the Pomon is on full HP
                 if (_playerPomonTeam.team[i].CurrentHealt > 0)
                 {
+                    
                     // sets the name of the pomon on the button
                     _PomonTextPlate[i].SetActive(true);
                     _pomonNameText[i].text = _playerPomonTeam.team[i].PomonName;               
@@ -77,6 +80,7 @@ public class SwichingMonsUI : MonoBehaviour
             catch
             {
                 _PomonTextPlate[i].SetActive(false);
+                Debug.Log("missing pomon");
             }
         }
     }
