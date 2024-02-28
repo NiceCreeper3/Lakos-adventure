@@ -247,8 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c06a71bdb366040894be9221723580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movepoint: {x: 0, y: 0, z: 0}
-  grid: {fileID: 0}
+  movepoint: {fileID: 0}
   col: {fileID: 7812185380985700342}
   interact: {fileID: 7072600734123653393}
 --- !u!58 &7812185380985700342
@@ -312,5 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910323ff4014260438b09027623155e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: {fileID: 0}
+  actor: {fileID: 11400000, guid: a64899f5c9d08a44280e742a9dc3253a, type: 2}
   diretion: {x: 0, y: 0}
+  grid: {fileID: 0}
+  movepoint: {x: 0.31, y: 0.31, z: 0}

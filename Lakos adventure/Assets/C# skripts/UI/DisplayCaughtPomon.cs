@@ -9,9 +9,9 @@ public class DisplayCaughtPomon : MonoBehaviour
 {
     [SerializeField] private Pomons pomon;
     [SerializeField] private Image monportraitfront;
-    [SerializeField] private TMP_Text attack;
-    [SerializeField] private TMP_Text defece;
-    [SerializeField] private TMP_Text speed;
+    [SerializeField] protected TMP_Text attack;
+    [SerializeField] protected TMP_Text defece;
+    [SerializeField] protected TMP_Text speed;
     [SerializeField] private TMP_Text name_text;
     [SerializeField] private showHealth health;
     [SerializeField] private TMP_Text spesies;
@@ -21,10 +21,6 @@ public class DisplayCaughtPomon : MonoBehaviour
 
     [SerializeField] private Sprite dude;
     [SerializeField] private Sprite dudette;
-
-
-
-
 
     public virtual void loadmon(Pomons entry)
     {

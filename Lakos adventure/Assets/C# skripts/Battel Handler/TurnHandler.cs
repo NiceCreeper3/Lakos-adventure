@@ -13,6 +13,7 @@ public class TurnHandler : MonoBehaviour
         Attack,
         Swiching,
         Orb,
+        Run,
         Item
     }
 
@@ -64,6 +65,10 @@ public class TurnHandler : MonoBehaviour
             case PlayerActionType.Orb:
                 CaptureWildPomon.CapturePomon();
                 _playerAction = dullAction; // 
+                break;
+
+            case PlayerActionType.Run:
+                Run.Exskape();
                 break;
 
             case PlayerActionType.Item:
@@ -131,7 +136,8 @@ public class TurnHandler : MonoBehaviour
         }
         else // picks at random if speed even
         {
-            int Chapture = Random.Range(1, 2);
+            // can be shorten but don,t reamber how
+            short Chapture = (short)Random.Range(1, 2);
 
             if (Chapture == 1)
             {

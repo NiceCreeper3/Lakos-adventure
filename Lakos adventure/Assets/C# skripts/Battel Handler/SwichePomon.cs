@@ -78,13 +78,13 @@ public class SwichePomon : MonoBehaviour
 
     protected void BattleLost()
     {
-
+        SceneLoader.ChageScene();
     }
 
 
     protected void BattelWin()
     {
-
+        SceneLoader.ChageScene();
     }
     #endregion
 
