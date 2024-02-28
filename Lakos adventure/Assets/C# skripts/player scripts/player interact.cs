@@ -11,20 +11,6 @@ public class playerinteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 directions = direction.diretion;
-        if (Input.GetAxis("Vertical") != 0)
-        {
-            directions = new Vector2(0, (int)Input.GetAxis("Vertical"));
-        }
-        else if ((int)Input.GetAxis("Horizontal") != 0)
-        {
-            directions = new Vector2((int)Input.GetAxis("Horizontal"), 0);
-        }
-
-        if(((int)Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && directions != new Vector2(0,0))
-        {
-            direction.diretion = directions;
-        }
         
 
         if (Input.GetKeyDown(KeyCode.Space))
