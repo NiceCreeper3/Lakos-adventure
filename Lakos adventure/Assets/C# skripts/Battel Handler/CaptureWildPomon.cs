@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CaptureWildPomon : MonoBehaviour
 {
-    public static List<Pomons> PomonTeamList = new List<Pomons>();
+    [SerializeField] private static pomonteam _playerPomonTeam;
 
     private static Pomons _currentCapture;
 
@@ -16,6 +16,11 @@ public class CaptureWildPomon : MonoBehaviour
         OnPomonSwich = GetComponent<SwichePomon>();
 
         OnPomonSwich.OnPomonSwiching += OnPomonSwich_OnPomonSwiching;
+    }
+
+    public static void SetplayerTeam(pomonteam pomonteam)
+    {
+        _playerPomonTeam = pomonteam;
     }
 
     // updates what pomon we are etmting to capture
@@ -49,10 +54,9 @@ public class CaptureWildPomon : MonoBehaviour
 
     private static void PomonCaptured()
     {
-        PomonTeamList.Add(_currentCapture);
-        Debug.Log(PomonTeamList);
+        _playerPomonTeam.team.Add(_currentCapture);
 
-
-        SceneLoader.ChageScene("outdoors"); // __________________________[Reaplase with the return to previes]_______________________________________
+        //return to previes
+        SceneLoader.ChageScene();
     }
 }

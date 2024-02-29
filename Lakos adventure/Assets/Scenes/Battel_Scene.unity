@@ -1921,7 +1921,7 @@ GameObject:
   - component: {fileID: 300492434}
   - component: {fileID: 300492437}
   m_Layer: 5
-  m_Name: Cammra.bth
+  m_Name: Ord.bth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

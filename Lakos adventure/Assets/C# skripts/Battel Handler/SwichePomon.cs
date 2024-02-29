@@ -23,6 +23,8 @@ public class SwichePomon : MonoBehaviour
 
     private void Start()
     {
+        if (_isPlayer) // ____________________________________[tempeary suluson Pealsh cahnge latter]__________________________________________
+            CaptureWildPomon.SetplayerTeam(_pomonTeam);
 
         FullHealTeam();
 

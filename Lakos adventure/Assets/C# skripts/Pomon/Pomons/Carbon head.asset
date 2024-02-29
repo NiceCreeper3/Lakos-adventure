@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
+  m_Name: Carbon head
+  m_EditorClassIdentifier: 
+  PomonName: Carbon head
+  Spesies: {fileID: 11400000, guid: 2a55a190731c67a42b84e2457471839d, type: 2}
+  IsDude: 1
+  level: 0
+  Attack: 14
+  MaxHealt: 60
+  CurrentHealt: 60
+  Speed: 16
+  Defense: 2
+  PomonMoves:
+  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}

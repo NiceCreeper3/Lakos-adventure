@@ -83,7 +83,6 @@ public class TurnHandler : MonoBehaviour
             _playerAction();
     }
 
-
     // if it gets more sufiste catted then put ind it onwen script
     private ushort EnemyTurnAI()
     {

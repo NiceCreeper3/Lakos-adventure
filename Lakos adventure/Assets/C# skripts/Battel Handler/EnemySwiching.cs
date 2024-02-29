@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class EnemySwiching : SwichePomon
 {
     protected override void Awake()
