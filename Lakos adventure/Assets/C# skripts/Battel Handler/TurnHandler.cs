@@ -63,12 +63,13 @@ public class TurnHandler : MonoBehaviour
                 break;
 
             case PlayerActionType.Orb:
-                CaptureWildPomon.CapturePomon();
-                _playerAction = dullAction; // 
+                _playerAction = CaptureWildPomon.CapturePomon;
+                
                 break;
 
             case PlayerActionType.Run:
-                Run.Exskape();
+                _playerAction = Run.Exskape;
+                
                 break;
 
             case PlayerActionType.Item:
@@ -150,12 +151,11 @@ public class TurnHandler : MonoBehaviour
         }
     }
 
+    // starts the turn. and has a 1 sec delay indbetyvie the to turns
     private IEnumerator Turn(TurnAction fistsOrder, TurnAction sekundOrder)
     {
         fistsOrder();
         yield return new WaitForSecondsRealtime(1); // time four animason to play
         sekundOrder();
     }
-
-
 }
