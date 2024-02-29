@@ -7,7 +7,7 @@ public class EnemySwiching : SwichePomon
         _isPlayer = false;
 
         //____________________________________________________________________________________[Add this after Teasting]____________________________________________
-        _pomonTeam = MapToBattel.enemyPomons;
+        //_pomonTeam = MapToBattel.enemyPomons;
 
         base.Awake();
     }
