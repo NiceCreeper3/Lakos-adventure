@@ -36,17 +36,6 @@ public class Pomons : ScriptableObject
     public List<BasikMoves> PomonMoves = new List<BasikMoves>();
 
     #endregion
-
-    //constuctor
-    public Pomons(PomonsBluPrint bluPrint)
-    {
-        Spesies = bluPrint;
-        Attack = Random.Range(bluPrint.MinAttack,bluPrint.MaxAttack+1);
-        MaxHealt = Random.Range(bluPrint.MinHealt, bluPrint.MaxHealt+1);
-        CurrentHealt = MaxHealt;
-        Speed = Random.Range(bluPrint.MinSpeed, bluPrint.MaxSpeed + 1);
-        Defense = Random.Range(bluPrint.MinDefense, bluPrint.MaxDefense + 1);
-    }
     public void levelcalc(int amount)
     {
         Attack = Spesies.attackgrow * amount;

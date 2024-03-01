@@ -7,6 +7,7 @@ public static class SceneLoader
     // is four when we need to load a spisifk scene
     public static void ChageScene(string SceneToLoad)
     {
+
         Scene currentScene = SceneManager.GetActiveScene();
         PreviesScene = currentScene.name;
         SceneManager.LoadScene(SceneToLoad);

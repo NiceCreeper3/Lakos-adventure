@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a4771f154b6bc4ca61e9ba901d9f69, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
-  Name: 
+  Name: player
   sprites:
   - {fileID: -263431052, guid: 31bc581c17d43514882169fcd5acfa7d, type: 3}
   - {fileID: -716381203, guid: 31bc581c17d43514882169fcd5acfa7d, type: 3}

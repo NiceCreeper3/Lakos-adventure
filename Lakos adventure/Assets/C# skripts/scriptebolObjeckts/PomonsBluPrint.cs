@@ -18,7 +18,10 @@ public class PomonsBluPrint : ScriptableObject
     public int genderratio;
 
     [Header("Genral states")]
-    public int MinAttack, MaxAttack, attackgrow;
+
+    public int MinAttack;
+
+    public int MaxAttack, attackgrow;
 
     public int MinHealt, MaxHealt, healthgrow;
 
@@ -36,19 +39,32 @@ public class PomonsBluPrint : ScriptableObject
     public Pomons generateMon(int level)
     {
         Pomons mon = CreateInstance<Pomons>();
+        Debug.Log(name + " generated");
         mon.name = name + level;
         mon.Spesies = this;
         mon.PomonName = name;
+        Debug.Log("mon named ");
         mon.IsDude = true;
         if (Random.Range(0,100) < genderratio)
         {
             mon.IsDude = false;
         }
-        mon.Attack = Random.Range(MinAttack, MaxAttack) + (attackgrow * (level - 1));
-        mon.Defense = Random.Range(MinDefense, MaxDefense) + (Defensegrow * (level - 1));
-        mon.MaxHealt = Random.Range(MinHealt, MaxHealt) + (healthgrow * (level-1));
-        mon.MaxHealt = Random.Range(MinSpeed, MaxSpeed) + (speedgrow * (level - 1));
+        Debug.Log("mon genderd");
+        mon.Attack = Random.Range(MinAttack, MaxAttack+1) + (attackgrow * (level - 1));
+        mon.Defense = Random.Range(MinDefense, MaxDefense+1) + (Defensegrow * (level - 1));
+        mon.MaxHealt = Random.Range(MinHealt, MaxHealt+1) + (healthgrow * (level-1));
+        mon.MaxHealt = Random.Range(MinSpeed, MaxSpeed+1) + (speedgrow * (level - 1));
+        Debug.Log("stats given");
         mon.CurrentHealt = mon.MaxHealt;
+        Debug.Log("health maxed");
+        for (int i = 0; i < 4; i++)
+        {
+            int rand = Random.Range(0, MovesCanLern.Count);
+            Debug.Log(rand);
+            Debug.Log(MovesCanLern[rand].name);
+            mon.PomonMoves.Add(MovesCanLern[rand]);
+            
+        }
 
 
         return mon;

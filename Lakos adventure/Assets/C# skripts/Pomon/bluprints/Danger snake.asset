@@ -17,16 +17,22 @@ MonoBehaviour:
   back: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
   description: 
   genderratio: 0
-  MinAttack: 0
-  MaxAttack: 0
-  MinHealt: 0
-  MaxHealt: 0
-  MinSpeed: 0
-  MaxSpeed: 0
-  MinDefense: 0
-  MaxDefense: 0
+  MinAttack: 1
+  MaxAttack: 1
+  attackgrow: 1
+  MinHealt: 1
+  MaxHealt: 1
+  healthgrow: 1
+  MinSpeed: 1
+  MaxSpeed: 1
+  speedgrow: 1
+  MinDefense: 1
+  MaxDefense: 1
+  Defensegrow: 1
   CaptureChanse: 99
   PomonElemet:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
-  MovesCanLern: []
+  MovesCanLern:
+  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
+  - {fileID: 11400000, guid: 624fdd767d1b92c4aa166bfe891f6a7f, type: 2}

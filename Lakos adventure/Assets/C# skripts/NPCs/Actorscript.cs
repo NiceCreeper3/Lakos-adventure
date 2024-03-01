@@ -18,21 +18,5 @@ public class Actorscript : MonoBehaviour
     {
         gameObject.transform.position = movepoint;
         actor.body = this;
-        if (diretion == new Vector2(0, 1))
-        {
-            actor.turn(1);
-        }
-        else if (diretion == new Vector2(0, -1))
-        {
-            actor.turn(2);
-        }
-        else if (diretion == new Vector2(-1, 0))
-        {
-            actor.turn(3);
-        }
-        else if (diretion == new Vector2(1, 0))
-        {
-            actor.turn(4);
-        }
     }
 }

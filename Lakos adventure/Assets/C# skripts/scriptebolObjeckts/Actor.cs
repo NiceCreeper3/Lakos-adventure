@@ -15,7 +15,7 @@ public class Actor : ScriptableObject
 
     public void movex(int length)
     {
-        if (length <= 0)
+        if (length < 0)
         {
             turn(3);
         }
@@ -27,7 +27,7 @@ public class Actor : ScriptableObject
     }
     public void movey(int length)
     {
-        if (length <= 0)
+        if (length < 0)
         {
             turn(2);
         }

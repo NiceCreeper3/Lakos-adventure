@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3850a751faf0ba4baf31918090612d4, type: 3}
   m_Name: the clone
   m_EditorClassIdentifier: 
-  Name: 
+  Name: the clone
   sprites:
   - {fileID: 859353918, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
   - {fileID: -626840361, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
