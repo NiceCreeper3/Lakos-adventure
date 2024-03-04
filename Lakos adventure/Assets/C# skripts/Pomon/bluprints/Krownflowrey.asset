@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a05b522ffd455148a94b9bc1f767917, type: 3}
-  m_Name: Carbon Head
+  m_Name: Krownflowrey
   m_EditorClassIdentifier: 
-  name: Carbon head
-  front: {fileID: 21300000, guid: 14b29848c0d7f754d957767d42fc4db7, type: 3}
-  back: {fileID: 0}
+  name: Krownflowrey
+  front: {fileID: 21300000, guid: b4e414f5fc33fcf47a4fa8633753710b, type: 3}
+  back: {fileID: 21300000, guid: 6d1c7cb277f76e049bd6f3c6dcaf774c, type: 3}
   description: 
   genderratio: 0
   MinAttack: 0
   MaxAttack: 0
-  attackgrow: 1
-  MinHealt: 1
-  MaxHealt: 1
-  healthgrow: 1
-  MinSpeed: 1
-  MaxSpeed: 1
-  speedgrow: 1
-  MinDefense: 1
-  MaxDefense: 1
-  Defensegrow: 1
-  CaptureChanse: 99
+  attackgrow: 0
+  MinHealt: 0
+  MaxHealt: 0
+  healthgrow: 0
+  MinSpeed: 0
+  MaxSpeed: 0
+  speedgrow: 0
+  MinDefense: 0
+  MaxDefense: 0
+  Defensegrow: 0
+  CaptureChanse: 0
   PomonElemet:
-  - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
+  - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern: []

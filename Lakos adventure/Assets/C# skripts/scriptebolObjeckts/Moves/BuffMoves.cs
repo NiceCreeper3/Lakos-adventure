@@ -5,10 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Moves", menuName = "PomonMoves/Buff Attack")]
 public class BuffMoves : BasikMoves
 {
-    public int buffAmount;
+    [SerializeField] private int buffTimes;
+    [SerializeField] private BattelLingMons.buffs WhatToBuff;
 
     public override void AbilityBefore(BattelLingMons interragsen)
     {
-        interragsen._attackBuff += buffAmount;
+        interragsen.StatesBuff(buffTimes, WhatToBuff);
     }
 }

@@ -8,6 +8,13 @@ using Random = UnityEngine.Random;
 
 public class BattelLingMons : MonoBehaviour
 {
+    public enum buffs
+    {
+        AttackBuff,
+        SpeedBuff,
+        DefenseBuff       
+    }
+
     // Values
     #region
 
@@ -17,14 +24,11 @@ public class BattelLingMons : MonoBehaviour
     [Header("Reference to aesthetic stuff")]
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
-    // represents the buffes to a state. are public so arracks can modefi them
-    [HideInInspector] public int _attackBuff;
-    [HideInInspector] private int _speedBuff;
-    [HideInInspector] private int _defenseBuff;
-
     private Pomons _currentMon;
-
     private SwichePomon OnSwitch;
+
+    // represents buffs
+    private DamageMath.StatsBuff _buffs;
 
     // evnets
     public event Action<int> OnHealhtChange;
@@ -52,13 +56,51 @@ public class BattelLingMons : MonoBehaviour
 
     public int ReturnSpeed()
     {
-        return _currentMon.Speed * _speedBuff;
+        return (int)(_currentMon.Speed * _buffs.SpeedBuff);
     }
 
     // triggeres chosen attacks BeforeAblity
     public void BeforeBattle(int attackPicked)
     {
         _currentMon.PomonMoves[attackPicked].AbilityBefore(this);
+    }
+
+    // adds stats "stabs". aka buffs
+    public void StatesBuff(int buffTimes, buffs whatToBuff)
+    {
+        // the max amount of times we can buff
+        short maxBuffTimes = 6;
+
+        // is kurrent amout stuff gets buffed
+        double buffAmount = 0.5;
+
+        // determens how meany times a abilty buffs
+        for (int i = 0; i < buffTimes; i++)
+        {
+            switch (whatToBuff)
+            {
+                case buffs.AttackBuff:
+                    _buffs.AttackBuff += buffAmount;
+                    break;
+
+                case buffs.SpeedBuff:
+                    _buffs.SpeedBuff += buffAmount;
+                    break;
+
+                case buffs.DefenseBuff:
+                    _buffs.DefenseBuff += buffAmount;
+                    break;
+            }
+        }
+
+        // make it beater latter
+        // adds a buff cap. so you can only have buffed [maxBuffTimes]. the + 2 is to acount four the buff starting at 1
+        if ((maxBuffTimes + 2) * buffAmount < _buffs.AttackBuff)
+            _buffs.AttackBuff = buffAmount * 8;
+        if ((maxBuffTimes + 2) * buffAmount < _buffs.SpeedBuff)
+            _buffs.SpeedBuff = buffAmount * 8;
+        if ((maxBuffTimes + 2) * buffAmount < _buffs.DefenseBuff)
+            _buffs.DefenseBuff = buffAmount * 8;
     }
 
     // calkulates damige and and  sends it to the (attckTarget)
@@ -69,22 +111,13 @@ public class BattelLingMons : MonoBehaviour
         {
             // makes a short refrens to the Move
             BasikMoves move = _currentMon.PomonMoves[attackPicked];
-            int rawDamage = 0;
 
-            if (move.power != 0) // makes sure buff moves don,t end up doving damige
-                rawDamage = move.power + _currentMon.Attack;
-             
-            double totalDamage = rawDamage * move.MoveElement.ElementMultiplier(attckTarget._currentMon.Spesies) * _attackBuff;
-
-            Debug.Log($"_______________{_currentMon.PomonName}_______________");
-            Debug.Log(
-                $"raw damage is {rawDamage} geainde by {move.power} + {_currentMon.Attack} \n" +
-                $"Total damage is {totalDamage} geainde by {rawDamage} *{move.MoveElement.ElementMultiplier(attckTarget._currentMon.Spesies)} * {_attackBuff}");
+            int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget, _buffs);
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
             move.AbilityAfter(this);
 
-            attckTarget.TakesDamage((int)totalDamage);
+            attckTarget.TakesDamage(Damage);
         }
         else
         {
@@ -100,11 +133,11 @@ public class BattelLingMons : MonoBehaviour
     {
         
         // aclkulates kow muthe damage is dealt
-        int totaldamage = damage - (_currentMon.Defense * _defenseBuff);
+        int totaldamage = damage - (int)(_currentMon.Defense * _buffs.DefenseBuff);
 
         Debug.Log(
             $"{_currentMon.PomonName} \n" +
-            $"damge defended is {totaldamage} given by {_defenseBuff} - {damage}");
+            $"damge defended is {totaldamage} given by {_buffs.DefenseBuff} - {damage}");
 
         // ind case Defense is higer then damage and then wood result ind healing
         if (totaldamage < 0)
@@ -151,10 +184,8 @@ public class BattelLingMons : MonoBehaviour
         // sets the new _currentMon Pomon to be the swithed ind one
         _currentMon = swichingPomons;
 
-        // sets the tempeary states of the swinced ind Pomon
-        _attackBuff = 1;
-        _speedBuff = 1;
-        _defenseBuff = 1;
+        // sets buff amount
+        _buffs = new DamageMath.StatsBuff(1,1,1);
 
         // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
         if (isPlayerMon)

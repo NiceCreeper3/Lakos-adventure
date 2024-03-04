@@ -27,7 +27,7 @@ public class Pomons : ScriptableObject
     public int Attack;
 
     public int MaxHealt;
-    public int CurrentHealt;
+    [HideInInspector] public int CurrentHealt;
 
     public int Speed;
 

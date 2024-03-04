@@ -15,7 +15,7 @@ public class PomonsBluPrint : ScriptableObject
 
     public string description;
 
-    public int genderratio;
+    [Range(0,100)] public int genderratio;
 
     [Header("Genral states")]
 
