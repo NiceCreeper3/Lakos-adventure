@@ -32,7 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1610734887794781292}
-  m_Father: {fileID: 9161069904381445440}
+  m_Father: {fileID: 4848339647980515485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3255903836587497680}
         m_TargetAssemblyTypeName: TypeWriterEffect, Assembly-CSharp
-        m_MethodName: CallUpdateFullText
+        m_MethodName: UpdateFullText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -162,8 +162,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 500270637674817842}
+  m_Children: []
   m_Father: {fileID: 4848339647980515485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -438,6 +437,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9161069904381445440}
+  - {fileID: 500270637674817842}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -500,3 +500,4 @@ MonoBehaviour:
   Texter: {fileID: 0}
   player: {fileID: 0}
   ineracor: {fileID: 0}
+  anim: {fileID: 0}
