@@ -19,7 +19,8 @@ MonoBehaviour:
   - {fileID: -712862093, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
   - {fileID: 1424064128, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
   body: {fileID: 0}
+  Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   battlesprite: {fileID: 21300000, guid: 784aa7fc24b85f647918d7e5f5134c9f, type: 3}
   Seaching: 1
   defeated: 0
-  trainerTeam: {fileID: 0}
+  trainerTeam: {fileID: 11400000, guid: 3b884149adcbdd64b938d8c1bc8a1cde, type: 2}

@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045a238e91a5fa84cbc4f76ca4ea7eda, type: 3}
   m_Name: textbox indecator
   m_EditorClassIdentifier: 
+  textboxinsceene: {fileID: 0}
+  box: {fileID: 0}
+  controller: {fileID: 9100000, guid: f8952ff7daa43e74d8dd7d69d15f1ca2, type: 2}
+  interactor: {fileID: 0}

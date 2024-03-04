@@ -233,8 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wild: {fileID: 11400000, guid: a6c98a87f652b024999b396640efd335, type: 2}
-  player: {fileID: 0}
-  grid: {fileID: 0}
+  player: {fileID: 3835068500105258429}
+  grid: {fileID: 1277674333}
 --- !u!114 &389816230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +535,18 @@ PrefabInstance:
       propertyPath: team.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 365acd6f33e004b49b589c7600c84e5a, type: 2}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1153,7 +1165,7 @@ PrefabInstance:
     - target: {fileID: 5998923698747512450, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f8952ff7daa43e74d8dd7d69d15f1ca2, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5998923698747512450, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: m_CullingMode
       value: 0

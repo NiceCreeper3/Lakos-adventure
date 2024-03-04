@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Actorscript : MonoBehaviour
 {
-    [SerializeField]public Actor actor;
+    [SerializeField] public Actor actor;
     [SerializeField] public Vector2 diretion;
     [SerializeField] public Grid grid;
     [SerializeField] public Vector3 movepoint = new Vector3(0.31f, 0.31f, 0);
+    
 
     private void Update()
     {

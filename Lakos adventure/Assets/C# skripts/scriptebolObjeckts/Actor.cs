@@ -11,6 +11,7 @@ public class Actor : ScriptableObject
     public Sprite[] sprites;
 
     [HideInInspector] public Actorscript body;
+    [SerializeField] public textinteractor Textinteractor;
 
 
     public void movex(int length)
@@ -77,5 +78,6 @@ public class Actor : ScriptableObject
         }
         return sprite;
     }
+    
 
 }

@@ -22,6 +22,11 @@ public class textinteractor: ScriptableObject
         controller = animator;
         interactor.setcontroller();
     }
+    public void changeanim()
+    {
+        controller = null;
+        interactor.setcontroller();
+    }
 
-    
+
 }
