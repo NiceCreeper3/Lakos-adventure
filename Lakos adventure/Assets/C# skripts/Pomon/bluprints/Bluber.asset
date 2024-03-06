@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a05b522ffd455148a94b9bc1f767917, type: 3}
+  m_Name: Bluber
+  m_EditorClassIdentifier: 
+  name: Bluber
+  front: {fileID: 21300000, guid: f8518c655a40d744ba615a25a2c6089d, type: 3}
+  back: {fileID: 21300000, guid: a21982875ce09c449b9286df932eeb1f, type: 3}
+  description: 
+  genderratio: 0
+  MinAttack: 0
+  MaxAttack: 0
+  attackgrow: 0
+  MinHealt: 0
+  MaxHealt: 0
+  healthgrow: 0
+  MinSpeed: 0
+  MaxSpeed: 0
+  speedgrow: 0
+  MinDefense: 0
+  MaxDefense: 0
+  Defensegrow: 0
+  CaptureChanse: 0
+  PomonElemet: []
+  MovesCanLern: []

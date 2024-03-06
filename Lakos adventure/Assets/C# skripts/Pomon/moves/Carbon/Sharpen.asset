@@ -16,5 +16,6 @@ MonoBehaviour:
   MoveDiskrepseon: 
   power: 0
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  buffTimes: 2
-  WhatToBuff: 0
+  _toBuff:
+  - BuffTimes: 2
+    WhatToBuff: 0

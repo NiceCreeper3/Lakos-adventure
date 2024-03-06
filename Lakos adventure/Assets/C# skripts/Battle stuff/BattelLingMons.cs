@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using UnityEngine;
-using UnityEngine.Events;
-
-using Random = UnityEngine.Random;
 
 public class BattelLingMons : MonoBehaviour
 {
-    public enum buffs
+    public enum Buffs
     {
         AttackBuff,
         SpeedBuff,
@@ -66,41 +61,36 @@ public class BattelLingMons : MonoBehaviour
     }
 
     // adds stats "stabs". aka buffs
-    public void StatesBuff(int buffTimes, buffs whatToBuff)
+    public void StatesBuff(double buffTimes, Buffs whatToBuff)
     {
         // the max amount of times we can buff
-        short maxBuffTimes = 6;
+        short maxBuffAmount = 6;
 
-        // is kurrent amout stuff gets buffed
-        double buffAmount = 0.5;
-
-        // determens how meany times a abilty buffs
-        for (int i = 0; i < buffTimes; i++)
+        switch (whatToBuff)
         {
-            switch (whatToBuff)
-            {
-                case buffs.AttackBuff:
-                    _buffs.AttackBuff += buffAmount;
-                    break;
+            case Buffs.AttackBuff:
+                _buffs.AttackBuff += buffTimes;
+                break;
 
-                case buffs.SpeedBuff:
-                    _buffs.SpeedBuff += buffAmount;
-                    break;
+            case Buffs.SpeedBuff:
+                _buffs.SpeedBuff += buffTimes;
+                break;
 
-                case buffs.DefenseBuff:
-                    _buffs.DefenseBuff += buffAmount;
-                    break;
-            }
+            case Buffs.DefenseBuff:
+                _buffs.DefenseBuff += buffTimes;
+                break;
         }
 
         // make it beater latter
-        // adds a buff cap. so you can only have buffed [maxBuffTimes]. the + 2 is to acount four the buff starting at 1
-        if ((maxBuffTimes + 2) * buffAmount < _buffs.AttackBuff)
-            _buffs.AttackBuff = buffAmount * 8;
-        if ((maxBuffTimes + 2) * buffAmount < _buffs.SpeedBuff)
-            _buffs.SpeedBuff = buffAmount * 8;
-        if ((maxBuffTimes + 2) * buffAmount < _buffs.DefenseBuff)
-            _buffs.DefenseBuff = buffAmount * 8;
+        // adds a buff cap. so you can only have buffed [maxBuffTimes]. the + 2 is to acount four the buffes starting at 1
+        if (maxBuffAmount <_buffs.AttackBuff)
+            _buffs.AttackBuff = maxBuffAmount;
+        if (maxBuffAmount < _buffs.SpeedBuff)
+            _buffs.SpeedBuff = maxBuffAmount;
+        if (maxBuffAmount < _buffs.DefenseBuff)
+            _buffs.DefenseBuff = maxBuffAmount;
+
+        Debug.Log($"has buffed/debuffed {_currentMon.PomonName}s {whatToBuff} by {buffTimes}");
     }
 
     // calkulates damige and and  sends it to the (attckTarget)

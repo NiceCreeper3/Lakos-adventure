@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
+  m_Name: Sowoink
+  m_EditorClassIdentifier: 
+  PomonName: Sowoink
+  Spesies: {fileID: 11400000, guid: eaab8cbdbd111b644b6d77542b92adc0, type: 2}
+  IsDude: 1
+  level: 1
+  Attack: 10
+  MaxHealt: 50
+  CurrentHealt: 0
+  Speed: 9
+  Defense: 6
+  PomonMoves:
+  - {fileID: 11400000, guid: 624fdd767d1b92c4aa166bfe891f6a7f, type: 2}
+  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: 00efef4a56e3043469cf9ec0c76723ab, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35225b45a1e0a10458ef27343aea8a5a, type: 3}
   m_Name: Obsorb
   m_EditorClassIdentifier: 
-  MoveName: 
+  MoveName: Obsorb
   MoveDiskrepseon: 
   power: 20
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}

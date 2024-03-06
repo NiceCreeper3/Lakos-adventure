@@ -16,5 +16,6 @@ MonoBehaviour:
   MoveDiskrepseon: 'coses a heavy storm. using it to shild it self farising defense '
   power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  buffTimes: 1
-  WhatToBuff: 2
+  _toBuff:
+  - BuffTimes: 1
+    WhatToBuff: 2

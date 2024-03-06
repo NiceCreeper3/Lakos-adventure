@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc387cdafd19de4c9e50b65af84e974, type: 3}
   m_Name: shot
   m_EditorClassIdentifier: 
-  MoveName: 
+  MoveName: Shot
   MoveDiskrepseon: Do i enven have to explane what dis does?
   power: 50
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

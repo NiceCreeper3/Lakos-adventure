@@ -29,6 +29,7 @@ public static class DamageMath
         if (attack.power != 0) // makes sure buff moves don,t end up doving damige
             rawDamage = attack.power + pomon.Attack;
 
+
         totalDamage = rawDamage * attack.MoveElement.ElementMultiplier(pomon.Spesies) * buffs.AttackBuff;
 
         Debug.Log($"_______________{pomon.PomonName}_______________");

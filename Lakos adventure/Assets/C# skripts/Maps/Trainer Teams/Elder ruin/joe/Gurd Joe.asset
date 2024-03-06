@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5102f1f28945aa249a733b202ed4946c, type: 3}
+  m_Name: Gurd Joe
+  m_EditorClassIdentifier: 
+  team:
+  - {fileID: 11400000, guid: 6aa55ebb729879748a9fba25e09adff0, type: 2}
+  - {fileID: 11400000, guid: f93390f3225167245a1a54dd62fa65ac, type: 2}
+  - {fileID: 11400000, guid: 5e30a12035efe8749bef425c2632018d, type: 2}

@@ -17,5 +17,6 @@ MonoBehaviour:
     cukkes the sharpeing knife
   power: 10
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  buffTimes: 1
-  WhatToBuff: 0
+  _toBuff:
+  - BuffTimes: 1
+    WhatToBuff: 0

@@ -7,6 +7,6 @@ public class Healing : BasikMoves
 
     public override void AbilityBefore(BattelLingMons interragsen)
     {
-        
+        interragsen.ChangeHealt(healPower);
     }
 }
