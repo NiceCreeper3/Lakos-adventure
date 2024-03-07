@@ -2343,7 +2343,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9f98a5b0b1a8beb4696e767ee10aea8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2580df563ccb8146bb839a9c936082a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3794,7 +3794,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPlayerMon: 1
   pomonImgeDissplay: {fileID: 345097783}
-  _attackBuff: 0
 --- !u!4 &854951184
 Transform:
   m_ObjectHideFlags: 0
@@ -7962,7 +7961,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPlayerMon: 0
   pomonImgeDissplay: {fileID: 1865353024}
-  _attackBuff: 0
 --- !u!114 &2083093382
 MonoBehaviour:
   m_ObjectHideFlags: 0
