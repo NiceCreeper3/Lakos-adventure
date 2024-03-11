@@ -13,13 +13,11 @@ public class pomondisplay : MonoBehaviour
     [SerializeField] private TMP_Text nameandid;
     [SerializeField] private TMP_Text desc;
     [SerializeField] private GenderRatioCalculator genderRatio;
+    [SerializeField] private showtypes typedisect;
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        loadmon(pomon);
-    }
+
 
     public void loadmon(PomonsBluPrint entry)
     {
@@ -29,5 +27,6 @@ public class pomondisplay : MonoBehaviour
         desc.text = pomon.description;
         genderRatio.ratio = pomon.genderratio;
         nameandid.text = id + "#" + pomon.name;
+        typedisect.loadtypes(pomon.PomonElemet);
     }
 }
