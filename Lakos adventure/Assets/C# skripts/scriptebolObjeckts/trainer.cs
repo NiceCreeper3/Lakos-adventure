@@ -23,9 +23,7 @@ public class trainer : Actor
         Seaching = false;
         if (!defeated)
         {
-            MapToBattel.IsTranerBattle = this;
-            MapToBattel.enemyPomons = trainerTeam;
-            Textinteractor.changeanim(interaction);
+            SceneLoader.Battle(this);
         }
     }
 
