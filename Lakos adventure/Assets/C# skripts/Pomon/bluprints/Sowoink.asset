@@ -33,6 +33,5 @@ MonoBehaviour:
   PomonElemet:
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern:
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
-  - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
-  - {fileID: 11400000, guid: 71eb2806e620dce42ad83eee17bb1ce4, type: 2}
+  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: 5e2fcb0d44bd50d4eaec2dffd9f1fd1f, type: 2}

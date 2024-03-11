@@ -18,6 +18,7 @@ public class DisplayCaughtPomon : MonoBehaviour
     [SerializeField] private TMP_Text level_text;
     [SerializeField] private MoveInitialize moveInitializer;
     [SerializeField] private Image gender;
+    [SerializeField] private showtypes typedisect;
 
     [SerializeField] private Sprite dude;
     [SerializeField] private Sprite dudette;
@@ -42,5 +43,6 @@ public class DisplayCaughtPomon : MonoBehaviour
         health.SetSlider(entry);
         spesies.text = "species:" + pomon.Spesies.name;
         moveInitializer.Updatemoves(pomon.PomonMoves);
+        typedisect.loadtypes(pomon.Spesies.PomonElemet);
     }
 }

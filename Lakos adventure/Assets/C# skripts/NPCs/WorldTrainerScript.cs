@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WorldTrainerScript : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class WorldTrainerScript : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Actorscript actorscript;
 
-
+    [SerializeField] private UnityEvent OnSpot;
     private void Start()
     {
         actorscript.movepoint = actorscript.grid.CellToWorld(actorscript.grid.WorldToCell(transform.position)) + new Vector3(0.31f, 0.31f, 0);
@@ -40,6 +41,6 @@ public class WorldTrainerScript : MonoBehaviour
     }
     public void triggeractive()
     {
-        
+        OnSpot.Invoke();
     }
 }
