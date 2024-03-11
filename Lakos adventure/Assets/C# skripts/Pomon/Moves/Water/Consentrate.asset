@@ -9,15 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbed0bec32bf73848b76a1924afd7d86, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
   m_Name: Consentrate
   m_EditorClassIdentifier: 
   MoveName: Consentrate
   MoveDiskrepseon: 
+  MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
-  _toBuff:
-  - BuffTimes: 1
-    WhatToBuff: 1
-  - BuffTimes: 2
-    WhatToBuff: 2
+  AddedAbilityes: []
+  _healPower: 0
+  _getBoffings:
+  - WhatToBuff: 1
+    HowToBuff: 0
+  - WhatToBuff: 2
+    HowToBuff: 2

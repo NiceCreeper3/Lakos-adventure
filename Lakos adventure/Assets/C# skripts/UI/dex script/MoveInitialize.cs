@@ -7,7 +7,7 @@ public class MoveInitialize : MonoBehaviour
     [SerializeField] List<GameObject> moves;
     [SerializeField]GameObject movebutton;
     // Update is called once per frame
-    public void Updatemoves( List<BasikMoves> pomonMoves)
+    public void Updatemoves( List<Moves> pomonMoves)
     {
         if (moves.Count > 0)
         {
@@ -17,7 +17,7 @@ public class MoveInitialize : MonoBehaviour
             }
         }
         
-        foreach (BasikMoves move in pomonMoves)
+        foreach (Moves move in pomonMoves)
         {
             GameObject movebut = Instantiate(movebutton, transform);
             movebut.GetComponent<VisualMove>().Visulize(move);

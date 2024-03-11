@@ -9,14 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbed0bec32bf73848b76a1924afd7d86, type: 3}
-  m_Name: Knife shot
+  m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
+  m_Name: Knife Shot
   m_EditorClassIdentifier: 
   MoveName: Knife Shot
-  MoveDiskrepseon: thr pomon will sharpen its claws inkrising its attack. also it
-    cukkes the sharpeing knife
+  MoveDiskrepseon: the pomon will sharpen its claws Increase its attack sligtly.
+    also it cukkes the sharpeing knife
+  MoveSound: 0
   power: 10
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  _toBuff:
-  - BuffTimes: 1
-    WhatToBuff: 0
+  _abilityes:
+  - AbilityEffects: 1
+    CallAfterAttack: 1
+    TargetSelf: 1
+  healPower: 0
+  _getBoffings:
+  - WhatToBuff: 0
+    HowToBuff: 0

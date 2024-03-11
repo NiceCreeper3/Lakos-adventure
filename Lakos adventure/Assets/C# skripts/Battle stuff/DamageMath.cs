@@ -19,7 +19,7 @@ public static class DamageMath
         }
     }
 
-    public static int AttackMath(BasikMoves attack, Pomons pomon, BattelLingMons target, StatsBuff buffs)
+    public static int AttackMath(Moves attack, Pomons pomon, BattelLingMons target, StatsBuff buffs)
     {
         // tempeary values
         int rawDamage = 0;

@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc387cdafd19de4c9e50b65af84e974, type: 3}
-  m_Name: LightBlast
+  m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
+  m_Name: Fire blast
   m_EditorClassIdentifier: 
-  MoveName: Light blast
+  MoveName: Fire blast
   MoveDiskrepseon: 
-  power: 40
-  MoveElement: {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
+  MoveSound: 0
+  power: 45
+  MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
+  _abilityes: []
+  healPower: 0
+  _getBoffings: []

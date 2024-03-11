@@ -1,19 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move", menuName = "PomonMoves/Teast")]
-public class MovesScriptebol : ScriptableObject
+[CreateAssetMenu(fileName = "Move", menuName = "PomonMoves/Move")]
+public class Moves : ScriptableObject
 {
     [Header("Flaver")]
     public string MoveName;
     public string MoveDiskrepseon;
+    public SoundManger.Sound MoveSound;
 
     [Header("attack")]
     public int power;
     public ElementObjecks MoveElement;
 
-    private enum AbilityEffects
+    public enum AbilityEffects
     {
         ChangeUserHealt,
         BuffTarget,
@@ -21,16 +20,16 @@ public class MovesScriptebol : ScriptableObject
     }
 
     [System.Serializable]
-    private struct AddAbiltyes
+    public struct AddAbiltyes
     {
         public AbilityEffects AbilityEffects;
-        public bool GoesBeforeTurn;
+        public bool CallAfterAttack;
         public bool TargetSelf;
     }
 
     // is only used her so is a priavte
     [Header("Ablityes the move has")]
-    [SerializeField] private AddAbiltyes[] _abilityes;
+    public AddAbiltyes[] AddedAbilityes;
 
     // waht abiltyes 
     private delegate void Ability(BattelLingMons TargetSelf);
@@ -38,40 +37,42 @@ public class MovesScriptebol : ScriptableObject
 
     // healt change
     #region
-    public int healPower;
+    [SerializeField] private int _healPower;
 
     private void HealtChange(BattelLingMons interragsen)
     {
-        interragsen.ChangeHealt(healPower);
+        ChangeHealtMoves.ChangeHealtCaller(interragsen, _healPower);
     }
     #endregion
 
     // buff/debuff
     #region
     [Header("Buffing pomon")]
-    [SerializeField] private Buffing.BuffInfo[] _getBoffings;
+    [SerializeField] private BuffingMoves.BuffInfo[] _getBoffings;
 
     private void GiveBuffInfo(BattelLingMons interragsen)
     {
-        Buffing.Buff(interragsen, _getBoffings);
+        BuffingMoves.Buff(interragsen, _getBoffings);
     }
     #endregion
 
     // maby move all the ablityes to a difrent spot
-    public void AbilbyAtevated()
+    public void AbilityActivated()
     {
+        //int nummber = (nummber + 1) % MyArray;
+
         // rundes fruge all the pikked effects
-        foreach (AddAbiltyes ability in _abilityes)
+        foreach (AddAbiltyes ability in AddedAbilityes)
         {
             // checkes what Ability was pikked
             switch (ability.AbilityEffects)
             {
                 case AbilityEffects.ChangeUserHealt:                    
-                    WhenAndHowToAblity(HealtChange, ability.GoesBeforeTurn,  ability.TargetSelf);
+                    WhenAndHowToAblity(HealtChange, ability.CallAfterAttack,  ability.TargetSelf);
                     break;
 
                 case AbilityEffects.BuffTarget:
-                    WhenAndHowToAblity(GiveBuffInfo, ability.GoesBeforeTurn, ability.TargetSelf);
+                    WhenAndHowToAblity(GiveBuffInfo, ability.CallAfterAttack, ability.TargetSelf);
                     break;
             }
         }
@@ -84,16 +85,16 @@ public class MovesScriptebol : ScriptableObject
         {
             // checkes if this abilty is targeting it self or the enemy 
             if (targetself)
-                _beforeTagetSelf += ability;
+                _afterTargetSelf += ability;
             else
-                _beforeTagetEnemy += ability;
+                _afterTagetEnemy += ability;
         }
         else
         {
             if (targetself)
-                _afterTargetSelf += ability;
+                _beforeTagetSelf += ability;
             else
-                _afterTagetEnemy += ability;
+                _beforeTagetEnemy += ability;
         }
     }
 
@@ -103,22 +104,27 @@ public class MovesScriptebol : ScriptableObject
     // are methods that represend what ablitys to trigger and at what time
     public void AbilityBeforeTargetSelf(BattelLingMons TargetSelf)
     {
-        _beforeTagetSelf(TargetSelf);
+        if (_beforeTagetSelf != null)
+            _beforeTagetSelf(TargetSelf);
+
     }
 
     public void AbilityAfterTargetSelf(BattelLingMons TargetSelf) 
     {
-        _afterTargetSelf(TargetSelf);
+        if (_beforeTagetSelf != null)
+            _afterTargetSelf(TargetSelf);
     }
 
     public void AbilityBeforeTargetEnemy(BattelLingMons TargetEnemy)
     {
-        _beforeTagetEnemy(TargetEnemy);
+        if (_beforeTagetSelf != null)
+            _beforeTagetEnemy(TargetEnemy);
     }
 
     public void AbilityAfterTargetEnemy(BattelLingMons TargetEnemy)
     {
-        _afterTagetEnemy(TargetEnemy);
+        if (_beforeTagetSelf != null)
+            _afterTagetEnemy(TargetEnemy);
     }
     #endregion
 }

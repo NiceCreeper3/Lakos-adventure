@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class Buffing
+public static class BuffingMoves
 {
     // buffing
     #region
@@ -16,13 +12,14 @@ public static class Buffing
     // makes it easyer to keep trak of how we buff/debuff
     public enum HowToBuff
     {
-        LesserInkres,
+        LesserIncrease,
         LesserDebuff,
-        StatInkres,
+        StatIncrease,
         StatdeDebuff,
-        MasiveStatInkres,   
+        MasiveStatIncrease,   
         MasiveStatDebuff    
     }
+    #endregion
 
     public static void Buff(BattelLingMons interragsen, BuffInfo[] buffing)
     {
@@ -31,45 +28,44 @@ public static class Buffing
             interragsen.StatesBuff(HowToStat(buff.HowToBuff), buff.WhatToBuff);
         }
     }
-    #endregion
+
 
     // gets the buff/debuff number
     private static double HowToStat(HowToBuff howToBuff)
     {
-        double lesserInkres = 0.25;
-        double statInkres = 0.5;
-        double masiveStatInkres = 1;
-
+        double lesserIncrease = 0.25;
+        double statIncrease = 0.5;
+        double masiveStatIncrease = 1;
+        
 
         double buffNumber = 0;
 
         switch (howToBuff)
         {
-            // buff states
-            case HowToBuff.LesserInkres:
-                buffNumber = lesserInkres;
+            // Increase states
+            case HowToBuff.LesserIncrease:
+                buffNumber = lesserIncrease;
                 break;
-            case HowToBuff.StatInkres:
-                buffNumber = statInkres;
+            case HowToBuff.StatIncrease:
+                buffNumber = statIncrease;
                 break;
-            case HowToBuff.MasiveStatInkres:
-                buffNumber = masiveStatInkres;
+            case HowToBuff.MasiveStatIncrease:
+                buffNumber = masiveStatIncrease;
                 break;
 
 
-            // dekres states
+            // Dincrease states
             case HowToBuff.LesserDebuff:
-                buffNumber = -lesserInkres;
+                buffNumber = -lesserIncrease;
                 break;
             case HowToBuff.StatdeDebuff:
-                buffNumber = -statInkres;
+                buffNumber = -statIncrease;
                 break;
             case HowToBuff.MasiveStatDebuff:
-                buffNumber = -masiveStatInkres;
+                buffNumber = -masiveStatIncrease;
                 break;
         }
 
         return buffNumber;
     }
-
 }

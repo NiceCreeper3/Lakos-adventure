@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Moves", menuName = "PomonMoves/No abilty")]
-public class BasikMoves : ScriptableObject
+public class BasikMoves1 : ScriptableObject
 {
     [Header("Flaver")]
     public string MoveName;

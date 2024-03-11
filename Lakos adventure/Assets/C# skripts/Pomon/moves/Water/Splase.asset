@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc387cdafd19de4c9e50b65af84e974, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
   m_Name: Splase
   m_EditorClassIdentifier: 
   MoveName: Splase
   MoveDiskrepseon: 
+  MoveSound: 0
   power: 30
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
+  AddedAbilityes: []
+  _healPower: 0
+  _getBoffings: []

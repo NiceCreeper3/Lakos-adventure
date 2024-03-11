@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class VisualMove : MonoBehaviour
 {
-    [SerializeField] private BasikMoves move;
+    [SerializeField] private Moves move;
 
     [SerializeField] private TMP_Text nametext;
     [SerializeField] private TMP_Text powertext;
@@ -15,7 +15,7 @@ public class VisualMove : MonoBehaviour
 
 
 
-    public void Visulize(BasikMoves newmove)
+    public void Visulize(Moves newmove)
     {
         move = newmove;
 

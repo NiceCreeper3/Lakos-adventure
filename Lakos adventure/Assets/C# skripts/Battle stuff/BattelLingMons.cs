@@ -57,14 +57,15 @@ public class BattelLingMons : MonoBehaviour
     // triggeres chosen attacks BeforeAblity
     public void BeforeBattle(int attackPicked)
     {
-        _currentMon.PomonMoves[attackPicked].AbilityBefore(this);
+        //_currentMon.PomonMoves[attackPicked].AbilityBefore(this);
+        _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(this);
     }
 
     // adds stats "stabs". aka buffs
     public void StatesBuff(double buffTimes, Buffs whatToBuff)
     {
         // the max amount of times we can buff
-        short maxBuffAmount = 6;
+        short maxBuffAmount = 3;
 
         switch (whatToBuff)
         {
@@ -90,7 +91,7 @@ public class BattelLingMons : MonoBehaviour
         if (maxBuffAmount < _buffs.DefenseBuff)
             _buffs.DefenseBuff = maxBuffAmount;
 
-        Debug.Log($"has buffed/debuffed {_currentMon.PomonName}s {whatToBuff} by {buffTimes}");
+        Debug.Log($"has buffed/debuffed {_currentMon.PomonName}s {whatToBuff} by {whatToBuff}");
     }
 
     // calkulates damige and and  sends it to the (attckTarget)
@@ -100,12 +101,16 @@ public class BattelLingMons : MonoBehaviour
         if (_currentMon.CurrentHealt > 0)
         {
             // makes a short refrens to the Move
-            BasikMoves move = _currentMon.PomonMoves[attackPicked];
+            //BasikMoves1 move = _currentMon.PomonMoves[attackPicked];
+            Moves move = _currentMon.PomonMoves[attackPicked];
 
+            //int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget, _buffs);
             int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget, _buffs);
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
-            move.AbilityAfter(this);
+            //move.AbilityAfter(this);
+            move.AbilityAfterTargetSelf(this);
+            move.AbilityAfterTargetEnemy(attckTarget);
 
             attckTarget.TakesDamage(Damage);
         }
@@ -176,6 +181,9 @@ public class BattelLingMons : MonoBehaviour
 
         // sets buff amount
         _buffs = new DamageMath.StatsBuff(1,1,1);
+
+        foreach (Moves moves in swichingPomons.PomonMoves)
+            moves.AbilityActivated();
 
         // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
         if (isPlayerMon)

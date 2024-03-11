@@ -33,7 +33,7 @@ public class Pomons : ScriptableObject
 
     public int Defense;
 
-    public List<BasikMoves> PomonMoves = new List<BasikMoves>();
+    public List<Moves> PomonMoves = new List<Moves>();
 
     #endregion
     public void levelcalc(int amount)

@@ -18,10 +18,9 @@ MonoBehaviour:
   level: 0
   Attack: 16
   MaxHealt: 100
-  CurrentHealt: 100
+  CurrentHealt: 62
   Speed: 16
   Defense: 12
   PomonMoves:
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: e1a91a734f1db0846a538292181a0322, type: 2}
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
+  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}

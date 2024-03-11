@@ -9,13 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbed0bec32bf73848b76a1924afd7d86, type: 3}
-  m_Name: Atom storm
+  m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
+  m_Name: Atom Storm
   m_EditorClassIdentifier: 
-  MoveName: Atom storm
-  MoveDiskrepseon: 'coses a heavy storm. using it to shild it self farising defense '
+  MoveName: Atom Storm
+  MoveDiskrepseon: 'coses a thick storm of dust. using it to shild it self farising
+    defense '
+  MoveSound: 0
   power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  _toBuff:
-  - BuffTimes: 1
-    WhatToBuff: 2
+  _abilityes:
+  - AbilityEffects: 1
+    CallAfterAttack: 0
+    TargetSelf: 1
+  healPower: 0
+  _getBoffings:
+  - WhatToBuff: 2
+    HowToBuff: 0

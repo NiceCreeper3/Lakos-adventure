@@ -34,7 +34,7 @@ public class PomonsBluPrint : ScriptableObject
     public ElementObjecks[] PomonElemet;
 
     [Header("On Level")]
-    public List<BasikMoves> MovesCanLern = new List<BasikMoves>();
+    public List<Moves> MovesCanLern = new List<Moves>();
 
     public Pomons generateMon(int level)
     {

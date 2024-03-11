@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc387cdafd19de4c9e50b65af84e974, type: 3}
-  m_Name: bring into void
+  m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
+  m_Name: Bring into void
   m_EditorClassIdentifier: 
-  MoveName: bring into void
+  MoveName: Bring into void
   MoveDiskrepseon: 
+  MoveSound: 0
   power: 65
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
+  _abilityes: []
+  healPower: 0
+  _getBoffings: []
