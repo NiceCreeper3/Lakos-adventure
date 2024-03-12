@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
-  m_Name: Shot
+  m_Name: shot
   m_EditorClassIdentifier: 
   MoveName: Shot
   MoveDiskrepseon: Do i enven have to explane what dis does?
   MoveSound: 0
   power: 50
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  _abilityes: []
-  healPower: 0
+  AddedAbilityes: []
+  _healPower: 0
   _getBoffings: []

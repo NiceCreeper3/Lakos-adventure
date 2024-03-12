@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5102f1f28945aa249a733b202ed4946c, type: 3}
   m_Name: Gurd Gu
   m_EditorClassIdentifier: 
-  team: []
+  team:
+  - {fileID: 11400000, guid: f8feb478603fab54f98622fa67f9c3ec, type: 2}

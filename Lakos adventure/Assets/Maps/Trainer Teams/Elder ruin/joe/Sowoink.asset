@@ -22,6 +22,6 @@ MonoBehaviour:
   Speed: 9
   Defense: 6
   PomonMoves:
-  - {fileID: 11400000, guid: 624fdd767d1b92c4aa166bfe891f6a7f, type: 2}
-  - {fileID: 11400000, guid: 4a36173ed4daad945b91cbc982a8b22e, type: 2}
-  - {fileID: 11400000, guid: 00efef4a56e3043469cf9ec0c76723ab, type: 2}
+  - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}
+  - {fileID: 11400000, guid: b807c98e8d14c114da9c15b4c5433345, type: 2}
+  - {fileID: 11400000, guid: ce496724d51b6bd41b6b95fb460fcef4, type: 2}

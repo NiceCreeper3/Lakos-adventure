@@ -16,5 +16,4 @@ MonoBehaviour:
   ElementColor: {r: 0.109336056, g: 0.17484963, b: 0.3679245, a: 1}
   _effetive:
   - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
-  _resestes:
-  - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
+  _resestes: []

@@ -17,6 +17,6 @@ MonoBehaviour:
   MoveSound: 0
   power: 40
   MoveElement: {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
-  _abilityes: []
-  healPower: 0
+  AddedAbilityes: []
+  _healPower: 0
   _getBoffings: []

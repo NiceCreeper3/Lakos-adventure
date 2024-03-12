@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Danger snake
   m_EditorClassIdentifier: 
   name: Snappersapper
-  front: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
+  front: {fileID: 21300000, guid: c96030c7c9ddeb74f9bf63e465064cd3, type: 3}
   back: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
   description: 
   genderratio: 0
@@ -34,5 +34,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern:
-  - {fileID: 11400000, guid: c01c292ee4b007743b4210e2e99d6fec, type: 2}
-  - {fileID: 11400000, guid: 624fdd767d1b92c4aa166bfe891f6a7f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}

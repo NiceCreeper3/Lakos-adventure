@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -24,9 +24,9 @@ public class MoveEditorWindow : Editor
     SerializedProperty _getBoffings;
     #endregion
 
-    private bool _flaverInfo, BasickMoves, Ablitys = false;
-    private bool _wantsToChangeHealt = false;
-    private bool _wantsToBuff = false;
+    private bool _flaverInfo, BasickMoves, Ablitys;
+    private bool _wantsToChangeHealt;
+    private bool _wantsToBuff;
 
 
     // gets a refrends to the values
@@ -65,8 +65,11 @@ public class MoveEditorWindow : Editor
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 
+        // the most genral stats
+        #region
         EditorGUILayout.Space(5);
 
+        //if (moves.AddedAbilityes.Contains(moves.AbilityEffects.BuffTarget))
 
         // displayes normal pise of info
         EditorGUILayout.PropertyField(power);
@@ -77,17 +80,18 @@ public class MoveEditorWindow : Editor
         EditorGUILayout.PropertyField(AddedAbilityes);
 
         EditorGUILayout.Space(5);
+        #endregion
 
-        #region
         // Abilty
+        #region
 
         // makes a drop down four falver info
-        Ablitys = EditorGUILayout.BeginFoldoutHeaderGroup(Ablitys, "the normal");
+        Ablitys = EditorGUILayout.BeginFoldoutHeaderGroup(Ablitys, "Ablitys");
         if (Ablitys)
         {
             GUILayout.Label("Abiltys info");
-            _wantsToChangeHealt = GUILayout.Toggle(_wantsToChangeHealt, "using buffing");
-            _wantsToBuff = GUILayout.Toggle(_wantsToBuff, "using healt change");
+            _wantsToChangeHealt = GUILayout.Toggle(_wantsToChangeHealt, "using healt change");
+            _wantsToBuff = GUILayout.Toggle(_wantsToBuff, "using buffing");
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 

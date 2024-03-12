@@ -17,11 +17,11 @@ MonoBehaviour:
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
-  _abilityes:
+  AddedAbilityes:
   - AbilityEffects: 1
     CallAfterAttack: 0
     TargetSelf: 1
-  healPower: 0
+  _healPower: 0
   _getBoffings:
   - WhatToBuff: 1
     HowToBuff: 2

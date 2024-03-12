@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
-  m_Name: Atom Storm
+  m_Name: Atom storm
   m_EditorClassIdentifier: 
   MoveName: Atom Storm
   MoveDiskrepseon: 'coses a thick storm of dust. using it to shild it self farising
@@ -18,11 +18,11 @@ MonoBehaviour:
   MoveSound: 0
   power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  _abilityes:
+  AddedAbilityes:
   - AbilityEffects: 1
-    CallAfterAttack: 0
+    CallAfterAttack: 1
     TargetSelf: 1
-  healPower: 0
+  _healPower: 0
   _getBoffings:
   - WhatToBuff: 2
     HowToBuff: 0
