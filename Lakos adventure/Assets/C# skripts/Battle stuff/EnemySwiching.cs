@@ -4,8 +4,10 @@ public class EnemySwiching : SwichePomon
     {
         _isPlayer = false;
 
-        //____________________________________________________________________________________[Add this after Teasting]____________________________________________
-        _pomonTeam = MapToBattel.enemyPomons;
+        // adds the info from map if there has not bean given a team
+        if (_pomonTeam == null)
+            _pomonTeam = MapToBattel.enemyPomons;
+
 
         base.Awake();
     }
