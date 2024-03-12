@@ -614,11 +614,7 @@ PrefabInstance:
     - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-<<<<<<< Updated upstream
       objectReference: {fileID: 289485903}
-=======
-      objectReference: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
->>>>>>> Stashed changes
     - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -633,11 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-<<<<<<< Updated upstream
       value: triggeractive
-=======
-      value: RunTextBox
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -645,11 +637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-<<<<<<< Updated upstream
       value: WorldTrainerScript, Assembly-CSharp
-=======
-      value: textinteractor, Assembly-CSharp
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
