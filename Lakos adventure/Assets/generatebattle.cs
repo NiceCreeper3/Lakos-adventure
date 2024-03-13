@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class ScenarioState : StateMachineBehaviour
+public class generatebattle : StateMachineBehaviour
 {
-    [SerializeField] private textinteractor typeWriter;
-    [SerializeField]private UnityEvent actions;
+    [SerializeField] private PomonsBluPrint monster;
+    [SerializeField] private int level;
+    [SerializeField] private Actor player;
+    [SerializeField] private pomonteam wild;
+
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
-        if (typeWriter)
+        while (wild.team.Count >= 1)
         {
-            typeWriter.textboxinsceene.anim = animator;
+            wild.team.RemoveAt(0);
         }
-        actions.Invoke();
+        wild.team.Add(monster.generateMon(level));
+        InfoSaved.playerlocation = player.body.grid.WorldToCell(player.body.transform.position);
+        SceneLoader.Battle(wild);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

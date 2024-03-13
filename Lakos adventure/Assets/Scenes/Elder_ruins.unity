@@ -1531,6 +1531,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1546269746}
     - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: maxlevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: minlevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: posiblemons
       value: 
       objectReference: {fileID: 11400000, guid: dcdad466f66a7f14e8772f04d19c6488, type: 2}
@@ -33640,9 +33648,13 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1546269747}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: Trainer
       value: 
-      objectReference: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
+      objectReference: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33765,9 +33777,13 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1546269747}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: Trainer
       value: 
-      objectReference: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
+      objectReference: {fileID: 11400000, guid: 039779dfa2331724c940f80b4e32c46e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35404,8 +35420,8 @@ MonoBehaviour:
         m_CallState: 2
   player: {fileID: 1546269746}
   propability: 2
-  minlevel: 0
-  maxlevel: 0
+  minlevel: 17
+  maxlevel: 30
   posiblemons: {fileID: 11400000, guid: 95d01f543abcdb645b323c5d2efb92d5, type: 2}
 --- !u!114 &1207292376
 MonoBehaviour:
@@ -36649,9 +36665,13 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1546269747}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: Trainer
       value: 
-      objectReference: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
+      objectReference: {fileID: 11400000, guid: 0087515bdb9f3a04aaeeea5d6b5c8d19, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37226,9 +37246,13 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1546269747}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: Trainer
       value: 
-      objectReference: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
+      objectReference: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
