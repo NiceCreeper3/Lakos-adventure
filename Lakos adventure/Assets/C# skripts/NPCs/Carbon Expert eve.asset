@@ -16,8 +16,8 @@ MonoBehaviour:
   sprites: []
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
+  interaction: {fileID: 0}
   battlesprite: {fileID: 0}
   Seaching: 0
   defeated: 0
   trainerTeam: {fileID: 0}
-  interaction: {fileID: 0}

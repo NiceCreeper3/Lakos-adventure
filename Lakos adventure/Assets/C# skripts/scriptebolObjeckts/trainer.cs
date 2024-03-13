@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+
 
 [CreateAssetMenu(fileName = "new trainer", menuName = "person/trainer")]
 public class trainer : Actor
@@ -16,7 +16,7 @@ public class trainer : Actor
 
     public pomonteam trainerTeam;
 
-    public AnimatorController interaction;
+    
 
     public void attack()
     {

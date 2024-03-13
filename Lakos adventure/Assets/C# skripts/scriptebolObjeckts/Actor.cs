@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEditor.Animations;
 
 [CreateAssetMenu(fileName = "new Actor", menuName = "person/Civilian")]
 public class Actor : ScriptableObject
@@ -12,6 +13,8 @@ public class Actor : ScriptableObject
 
     [HideInInspector] public Actorscript body;
     [SerializeField] public textinteractor Textinteractor;
+
+    public AnimatorController interaction;
 
 
     public void movex(int length)
@@ -66,6 +69,10 @@ public class Actor : ScriptableObject
         }
     }
 
+    public void ineract()
+    {
+        Textinteractor.changeanim(interaction);
+    }
     public Sprite Getsprite(string spritename)
     {
         Sprite sprite = null;
