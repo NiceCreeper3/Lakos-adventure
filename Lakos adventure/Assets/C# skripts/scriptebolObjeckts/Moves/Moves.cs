@@ -110,24 +110,23 @@ public class Moves : ScriptableObject
     {
         if (_beforeTagetSelf != null)
             _beforeTagetSelf(TargetSelf);
-
     }
 
     public void AbilityAfterTargetSelf(BattelLingMons TargetSelf) 
     {
-        if (_beforeTagetSelf != null)
+        if (_afterTargetSelf != null)
             _afterTargetSelf(TargetSelf);
     }
 
     public void AbilityBeforeTargetEnemy(BattelLingMons TargetEnemy)
     {
-        if (_beforeTagetSelf != null)
+        if (_beforeTagetEnemy != null)
             _beforeTagetEnemy(TargetEnemy);
     }
 
     public void AbilityAfterTargetEnemy(BattelLingMons TargetEnemy)
     {
-        if (_beforeTagetSelf != null)
+        if (_afterTagetEnemy != null)
             _afterTagetEnemy(TargetEnemy);
     }
     #endregion

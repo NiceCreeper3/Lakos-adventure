@@ -18,7 +18,7 @@ MonoBehaviour:
   description: 
   genderratio: 57
   MinHealt: 90
-  MaxHealt: 90
+  MaxHealt: 100
   healthgrow: 0
   MinAttack: 21
   MaxAttack: 29
