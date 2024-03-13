@@ -919,7 +919,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 170597478}
+      - m_Target: {fileID: 188330609}
         m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
         m_MethodName: CustumActionButton
         m_Mode: 1
@@ -1677,7 +1677,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 170597478}
+      - m_Target: {fileID: 236271216}
         m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
         m_MethodName: CustumActionButton
         m_Mode: 1
@@ -2745,8 +2745,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -3794,6 +3794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPlayerMon: 1
   pomonImgeDissplay: {fileID: 345097783}
+  _currentMon: {fileID: 0}
 --- !u!4 &854951184
 Transform:
   m_ObjectHideFlags: 0
@@ -5012,7 +5013,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 170597478}
+      - m_Target: {fileID: 1058054448}
         m_TargetAssemblyTypeName: CustumButton, Assembly-CSharp
         m_MethodName: CustumActionButton
         m_Mode: 1
@@ -5458,8 +5459,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -6787,8 +6788,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -7862,8 +7863,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -7961,6 +7962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPlayerMon: 0
   pomonImgeDissplay: {fileID: 1865353024}
+  _currentMon: {fileID: 0}
 --- !u!114 &2083093382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8314,7 +8316,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2127291032}
   - component: {fileID: 2127291033}
-  - component: {fileID: 2127291035}
   - component: {fileID: 2127291034}
   m_Layer: 5
   m_Name: Swiching Pomon UI
@@ -8386,18 +8387,6 @@ MonoBehaviour:
   _showAttack: {fileID: 1440653339}
   _showDefens: {fileID: 928925907}
   _showSpeed: {fileID: 2089643339}
---- !u!114 &2127291035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127291031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed678c565bc347f43b2b274fef575de7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class BattelLingMons : MonoBehaviour
     [Header("Reference to aesthetic stuff")]
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
-    private Pomons _currentMon;
+    [HideInInspector] public Pomons _currentMon;
     private SwichePomon OnSwitch;
 
     // represents buffs
@@ -104,8 +104,7 @@ public class BattelLingMons : MonoBehaviour
             //BasikMoves1 move = _currentMon.PomonMoves[attackPicked];
             Moves move = _currentMon.PomonMoves[attackPicked];
 
-            //int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget, _buffs);
-            int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget, _buffs);
+            int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget._currentMon, _buffs);
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
             //move.AbilityAfter(this);

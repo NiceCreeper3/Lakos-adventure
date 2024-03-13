@@ -15,8 +15,8 @@ MonoBehaviour:
   MoveName: Fire blast
   MoveDiskrepseon: 
   MoveSound: 0
-  power: 45
+  power: 35
   MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
-  _abilityes: []
-  healPower: 0
+  AddedAbilityes: []
+  _healPower: 0
   _getBoffings: []

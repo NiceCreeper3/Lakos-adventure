@@ -15,8 +15,13 @@ MonoBehaviour:
   MoveName: Bring into void
   MoveDiskrepseon: 
   MoveSound: 0
-  power: 65
+  power: 45
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
-  AddedAbilityes: []
+  AddedAbilityes:
+  - AbilityEffects: 2
+    CallAfterAttack: 0
+    TargetSelf: 1
   _healPower: 0
-  _getBoffings: []
+  _getBoffings:
+  - WhatToBuff: 1
+    HowToBuff: 1

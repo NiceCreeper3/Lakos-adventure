@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sharpen
   m_EditorClassIdentifier: 
   MoveName: Sharpen
-  MoveDiskrepseon: 
+  MoveDiskrepseon: inkresise the useres attack damge
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

@@ -17,8 +17,8 @@ MonoBehaviour:
   IsDude: 0
   level: 1
   Attack: 0
-  MaxHealt: 100
-  CurrentHealt: 0
+  MaxHealt: 125
+  CurrentHealt: 5
   Speed: 15
   Defense: 0
   PomonMoves:

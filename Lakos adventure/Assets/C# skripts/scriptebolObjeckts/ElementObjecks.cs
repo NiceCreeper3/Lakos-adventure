@@ -19,10 +19,14 @@ public class ElementObjecks : ScriptableObject
     {
         double moddefiher = 1;
 
+        Debug.Log($"defender has {defenderElemts.name} elemts");
+
         // runes frouge all the defending elemets.
         // if eny are ind _strongAgenst then it adds to moddefiher and does the oppsind if ind _weakAgenst
         foreach (ElementObjecks elemt in defenderElemts.PomonElemet)
         {
+            Debug.Log($"{elemt.name} elemts");
+
             // runs fruge all the elemt this Element is strong agenst. and if then it adds bounes damige
             foreach (ElementObjecks attack in _effetive)
                 if (elemt == attack)

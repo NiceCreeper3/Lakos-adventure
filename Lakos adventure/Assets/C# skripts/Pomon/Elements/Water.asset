@@ -17,4 +17,5 @@ MonoBehaviour:
   _effetive:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  _resestes: []
+  _resestes:
+  - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}

@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Snugems
   m_EditorClassIdentifier: 
   PomonName: Snugems
-  Spesies: {fileID: 11400000, guid: d21fdbdf38ff8fb4da5152e76987fa99, type: 2}
+  Spesies: {fileID: 11400000, guid: 34f296375e4fb414ca84265080996a89, type: 2}
   IsDude: 0
   level: 0
-  Attack: 16
+  Attack: 0
   MaxHealt: 100
   CurrentHealt: 100
   Speed: 16
   Defense: 12
   PomonMoves:
-  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
   - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
   - {fileID: 11400000, guid: 8752a5691bd030949a53b1826d7adbcc, type: 2}

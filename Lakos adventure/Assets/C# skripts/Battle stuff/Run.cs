@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public static class Run
 {
+    /// <summary>
+    /// Changes the scene to the previse
+    /// </summary>
     public static void Exskape()
     {
         // maby indklude a chanse or mini game

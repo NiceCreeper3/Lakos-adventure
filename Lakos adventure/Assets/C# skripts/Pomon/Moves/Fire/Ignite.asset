@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
-  m_Name: Sun blast
+  m_Name: Ignite
   m_EditorClassIdentifier: 
-  MoveName: Sun blast
-  MoveDiskrepseon: 
+  MoveName: Ignite
+  MoveDiskrepseon: the user fires it self op ready to attack. incresis the useres
+    attack and speed a small amount
   MoveSound: 0
-  power: 10
+  power: 5
   MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   AddedAbilityes:
   - AbilityEffects: 1

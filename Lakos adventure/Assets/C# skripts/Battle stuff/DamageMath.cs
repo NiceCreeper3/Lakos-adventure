@@ -19,7 +19,7 @@ public static class DamageMath
         }
     }
 
-    public static int AttackMath(Moves attack, Pomons pomon, BattelLingMons target, StatsBuff buffs)
+    public static int AttackMath(Moves attack, Pomons pomon, Pomons target, StatsBuff buffs)
     {
         // tempeary values
         int rawDamage = 0;
@@ -29,13 +29,18 @@ public static class DamageMath
         if (attack.power != 0) // makes sure buff moves don,t end up doving damige
             rawDamage = attack.power + pomon.Attack;
 
+        // gets a multeplyer based on weter or not the enemy resistes or is weak to the attacks elemt
+        double elementalMultyplayer = attack.MoveElement.ElementMultiplier(target.Spesies);
 
-        totalDamage = rawDamage * attack.MoveElement.ElementMultiplier(pomon.Spesies) * buffs.AttackBuff;
+        // adds all the math togetter four a totalDamage value
+        totalDamage = rawDamage * elementalMultyplayer * buffs.AttackBuff;
 
-        Debug.Log($"_______________{pomon.PomonName}_______________");
+        Debug.Log(
+            $"_______________{pomon.PomonName}_______________\n" +
+            $"___________used {attack.MoveName}_______________ ");
         Debug.Log(
             $"raw damage is {rawDamage} geainde by {attack.power} + {pomon.Attack} \n" +
-            $"Total damage is {totalDamage} geainde by {rawDamage} *{attack.MoveElement.ElementMultiplier(pomon.Spesies)} * {buffs.AttackBuff}");
+            $"Total damage is {totalDamage} geainde by {rawDamage} *{elementalMultyplayer} * {buffs.AttackBuff}");
 
         return (int)totalDamage;
     }
