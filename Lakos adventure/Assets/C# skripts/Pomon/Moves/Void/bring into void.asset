@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: bring into void
   m_EditorClassIdentifier: 
   MoveName: Bring into void
-  MoveDiskrepseon: 
+  MoveDiskrepseon: obsorbs som of the enemys life. the user also gains som whagt
+    and duse losses som speed
   MoveSound: 0
   power: 45
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   AddedAbilityes:
   - AbilityEffects: 2
-    CallAfterAttack: 0
+    CallAfterAttack: 1
     TargetSelf: 1
   _healPower: 0
   _getBoffings:

@@ -20,8 +20,8 @@ MonoBehaviour:
   MinAttack: 1
   MaxAttack: 1
   attackgrow: 1
-  MinHealt: 1
-  MaxHealt: 1
+  MinHealt: 125
+  MaxHealt: 125
   healthgrow: 1
   MinSpeed: 1
   MaxSpeed: 1
@@ -32,8 +32,4 @@ MonoBehaviour:
   CaptureChanse: 99
   PomonElemet:
   - {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
-  MovesCanLern:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  MovesCanLern: []

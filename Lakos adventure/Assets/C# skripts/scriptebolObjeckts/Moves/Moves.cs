@@ -74,6 +74,10 @@ public class Moves : ScriptableObject
                 case AbilityEffects.BuffTarget:
                     WhenAndHowToAblity(GiveBuffInfo, ability.CallAfterAttack, ability.TargetSelf);
                     break;
+
+                case AbilityEffects.DebuffTarget:
+                    WhenAndHowToAblity(GiveBuffInfo, ability.CallAfterAttack, ability.TargetSelf);
+                    break;
             }
         }
     }

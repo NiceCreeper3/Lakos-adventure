@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
-  m_Name: Fake
+  m_Name: Trial by fire
   m_EditorClassIdentifier: 
-  MoveName: Fake
-  MoveDiskrepseon: Does nothing
+  MoveName: Trial by fire
+  MoveDiskrepseon: the user lights them sefl ablase dealing 50 damage to itself,
+    and giving a massive buff to all states
   MoveSound: 0
   power: 0
-  MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
+  MoveElement: {fileID: 0}
   AddedAbilityes: []
   _healPower: 0
   _getBoffings: []

@@ -20,8 +20,8 @@ MonoBehaviour:
   MinAttack: 1
   MaxAttack: 2
   attackgrow: 1
-  MinHealt: 20
-  MaxHealt: 35
+  MinHealt: 125
+  MaxHealt: 125
   healthgrow: 12
   MinSpeed: 1
   MaxSpeed: 3

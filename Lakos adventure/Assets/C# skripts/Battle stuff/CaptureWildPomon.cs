@@ -32,6 +32,8 @@ public class CaptureWildPomon : MonoBehaviour
     // is called when player clikes on the capture button
     public static void CapturePomon()
     {
+        Debug.Log($"attemting to capture {_currentCapture}");
+
         int chansesToCapture = 3;
 
         // attempts to chapture. as long as this is not a trainer battle indekated by where or not there is a trainer sprite

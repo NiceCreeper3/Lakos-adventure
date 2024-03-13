@@ -17,18 +17,27 @@ public class PomonsBluPrint : ScriptableObject
 
     [Range(0,100)] public int genderratio;
 
+    #region
     [Header("Genral states")]
 
-    public int MinAttack;
+    [Header("Healt")]
+    public int MinHealt;
+    public int MaxHealt, healthgrow;
 
+    [Header("Attack")]
+    public int MinAttack;
     public int MaxAttack, attackgrow;
 
-    public int MinHealt, MaxHealt, healthgrow;
+    [Header("Speed")]
+    public int MinSpeed;
+    public int MaxSpeed, speedgrow;
 
-    public int MinSpeed, MaxSpeed, speedgrow;
+    [Header("Defense")]
+    public int MinDefense;
+    public int MaxDefense, Defensegrow;
+    #endregion
 
-    public int MinDefense, MaxDefense, Defensegrow;
-
+    [Space(10)]
     public int CaptureChanse;
 
     public ElementObjecks[] PomonElemet;
