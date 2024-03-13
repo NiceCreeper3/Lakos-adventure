@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Carbon head
   front: {fileID: 21300000, guid: 14b29848c0d7f754d957767d42fc4db7, type: 3}
-  back: {fileID: 0}
+  back: {fileID: 21300000, guid: 14b29848c0d7f754d957767d42fc4db7, type: 3}
   description: 
-  genderratio: 0
-  MinAttack: 15
-  MaxAttack: 19
-  attackgrow: 1
+  genderratio: 45
   MinHealt: 125
   MaxHealt: 125
   healthgrow: 1
+  MinAttack: 15
+  MaxAttack: 19
+  attackgrow: 1
   MinSpeed: 19
   MaxSpeed: 27
   speedgrow: 1
@@ -33,6 +33,9 @@ MonoBehaviour:
   PomonElemet:
   - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   MovesCanLern:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}
+  - {fileID: 11400000, guid: bccda2bdacee59f45a151f8a3cf10bc1, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
+  - {fileID: 11400000, guid: f7201742ec094714b951abf453645d42, type: 2}
+  - {fileID: 11400000, guid: fb3e452a25a79114485056367c68bc4d, type: 2}

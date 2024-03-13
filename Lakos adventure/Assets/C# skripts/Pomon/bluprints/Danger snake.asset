@@ -16,23 +16,27 @@ MonoBehaviour:
   front: {fileID: 21300000, guid: c96030c7c9ddeb74f9bf63e465064cd3, type: 3}
   back: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
   description: 
-  genderratio: 0
-  MinAttack: 1
-  MaxAttack: 1
-  attackgrow: 1
-  MinHealt: 125
-  MaxHealt: 125
+  genderratio: 45
+  MinHealt: 134
+  MaxHealt: 145
   healthgrow: 1
-  MinSpeed: 1
-  MaxSpeed: 1
+  MinAttack: 31
+  MaxAttack: 40
+  attackgrow: 1
+  MinSpeed: 13
+  MaxSpeed: 18
   speedgrow: 1
-  MinDefense: 1
-  MaxDefense: 1
+  MinDefense: 19
+  MaxDefense: 23
   Defensegrow: 1
   CaptureChanse: 99
   PomonElemet:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
+  - {fileID: 11400000, guid: 698bfacf642a1d549b11c0239c0e969f, type: 2}
+  - {fileID: 11400000, guid: ce09a2f2552be514b9ced8ff9c4567d4, type: 2}
+  - {fileID: 11400000, guid: fb3e452a25a79114485056367c68bc4d, type: 2}
+  - {fileID: 11400000, guid: 7601b49f8e2045e4baf575863b27b77f, type: 2}
+  - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}

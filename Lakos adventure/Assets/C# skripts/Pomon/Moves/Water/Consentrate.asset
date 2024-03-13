@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Consentrate
   m_EditorClassIdentifier: 
   MoveName: Consentrate
-  MoveDiskrepseon: 
+  MoveDiskrepseon: the user tages a deep breath and sets it self up. this buffes
+    the users speed and defends by a thiny amount
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
   AddedAbilityes:
   - AbilityEffects: 1
     CallAfterAttack: 0
-    TargetSelf: 0
+    TargetSelf: 1
   _healPower: 0
   _getBoffings:
   - WhatToBuff: 1

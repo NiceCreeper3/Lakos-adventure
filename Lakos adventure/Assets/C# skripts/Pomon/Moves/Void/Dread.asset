@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
-  m_Name: Killer Wave
+  m_Name: Dread
   m_EditorClassIdentifier: 
-  MoveName: Killer wave
-  MoveDiskrepseon: the user flods the interare battel fild. dekrising the useres
-    speed
+  MoveName: Dread
+  MoveDiskrepseon: Dekresises the apponents defends by a lot
   MoveSound: 0
-  power: 50
-  MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
+  power: 0
+  MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   AddedAbilityes:
-  - AbilityEffects: 2
-    CallAfterAttack: 1
-    TargetSelf: 1
+  - AbilityEffects: 0
+    CallAfterAttack: 0
+    TargetSelf: 0
   _healPower: 0
   _getBoffings:
-  - WhatToBuff: 1
-    HowToBuff: 3
+  - WhatToBuff: 2
+    HowToBuff: 5

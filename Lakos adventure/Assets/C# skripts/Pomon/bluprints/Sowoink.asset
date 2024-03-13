@@ -15,23 +15,27 @@ MonoBehaviour:
   name: Sowoink
   front: {fileID: 21300000, guid: 54966c9f39badf842a3c63ad8a9beae8, type: 3}
   back: {fileID: 21300000, guid: 203b15da8508c6843b3e4884901e9032, type: 3}
-  description: 
-  genderratio: 0
-  MinAttack: 1
-  MaxAttack: 1
-  attackgrow: 1
-  MinHealt: 125
-  MaxHealt: 125
+  description: if you have ever sean only one sowoink. its cose you are hafe blind
+  genderratio: 50
+  MinHealt: 100
+  MaxHealt: 115
   healthgrow: 1
-  MinSpeed: 1
-  MaxSpeed: 1
+  MinAttack: 15
+  MaxAttack: 19
+  attackgrow: 1
+  MinSpeed: 13
+  MaxSpeed: 17
   speedgrow: 1
-  MinDefense: 1
-  MaxDefense: 1
+  MinDefense: 12
+  MaxDefense: 16
   Defensegrow: 1
   CaptureChanse: 99
   PomonElemet:
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern:
-  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
+  - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}
   - {fileID: 11400000, guid: 5e2fcb0d44bd50d4eaec2dffd9f1fd1f, type: 2}
+  - {fileID: 11400000, guid: 7601b49f8e2045e4baf575863b27b77f, type: 2}
+  - {fileID: 11400000, guid: ce496724d51b6bd41b6b95fb460fcef4, type: 2}
+  - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}

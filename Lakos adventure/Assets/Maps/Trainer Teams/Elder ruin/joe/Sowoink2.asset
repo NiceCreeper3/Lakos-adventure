@@ -14,15 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PomonName: Sowoink
   Spesies: {fileID: 11400000, guid: eaab8cbdbd111b644b6d77542b92adc0, type: 2}
-  IsDude: 0
-  level: 1
-  Attack: 9
-  MaxHealt: 50
+  IsDude: 1
+  level: 5
+  Attack: 18
+  MaxHealt: 100
   CurrentHealt: 0
-  Speed: 10
-  Defense: 6
+  Speed: 14
+  Defense: 12
   PomonMoves:
+  - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}
   - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
-  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
-  - {fileID: 11400000, guid: 508b237f9ce60874093a5bb7bc6e3c1c, type: 2}
-  - {fileID: 11400000, guid: 46c1c4cb161c9f44088790f7ef085711, type: 2}
+  - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}

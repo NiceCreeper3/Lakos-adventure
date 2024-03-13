@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PomonName: Eyecon
   Spesies: {fileID: 11400000, guid: 083bd188a9ab48c4c96bdf97c3e2e810, type: 2}
-  IsDude: 0
+  IsDude: 1
   level: 1
-  Attack: 10
-  MaxHealt: 40
+  MaxHealt: 100
   CurrentHealt: 0
-  Speed: 16
+  Attack: 24
+  Speed: 33
   Defense: 12
   PomonMoves:
-  - {fileID: 11400000, guid: 2ea81b62966fa204fb76b3f0e557edfb, type: 2}
-  - {fileID: 11400000, guid: 5479f075acba89940903810d4e2a6a9e, type: 2}
-  - {fileID: 11400000, guid: 700da8d00d324d146b7e413841919d45, type: 2}
+  - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}
+  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: ce09a2f2552be514b9ced8ff9c4567d4, type: 2}

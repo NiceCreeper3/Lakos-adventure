@@ -21,17 +21,26 @@ public class Pomons : ScriptableObject
     public PomonsBluPrint Spesies;
     public bool IsDude;
 
-    [Header("States and Moves")]
+    [Space(10)]
+
     public int level = 1;
 
-    public int Attack;
+    [Header("States and Moves")]
 
+    [Header("Healt")]
     public int MaxHealt;
     [HideInInspector] public int CurrentHealt;
 
+    [Header("Attack")]
+    public int Attack;
+
+    [Header("Speed")]
     public int Speed;
 
+    [Header("Defense")]
     public int Defense;
+
+    [Space(10)]
 
     public List<Moves> PomonMoves = new List<Moves>();
 

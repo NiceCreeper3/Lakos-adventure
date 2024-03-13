@@ -17,7 +17,19 @@ MonoBehaviour:
     and giving a massive buff to all states
   MoveSound: 0
   power: 0
-  MoveElement: {fileID: 0}
-  AddedAbilityes: []
-  _healPower: 0
-  _getBoffings: []
+  MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
+  AddedAbilityes:
+  - AbilityEffects: 0
+    CallAfterAttack: 0
+    TargetSelf: 1
+  - AbilityEffects: 1
+    CallAfterAttack: 1
+    TargetSelf: 1
+  _healPower: 50
+  _getBoffings:
+  - WhatToBuff: 0
+    HowToBuff: 4
+  - WhatToBuff: 1
+    HowToBuff: 4
+  - WhatToBuff: 2
+    HowToBuff: 4
