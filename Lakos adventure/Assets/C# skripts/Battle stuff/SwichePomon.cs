@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SwichePomon : MonoBehaviour
@@ -80,13 +81,32 @@ public class SwichePomon : MonoBehaviour
 
     protected void BattleLost()
     {
+        RemoveDeadPomons();
         SceneLoader.ChageScene();
     }
 
 
     protected void BattelWin()
     {
+        RemoveDeadPomons();
         SceneLoader.ChageScene();
+    }
+
+    private void RemoveDeadPomons()
+    {
+        List<Pomons> pomonsToDelete = new List<Pomons>(); 
+
+        // gets the pomons to remove
+        foreach (Pomons pomon in _pomonTeam.team)
+        {
+            if (pomon.CurrentHealt == 0)
+                pomonsToDelete.Add(pomon);
+        }
+
+        foreach (Pomons pomon in pomonsToDelete)
+        {
+            _pomonTeam.team.Remove(pomon);
+        }
     }
     #endregion
 

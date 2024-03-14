@@ -42,9 +42,9 @@ public class ShowPomonInfo : MonoBehaviour
         Image.sprite = pomonToShow.Spesies.front;
         _flaverText.text = pomonToShow.Spesies.description;
         _showHealt.text = $"{pomonToShow.CurrentHealt}Hp/{pomonToShow.MaxHealt}HP";
-        _showAttack.text = pomonToShow.Attack.ToString();
-        _showDefens.text = pomonToShow.Defense.ToString();
-        _showSpeed.text = pomonToShow.Speed.ToString();
+        _showAttack.text = $"Attack:({pomonToShow.Attack})";
+        _showDefens.text = $"Defense:({pomonToShow.Defense})";
+        _showSpeed.text = $"Speed:({pomonToShow.Speed})";
     }
 
     private void turnOnOffConfurm(bool trunOnOff)
