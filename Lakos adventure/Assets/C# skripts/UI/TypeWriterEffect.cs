@@ -54,9 +54,13 @@ public class TypeWriterEffect : MonoBehaviour
         }
         else
         {
-            ineracor.enabled = true;
-            player.enabled = true;
-            anim.SetTrigger("continue");
+            if (ineracor)
+                ineracor.enabled = true;
+            if (player)
+                player.enabled = true;
+            if(anim)
+                anim.SetTrigger("continue");
+
             gameObject.SetActive(false);
 
         }
@@ -66,15 +70,11 @@ public class TypeWriterEffect : MonoBehaviour
 
     public void CallUpdateFullText(string str)
     {
-        try
-        {
+        if (ineracor)
             ineracor.enabled = false;
+        if (player)
             player.enabled = false;
-        }
-        catch
-        {
 
-        }
 
         fullText = str;
         StartCoroutine(ShowText()); // the new line to load, TODO: make list or document with lines
