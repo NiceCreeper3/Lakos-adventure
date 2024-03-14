@@ -43,6 +43,7 @@ public class SwichePomon : MonoBehaviour
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
     protected virtual void SwichePickMetthod()
     {
+        RemoveDeadPomons();
         PicPomonUI.SetActive(true);
     }
 
@@ -81,14 +82,12 @@ public class SwichePomon : MonoBehaviour
 
     protected void BattleLost()
     {
-        RemoveDeadPomons();
         SceneLoader.ChageScene();
     }
 
 
     protected void BattelWin()
-    {
-        RemoveDeadPomons();
+    {       
         SceneLoader.ChageScene();
     }
 
