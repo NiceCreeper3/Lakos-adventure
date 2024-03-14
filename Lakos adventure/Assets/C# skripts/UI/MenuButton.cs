@@ -9,4 +9,8 @@ public class MenuButton : MonoBehaviour
     {
         Instantiate(thisdex, canvas.transform);
     }
+    public void leave()
+    {
+        SceneLoader.ChageScene("menue");
+    }
 }

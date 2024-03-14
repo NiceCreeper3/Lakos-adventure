@@ -17,6 +17,11 @@ public static class SceneLoader
         PreviesScene = SavePreviesScene();
     }
 
+    // closes the aplication
+    public static void close()
+    {
+        Application.Quit();
+    }
     /// <summary>
     /// returns you to the prives scene was 
     /// </summary>
