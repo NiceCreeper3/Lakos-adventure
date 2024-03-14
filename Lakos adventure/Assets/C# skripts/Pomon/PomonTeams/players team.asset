@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: players team
   m_EditorClassIdentifier: 
   team:
-  - {fileID: 11400000, guid: dad5c77742f08f1438de9ecb02eafe1f, type: 2}
-  - {fileID: 11400000, guid: f9542c0efe3055e45a5c72fda72bfebc, type: 2}
-  - {fileID: 11400000, guid: 68d91f1034d36ae44a5f11066eda8056, type: 2}
+  - {fileID: 11400000, guid: b6e463f4259fc7b42b74c01ea7f016a3, type: 2}

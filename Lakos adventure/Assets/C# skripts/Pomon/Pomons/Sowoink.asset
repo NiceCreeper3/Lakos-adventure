@@ -21,4 +21,7 @@ MonoBehaviour:
   Attack: 0
   Speed: 0
   Defense: 0
-  PomonMoves: []
+  PomonMoves:
+  - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
+  - {fileID: 11400000, guid: 7601b49f8e2045e4baf575863b27b77f, type: 2}
