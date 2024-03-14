@@ -92,6 +92,7 @@ public class TurnHandler : MonoBehaviour
         ushort whatAttackToPick = (ushort)Random.Range(0, _enemyMoves);
         Debug.Log("random attack " + whatAttackToPick);
 
+        _enemy.BeforeBattle(whatAttackToPick);
         _enemyAction = EnemyAttack;
 
         // is meant to sent with attack the Ai is goving four

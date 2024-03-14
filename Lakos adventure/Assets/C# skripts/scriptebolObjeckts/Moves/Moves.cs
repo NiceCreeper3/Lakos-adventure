@@ -41,6 +41,7 @@ public class Moves : ScriptableObject
 
     private void HealtChange(BattelLingMons interragsen)
     {
+        Debug.Log($"change healt of {interragsen}");
         ChangeHealtMoves.ChangeHealtCaller(interragsen, _healPower);
     }
     #endregion
@@ -59,7 +60,10 @@ public class Moves : ScriptableObject
     // maby move all the ablityes to a difrent spot
     public void AbilityActivated()
     {
-        //int nummber = (nummber + 1) % MyArray;
+        _afterTargetSelf = null;
+        _afterTagetEnemy = null;
+        _beforeTagetSelf = null;
+        _beforeTagetEnemy = null;
 
         // rundes fruge all the pikked effects
         foreach (AddAbiltyes ability in AddedAbilityes)
