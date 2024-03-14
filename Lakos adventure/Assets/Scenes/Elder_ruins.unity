@@ -33655,6 +33655,46 @@ PrefabInstance:
       propertyPath: Trainer
       value: 
       objectReference: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33784,6 +33824,34 @@ PrefabInstance:
       propertyPath: Trainer
       value: 
       objectReference: {fileID: 11400000, guid: 039779dfa2331724c940f80b4e32c46e, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 039779dfa2331724c940f80b4e32c46e, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34437,6 +34505,10 @@ PrefabInstance:
       propertyPath: actor
       value: 
       objectReference: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
+    - target: {fileID: 2385406756148309533, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: diretion.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2390608917331487456, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
       propertyPath: m_Name
       value: Tod
@@ -34465,6 +34537,46 @@ PrefabInstance:
       propertyPath: Trainer
       value: 
       objectReference: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35792,6 +35904,34 @@ PrefabInstance:
       propertyPath: Trainer
       value: 
       objectReference: {fileID: 11400000, guid: 0087515bdb9f3a04aaeeea5d6b5c8d19, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 0087515bdb9f3a04aaeeea5d6b5c8d19, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36373,6 +36513,46 @@ PrefabInstance:
       propertyPath: Trainer
       value: 
       objectReference: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776052782746445449, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: OnSpot.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338796932567110140, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+      propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: trainer, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -17,7 +17,32 @@ public class Actorscript : MonoBehaviour
     }
     public void load()
     {
-        gameObject.transform.position = movepoint;
-        actor.body = this;
+        if (diretion.y != 0)
+        {
+            if (diretion.y >= 0)
+            {
+                actor.turn(1);
+            }
+            else
+            {
+                actor.turn(2);
+            }
+
+        }
+        else if (0 != diretion.x)
+        {
+            if (diretion.x >= 0)
+            {
+                actor.turn(4);
+            }
+            else
+            {
+                actor.turn(3);
+            }
+            
+
+        }
+            gameObject.transform.position = movepoint;
+            actor.body = this;
     }
 }
