@@ -16,10 +16,10 @@ MonoBehaviour:
   Spesies: {fileID: 11400000, guid: 66cb5918757cc9e49a99e7416e506a2f, type: 2}
   IsDude: 0
   level: 1
-  Attack: 0
   MaxHealt: 125
   CurrentHealt: 0
+  Attack: 0
   Speed: 15
   Defense: 0
   PomonMoves:
-  - {fileID: 11400000, guid: 4674c286c89c82f408d7d63dd5171831, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}

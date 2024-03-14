@@ -34,6 +34,8 @@ public class SwichePomon : MonoBehaviour
     }
     private void OnNeededSwiche_OnPomonSwicheNeeded()
     {
+        RemoveDeadPomons();
+
         // turns on the swiche UI
         SwichePickMetthod();
     }
@@ -81,14 +83,12 @@ public class SwichePomon : MonoBehaviour
 
     protected void BattleLost()
     {
-        RemoveDeadPomons();
         SceneLoader.ChageScene();
     }
 
 
     protected void BattelWin()
-    {
-        RemoveDeadPomons();
+    {       
         SceneLoader.ChageScene();
     }
 
