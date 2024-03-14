@@ -34,12 +34,14 @@ public class CaptureWildPomon : MonoBehaviour
     {
         Debug.Log($"attemting to capture {_currentCapture}");
 
+        int playerMaxTeam = 6;
+
         int chansesToCapture = 3;
 
-        // attempts to chapture. as long as this is not a trainer battle indekated by where or not there is a trainer sprite
-        if (MapToBattel.IsTranerBattle != null)
+        // checkes if we can capture. fist checking if this is a trainer fight (indekated by if there is a trainer sprite), and then checks if we have spase four ned pomon
+        if (MapToBattel.IsTranerBattle == null && _playerPomonTeam.team.Count != playerMaxTeam)
         {
-            // rolles 3 times randomly to see if pomon got chapured
+            // rolles 3 times to see if the player chaptures the pomon
             for (int i = 0; i <= chansesToCapture; i++)
             {
                 int Chapture = Random.Range(_currentCapture.Spesies.CaptureChanse, 101);
@@ -49,6 +51,7 @@ public class CaptureWildPomon : MonoBehaviour
                 if (Chapture == 100)
                 {
                     PomonCaptured();
+                    break; // breaks the loop so the player only chaptures the pomon ones
                 }
             }
         }

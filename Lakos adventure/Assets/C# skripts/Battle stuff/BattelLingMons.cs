@@ -107,7 +107,6 @@ public class BattelLingMons : MonoBehaviour
             int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget._currentMon, _buffs);
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
-            //move.AbilityAfter(this);
             move.AbilityAfterTargetSelf(this);
             move.AbilityAfterTargetEnemy(attckTarget);
 
