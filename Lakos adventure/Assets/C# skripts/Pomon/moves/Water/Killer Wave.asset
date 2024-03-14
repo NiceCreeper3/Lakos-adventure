@@ -16,7 +16,7 @@ MonoBehaviour:
   MoveDiskrepseon: the user flods the interare battel fild. dekrising the useres
     speed
   MoveSound: 0
-  power: 120
+  power: 55
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
   AddedAbilityes:
   - AbilityEffects: 2

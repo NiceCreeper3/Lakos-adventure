@@ -16,7 +16,7 @@ MonoBehaviour:
   MoveDiskrepseon: obsorbs som of the enemys life. the user also gains som whagt
     and duse losses som speed
   MoveSound: 0
-  power: 75
+  power: 60
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   AddedAbilityes:
   - AbilityEffects: 2

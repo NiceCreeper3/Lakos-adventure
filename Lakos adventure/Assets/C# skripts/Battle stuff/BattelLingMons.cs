@@ -58,7 +58,7 @@ public class BattelLingMons : MonoBehaviour
     public void BeforeBattle(int attackPicked, BattelLingMons aponent)
     {
         _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(this);
-        _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(aponent);
+        _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetEnemy(aponent);
     }
 
     // adds stats "stabs". aka buffs
@@ -134,7 +134,7 @@ public class BattelLingMons : MonoBehaviour
 
         // ind case Defense is higer then damage and then wood result ind healing
         if (totaldamage < 0)
-            totaldamage = 0;
+            totaldamage = 10;
 
         // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
         ChangeHealt(-totaldamage);

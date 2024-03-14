@@ -15,7 +15,7 @@ MonoBehaviour:
   MoveName: Splase
   MoveDiskrepseon: 
   MoveSound: 0
-  power: 50
+  power: 40
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
   AddedAbilityes: []
   _healPower: 0

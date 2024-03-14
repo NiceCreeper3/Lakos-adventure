@@ -10,6 +10,8 @@ public class Healthbars : MonoBehaviour
     [SerializeField] private SwichePomon _omSwiche;
     [SerializeField] private Slider _healhtSlider;
     [SerializeField] private Image _fillColor;
+
+    private Pomons current;
     #endregion
 
     private void Awake()
@@ -32,7 +34,9 @@ public class Healthbars : MonoBehaviour
     #region
     private void BattelLing_OnHealhtChange(int obj)
     {
-        SetPomonHp(obj);
+        //SetPomonHp(obj);
+        _healhtSlider.value = current.CurrentHealt;
+        SetHealtColor();
     }
 
     #endregion
@@ -44,6 +48,8 @@ public class Healthbars : MonoBehaviour
     // this method shode be called eny time a new pomon is swiched ind. as to make sure the health bar reprents the pomons HP aturtlig
     private void SetSlider(Pomons maxSet)
     {
+        current = maxSet;
+
         _healhtSlider.maxValue = maxSet.MaxHealt;
         _healhtSlider.value = maxSet.CurrentHealt;
 

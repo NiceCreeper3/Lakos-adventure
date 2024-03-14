@@ -16,7 +16,7 @@ MonoBehaviour:
   MoveDiskrepseon: the user makes a suffekating cloud of smok. this damages the user
     a bit
   MoveSound: 0
-  power: 80
+  power: 70
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   AddedAbilityes:
   - AbilityEffects: 0

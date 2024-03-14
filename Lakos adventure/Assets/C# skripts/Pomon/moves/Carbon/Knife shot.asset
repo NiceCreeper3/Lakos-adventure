@@ -16,7 +16,7 @@ MonoBehaviour:
   MoveDiskrepseon: the pomon will sharpen its claws Increase its attack sligtly.
     also it cukkes the sharpeing knife
   MoveSound: 0
-  power: 30
+  power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   AddedAbilityes:
   - AbilityEffects: 1
