@@ -55,9 +55,10 @@ public class BattelLingMons : MonoBehaviour
     }
 
     // triggeres chosen attacks BeforeAblity
-    public void BeforeBattle(int attackPicked)
+    public void BeforeBattle(int attackPicked, BattelLingMons aponent)
     {
         _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(this);
+        _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(aponent);
     }
 
     // adds stats "stabs". aka buffs

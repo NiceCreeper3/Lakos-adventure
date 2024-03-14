@@ -55,7 +55,7 @@ public class TurnHandler : MonoBehaviour
             case PlayerActionType.Attack:
                 // 
                 _playerAttack = (ushort)chosen;
-                _player.BeforeBattle(_playerAttack);
+                _player.BeforeBattle(_playerAttack, _enemy);
 
                 _playerAction = Attack;
                 break;
@@ -92,7 +92,7 @@ public class TurnHandler : MonoBehaviour
         ushort whatAttackToPick = (ushort)Random.Range(0, _enemyMoves);
         Debug.Log("random attack " + whatAttackToPick);
 
-        _enemy.BeforeBattle(whatAttackToPick);
+        _enemy.BeforeBattle(whatAttackToPick, _player);
         _enemyAction = EnemyAttack;
 
         // is meant to sent with attack the Ai is goving four
