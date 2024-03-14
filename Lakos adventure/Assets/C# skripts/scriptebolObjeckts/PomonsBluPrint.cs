@@ -62,7 +62,7 @@ public class PomonsBluPrint : ScriptableObject
         mon.Attack = Random.Range(MinAttack, MaxAttack+1) + (attackgrow * (level - 1));
         mon.Defense = Random.Range(MinDefense, MaxDefense+1) + (Defensegrow * (level - 1));
         mon.MaxHealt = Random.Range(MinHealt, MaxHealt+1) + (healthgrow * (level-1));
-        mon.MaxHealt = Random.Range(MinSpeed, MaxSpeed+1) + (speedgrow * (level - 1));
+        mon.Speed = Random.Range(MinSpeed, MaxSpeed+1) + (speedgrow * (level - 1));
         Debug.Log("stats given");
         mon.CurrentHealt = mon.MaxHealt;
         Debug.Log("health maxed");
