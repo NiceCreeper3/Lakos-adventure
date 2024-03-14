@@ -41,6 +41,7 @@ public class WorldTrainerScript : MonoBehaviour
     }
     public void triggeractive()
     {
+        InfoSaved.playerlocation = actorscript.grid.WorldToCell(player.position);
         OnSpot.Invoke();
     }
 }
