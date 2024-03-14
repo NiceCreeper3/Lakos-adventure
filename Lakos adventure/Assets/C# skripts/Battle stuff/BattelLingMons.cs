@@ -68,7 +68,7 @@ public class BattelLingMons : MonoBehaviour
     public void StatesBuff(double buffTimes, Buffs whatToBuff)
     {
         // the max amount of times we can buff
-        short maxBuffAmount = 3;
+        short maxBuffAmount = 2;
 
         switch (whatToBuff)
         {
