@@ -56,6 +56,8 @@ public class CaptureWildPomon : MonoBehaviour
 
     private static void PomonCaptured()
     {
+        Debug.Log("Pomon captured");
+
         _playerPomonTeam.team.Add(_currentCapture);
 
         //return to previes

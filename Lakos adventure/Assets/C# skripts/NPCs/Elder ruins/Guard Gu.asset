@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3850a751faf0ba4baf31918090612d4, type: 3}
-  m_Name: Tod
+  m_Name: Guard Gu
   m_EditorClassIdentifier: 
-  Name: Tod
-  sprites:
-  - {fileID: 21300000, guid: c36cabb983acbfb4eaff55887d2fa5b1, type: 3}
-  - {fileID: 21300000, guid: bd0556a2f8f19494db3710e19cca729a, type: 3}
+  Name: 
+  sprites: []
   body: {fileID: 0}
-  battlesprite: {fileID: 21300000, guid: 9017d7859ab693242a42db45d0cae360, type: 3}
+  Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
+  battlesprite: {fileID: 0}
   Seaching: 0
   defeated: 0
-  trainerTeam: {fileID: 11400000, guid: 7f8e1e4dfa36cf5489b308f8fd531746, type: 2}
+  trainerTeam: {fileID: 11400000, guid: 6462d8db2c5ac6f4f99626a645615605, type: 2}
+  interaction: {fileID: 0}
