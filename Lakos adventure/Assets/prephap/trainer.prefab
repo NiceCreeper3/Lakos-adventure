@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1173077229066357823}
-  - component: {fileID: 310079381926125133}
   - component: {fileID: 4599912569244661677}
   - component: {fileID: 6338796932567110140}
   - component: {fileID: 4776052782746445449}
@@ -37,19 +36,6 @@ Transform:
   - {fileID: 3287391098179971485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310079381926125133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390608917331487456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b6f8edda9e7cd43bf01703576789d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
 --- !u!58 &4599912569244661677
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -127,6 +113,9 @@ MonoBehaviour:
   Trainer: {fileID: 0}
   player: {fileID: 0}
   actorscript: {fileID: 2385406756148309533}
+  OnSpot:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2385406756148309533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +132,7 @@ MonoBehaviour:
   diretion: {x: 0, y: 0}
   grid: {fileID: 0}
   movepoint: {x: 0.31, y: 0.31, z: 0}
+  canmove: 0
 --- !u!1 &6985249691758791174
 GameObject:
   m_ObjectHideFlags: 0
