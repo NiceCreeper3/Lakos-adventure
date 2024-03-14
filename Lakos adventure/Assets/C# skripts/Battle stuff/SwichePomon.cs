@@ -34,8 +34,6 @@ public class SwichePomon : MonoBehaviour
     }
     private void OnNeededSwiche_OnPomonSwicheNeeded()
     {
-        RemoveDeadPomons();
-
         // turns on the swiche UI
         SwichePickMetthod();
     }
@@ -45,6 +43,7 @@ public class SwichePomon : MonoBehaviour
     // handels how a new Pomon is beaing swiceh ind. the enemy is goving to inhert this and change it 
     protected virtual void SwichePickMetthod()
     {
+        RemoveDeadPomons();
         PicPomonUI.SetActive(true);
     }
 

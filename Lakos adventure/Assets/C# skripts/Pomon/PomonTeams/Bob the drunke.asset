@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5102f1f28945aa249a733b202ed4946c, type: 3}
   m_Name: Bob the drunke
   m_EditorClassIdentifier: 
-  team: []
+  team:
+  - {fileID: 11400000, guid: 8f452acc66941a94d980ad12b8847986, type: 2}

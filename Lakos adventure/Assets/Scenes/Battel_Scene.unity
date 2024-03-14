@@ -5729,6 +5729,7 @@ MonoBehaviour:
   _player: {fileID: 854951183}
   _enemy: {fileID: 2083093380}
   _onEnemySwiche: {fileID: 2083093383}
+  makeInvesbolDurringAttack: []
 --- !u!1 &1338578119
 GameObject:
   m_ObjectHideFlags: 0
@@ -7987,7 +7988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f6be9bb054f2540be32be632179ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pomonTeam: {fileID: 0}
+  _pomonTeam: {fileID: 11400000, guid: 3b884149adcbdd64b938d8c1bc8a1cde, type: 2}
   PicPomonUI: {fileID: 2127291031}
 --- !u!1 &2089643338
 GameObject:
