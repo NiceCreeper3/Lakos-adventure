@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Guro Cana
   m_EditorClassIdentifier: 
   Name: 
-  sprites: []
+  sprites:
+  - {fileID: 859353918, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
+  - {fileID: -626840361, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
+  - {fileID: -712862093, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
+  - {fileID: 1424064128, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

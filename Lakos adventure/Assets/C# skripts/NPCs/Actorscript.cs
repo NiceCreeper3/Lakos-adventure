@@ -17,6 +17,10 @@ public class Actorscript : MonoBehaviour
     }
     public void load()
     {
+        
+        gameObject.transform.position = movepoint;
+        actor.body = this;
+
         if (diretion.y != 0)
         {
             if (diretion.y >= 0)
@@ -39,10 +43,8 @@ public class Actorscript : MonoBehaviour
             {
                 actor.turn(3);
             }
-            
+
 
         }
-            gameObject.transform.position = movepoint;
-            actor.body = this;
     }
 }

@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foward
+      name: forward
       rect:
         serializedVersion: 2
         x: 352
@@ -231,7 +231,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       back: 859353918
-      foward: -626840361
+      forward: -626840361
       left: -712862093
       right: 1424064128
   mipmapLimitGroupName: 
