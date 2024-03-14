@@ -25,7 +25,7 @@ MonoBehaviour:
   - AbilityEffects: 1
     CallAfterAttack: 1
     TargetSelf: 1
-  _healPower: -50
+  _healPower: -70
   _getBoffings:
   - WhatToBuff: 0
     HowToBuff: 4

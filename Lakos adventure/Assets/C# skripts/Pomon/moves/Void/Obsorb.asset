@@ -15,11 +15,11 @@ MonoBehaviour:
   MoveName: Obsorb
   MoveDiskrepseon: 
   MoveSound: 0
-  power: 15
+  power: 30
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   AddedAbilityes:
   - AbilityEffects: 0
     CallAfterAttack: 0
     TargetSelf: 1
-  _healPower: 20
+  _healPower: 30
   _getBoffings: []

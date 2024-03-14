@@ -15,7 +15,7 @@ MonoBehaviour:
   MoveName: Shot
   MoveDiskrepseon: Do i enven have to explane what dis does?
   MoveSound: 0
-  power: 30
+  power: 50
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   AddedAbilityes: []
   _healPower: 0
