@@ -20,4 +20,4 @@ MonoBehaviour:
   battlesprite: {fileID: 0}
   Seaching: 0
   defeated: 0
-  trainerTeam: {fileID: 0}
+  trainerTeam: {fileID: 11400000, guid: d24448ad223f3b74298c13404732d7a5, type: 2}

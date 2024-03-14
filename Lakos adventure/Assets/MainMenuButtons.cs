@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class MainMenuButtons : MonoBehaviour
 {
@@ -23,6 +22,6 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void quit()
     {
-        
+        SceneLoader.close();
     }
 }
