@@ -66,8 +66,16 @@ public class TypeWriterEffect : MonoBehaviour
 
     public void CallUpdateFullText(string str)
     {
-        ineracor.enabled = false;
-        player.enabled = false;
+        try
+        {
+            ineracor.enabled = false;
+            player.enabled = false;
+        }
+        catch
+        {
+
+        }
+
         fullText = str;
         StartCoroutine(ShowText()); // the new line to load, TODO: make list or document with lines
     }
