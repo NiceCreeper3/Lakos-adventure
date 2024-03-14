@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,7 +45,11 @@ public class SwichePomon : MonoBehaviour
     protected virtual void SwichePickMetthod()
     {
         RemoveDeadPomons();
-        PicPomonUI.SetActive(true);
+
+        if (StillHasPomonLeft())
+            PicPomonUI.SetActive(true);
+        else
+            BattleLost();
     }
 
     void FullHealTeam() //----------------------------------------------[ remove this after teasting]------------------------------------------------------
@@ -82,12 +87,18 @@ public class SwichePomon : MonoBehaviour
 
     protected void BattleLost()
     {
-        SceneLoader.ChageScene();
+        StartCoroutine(WaitFouraBit());
     }
 
 
     protected void BattelWin()
-    {       
+    {
+        StartCoroutine(WaitFouraBit());
+    }
+
+    private IEnumerator WaitFouraBit()
+    {
+        yield return new WaitForSeconds(2);
         SceneLoader.ChageScene();
     }
 
@@ -106,6 +117,23 @@ public class SwichePomon : MonoBehaviour
         {
             _pomonTeam.team.Remove(pomon);
         }
+    }
+
+    private bool StillHasPomonLeft()
+    {
+        bool noPomonFound = false;
+
+        foreach (Pomons pomons in _pomonTeam.team)
+        {
+            // checkes the team still has pomon with full healt
+            if (pomons.CurrentHealt > 0)
+            {
+                noPomonFound = true;
+                break;
+            }             
+        }
+
+        return noPomonFound;
     }
     #endregion
 

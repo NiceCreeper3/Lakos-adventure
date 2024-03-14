@@ -19,6 +19,9 @@ public class BattelLingMons : MonoBehaviour
     [Header("Reference to aesthetic stuff")]
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
+    [Header("Text box")]
+    [SerializeField] private textinteractor _textBox;
+
     [HideInInspector] public Pomons _currentMon;
     private SwichePomon OnSwitch;
 
@@ -110,6 +113,9 @@ public class BattelLingMons : MonoBehaviour
             move.AbilityAfterTargetSelf(this);
             move.AbilityAfterTargetEnemy(attckTarget);
 
+            if (!_isPlayerMon)
+                _textBox.RunTextBox($" {_currentMon.PomonName} used {move.MoveName}");
+
             attckTarget.TakesDamage(Damage);
         }
         else
@@ -134,7 +140,7 @@ public class BattelLingMons : MonoBehaviour
 
         // ind case Defense is higer then damage and then wood result ind healing
         if (totaldamage < 0)
-            totaldamage = 10;
+            totaldamage = 0;
 
         // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
         ChangeHealt(-totaldamage);

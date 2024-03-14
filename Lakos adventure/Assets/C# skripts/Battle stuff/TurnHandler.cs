@@ -30,7 +30,8 @@ public class TurnHandler : MonoBehaviour
     private ushort _enemyMoves;
     private ushort _playerAttack, _AiAttack;
 
-    [SerializeField] private GameObject[] makeInvesbolDurringAttack;
+    [SerializeField] private GameObject[] _makeInvesbolDurringAttack;
+    [SerializeField] private GameObject[] _makevisubolDurring;
 
     // makes it so the player can swiche with aot the aponet getting to hit back
     //[HideInInspector] public static bool FreeSwiche;
@@ -156,14 +157,20 @@ public class TurnHandler : MonoBehaviour
     // starts the turn. and has a 1 sec delay indbetyvie the to turns
     private IEnumerator Turn(TurnAction fistsOrder, TurnAction sekundOrder)
     {
-        foreach (GameObject makeInvesebol in makeInvesbolDurringAttack)
+        foreach (GameObject makeInvesebol in _makeInvesbolDurringAttack)
             makeInvesebol.SetActive(false);
+/*
+        foreach (GameObject visubol in _makevisubolDurring)
+            visubol.SetActive(true);*/
 
         fistsOrder();
         yield return new WaitForSecondsRealtime(1); // time four animason to play
         sekundOrder();
 
-        foreach (GameObject makeInvesebol in makeInvesbolDurringAttack)
+        foreach (GameObject makeInvesebol in _makeInvesbolDurringAttack)
             makeInvesebol.SetActive(true);
+/*
+        foreach (GameObject visubol in _makevisubolDurring)
+            visubol.SetActive(false);*/
     }
 }

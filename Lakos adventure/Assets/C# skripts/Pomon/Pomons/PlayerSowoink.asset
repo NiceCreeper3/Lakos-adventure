@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: Sowoink
+  m_Name: PlayerSowoink
   m_EditorClassIdentifier: 
   PomonName: Sowoink
   Spesies: {fileID: 11400000, guid: eaab8cbdbd111b644b6d77542b92adc0, type: 2}
