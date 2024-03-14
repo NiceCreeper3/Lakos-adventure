@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 
 [CreateAssetMenu(fileName = "new Actor", menuName = "person/Civilian")]
 public class Actor : ScriptableObject
@@ -14,7 +14,7 @@ public class Actor : ScriptableObject
     [HideInInspector] public Actorscript body;
     [SerializeField] public textinteractor Textinteractor;
 
-    public AnimatorController interaction;
+    public RuntimeAnimatorController interaction;
 
 
     public void movex(int length)

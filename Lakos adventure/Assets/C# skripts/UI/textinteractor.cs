@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 [CreateAssetMenu(fileName = "textbox indecator", menuName = "textindecator")]
 public class textinteractor: ScriptableObject
 {
     public TypeWriterEffect textboxinsceene;
     public GameObject box;
 
-    public AnimatorController controller;
+    public RuntimeAnimatorController controller;
     public animationinteractor interactor;
     public pomonteam wild;
 
@@ -19,7 +19,7 @@ public class textinteractor: ScriptableObject
     }
 
 
-    public void changeanim(AnimatorController animator)
+    public void changeanim(RuntimeAnimatorController animator)
     {
         controller = animator;
         interactor.setcontroller();

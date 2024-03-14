@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 
 public class MainMenuButtons : MonoBehaviour
 {
     [Header("new game peramiters")]
     [SerializeField] private Vector2Int startlocation;
-    [SerializeField] private AnimatorController openingcutscene;
+    [SerializeField] private RuntimeAnimatorController openingcutscene;
     [SerializeField] private textinteractor texter;
 
     public void play()
