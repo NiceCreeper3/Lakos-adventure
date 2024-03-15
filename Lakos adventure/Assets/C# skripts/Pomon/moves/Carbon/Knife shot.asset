@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Knife shot
   m_EditorClassIdentifier: 
   MoveName: Knife Shot
-  MoveDiskrepseon: the pomon will sharpen its claws Increase its attack sligtly.
-    also it cukkes the sharpeing knife
+  MoveDiskrepseon: The pomon will sharpen its claws, increasing its attack slightly.
+    Also - it chucks the knife used
   MoveSound: 0
   power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
