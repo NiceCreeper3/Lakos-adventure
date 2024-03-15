@@ -114,7 +114,7 @@ public class BattelLingMons : MonoBehaviour
             move.AbilityAfterTargetEnemy(attckTarget);
 
             if (!_isPlayerMon)
-                _textBox.RunTextBox($" {_currentMon.PomonName} used {move.MoveName}");
+                _textBox.RunTextBox($" {_currentMon.PomonName} used {move.MoveName} which does \n {move.MoveDiskrepseon}");
 
             attckTarget.TakesDamage(Damage);
         }

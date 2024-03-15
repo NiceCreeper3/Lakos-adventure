@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Light cure
   m_EditorClassIdentifier: 
   MoveName: Light cure
-  MoveDiskrepseon: heals the user four 40hp
+  MoveDiskrepseon: heals the user four 20hp
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}

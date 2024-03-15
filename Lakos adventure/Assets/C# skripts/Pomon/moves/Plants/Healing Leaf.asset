@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveName: Healing Leaf
   MoveDiskrepseon: Chanelling the Pomons inder rots. /and also haveing free healt
-    care/ the pomon heals 40Hp
+    care/ the pomon heals 20Hp
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
