@@ -1737,6 +1737,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1095387380}
     - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: propability
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Elder_ruins
       objectReference: {fileID: 0}
