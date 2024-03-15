@@ -178,6 +178,7 @@ public class BattelLingMons : MonoBehaviour
         if (_currentMon != null)
             Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
 
+        // playes a audio clip
         SoundManger.Playsound(SoundManger.Sound.OnPomonEnterBattel);
 
         // sets the new _currentMon Pomon to be the swithed ind one
@@ -186,12 +187,8 @@ public class BattelLingMons : MonoBehaviour
         // sets buff amount
         _buffs = new DamageMath.StatsBuff(1,1,1);
 
-        Debug.Log($"moves {swichingPomons.PomonMoves}   {swichingPomons.PomonName}");
         foreach (Moves moves in swichingPomons.PomonMoves)
-        {
-            Debug.Log($"has run {moves.MoveName} {swichingPomons.PomonName}");
             moves.AbilityActivated();
-        }
             
 
         // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
