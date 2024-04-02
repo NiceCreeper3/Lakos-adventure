@@ -6,7 +6,8 @@ public class EnterArea : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private Grid grid;
-    public void Enter(SceneLoader.ScenesToLoad warparea)
+    [SerializeField] private SceneLoader.ScenesToLoad warparea;
+    public void Enter()
     {
         InfoSaved.playerlocation = grid.WorldToCell(player.position);
         SceneLoader.ChageScene(warparea);
