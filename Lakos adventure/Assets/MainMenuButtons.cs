@@ -13,7 +13,7 @@ public class MainMenuButtons : MonoBehaviour
     {
         texter.controller = openingcutscene;
         InfoSaved.playerlocation = (Vector3Int)startlocation;
-        SceneLoader.ChageScene("outdoors");
+        SceneLoader.ChageScene(SceneLoader.ScenesToLoad.Startereer);
     }
 
     public void load()
