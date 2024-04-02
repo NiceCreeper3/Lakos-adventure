@@ -32,6 +32,7 @@ public class BattelLingMons : MonoBehaviour
     public event Action<int> OnHealhtChange;
     public event Action OnPomonSwicheNeeded;
 
+    
     #endregion
 
     // Start is called before the first frame update
@@ -113,8 +114,8 @@ public class BattelLingMons : MonoBehaviour
             move.AbilityAfterTargetSelf(this);
             move.AbilityAfterTargetEnemy(attckTarget);
 
-            if (!_isPlayerMon)
-                _textBox.RunTextBox($" {_currentMon.PomonName} used {move.MoveName} which does \n {move.MoveDiskrepseon}");
+/*            if (!_isPlayerMon)
+                _textBox.RunTextBox($" {_currentMon.PomonName} used {move.MoveName} which does \n {move.MoveDiskrepseon}");*/
 
             attckTarget.TakesDamage(Damage);
         }

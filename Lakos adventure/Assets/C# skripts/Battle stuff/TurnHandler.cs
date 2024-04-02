@@ -127,6 +127,8 @@ public class TurnHandler : MonoBehaviour
         Debug.Log("enemy speed:" + enemySpeed + " Player Speed" + playerSpeed);
         _AiAttack = EnemyTurnAI();
 
+        //TurnAction[] turnsOrder = new TurnAction[] { _playerAction, _enemyAction };
+        //Array.Sort(turnsOrder);
 
         // compares the speed of both Pomons. the one with the higst gets to aket fhist
         if (playerSpeed > enemySpeed)
@@ -159,9 +161,10 @@ public class TurnHandler : MonoBehaviour
     {
         foreach (GameObject makeInvesebol in _makeInvesbolDurringAttack)
             makeInvesebol.SetActive(false);
-/*
-        foreach (GameObject visubol in _makevisubolDurring)
-            visubol.SetActive(true);*/
+        /*
+                foreach (GameObject visubol in _makevisubolDurring)
+                    visubol.SetActive(true);*/
+
 
         fistsOrder();
         yield return new WaitForSecondsRealtime(1); // time four animason to play
