@@ -12,7 +12,8 @@ public static class SceneLoader
     {
         Battle,
         Startereer,
-        ElderRuins
+        ElderRuins,
+        MainMenu
     }
 
     private static string PreviesScene;
@@ -42,7 +43,9 @@ public static class SceneLoader
                 sceneName = "Elder_ruins";
                 break;
 
-
+            case ScenesToLoad.MainMenu:
+                sceneName = "menue";
+                break;
         }
 
         return sceneName;
