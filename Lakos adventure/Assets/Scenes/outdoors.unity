@@ -1724,6 +1724,10 @@ PrefabInstance:
       propertyPath: ontrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Wildgrass, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1201372658877774792, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: trainerprephap
+      value: 
+      objectReference: {fileID: 2390608917331487456, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
     - target: {fileID: 5998923698747512450, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: m_Controller
       value: 

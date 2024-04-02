@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class WorldTrainerScript : MonoBehaviour
 {
-    [SerializeField] private trainer Trainer;
+    [SerializeField] public trainer Trainer;
     [SerializeField] private Transform player;
     [SerializeField] private Actorscript actorscript;
 

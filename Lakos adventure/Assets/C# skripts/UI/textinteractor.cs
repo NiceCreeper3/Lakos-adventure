@@ -29,6 +29,10 @@ public class textinteractor: ScriptableObject
         controller = null;
         interactor.setcontroller();
     }
+    public void generateactor(Actor person)
+    {
+        interactor.generateactor(person);
+    }
 
 
 }

@@ -41,7 +41,17 @@ public class Actor : ScriptableObject
         }
         body.movepoint += new Vector3(0, 0.63f * length, 0);
     }
+    public void setx(int location)
+    {
 
+        body.movepoint = new Vector3(0.63f * location, body.gameObject.transform.position.y, 0);
+        body.gameObject.transform.position = new Vector3(0.63f * location, body.gameObject.transform.position.y, 0);
+    }
+    public void sety(int location)
+    {
+        body.movepoint = new Vector3(body.gameObject.transform.position.x, 0.63f * location, 0);
+        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, 0.63f * location, 0);
+    }
     public void turn(int direction)
     {
         SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
@@ -84,6 +94,11 @@ public class Actor : ScriptableObject
             }
         }
         return sprite;
+    }
+
+    public void kill()
+    {
+        Destroy(body.gameObject);
     }
     
 

@@ -716,3 +716,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handler: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   animator: {fileID: 5998923698747512450}
+  actorlayer: {fileID: 0}
+  actorprephap: {fileID: 5811109040177542217, guid: aa5cb5808e082e44c96a753259a25d0b, type: 3}
+  trainerprephap: {fileID: 2390608917331487456, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
