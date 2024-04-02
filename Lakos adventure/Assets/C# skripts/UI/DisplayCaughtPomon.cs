@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DisplayCaughtPomon : MonoBehaviour
 {
-    [SerializeField] private Pomons pomon;
+    [SerializeField] public Pomons pomon;
     [SerializeField] private Image monportraitfront;
     [SerializeField] protected TMP_Text attack;
     [SerializeField] protected TMP_Text defece;
@@ -42,7 +42,14 @@ public class DisplayCaughtPomon : MonoBehaviour
         }
         health.SetSlider(entry);
         spesies.text = "species:" + pomon.Spesies.name;
-        moveInitializer.Updatemoves(pomon.PomonMoves);
+        try
+        {
+            moveInitializer.Updatemoves(pomon.PomonMoves);
+        }
+        catch
+        {
+
+        }
         typedisect.loadtypes(pomon.Spesies.PomonElemet);
     }
 }

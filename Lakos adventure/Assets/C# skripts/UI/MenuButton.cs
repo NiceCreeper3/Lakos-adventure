@@ -11,6 +11,6 @@ public class MenuButton : MonoBehaviour
     }
     public void leave()
     {
-        //SceneLoader.ChageScene(SceneLoader.ScenesToLoad.menue);
+        SceneLoader.ChageScene(SceneLoader.ScenesToLoad.MainMenu);
     }
 }
