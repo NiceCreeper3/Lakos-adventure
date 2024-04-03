@@ -9,7 +9,6 @@ public class Actorscript : MonoBehaviour
     [SerializeField] public Grid grid;
     [SerializeField] public Vector3 movepoint;
 
-    [SerializeField] private bool canmove;
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position,movepoint, 1 * Time.deltaTime);
@@ -46,6 +45,5 @@ public class Actorscript : MonoBehaviour
 
 
         }
-        canmove = true;
     }
 }

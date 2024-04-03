@@ -27,7 +27,7 @@ public class Actor : ScriptableObject
         {
             turn(4);
         }
-        body.movepoint += new Vector3(0.63f * length, 0, 0);
+        body.movepoint += new Vector3(0.64f * length, 0, 0);
     }
     public void movey(int length)
     {
@@ -39,18 +39,18 @@ public class Actor : ScriptableObject
         {
             turn(1);
         }
-        body.movepoint += new Vector3(0, 0.63f * length, 0);
+        body.movepoint += new Vector3(0, 0.64f * length, 0);
     }
     public void setx(int location)
     {
 
-        body.movepoint = new Vector3(0.63f * location, body.gameObject.transform.position.y, 0);
-        body.gameObject.transform.position = new Vector3(0.63f * location, body.gameObject.transform.position.y, 0);
+        body.movepoint = new Vector3(0.64f * location, body.gameObject.transform.position.y, 0);
+        body.gameObject.transform.position = new Vector3(0.64f * location, body.gameObject.transform.position.y, 0);
     }
     public void sety(int location)
     {
-        body.movepoint = new Vector3(body.gameObject.transform.position.x, 0.63f * location, 0);
-        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, 0.63f * location, 0);
+        body.movepoint = new Vector3(body.gameObject.transform.position.x, 0.64f * location, 0);
+        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, 0.64f * location, 0);
     }
     public void turn(int direction)
     {
