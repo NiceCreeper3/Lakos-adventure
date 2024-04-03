@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: player
   sprites:
-  - {fileID: -263431052, guid: 31bc581c17d43514882169fcd5acfa7d, type: 3}
-  - {fileID: -716381203, guid: 31bc581c17d43514882169fcd5acfa7d, type: 3}
-  - {fileID: 1926157779, guid: 31bc581c17d43514882169fcd5acfa7d, type: 3}
-  - {fileID: -665633148, guid: 31bc581c17d43514882169fcd5acfa7d, type: 3}
+  - {fileID: -1497098677, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -1786274286, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -724418124, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -901164611, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
+  interaction: {fileID: 0}
