@@ -69,8 +69,6 @@ public class SwichePomon : MonoBehaviour
     // the buttons of picing a new Pomon is goving to be here
     public void SeltedPomon(int pomonNummber)
     {
-        Debug.Log("attemting to swiche Pomon");
-
         try
         {
             if (_pomonTeam.team[pomonNummber].CurrentHealt > 0)
@@ -81,7 +79,7 @@ public class SwichePomon : MonoBehaviour
         }
         catch
         {
-
+            Debug.Log("attemting to swiche Pomon");
         }
     }
 

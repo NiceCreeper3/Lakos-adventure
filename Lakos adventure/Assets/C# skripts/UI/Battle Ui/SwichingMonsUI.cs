@@ -45,26 +45,16 @@ public class SwichingMonsUI : MonoBehaviour
 
     private void FillMonNames()
     {
-        //_PomonTextPlate[0].SetActive(true);
-        _pomonNameText[0].text = _playerPomonTeam.team[0].PomonName;
-
-        Debug.Log(_playerPomonTeam.team[0].CurrentHealt);
-
         // sets op so eathe moves name is represendit on a button
         for (int i = 0; i < _PomonTextPlate.Length; i++)
-        {
-            
+        {            
             try
             {
                 // checkes if the Pomon is on full HP
                 if (_playerPomonTeam.team[i].CurrentHealt > 0)
                 {
-                    
-
-
                     // sets the name of the pomon on the button
                     _PomonTextPlate[i].SetActive(true);
-                    Debug.Log("was called");
                     _pomonNameText[i].text = _playerPomonTeam.team[i].PomonName;               
                 }
                 else
@@ -77,7 +67,6 @@ public class SwichingMonsUI : MonoBehaviour
             catch
             {
                 _PomonTextPlate[i].SetActive(false);
-                Debug.Log("missing pomon");
             }
         }
     }

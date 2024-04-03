@@ -18,14 +18,19 @@ public class ElementObjecks : ScriptableObject
     public double ElementMultiplier(PomonsBluPrint defenderElemts)
     {
         double moddefiher = 1;
+        // holdes the writen name off the elemts the defender has
+        string defenderElemtNames = "";
 
-        Debug.Log($"defender has {defenderElemts.name} elemts");
+/*        Debug.Log(
+            $"defender has {defenderElemts.name} elemts \n" +
+            $"{defenderElemts.PomonElemet[0].name} {defenderElemts.PomonElemet[1].name}");*/
 
         // runes frouge all the defending elemets.
         // if eny are ind _strongAgenst then it adds to moddefiher and does the oppsind if ind _weakAgenst
         foreach (ElementObjecks elemt in defenderElemts.PomonElemet)
         {
-            Debug.Log($"{elemt.name} elemts");
+
+            
 
             // runs fruge all the elemt this Element is strong agenst. and if then it adds bounes damige
             foreach (ElementObjecks attack in _effetive)
@@ -36,8 +41,13 @@ public class ElementObjecks : ScriptableObject
             foreach (ElementObjecks resists in elemt._resestes)
                 if (resists == this)
                     moddefiher -= deBuff;
+
+            defenderElemtNames += $"{elemt.name }";
         }
 
+        Debug.Log(
+            $"defender has {defenderElemts.name} elemts \n" +
+            $"{defenderElemtNames}");
 
         // returns the moddefiher
         return moddefiher;

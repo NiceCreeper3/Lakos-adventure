@@ -24,11 +24,11 @@ public class TurnHandler : MonoBehaviour
 
     public static bool FreeAction;
 
-    private delegate void TurnAction();
+    public delegate void TurnAction();
     private TurnAction _playerAction, _enemyAction;
 
-    private ushort _enemyMoves;
-    private ushort _playerAttack, _AiAttack;
+
+    private ushort _playerAttack;
 
     [SerializeField] private GameObject[] _makeInvesbolDurringAttack;
     [SerializeField] private GameObject[] _makevisubolDurring;
@@ -38,12 +38,14 @@ public class TurnHandler : MonoBehaviour
 
     private void Awake()
     {
+        // gives the neede refrendses to the Ai script
+        EnemyAI.GetRefendses(_enemy, _player);
         _onEnemySwiche.OnPomonSwiching += OnEnemySwiche_OnPomonSwiching;
     }
 
-    private void OnEnemySwiche_OnPomonSwiching(Pomons arg1, bool arg2)
+    private void OnEnemySwiche_OnPomonSwiching(Pomons AIPomon, bool arg2)
     {
-        _enemyMoves = (ushort)arg1.PomonMoves.Count;
+        EnemyAI.UpdateEnemyAttackList(AIPomon);
     }
 
     // is called by the attack buttons. /tenekly by CustumButton/
@@ -83,22 +85,14 @@ public class TurnHandler : MonoBehaviour
         if (FreeAction != true)
             TurnOrder();
         else
+        {
             _playerAction();
+            FreeAction = false;
+        }
+            
     }
 
-    // if it gets more sufiste catted then put ind it onwen script
-    private ushort EnemyTurnAI()
-    {
-        // giver et tall mellem 0 til 3
-        ushort whatAttackToPick = (ushort)Random.Range(0, _enemyMoves);
-        Debug.Log("random attack " + whatAttackToPick);
 
-        _enemy.BeforeBattle(whatAttackToPick, _player);
-        _enemyAction = EnemyAttack;
-
-        // is meant to sent with attack the Ai is goving four
-        return whatAttackToPick;
-    }
 
     // inprove so can be used to by player and enemy
     #region attack and i hate it and needs inprovement
@@ -108,10 +102,7 @@ public class TurnHandler : MonoBehaviour
         _player.PomonAttacks(_playerAttack, _enemy);
     }
     
-    private void EnemyAttack()
-    {
-        _enemy.PomonAttacks(_AiAttack, _player);
-    }
+
     #endregion
 
     // is meant to indekate the player did somthing else
@@ -123,12 +114,12 @@ public class TurnHandler : MonoBehaviour
         // getes the speed of moboe player and enemy
         int playerSpeed = _player.ReturnSpeed();
         int enemySpeed = _enemy.ReturnSpeed();
-
-        Debug.Log("enemy speed:" + enemySpeed + " Player Speed" + playerSpeed);
-        _AiAttack = EnemyTurnAI();
-
-        //TurnAction[] turnsOrder = new TurnAction[] { _playerAction, _enemyAction };
-        //Array.Sort(turnsOrder);
+        
+        Debug.Log(
+            "enemy speed:" + enemySpeed + 
+            "\n          Player Speed" + playerSpeed);
+        //_AiAttack = AITurn();
+        _enemyAction = EnemyAI.AITurn();
 
         // compares the speed of both Pomons. the one with the higst gets to aket fhist
         if (playerSpeed > enemySpeed)
@@ -157,7 +148,7 @@ public class TurnHandler : MonoBehaviour
     }
 
     // starts the turn. and has a 1 sec delay indbetyvie the to turns
-    private IEnumerator Turn(TurnAction fistsOrder, TurnAction sekundOrder)
+    private IEnumerator Turn(TurnAction fistsOrder, TurnAction secundOrder)
     {
         foreach (GameObject makeInvesebol in _makeInvesbolDurringAttack)
             makeInvesebol.SetActive(false);
@@ -165,10 +156,11 @@ public class TurnHandler : MonoBehaviour
                 foreach (GameObject visubol in _makevisubolDurring)
                     visubol.SetActive(true);*/
 
+        Debug.Log($"attacks the fist:{fistsOrder} Secound:{secundOrder}");
 
         fistsOrder();
         yield return new WaitForSecondsRealtime(1); // time four animason to play
-        sekundOrder();
+        secundOrder();
 
         foreach (GameObject makeInvesebol in _makeInvesbolDurringAttack)
             makeInvesebol.SetActive(true);

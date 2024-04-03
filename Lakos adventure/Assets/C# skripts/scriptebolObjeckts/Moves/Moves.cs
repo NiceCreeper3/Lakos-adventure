@@ -37,12 +37,12 @@ public class Moves : ScriptableObject
 
     // healt change
     #region
-    [SerializeField] private int _healPower;
+    [SerializeField] private int _healtChangeAmount;
+    [SerializeField] private double _healthChangePressentige;
 
     private void HealtChange(BattelLingMons interragsen)
     {
-        Debug.Log($"change healt of {interragsen}");
-        ChangeHealtMoves.ChangeHealtCaller(interragsen, _healPower);
+        ChangeHealtMoves.ChangeHealtByNummber(interragsen, _healtChangeAmount); // uses the ChangeHealtMoves class. to indreckly call ChangeHealt method. it does it this way so other scripts can do the same
     }
     #endregion
 

@@ -58,18 +58,6 @@ public class Healthbars : MonoBehaviour
         SetHealtColor();
     }
 
-    // Cahnges the fill amout ind the health bar
-    private void SetPomonHp(int HPToSet)
-    {
-        // makes sure if we get indto negtive digets it stajes at 0
-        if (HPToSet > _healhtSlider.value)
-            _healhtSlider.value = 0;
-        else
-            _healhtSlider.value += HPToSet;
-
-        SetHealtColor();
-    }
-
     // changes the color in health bar fill. this is to indkate how damige the pomon is
     private void SetHealtColor()
     {

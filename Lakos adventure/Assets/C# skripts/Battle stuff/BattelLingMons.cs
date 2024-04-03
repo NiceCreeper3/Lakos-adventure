@@ -22,7 +22,7 @@ public class BattelLingMons : MonoBehaviour
     [Header("Text box")]
     [SerializeField] private textinteractor _textBox;
 
-    [HideInInspector] public Pomons _currentMon;
+    [HideInInspector] public Pomons CurrentMon;
     private SwichePomon OnSwitch;
 
     // represents buffs
@@ -55,14 +55,14 @@ public class BattelLingMons : MonoBehaviour
 
     public int ReturnSpeed()
     {
-        return (int)(_currentMon.Speed * _buffs.SpeedBuff);
+        return (int)(CurrentMon.Speed * _buffs.SpeedBuff);
     }
 
     // triggeres chosen attacks BeforeAblity
     public void BeforeBattle(int attackPicked, BattelLingMons aponent)
     {
-        _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(this);
-        _currentMon.PomonMoves[attackPicked].AbilityBeforeTargetEnemy(aponent);
+        CurrentMon.PomonMoves[attackPicked].AbilityBeforeTargetSelf(this);
+        CurrentMon.PomonMoves[attackPicked].AbilityBeforeTargetEnemy(aponent);
     }
 
     // adds stats "stabs". aka buffs
@@ -95,29 +95,38 @@ public class BattelLingMons : MonoBehaviour
         if (maxBuffAmount < _buffs.DefenseBuff)
             _buffs.DefenseBuff = maxBuffAmount;
 
-        Debug.Log($"has buffed/debuffed {_currentMon.PomonName}s {whatToBuff} by {whatToBuff}");
+        Debug.Log($"has buffed/debuffed {CurrentMon.PomonName}s {whatToBuff} by {buffTimes}");
     }
 
     // calkulates damige and and  sends it to the (attckTarget)
     public void PomonAttacks(int attackPicked, BattelLingMons attckTarget)
     {
+        int damage = 0;
+        Moves move = null;
+
         // checkes if the Pomon is stil alive 
-        if (_currentMon.CurrentHealt > 0)
+        if (CurrentMon.CurrentHealt > 0)
         {
             // makes a short refrens to the Move
-            //BasikMoves1 move = _currentMon.PomonMoves[attackPicked];
-            Moves move = _currentMon.PomonMoves[attackPicked];
-
-            int Damage = DamageMath.AttackMath(move, _currentMon, attckTarget._currentMon, _buffs);
+            move = CurrentMon.PomonMoves[attackPicked];
 
             // actevates the Ability after the Damage math as to not give buff damige amidetly
             move.AbilityAfterTargetSelf(this);
             move.AbilityAfterTargetEnemy(attckTarget);
 
-/*            if (!_isPlayerMon)
-                _textBox.RunTextBox($" {_currentMon.PomonName} used {move.MoveName} which does \n {move.MoveDiskrepseon}");*/
+            // ind case the move has not attack power. the move is not meant to do damage and there four this does not make eny damage math
+            if (move.power != 0)
+            {
+                damage = DamageMath.AttackMath(move, CurrentMon, attckTarget.CurrentMon, _buffs);
+                damage = DamageMath.DefenderMath(attckTarget.CurrentMon, damage, attckTarget._buffs);
 
-            attckTarget.TakesDamage(Damage);
+                // thanges the healt of the enemy pomon
+                attckTarget.ChangeHealt(-damage);
+            }
+
+            // writes what move the enemy used as well as a short deskripson of what it does
+            if (!_isPlayerMon)
+                _textBox.RunTextBox($" ({CurrentMon.PomonName} used {move.MoveName}) \n {move.MoveDiskrepseon}");
         }
         else
         {
@@ -128,44 +137,24 @@ public class BattelLingMons : MonoBehaviour
     // health maipulason
     #region
 
-    // damiges the pomons current HP
-    private void TakesDamage(int damage)
-    {
-        
-        // aclkulates kow muthe damage is dealt
-        int totaldamage = damage - (int)(_currentMon.Defense * _buffs.DefenseBuff);
-
-        Debug.Log(
-            $"{_currentMon.PomonName} \n" +
-            $"damge defended is {totaldamage} given by {_buffs.DefenseBuff} - {damage}");
-
-        // ind case Defense is higer then damage and then wood result ind healing
-        if (totaldamage < 0)
-            totaldamage = 0;
-
-        // changes the pomons current HP diretlig as we want to remember eng damage don to the pomon
-        ChangeHealt(-totaldamage);
-    }
-
     //make changes ind the helt of the pomon. this can be healing or damage
     public void ChangeHealt(int howToChange)
     {
-        _currentMon.CurrentHealt += howToChange;
-        Debug.Log(howToChange + " " + _currentMon.CurrentHealt);
+        CurrentMon.CurrentHealt += howToChange;
 
         // makes sure a pomon does not have more health then MaxHealth
-        if (_currentMon.CurrentHealt > _currentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
-            _currentMon.CurrentHealt = _currentMon.MaxHealt;
+        if (CurrentMon.CurrentHealt > CurrentMon.MaxHealt) // makes sure the Pomon does not get more HP then Max
+            CurrentMon.CurrentHealt = CurrentMon.MaxHealt;
 
-        Debug.Log($"{_currentMon.PomonName} has had its health changed by {howToChange} and is now at {_currentMon.CurrentHealt}/{_currentMon.MaxHealt}");
+        Debug.Log($"{CurrentMon.PomonName} has had its health changed by {howToChange} and is now at {CurrentMon.CurrentHealt}/{CurrentMon.MaxHealt}");
 
         OnHealhtChange?.Invoke(howToChange);
 
         // checks if the pomon has negetive healt. if so then its considered dead.
         // and its hp is put to 0 as it is nicer to look at
-        if (_currentMon.CurrentHealt <= 0)
+        if (CurrentMon.CurrentHealt <= 0)
         {
-            _currentMon.CurrentHealt = 0;
+            CurrentMon.CurrentHealt = 0;
             TurnHandler.FreeAction = true;
             OnPomonSwicheNeeded?.Invoke();
         }
@@ -176,14 +165,14 @@ public class BattelLingMons : MonoBehaviour
     // is goving to handel swithing ind a new pokemon
     private void SwitchPomon(Pomons swichingPomons, bool isPlayerMon)
     {
-        if (_currentMon != null)
-            Debug.Log($"swichint {_currentMon.PomonName} out with {swichingPomons.PomonName}");
+        if (CurrentMon != null)
+            Debug.Log($"swichint {CurrentMon.PomonName} out with {swichingPomons.PomonName}");
 
         // playes a audio clip
         SoundManger.Playsound(SoundManger.Sound.OnPomonEnterBattel);
 
         // sets the new _currentMon Pomon to be the swithed ind one
-        _currentMon = swichingPomons;
+        CurrentMon = swichingPomons;
 
         // sets buff amount
         _buffs = new DamageMath.StatsBuff(1,1,1);
@@ -194,9 +183,9 @@ public class BattelLingMons : MonoBehaviour
 
         // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
         if (isPlayerMon)
-            pomonImgeDissplay.sprite = _currentMon.Spesies.back;
+            pomonImgeDissplay.sprite = CurrentMon.Spesies.back;
         else
-            pomonImgeDissplay.sprite = _currentMon.Spesies.front;
+            pomonImgeDissplay.sprite = CurrentMon.Spesies.front;
     }
     #endregion
 }
