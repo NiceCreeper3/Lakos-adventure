@@ -5489,7 +5489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e2b87723374154494cc58aaa90e5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pomon: {fileID: 11400000, guid: 68d91f1034d36ae44a5f11066eda8056, type: 2}
+  pomon: {fileID: 0}
   monportraitfront: {fileID: 8745383625128719690}
   attack: {fileID: 5622404990768156284}
   defece: {fileID: 553157262297506961}
@@ -5596,7 +5596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e2b87723374154494cc58aaa90e5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pomon: {fileID: 11400000, guid: 68d91f1034d36ae44a5f11066eda8056, type: 2}
+  pomon: {fileID: 0}
   monportraitfront: {fileID: 2118437218852954381}
   attack: {fileID: 6455220147250917818}
   defece: {fileID: 7820995032370204442}

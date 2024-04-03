@@ -19,12 +19,19 @@ public class ListCaughtMon : MonoBehaviour
                 Destroy(entry);
             }
         }
+        try
+        {
+            displayCaught.loadmon(allpomon.team[0]);
+        }
+        catch
+        {
 
-        displayCaught.loadmon(allpomon.team[0]);
-        for (int i = 0; i < allpomon.team.Count; i++)
+        }
+        
+        foreach (Pomons pomon in allpomon.team)
         {
             ShowBoxEnty dex = Instantiate(entry, transform).GetComponent<ShowBoxEnty>();
-            dex.loadmon(allpomon.team[i]);
+            dex.loadmon(pomon);
             dex.displayCaught = displayCaught;
             currententries.Add(dex.gameObject);
 
