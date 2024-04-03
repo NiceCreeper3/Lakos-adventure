@@ -48,32 +48,28 @@ public class PomonsBluPrint : ScriptableObject
     public Pomons generateMon(int level)
     {
         Pomons mon = CreateInstance<Pomons>();
-        Debug.Log(name + " generated");
+
         mon.name = name + level;
         mon.Spesies = this;
         mon.PomonName = name;
-        Debug.Log("mon named ");
         mon.IsDude = true;
         if (Random.Range(0,100) < genderratio)
         {
             mon.IsDude = false;
         }
-        Debug.Log("mon genderd");
         mon.Attack = Random.Range(MinAttack, MaxAttack+1) + (attackgrow * (level - 1));
         mon.Defense = Random.Range(MinDefense, MaxDefense+1) + (Defensegrow * (level - 1));
         mon.MaxHealt = Random.Range(MinHealt, MaxHealt+1) + (healthgrow * (level-1));
         mon.Speed = Random.Range(MinSpeed, MaxSpeed+1) + (speedgrow * (level - 1));
-        Debug.Log("stats given");
         mon.CurrentHealt = mon.MaxHealt;
-        Debug.Log("health maxed");
         for (int i = 0; i < 4; i++)
         {
             int rand = Random.Range(0, MovesCanLern.Count);
-            Debug.Log(rand);
-            Debug.Log(MovesCanLern[rand].name);
             mon.PomonMoves.Add(MovesCanLern[rand]);
             
         }
+        Debug.Log(name + " generated at level:" + mon.level);
+        Debug.Log($"attack:{mon.Attack} defense:{mon.Defense} speed:{mon.Speed} health:{mon.MaxHealt}");
 
 
         return mon;

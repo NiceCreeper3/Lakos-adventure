@@ -26,6 +26,7 @@ public class ListCaughtMon : MonoBehaviour
             ShowBoxEnty dex = Instantiate(entry, transform).GetComponent<ShowBoxEnty>();
             dex.loadmon(allpomon.team[i]);
             dex.displayCaught = displayCaught;
+            currententries.Add(dex.gameObject);
 
         }
     }

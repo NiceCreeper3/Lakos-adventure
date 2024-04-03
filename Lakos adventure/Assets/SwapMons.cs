@@ -14,11 +14,13 @@ public class SwapMons : MonoBehaviour
     public void swappomons()
     {
         int boxindex = box.team.IndexOf(boxtoswap.pomon);
-        box.team.RemoveAt(boxindex);
-        box.team.Insert(boxindex,bagtoswap.pomon);
+        box.team.Insert(boxindex, bagtoswap.pomon);
+        box.team.RemoveAt(boxindex+1);
+        
         int bagindex = bag.team.IndexOf(bagtoswap.pomon);
-        bag.team.RemoveAt(bagindex);
-        bag.team.Insert(boxindex, boxtoswap.pomon);
+        bag.team.Insert(bagindex, boxtoswap.pomon);
+        bag.team.RemoveAt(bagindex+1);
+        
 
         baglist.loadmons();
         boxlist.loadmons();
