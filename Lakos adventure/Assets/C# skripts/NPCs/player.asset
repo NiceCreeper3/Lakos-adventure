@@ -15,9 +15,17 @@ MonoBehaviour:
   Name: player
   sprites:
   - {fileID: -1497098677, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: 1962506724, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -1538873174, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
   - {fileID: -1786274286, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -939388730, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: 2101748890, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
   - {fileID: -724418124, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -502405691, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: 1982844198, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
   - {fileID: -901164611, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -1693209964, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: -2089175078, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}
