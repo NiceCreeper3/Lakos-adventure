@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: player
   sprites:
-  - {fileID: -1497098677, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: 1962506724, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -1538873174, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -1786274286, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -939388730, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: 2101748890, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -724418124, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -502405691, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: 1982844198, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -901164611, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -1693209964, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
-  - {fileID: -2089175078, guid: cde3a5a9876e74d429297939937d39ac, type: 3}
+  - {fileID: 884876923, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: 518400372, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: 1596817351, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: 673182578, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: 905413610, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: -1528955495, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: -2112920036, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: -1615379399, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: -1876188322, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: -1656488396, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: 1363018722, guid: 344ed321561419b498b90bae12653863, type: 3}
+  - {fileID: 1506008552, guid: 344ed321561419b498b90bae12653863, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

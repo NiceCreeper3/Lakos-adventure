@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a4771f154b6bc4ca61e9ba901d9f69, type: 3}
+  m_Name: angila
+  m_EditorClassIdentifier: 
+  Name: mc newbe
+  sprites:
+  - {fileID: 645713976, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 229635972, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: -1953299580, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 781536677, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 729771101, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: -127570185, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 1992771787, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 419535038, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 1417432989, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 1769251324, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: 1425919287, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  - {fileID: -112018892, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
+  body: {fileID: 0}
+  Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
+  interaction: {fileID: 0}
