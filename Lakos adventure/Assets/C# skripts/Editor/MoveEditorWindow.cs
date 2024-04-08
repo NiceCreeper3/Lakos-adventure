@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -20,11 +17,12 @@ public class MoveEditorWindow : Editor
 
 
     SerializedProperty healPower;
+    SerializedProperty _pressengigeHealt;
 
     SerializedProperty _getBoffings;
     #endregion
 
-    private bool _flaverInfo, BasickMoves, Ablitys;
+    private bool _flaverInfo, Ablitys;
     private bool _wantsToChangeHealt;
     private bool _wantsToBuff;
 
@@ -43,7 +41,8 @@ public class MoveEditorWindow : Editor
 
         AddedAbilityes = serializedObject.FindProperty("AddedAbilityes");
 
-        healPower = serializedObject.FindProperty("_healPower");
+        healPower = serializedObject.FindProperty("_healtChangeAmount"); 
+        _pressengigeHealt = serializedObject.FindProperty("_healthChangePressentige");
         _getBoffings = serializedObject.FindProperty("_getBoffings");
 
     }
@@ -100,9 +99,14 @@ public class MoveEditorWindow : Editor
         // shows healtchange values informason
         if (_wantsToChangeHealt)
         {
-            // displayes ety pise of info
-            GUILayout.Label("how to change healt");
+            // displayes a pise of info
+            GUILayout.Label("how muthe to change healt by");
             EditorGUILayout.PropertyField(healPower);
+
+            EditorGUILayout.Space(5);
+
+            GUILayout.Label("how muthe pressentige to change healt by");
+            EditorGUILayout.PropertyField(_pressengigeHealt);
         }
 
         EditorGUILayout.Space(10);

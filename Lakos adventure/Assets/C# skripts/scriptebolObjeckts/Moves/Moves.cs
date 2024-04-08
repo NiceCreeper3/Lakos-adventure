@@ -14,7 +14,9 @@ public class Moves : ScriptableObject
 
     public enum AbilityEffects
     {
-        ChangeUserHealt,
+        ChangeHealtByNummber,
+        ChangeHealtByMaxHealt,
+        ChangeHealtByMissingHealt,
         BuffTarget,
         DebuffTarget
     }
@@ -44,6 +46,16 @@ public class Moves : ScriptableObject
     {
         ChangeHealtMoves.ChangeHealtByNummber(interragsen, _healtChangeAmount); // uses the ChangeHealtMoves class. to indreckly call ChangeHealt method. it does it this way so other scripts can do the same
     }
+
+    private void HealtMaxPressentig(BattelLingMons interragsen)
+    {
+        ChangeHealtMoves.ChangeHealtByMaxHealt(interragsen, _healthChangePressentige);
+    }
+
+    private void HealtMissingPressentig(BattelLingMons interragsen)
+    {
+        ChangeHealtMoves.ChangeHealtByMissingHealt(interragsen, _healthChangePressentige);
+    }
     #endregion
 
     // buff/debuff
@@ -71,8 +83,16 @@ public class Moves : ScriptableObject
             // checkes what Ability was pikked
             switch (ability.AbilityEffects)
             {
-                case AbilityEffects.ChangeUserHealt:                    
+                case AbilityEffects.ChangeHealtByNummber:                    
                     WhenAndHowToAblity(HealtChange, ability.CallAfterAttack,  ability.TargetSelf);
+                    break;
+
+                case AbilityEffects.ChangeHealtByMaxHealt:
+                    WhenAndHowToAblity(HealtMaxPressentig, ability.CallAfterAttack, ability.TargetSelf);
+                    break;
+
+                case AbilityEffects.ChangeHealtByMissingHealt:
+                    WhenAndHowToAblity(HealtMissingPressentig, ability.CallAfterAttack, ability.TargetSelf);
                     break;
 
                 case AbilityEffects.BuffTarget:

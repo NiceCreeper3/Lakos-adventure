@@ -37,6 +37,7 @@ public static class EnemyAI
         return EnemyAttack;
     }
 
+    // Ai Attacking
     private static void EnemyAttack()
     {
         _AIPomon.PomonAttacks(_AiAttack, _playerPomon);

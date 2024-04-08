@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dread
   m_EditorClassIdentifier: 
   MoveName: Dread
-  MoveDiskrepseon: Dekresises the apponents defends by a lot
+  MoveDiskrepseon: reaminds the aponnet that we all die one day, Dekresises the apponents
+    defends by a lot
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
@@ -21,7 +22,8 @@ MonoBehaviour:
   - AbilityEffects: 0
     CallAfterAttack: 0
     TargetSelf: 0
-  _healPower: 0
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0
   _getBoffings:
   - WhatToBuff: 2
     HowToBuff: 5

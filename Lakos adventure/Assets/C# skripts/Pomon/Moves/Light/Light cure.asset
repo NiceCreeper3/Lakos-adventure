@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Light cure
   m_EditorClassIdentifier: 
   MoveName: Light cure
-  MoveDiskrepseon: heals the user four 20hp
+  MoveDiskrepseon: restores 15% of the useres healt
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
   AddedAbilityes:
-  - AbilityEffects: 0
+  - AbilityEffects: 1
     CallAfterAttack: 0
     TargetSelf: 1
-  _healPower: 20
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0.15
   _getBoffings: []

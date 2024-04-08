@@ -36,9 +36,7 @@ public static class DamageMath
         // adds all the math togetter four a totalDamage value
         totalAttackDamage = rawDamage * elementalMultyplayer * buffs.AttackBuff;
 
-        Debug.Log(
-            $"_______________{pomon.PomonName}_______________\n" +
-            $"___________used {attack.MoveName}_______________ ");
+
         Debug.Log(
             $"raw damage is {rawDamage} geainde by {attack.power} + {pomon.Attack} \n" +
             $"Total damage is {totalAttackDamage} geainde by {rawDamage} *{elementalMultyplayer} * {buffs.AttackBuff}");
@@ -54,9 +52,7 @@ public static class DamageMath
         // aclkulates kow muthe damage is dealt
         totalDefendsDamage = damage - (int)(enemyPomon.Defense * enemyDefendBuffs.DefenseBuff);
 
-        Debug.Log(
-            $"{enemyPomon.PomonName} damge defended is {totalDefendsDamage} given by {enemyDefendBuffs.DefenseBuff} - {damage} \n" +
-            "______________________________________________[Math]______________________________________________________");
+        Debug.Log($"{enemyPomon.PomonName} damge defended is {totalDefendsDamage} given by {enemyDefendBuffs.DefenseBuff} - {damage}");
 
         // ind case Defense is higer then damage. this sets it to _minimumeDamage. to indsure the user still does som damage. and does not heal the aponent
         if (totalDefendsDamage < 0)

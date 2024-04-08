@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: Trial by fire
   m_EditorClassIdentifier: 
   MoveName: Trial by fire
-  MoveDiskrepseon: the user lights them sefl ablase dealing 50 damage to itself,
-    and giving a massive buff to all states
+  MoveDiskrepseon: the user lights them sefl ablase dealing hafe there max healt
+    as damage to itself, and giving a massive buff to all states
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   AddedAbilityes:
-  - AbilityEffects: 0
+  - AbilityEffects: 1
     CallAfterAttack: 0
     TargetSelf: 1
-  - AbilityEffects: 1
+  - AbilityEffects: 3
     CallAfterAttack: 1
     TargetSelf: 1
-  _healPower: -70
+  _healtChangeAmount: 0
+  _healthChangePressentige: -0.5
   _getBoffings:
   - WhatToBuff: 0
     HowToBuff: 4

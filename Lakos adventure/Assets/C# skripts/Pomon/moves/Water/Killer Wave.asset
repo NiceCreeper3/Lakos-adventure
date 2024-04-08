@@ -19,10 +19,11 @@ MonoBehaviour:
   power: 55
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
   AddedAbilityes:
-  - AbilityEffects: 2
+  - AbilityEffects: 4
     CallAfterAttack: 1
     TargetSelf: 1
-  _healPower: 0
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0
   _getBoffings:
   - WhatToBuff: 1
     HowToBuff: 3

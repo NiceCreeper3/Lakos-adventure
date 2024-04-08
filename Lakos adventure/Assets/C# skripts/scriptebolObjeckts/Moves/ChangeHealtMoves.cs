@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public static class ChangeHealtMoves
 {
     public static void ChangeHealtByNummber(BattelLingMons interragsen, int ChangeHealt)
@@ -13,9 +15,7 @@ public static class ChangeHealtMoves
     /// <param name="healPower"></param>
     public static void ChangeHealtByMaxHealt(BattelLingMons interragsen, double Pressentig)
     {
-        // does the mathe before sending it on to the ChangeHealt method
         int ChangeHealt = (int)(interragsen.CurrentMon.MaxHealt * Pressentig);
-
         interragsen.ChangeHealt(ChangeHealt);
     }
 
@@ -26,10 +26,7 @@ public static class ChangeHealtMoves
     /// <param name="healPower"></param>
     public static void ChangeHealtByMissingHealt(BattelLingMons interragsen, double Pressentig)
     {
-        int ChangeHealt = (int)(interragsen.CurrentMon.MaxHealt * Pressentig);
-
-
-
+        int ChangeHealt = (int)((interragsen.CurrentMon.MaxHealt - interragsen.CurrentMon.CurrentHealt)  * Pressentig);
         interragsen.ChangeHealt(ChangeHealt);
     }
 }

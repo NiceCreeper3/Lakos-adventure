@@ -21,5 +21,6 @@ MonoBehaviour:
   - AbilityEffects: 0
     CallAfterAttack: 0
     TargetSelf: 1
-  _healPower: 20
+  _healtChangeAmount: 20
+  _healthChangePressentige: 0
   _getBoffings: []
