@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
 
 public class Actorscript : MonoBehaviour
 {
@@ -8,10 +10,10 @@ public class Actorscript : MonoBehaviour
     [SerializeField] public Vector2 diretion;
     [SerializeField] public Grid grid;
     [SerializeField] public Vector3 movepoint;
-
+    
     private void Start()
     {
-        //StartCoroutine(drawframe());
+        StartCoroutine(drawframe());
     }
     IEnumerator drawframe()
     {
@@ -19,11 +21,12 @@ public class Actorscript : MonoBehaviour
         int frameindex = 1;
         while(true)
         {
-            bool v = transform.position != movepoint;
-            //yield return new WaitUntil(System.Func< transform.position != movepoint > ());
+            
+            yield return new WaitUntil(() => transform.position != movepoint);
             yield return new WaitForSeconds(0.3f);
             if (transform.position != movepoint)
             {
+
                 if (diretion.y != 0)
                 {
                     if (diretion.y >= 0)
@@ -81,9 +84,12 @@ public class Actorscript : MonoBehaviour
 
 
                 }
+
             }
             else
             {
+
+
                 if (diretion.y != 0)
                 {
                     if (diretion.y >= 0)
@@ -119,6 +125,7 @@ public class Actorscript : MonoBehaviour
             {
                 frameindex++;
             }
+            
         }
             
             
@@ -130,9 +137,26 @@ public class Actorscript : MonoBehaviour
     }
     public void load()
     {
-        
         gameObject.transform.position = movepoint;
         actor.body = this;
+        GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
+        foreach (GameObject game in objectsinscene)
+        {
+            try
+            {
+                grid = game.GetComponent<Grid>();
+            }
+            catch
+            {
+
+            }
+            
+            if (grid)
+            {
+                break;
+            }
+        }
+        
 
         if (diretion.y != 0)
         {
@@ -159,5 +183,9 @@ public class Actorscript : MonoBehaviour
 
 
         }
+    }
+    public void interact()
+    {
+        actor.Textinteractor.changeanim(actor.interaction);
     }
 }

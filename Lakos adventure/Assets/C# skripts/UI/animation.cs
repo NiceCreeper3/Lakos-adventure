@@ -24,17 +24,19 @@ public class animationinteractor : MonoBehaviour
         animator.runtimeAnimatorController = handler.controller;
     }
     
-    public void generateactor(Actor person)
+    public Actorscript generateactor(Actor person)
     {
         Actorscript actorscript = Instantiate(actorprephap, actorlayer).GetComponent<Actorscript>();
         actorscript.actor = person;
+        return actorscript;
     }
-    public void generateactor(trainer person)
+    public Actorscript generateactor(trainer person)
     {
         GameObject newtrainer = Instantiate(trainerprephap, actorlayer);
         Actorscript actorscript = newtrainer.GetComponent<Actorscript>();
         WorldTrainerScript worldTrainerScript = newtrainer.GetComponent<WorldTrainerScript>();
         actorscript.actor = person;
         worldTrainerScript.Trainer = person;
+        return actorscript;
     }
 }

@@ -1,19 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 
 public class WorldTrainerScript : MonoBehaviour
 {
     [SerializeField] public trainer Trainer;
     [SerializeField] private Transform player;
     [SerializeField] private Actorscript actorscript;
-
-    [SerializeField] private UnityEvent OnSpot;
     private void Start()
     {
         actorscript.movepoint = actorscript.grid.CellToWorld(actorscript.grid.WorldToCell(transform.position)) + new Vector3(0.31f, 0.31f, 0);
         transform.position = actorscript.movepoint;
+        GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
+        foreach (GameObject game in objectsinscene)
+        {
+            try
+            {
+                 player = game.GetComponentInChildren<playerinteract>().transform;
+            }
+            catch
+            {
+
+            }
+
+            if (player)
+            {
+                break;
+            }
+        }
         actorscript.load();
         
 
@@ -43,6 +59,7 @@ public class WorldTrainerScript : MonoBehaviour
     public void triggeractive()
     {
         InfoSaved.playerlocation = actorscript.grid.WorldToCell(player.position);
-        OnSpot.Invoke();
+        Trainer.attack();
+        
     }
 }

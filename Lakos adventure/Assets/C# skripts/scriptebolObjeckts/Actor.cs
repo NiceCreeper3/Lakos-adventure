@@ -43,9 +43,12 @@ public class Actor : ScriptableObject
     }
     public void setx(int location)
     {
-
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
         body.movepoint = new Vector3(0.64f * location, body.gameObject.transform.position.y, 0);
         body.gameObject.transform.position = new Vector3(0.64f * location, body.gameObject.transform.position.y, 0);
+        int index = data.findactor(this);
+        //data.actordatainfo[index].location.x = location;
+        
     }
     public void sety(int location)
     {
@@ -77,6 +80,38 @@ public class Actor : ScriptableObject
                 renderer.sprite = Getsprite("right");
                 break;
         }
+    }
+    public void turn(Vector2 direction)
+    {
+        SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
+        if (direction == new Vector2(0, 1))
+        {
+            body.diretion = new Vector2(0, 1);
+            renderer.sprite = Getsprite("forward");
+        }
+        else if(direction == new Vector2(0, -1))
+        {
+            body.diretion = new Vector2(0, -1);
+            renderer.sprite = Getsprite("back");
+        }
+        else if (direction == new Vector2(-1, 0))
+        {
+            body.diretion = new Vector2(-1, 0);
+            renderer.sprite = Getsprite("left");
+        }
+        else if (direction == new Vector2(1, 0))
+        {
+            body.diretion = new Vector2(1, 0);
+            renderer.sprite = Getsprite("right");
+        }
+                
+
+                
+
+
+
+
+
     }
 
     public void ineract()

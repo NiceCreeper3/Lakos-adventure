@@ -707,6 +707,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0233df12ed1880546b3e5a3e49fb3ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1437711493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4830858759855439840, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+  m_PrefabInstance: {fileID: 8290821752153579839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1853031332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 226498117224582228, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
@@ -1930,9 +1935,21 @@ PrefabInstance:
       value: Wildgrass, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1201372658877774792, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: actorlayer
+      value: 
+      objectReference: {fileID: 1437711493}
+    - target: {fileID: 1201372658877774792, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: trainerprephap
       value: 
       objectReference: {fileID: 2390608917331487456, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+    - target: {fileID: 4695674146003077600, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 26cf0d81c9371354087eb38fed7ef77b, type: 2}
+    - target: {fileID: 4695674146003077600, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: inizilizer
+      value: 
+      objectReference: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
     - target: {fileID: 5998923698747512450, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: m_Controller
       value: 
