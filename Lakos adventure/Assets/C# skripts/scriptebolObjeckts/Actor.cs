@@ -19,6 +19,16 @@ public class Actor : ScriptableObject
 
     public void movex(int length)
     {
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        int index = data.findactor(this);
+        if (index != -1)
+        {
+            LocationData.SceneActorData actorData = data.actordatainfo[index];
+            actorData.location.x += length;
+        }
+        
+
+        
         if (length < 0)
         {
             turn(3);
@@ -31,6 +41,14 @@ public class Actor : ScriptableObject
     }
     public void movey(int length)
     {
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        int index = data.findactor(this);
+        if (index != -1)
+        {
+            LocationData.SceneActorData actorData = data.actordatainfo[index];
+            actorData.location.y += length;
+        }
+
         if (length < 0)
         {
             turn(2);
@@ -44,69 +62,115 @@ public class Actor : ScriptableObject
     public void setx(int location)
     {
         LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
-        body.movepoint = new Vector3(0.64f * location, body.gameObject.transform.position.y, 0);
-        body.gameObject.transform.position = new Vector3(0.64f * location, body.gameObject.transform.position.y, 0);
+        body.movepoint = new Vector3((0.64f * location) + 0.31f, body.gameObject.transform.position.y , 0);
+        body.gameObject.transform.position = new Vector3((0.64f * location) + 0.31f, body.gameObject.transform.position.y, 0);
         int index = data.findactor(this);
-        //data.actordatainfo[index].location.x = location;
+        if (index != -1)
+        {
+            LocationData.SceneActorData actorData = data.actordatainfo[index];
+            actorData.location.x = location ;
+        }
         
     }
     public void sety(int location)
     {
-        body.movepoint = new Vector3(body.gameObject.transform.position.x, 0.64f * location, 0);
-        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, 0.64f * location, 0);
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        body.movepoint = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.31f, 0);
+        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.31f, 0);
+        int index = data.findactor(this);
+        LocationData.SceneActorData actorData = data.actordatainfo[index];
+        actorData.location.x = location;
     }
     public void turn(int direction)
     {
-        SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
-        switch(direction)
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        int index = data.findactor(this);
+        LocationData.SceneActorData actorData = data.actordatainfo[index];
+
+        
+        if (body)
         {
-            case 1:
-                body.diretion = new Vector2(0,1);
-                renderer.sprite = Getsprite("forward");
-                break;
+            SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
+            switch (direction)
+            {
+                case 1:
+                    body.diretion = new Vector2(0, 1);
+                    actorData.direction = new Vector2(0, 1);
+                    renderer.sprite = Getsprite("forward");
+                    break;
 
-            case 2:
-                body.diretion = new Vector2(0, -1);
-                renderer.sprite = Getsprite("back");
-                break;
+                case 2:
+                    body.diretion = new Vector2(0, -1);
+                    actorData.direction = new Vector2(0, -1);
+                    renderer.sprite = Getsprite("back");
+                    break;
 
-            case 3:
-                body.diretion = new Vector2(-1, 0);
-                renderer.sprite = Getsprite("left");
-                break;
+                case 3:
+                    body.diretion = new Vector2(-1, 0);
+                    actorData.direction = new Vector2(-1, 0);
+                    renderer.sprite = Getsprite("left");
+                    break;
 
-            case 4:
-                body.diretion = new Vector2(1, 0);
-                renderer.sprite = Getsprite("right");
-                break;
+                case 4:
+                    body.diretion = new Vector2(1, 0);
+                    actorData.direction = new Vector2(1, 0);
+                    renderer.sprite = Getsprite("right");
+                    break;
+            }
         }
+        else
+        {
+            switch (direction)
+            {
+                case 1:
+                    actorData.direction = new Vector2(0, 1);
+                    break;
+
+                case 2:
+                    actorData.direction = new Vector2(0, -1);
+                    break;
+
+                case 3:
+                    actorData.direction = new Vector2(-1, 0);
+                    break;
+
+                case 4:
+                    actorData.direction = new Vector2(1, 0);
+                    break;
+            }
+        }
+        
     }
     public void turn(Vector2 direction)
     {
-        SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
-        if (direction == new Vector2(0, 1))
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        int index = data.findactor(this);
+        LocationData.SceneActorData actorData = data.actordatainfo[index];
+        actorData.direction = direction;
+        if (body)
         {
-            body.diretion = new Vector2(0, 1);
-            renderer.sprite = Getsprite("forward");
+            SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
+            if (direction == new Vector2(0, 1))
+            {
+                body.diretion = new Vector2(0, 1);
+                renderer.sprite = Getsprite("forward");
+            }
+            else if (direction == new Vector2(0, -1))
+            {
+                body.diretion = new Vector2(0, -1);
+                renderer.sprite = Getsprite("back");
+            }
+            else if (direction == new Vector2(-1, 0))
+            {
+                body.diretion = new Vector2(-1, 0);
+                renderer.sprite = Getsprite("left");
+            }
+            else if (direction == new Vector2(1, 0))
+            {
+                body.diretion = new Vector2(1, 0);
+                renderer.sprite = Getsprite("right");
+            }
         }
-        else if(direction == new Vector2(0, -1))
-        {
-            body.diretion = new Vector2(0, -1);
-            renderer.sprite = Getsprite("back");
-        }
-        else if (direction == new Vector2(-1, 0))
-        {
-            body.diretion = new Vector2(-1, 0);
-            renderer.sprite = Getsprite("left");
-        }
-        else if (direction == new Vector2(1, 0))
-        {
-            body.diretion = new Vector2(1, 0);
-            renderer.sprite = Getsprite("right");
-        }
-                
-
-                
 
 
 
@@ -117,6 +181,14 @@ public class Actor : ScriptableObject
     public void ineract()
     {
         Textinteractor.changeanim(interaction);
+    }
+    public void changeinteraction(RuntimeAnimatorController animatorController)
+    {
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        int index = data.findactor(this);
+        LocationData.SceneActorData actorData = data.actordatainfo[index];
+        interaction = animatorController;
+        actorData.interaction = animatorController;
     }
     public Sprite Getsprite(string spritename)
     {
@@ -130,10 +202,14 @@ public class Actor : ScriptableObject
         }
         return sprite;
     }
-
     public void kill()
     {
-        Destroy(body.gameObject);
+        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        data.removeactor(this);
+        if (body)
+        {
+            Destroy(body.gameObject);
+        }
     }
     
 

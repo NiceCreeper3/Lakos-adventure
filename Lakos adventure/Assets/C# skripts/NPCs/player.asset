@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a4771f154b6bc4ca61e9ba901d9f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c42ac3e01970e745be091c44ac636fe, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
-  Name: player
+  Name: max
   sprites:
   - {fileID: 884876923, guid: 344ed321561419b498b90bae12653863, type: 3}
   - {fileID: 518400372, guid: 344ed321561419b498b90bae12653863, type: 3}

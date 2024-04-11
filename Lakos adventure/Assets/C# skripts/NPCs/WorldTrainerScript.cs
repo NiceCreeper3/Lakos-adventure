@@ -13,29 +13,34 @@ public class WorldTrainerScript : MonoBehaviour
     {
         actorscript.movepoint = actorscript.grid.CellToWorld(actorscript.grid.WorldToCell(transform.position)) + new Vector3(0.31f, 0.31f, 0);
         transform.position = actorscript.movepoint;
-        GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (GameObject game in objectsinscene)
-        {
-            try
-            {
-                 player = game.GetComponentInChildren<playerinteract>().transform;
-            }
-            catch
-            {
-
-            }
-
-            if (player)
-            {
-                break;
-            }
-        }
+        
         actorscript.load();
         
 
     }
     void Update()
     {
+        if (!player)
+        {
+            GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
+            foreach (GameObject game in objectsinscene)
+            {
+                try
+                {
+                    player = game.GetComponentInChildren<playerinteract>().transform;
+                }
+                catch
+                {
+
+                }
+
+                if (player)
+                {
+                    break;
+                }
+            }
+        }
+        
         if (Trainer.Seaching)
         {
             RaycastHit2D[] coll = new RaycastHit2D[1];

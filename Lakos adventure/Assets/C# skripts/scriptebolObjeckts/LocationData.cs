@@ -32,4 +32,25 @@ public class LocationData : ScriptableObject
         return -1;
          
     }
+
+    public void addactor(Actor actor, Vector2Int location, RuntimeAnimatorController interaction, Vector2 direction)
+    {
+        SceneActorData data = new SceneActorData();
+        data.actor = actor;
+        data.direction = direction;
+        data.location = location;
+        data.interaction = interaction;
+        actordatainfo.Add(data);
+
+
+    }
+    public void removeactor(Actor actor)
+    {
+        int index = findactor(actor);
+        if (index != -1)
+        {
+            actordatainfo.RemoveAt(index);
+        }
+
+    }
 }

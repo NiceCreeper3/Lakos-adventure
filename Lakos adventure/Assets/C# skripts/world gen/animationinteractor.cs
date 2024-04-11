@@ -1,0 +1,125 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
+
+public class animationinteractor : MonoBehaviour
+{
+    [SerializeField] private textinteractor handler;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform actorlayer; 
+    [SerializeField] private GameObject actorprephap;
+    [SerializeField] private GameObject trainerprephap;
+    [SerializeField] private GameObject playerprephap;
+
+    // Start is called before the first frame update
+    void Start()
+   {
+        handler.interactor = this;
+        animator.runtimeAnimatorController = handler.controller;
+        GetComponent<LocationHandeler>().Loadall();
+   }
+
+    // Update is called once per frame
+    public void setcontroller()
+    {
+        animator.runtimeAnimatorController = handler.controller;
+    }
+    
+    public Actorscript generateactor(Actor person)
+    {
+        LocationData data = GetComponent<LocationHandeler>().data;
+        int index = data.findactor(person);
+        if (index == -1)
+        {
+            data.addactor(person, new Vector2Int(), null, new Vector2(0, -1));
+        }
+        Actorscript actorscript = Instantiate(actorprephap, actorlayer).GetComponent<Actorscript>();
+        actorscript.actor = person;
+        GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
+
+        foreach (GameObject game in @object)
+        {
+            Grid grid = game.GetComponentInChildren<Grid>();
+
+            if (grid)
+            {
+                actorscript.grid = grid;
+                break;
+            }
+
+        }
+        return actorscript;
+    }
+
+    public Actorscript generateplayer(Actor person)
+    {
+
+
+        LocationData data = GetComponent<LocationHandeler>().data;
+        int index = data.findactor(person);
+        if (index == -1)
+        {
+            data.addactor(person, new Vector2Int(), null, new Vector2(0, -1));
+        }
+        Actorscript actorscript = Instantiate(playerprephap, actorlayer).GetComponent<Actorscript>();
+        actorscript.actor = person;
+
+        GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
+        
+        foreach (GameObject game in @object)
+        {
+            Grid grid = game.GetComponentInChildren<Grid>();
+
+            if (grid)
+            {
+                actorscript.grid = grid;
+                break;
+            }
+
+        }
+        foreach (GameObject game in @object)
+        {
+            CameraLock Lock = game.GetComponentInChildren<CameraLock>();
+            
+            if (Lock)
+            {
+                Lock.player = person;
+                break;
+            }
+
+        }
+
+        return actorscript;
+    }
+    public Actorscript generatetrainer(Actor person)
+    {
+        LocationData data = GetComponent<LocationHandeler>().data;
+        int index = data.findactor(person);
+        if (index == -1)
+        {
+            data.addactor(person,new Vector2Int(), null,new Vector2(0,-1));
+        }
+
+
+        
+        GameObject newtrainer = Instantiate(trainerprephap, actorlayer);
+        Actorscript actorscript = newtrainer.GetComponent<Actorscript>();
+        actorscript.actor = person;
+        GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
+
+        foreach (GameObject game in @object)
+        {
+            Grid grid = game.GetComponentInChildren<Grid>();
+
+            if (grid)
+            {
+                actorscript.grid = grid;
+                break;
+            }
+
+        }
+        return actorscript;
+    }
+}

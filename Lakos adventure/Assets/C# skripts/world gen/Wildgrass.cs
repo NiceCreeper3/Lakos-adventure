@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Wildgrass : MonoBehaviour
 {
@@ -15,20 +16,44 @@ public class Wildgrass : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Collider2D[] coll = new Collider2D[1];
-        GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(),coll);
-        foreach (Collider2D col in coll)
+        if (!player)
         {
-            if (col == player)
+            GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
+            foreach (GameObject game in objectsinscene)
             {
-                int instance = Random.Range(1, 100);
-                if (propability > instance)
+                try
                 {
-                    ontrigger.Invoke();
+                    player = game.GetComponentInChildren<playerinteract>().GetComponent<Collider2D>();
+                }
+                catch
+                {
+
+                }
+
+                if (player)
+                {
+                    break;
                 }
             }
-            
         }
+        else
+        {
+            Collider2D[] coll = new Collider2D[1];
+            GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), coll);
+            foreach (Collider2D col in coll)
+            {
+                if (col == player)
+                {
+                    int instance = Random.Range(1, 100);
+                    if (propability > instance)
+                    {
+                        ontrigger.Invoke();
+                    }
+                }
+
+            }
+        }
+        
     }
 
 

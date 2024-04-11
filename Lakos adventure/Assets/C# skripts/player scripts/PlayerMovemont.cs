@@ -10,7 +10,6 @@ public class PlayerMovemont : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movepoint.movepoint = movepoint.grid.CellToWorld(InfoSaved.playerlocation) + new Vector3(0.31f, 0.31f, 0);
         movepoint.load();
     }
 

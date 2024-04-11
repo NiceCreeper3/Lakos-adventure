@@ -29,9 +29,21 @@ public class textinteractor: ScriptableObject
         controller = null;
         interactor.setcontroller();
     }
-    public Actorscript generateactor(Actor person)
+    public Actorscript Generateactor(Actor person)
     {
-        return interactor.generateactor(person);
+        
+        if (person.GetType() == new playeractor().GetType())
+        {
+            return interactor.generateplayer(person);
+        }
+        else if(person.GetType() == new trainer().GetType())
+        {
+            return interactor.generateactor(person);
+        }
+        else
+        {
+            return interactor.generateactor(person);
+        }
     }
 
 
