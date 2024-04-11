@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move", menuName = "PomonMoves/Move")]
+[CreateAssetMenu(fileName = "Move", menuName = "Pomon/Moves")]
 public class Moves : ScriptableObject
 {
     [Header("Flaver")]

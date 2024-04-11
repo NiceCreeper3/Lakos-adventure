@@ -3795,7 +3795,7 @@ MonoBehaviour:
   _isPlayerMon: 1
   pomonImgeDissplay: {fileID: 345097783}
   _textBox: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  _currentMon: {fileID: 0}
+  CurrentMon: {fileID: 0}
 --- !u!4 &854951184
 Transform:
   m_ObjectHideFlags: 0
@@ -8086,7 +8086,7 @@ MonoBehaviour:
   _isPlayerMon: 0
   pomonImgeDissplay: {fileID: 1865353024}
   _textBox: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  _currentMon: {fileID: 0}
+  CurrentMon: {fileID: 0}
 --- !u!114 &2083093382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8111,7 +8111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f6be9bb054f2540be32be632179ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pomonTeam: {fileID: 0}
+  _pomonTeam: {fileID: 11400000, guid: 3b884149adcbdd64b938d8c1bc8a1cde, type: 2}
   PicPomonUI: {fileID: 2127291031}
 --- !u!1 &2089643338
 GameObject:

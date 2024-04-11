@@ -17,7 +17,7 @@ MonoBehaviour:
   IsDude: 0
   level: 1
   MaxHealt: 115
-  CurrentHealt: 36
+  CurrentHealt: 115
   Attack: 19
   Speed: 17
   Defense: 16

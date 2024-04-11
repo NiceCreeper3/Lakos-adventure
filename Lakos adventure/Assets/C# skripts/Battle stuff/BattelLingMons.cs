@@ -128,6 +128,14 @@ public class BattelLingMons : MonoBehaviour
                 attckTarget.ChangeHealt(-damage);
             }
 
+            // playes a animason when the Pomon Attacks
+            if (CurrentMon.Spesies.AttackAnimason != null)
+            {
+                if (_isPlayerMon)
+                    AnimasonRunner.RunAnimason(pomonImgeDissplay, CurrentMon.Spesies.AttackAnimason);
+            }
+                
+
             // writes what move the enemy used as well as a short deskripson of what it does
             if (!_isPlayerMon)
                 _textBox.RunTextBox($" ({CurrentMon.PomonName} used {move.MoveName}) \n {move.MoveDiskrepseon}");

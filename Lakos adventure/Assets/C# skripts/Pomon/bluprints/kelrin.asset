@@ -17,6 +17,7 @@ MonoBehaviour:
   back: {fileID: 21300000, guid: af07f0624ff74ce4f9d7dca25c004829, type: 3}
   description: '[insert kelrin flavior text]'
   genderratio: 65
+  AttackAnimason: {fileID: 0}
   MinHealt: 135
   MaxHealt: 142
   healthgrow: 1

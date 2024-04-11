@@ -17,6 +17,7 @@ MonoBehaviour:
   back: {fileID: 21300000, guid: a21982875ce09c449b9286df932eeb1f, type: 3}
   description: 
   genderratio: 50
+  AttackAnimason: {fileID: 11400000, guid: e1b6c6230dd4b6f4c8903797bc57ae90, type: 2}
   MinHealt: 125
   MaxHealt: 125
   healthgrow: 1

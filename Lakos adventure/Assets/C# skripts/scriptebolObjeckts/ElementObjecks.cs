@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Elemets", menuName = "Type/Elemets")]
+[CreateAssetMenu(fileName = "Elemets", menuName = "Pomon/Elemets")]
 public class ElementObjecks : ScriptableObject
 {
     public string Element;
@@ -21,17 +21,10 @@ public class ElementObjecks : ScriptableObject
         // holdes the writen name off the elemts the defender has
         string defenderElemtNames = "";
 
-/*        Debug.Log(
-            $"defender has {defenderElemts.name} elemts \n" +
-            $"{defenderElemts.PomonElemet[0].name} {defenderElemts.PomonElemet[1].name}");*/
-
         // runes frouge all the defending elemets.
         // if eny are ind _strongAgenst then it adds to moddefiher and does the oppsind if ind _weakAgenst
         foreach (ElementObjecks elemt in defenderElemts.PomonElemet)
         {
-
-            
-
             // runs fruge all the elemt this Element is strong agenst. and if then it adds bounes damige
             foreach (ElementObjecks attack in _effetive)
                 if (elemt == attack)

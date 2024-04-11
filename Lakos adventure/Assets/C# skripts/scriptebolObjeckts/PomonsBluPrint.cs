@@ -17,6 +17,8 @@ public class PomonsBluPrint : ScriptableObject
 
     [Range(0,100)] public int genderratio;
 
+    public Animasons AttackAnimason;
+
     #region
     [Header("Genral states")]
 

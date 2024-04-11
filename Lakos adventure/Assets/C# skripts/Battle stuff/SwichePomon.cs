@@ -62,7 +62,7 @@ public class SwichePomon : MonoBehaviour
     // is goving to handel swithing ind a new pokemon
     public void SwitchPomonConfurmt()
     {
-        OnPomonSwiching?.Invoke(_pomonTeam.team[_seletedPomon], _isPlayer);
+        OnPomonSwiching?.Invoke(_pomonTeam.team[_seletedPomon], _isPlayer);    
     }
 
 
