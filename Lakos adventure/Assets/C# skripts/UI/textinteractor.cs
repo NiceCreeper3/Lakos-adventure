@@ -38,7 +38,7 @@ public class textinteractor: ScriptableObject
         }
         else if(person.GetType() == new trainer().GetType())
         {
-            return interactor.generateactor(person);
+            return interactor.generatetrainer(person);
         }
         else
         {

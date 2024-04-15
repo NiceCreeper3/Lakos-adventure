@@ -13,7 +13,8 @@ public class WorldTrainerScript : MonoBehaviour
     {
         actorscript.movepoint = actorscript.grid.CellToWorld(actorscript.grid.WorldToCell(transform.position)) + new Vector3(0.31f, 0.31f, 0);
         transform.position = actorscript.movepoint;
-        
+        Trainer = actorscript.actor as trainer;
+        Debug.Log(Trainer.trainerTeam);
         actorscript.load();
         
 

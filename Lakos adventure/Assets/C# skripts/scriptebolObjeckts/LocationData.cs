@@ -33,16 +33,152 @@ public class LocationData : ScriptableObject
          
     }
 
+    // adds scene actor data for actor too this Location data if it doesn't exist. 
     public void addactor(Actor actor, Vector2Int location, RuntimeAnimatorController interaction, Vector2 direction)
     {
-        SceneActorData data = new SceneActorData();
-        data.actor = actor;
-        data.direction = direction;
-        data.location = location;
-        data.interaction = interaction;
-        actordatainfo.Add(data);
+        SceneActorData actorlocationinfo;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            setactor(actor, location, direction, interaction);
+        }
+        else
+        {
+            SceneActorData data = new SceneActorData();
+            data.actor = actor;
+            data.direction = direction;
+            data.location = location;
+            data.interaction = interaction;
+            actordatainfo.Add(data);
+        }
 
 
+
+
+    }
+    public void setactor(Actor actor, Vector2Int location)
+    {
+        SceneActorData actorlocationinfo ;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            actorlocationinfo.location = location;
+        }
+
+    }
+    public void setactor(Actor actor, Vector2Int location, Vector2 direction, RuntimeAnimatorController interaction)
+    {
+        SceneActorData actorlocationinfo;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            actorlocationinfo.location = location;
+            actorlocationinfo.direction = direction;
+            actorlocationinfo.interaction = interaction;
+        }
+
+    }
+
+    public void setactor(Actor actor, Vector2 direction, RuntimeAnimatorController interaction)
+    {
+        SceneActorData actorlocationinfo;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            actorlocationinfo.direction = direction;
+            actorlocationinfo.interaction = interaction;
+        }
+
+    }
+
+    public void setactor(Actor actor, RuntimeAnimatorController interaction)
+    {
+        SceneActorData actorlocationinfo;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            actorlocationinfo.interaction = interaction;
+        }
+
+    }
+
+    public void setactor(Actor actor, Vector2Int location, Vector2 direction)
+    {
+        SceneActorData actorlocationinfo;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            actorlocationinfo.location = location;
+            actorlocationinfo.direction = direction;
+        }
+
+    }
+
+    public void setactor(Actor actor, Vector2 direction)
+    {
+        SceneActorData actorlocationinfo;
+        foreach (SceneActorData actorinscene in actordatainfo)
+        {
+            if (actorinscene.actor == actor)
+            {
+                actorlocationinfo = actorinscene;
+                break;
+            }
+
+        }
+        if (actor)
+        {
+            actorlocationinfo.direction = direction;
+        }
+        
     }
     public void removeactor(Actor actor)
     {

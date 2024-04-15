@@ -17,11 +17,23 @@ MonoBehaviour:
     interaction: {fileID: 0}
     location: {x: 0, y: 0}
     direction: {x: 0, y: 0}
-  - actor: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
+  - actor: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
     interaction: {fileID: 0}
-    location: {x: 0, y: 0}
-    direction: {x: 0, y: 0}
-  - actor: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
+    location: {x: 2, y: 4}
+    direction: {x: -1, y: 0}
+  - actor: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
     interaction: {fileID: 0}
-    location: {x: 0, y: 0}
+    location: {x: 13, y: -3}
+    direction: {x: 1, y: 0}
+  - actor: {fileID: 11400000, guid: 0087515bdb9f3a04aaeeea5d6b5c8d19, type: 2}
+    interaction: {fileID: 0}
+    location: {x: 17, y: 1}
     direction: {x: 0, y: 0}
+  - actor: {fileID: 11400000, guid: 039779dfa2331724c940f80b4e32c46e, type: 2}
+    interaction: {fileID: 0}
+    location: {x: 5, y: -16}
+    direction: {x: 1, y: 0}
+  - actor: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
+    interaction: {fileID: 0}
+    location: {x: 17, y: -8}
+    direction: {x: -1, y: 0}

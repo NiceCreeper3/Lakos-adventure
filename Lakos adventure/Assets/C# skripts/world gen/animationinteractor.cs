@@ -67,27 +67,36 @@ public class animationinteractor : MonoBehaviour
         actorscript.actor = person;
 
         GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
-        
+        int loads = 0;
         foreach (GameObject game in @object)
         {
             Grid grid = game.GetComponentInChildren<Grid>();
-
+            CameraLock Lock = game.GetComponentInChildren<CameraLock>();
+            MenuScript menu = game.GetComponentInChildren<MenuScript>();
             if (grid)
             {
                 actorscript.grid = grid;
+                
+            }
+            if (Lock)
+            {
+                Lock.player = person;
+
+            }
+            if (menu)
+            {
+                menu.player = actorscript.GetComponent<PlayerMovemont>();
+
+            }
+            if (loads == 2)
+            {
                 break;
             }
 
         }
         foreach (GameObject game in @object)
         {
-            CameraLock Lock = game.GetComponentInChildren<CameraLock>();
             
-            if (Lock)
-            {
-                Lock.player = person;
-                break;
-            }
 
         }
 

@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class MenuScript : MonoBehaviour
 {
-    [SerializeField]private PlayerMovemont player;
-    private bool isopen;
+    [SerializeField]public PlayerMovemont player;
+
+    [HideInInspector]public bool isopen;
     private bool holding;
     [SerializeField]private GameObject menu;
+
+    public void killmovement()
+    {
+        
+        player.enabled = false;
+
+    }
+    public void revidedmovement()
+    {
+        
+        player.enabled = true;
+
+    }
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.V))
         {
             if (!holding)
@@ -17,16 +32,14 @@ public class MenuScript : MonoBehaviour
                 if (!isopen)
                 {
                     menu.SetActive(true);
-                    player.enabled = false;
+                    killmovement();
                     isopen = true;
-
                 }
                 else
                 {
                     menu.SetActive(false);
-                    player.enabled = true;
+                    revidedmovement();
                     isopen = false;
-
                 }
                 holding = true;
             }
