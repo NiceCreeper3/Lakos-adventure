@@ -129,10 +129,12 @@ public class BattelLingMons : MonoBehaviour
             }
 
             // playes a animason when the Pomon Attacks
-            if (CurrentMon.Spesies.AttackAnimason != null)
+            if (CurrentMon.Spesies.BackAniasonAT != null || CurrentMon.Spesies.FrontAnimasonAT != null)
             {
                 if (_isPlayerMon)
-                    AnimasonRunner.RunAnimason(pomonImgeDissplay, CurrentMon.Spesies.AttackAnimason);
+                    AnimasonRunner.RunAnimason(pomonImgeDissplay, CurrentMon.Spesies.BackAniasonAT);
+                else
+                    AnimasonRunner.RunAnimason(pomonImgeDissplay, CurrentMon.Spesies.FrontAnimasonAT);
             }
                 
 

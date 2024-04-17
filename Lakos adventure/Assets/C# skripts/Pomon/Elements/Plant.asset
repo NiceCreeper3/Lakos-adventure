@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: plant
   ElementColor: {r: 0.5703478, g: 0.9056604, b: 0.2691349, a: 1}
+  ElementIcon: {fileID: 21300000, guid: 2dc6cdc15e6f54c4a8c83cdba647ca70, type: 3}
   _effetive:
   - {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
   - {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}

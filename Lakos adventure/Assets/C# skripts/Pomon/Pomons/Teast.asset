@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: Snugems
+  m_Name: Teast
   m_EditorClassIdentifier: 
-  PomonName: Snugems
-  Spesies: {fileID: 11400000, guid: 34f296375e4fb414ca84265080996a89, type: 2}
+  PomonName: H
+  Spesies: {fileID: 11400000, guid: 3f9da5a69dba8e94eafd4b261a48ff15, type: 2}
   IsDude: 0
-  level: 0
+  level: 1
   MaxHealt: 100
   CurrentHealt: 100
   Attack: 0
-  Speed: 16
-  Defense: 12
+  Speed: 0
+  Defense: 0
   PomonMoves:
-  - {fileID: 11400000, guid: 698bfacf642a1d549b11c0239c0e969f, type: 2}
-  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
-  - {fileID: 11400000, guid: 7601b49f8e2045e4baf575863b27b77f, type: 2}
-  - {fileID: 11400000, guid: f7201742ec094714b951abf453645d42, type: 2}
+  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}
+  - {fileID: 11400000, guid: ce09a2f2552be514b9ced8ff9c4567d4, type: 2}

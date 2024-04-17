@@ -3,8 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Elemets", menuName = "Pomon/Elemets")]
 public class ElementObjecks : ScriptableObject
 {
+    [Header("Flaver info")]
     public string Element;
     public Color ElementColor;
+    public Sprite ElementIcon;
 
     [Header("does 0.5 extra damge")]
     [SerializeField] private ElementObjecks[] _effetive;

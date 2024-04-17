@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83171c6b0e4ce6045b17d252ed892be2, type: 3}
-  m_Name: BluberFrontAT
+  m_Name: BluberBackAT
   m_EditorClassIdentifier: 
   AnimasonFrames:
-  - Fram: {fileID: 21300000, guid: 5850690639537b24a886f6e42d5f232d, type: 3}
+  - Fram: {fileID: 21300000, guid: aa5a6cc85013b8c49b6bb298ee453bed, type: 3}
     TimeOnTilNextFrame: 0
-  - Fram: {fileID: 21300000, guid: 059064f5cd7149f44b473c5a17a133d4, type: 3}
+  - Fram: {fileID: 21300000, guid: 466e978c65f801d4d919b929a9b35e00, type: 3}
     TimeOnTilNextFrame: 0.5
-  - Fram: {fileID: 21300000, guid: 5850690639537b24a886f6e42d5f232d, type: 3}
+  - Fram: {fileID: 21300000, guid: aa5a6cc85013b8c49b6bb298ee453bed, type: 3}
     TimeOnTilNextFrame: 1.25
-  - Fram: {fileID: 21300000, guid: f8518c655a40d744ba615a25a2c6089d, type: 3}
+  - Fram: {fileID: 21300000, guid: a21982875ce09c449b9286df932eeb1f, type: 3}
     TimeOnTilNextFrame: 1.75

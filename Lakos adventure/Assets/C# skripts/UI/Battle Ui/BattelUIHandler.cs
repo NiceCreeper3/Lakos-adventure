@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +5,6 @@ using TMPro;
 
 public class BattelUIHandler : MonoBehaviour
 {
-    //[SerializeField] private Pomons _pomonInUse, enemyPomon;
     [SerializeField] private SwichePomon _onPlayerSwiching;
 
     [SerializeField] private Button[] _buttonPlate;
@@ -37,10 +35,9 @@ public class BattelUIHandler : MonoBehaviour
             catch
             {
                 _buttonPlate[i].gameObject.SetActive(false);
-                //_moves[i].text = "";
-                //_buttonPlate[i].GetComponent<Image>().color = new Color(200, 200, 200);
             }
 
         }
-    }   
+    }
+
 }

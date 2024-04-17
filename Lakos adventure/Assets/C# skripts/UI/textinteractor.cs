@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+
 [CreateAssetMenu(fileName = "textbox indecator", menuName = "textindecator")]
 public class textinteractor: ScriptableObject
 {

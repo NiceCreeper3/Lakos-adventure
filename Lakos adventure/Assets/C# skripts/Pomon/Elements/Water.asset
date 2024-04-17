@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Element: Water
   ElementColor: {r: 0.28346387, g: 0.7899416, b: 0.9245283, a: 1}
+  ElementIcon: {fileID: 21300000, guid: 28c017b5e26787e4ab3fcea7798d24ae, type: 3}
   _effetive:
   - {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   - {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

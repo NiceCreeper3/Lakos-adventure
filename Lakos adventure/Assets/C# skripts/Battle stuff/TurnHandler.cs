@@ -33,9 +33,6 @@ public class TurnHandler : MonoBehaviour
     [SerializeField] private GameObject[] _makeInvesbolDurringAttack;
     [SerializeField] private GameObject[] _makevisubolDurring;
 
-    // makes it so the player can swiche with aot the aponet getting to hit back
-    //[HideInInspector] public static bool FreeSwiche;
-
     private void Awake()
     {
         // gives the neede refrendses to the Ai script
