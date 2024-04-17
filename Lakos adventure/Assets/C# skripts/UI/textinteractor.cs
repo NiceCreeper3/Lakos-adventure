@@ -14,8 +14,11 @@ public class textinteractor: ScriptableObject
 
     public void RunTextBox(string text)
     {
-        box.SetActive(true);
-        textboxinsceene.CallUpdateFullText(text);
+        if (interactor)
+        {
+            box.SetActive(true);
+            textboxinsceene.CallUpdateFullText(text);
+        }
     }
 
 
