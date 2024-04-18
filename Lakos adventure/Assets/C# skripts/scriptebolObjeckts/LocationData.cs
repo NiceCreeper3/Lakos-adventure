@@ -16,6 +16,7 @@ public class LocationData : ScriptableObject
         public Vector2 direction;
     }
 
+    public SceneLoader.ScenesToLoad toLoad;
     public List<SceneActorData> actordatainfo;
 
     public int findactor(Actor actor)
@@ -37,148 +38,117 @@ public class LocationData : ScriptableObject
     public void addactor(Actor actor, Vector2Int location, RuntimeAnimatorController interaction, Vector2 direction)
     {
         SceneActorData actorlocationinfo;
+        bool existsts = false;
         foreach (SceneActorData actorinscene in actordatainfo)
         {
             if (actorinscene.actor == actor)
             {
                 actorlocationinfo = actorinscene;
+                setactor(actor, location, direction, interaction);
+                existsts = true;
                 break;
             }
 
         }
-        if (actor)
+        if (!existsts)
         {
-            setactor(actor, location, direction, interaction);
-        }
-        else
-        {
+
             SceneActorData data = new SceneActorData();
             data.actor = actor;
             data.direction = direction;
             data.location = location;
             data.interaction = interaction;
             actordatainfo.Add(data);
+
         }
-
-
-
 
     }
     public void setactor(Actor actor, Vector2Int location)
     {
-        SceneActorData actorlocationinfo ;
-        foreach (SceneActorData actorinscene in actordatainfo)
+        int index = findactor(actor);
+        if (index >= 0)
         {
-            if (actorinscene.actor == actor)
-            {
-                actorlocationinfo = actorinscene;
-                break;
-            }
+            SceneActorData sceneActor = actordatainfo[index];
+            sceneActor.location = location;
+            removeactor(actor);
+            actordatainfo.Insert(index, sceneActor);
 
-        }
-        if (actor)
-        {
-            actorlocationinfo.location = location;
         }
 
     }
     public void setactor(Actor actor, Vector2Int location, Vector2 direction, RuntimeAnimatorController interaction)
     {
-        SceneActorData actorlocationinfo;
-        foreach (SceneActorData actorinscene in actordatainfo)
+        int index = findactor(actor);
+        if(index >= 0)
         {
-            if (actorinscene.actor == actor)
-            {
-                actorlocationinfo = actorinscene;
-                break;
-            }
+            SceneActorData sceneActor = actordatainfo[index];
+            sceneActor.direction = direction;
+            sceneActor.location = location;
+            sceneActor.interaction = interaction;
+            removeactor(actor);
+            actordatainfo.Insert(index, sceneActor);
+            
+        }
 
-        }
-        if (actor)
-        {
-            actorlocationinfo.location = location;
-            actorlocationinfo.direction = direction;
-            actorlocationinfo.interaction = interaction;
-        }
 
     }
 
     public void setactor(Actor actor, Vector2 direction, RuntimeAnimatorController interaction)
     {
-        SceneActorData actorlocationinfo;
-        foreach (SceneActorData actorinscene in actordatainfo)
+        int index = findactor(actor);
+        if (index >= 0)
         {
-            if (actorinscene.actor == actor)
-            {
-                actorlocationinfo = actorinscene;
-                break;
-            }
+            SceneActorData sceneActor = actordatainfo[index];
+            sceneActor.direction = direction;
+            sceneActor.interaction = interaction;
+            removeactor(actor);
+            actordatainfo.Insert(index, sceneActor);
 
-        }
-        if (actor)
-        {
-            actorlocationinfo.direction = direction;
-            actorlocationinfo.interaction = interaction;
         }
 
     }
 
     public void setactor(Actor actor, RuntimeAnimatorController interaction)
     {
-        SceneActorData actorlocationinfo;
-        foreach (SceneActorData actorinscene in actordatainfo)
+        int index = findactor(actor);
+        if (index >= 0)
         {
-            if (actorinscene.actor == actor)
-            {
-                actorlocationinfo = actorinscene;
-                break;
-            }
+            SceneActorData sceneActor = actordatainfo[index];
+            sceneActor.interaction = interaction;
+            removeactor(actor);
+            actordatainfo.Insert(index, sceneActor);
 
-        }
-        if (actor)
-        {
-            actorlocationinfo.interaction = interaction;
         }
 
     }
 
     public void setactor(Actor actor, Vector2Int location, Vector2 direction)
     {
-        SceneActorData actorlocationinfo;
-        foreach (SceneActorData actorinscene in actordatainfo)
+        int index = findactor(actor);
+        if (index >= 0)
         {
-            if (actorinscene.actor == actor)
-            {
-                actorlocationinfo = actorinscene;
-                break;
-            }
+            SceneActorData sceneActor = actordatainfo[index];
+            sceneActor.direction = direction;
+            sceneActor.location = location;
+            removeactor(actor);
+            actordatainfo.Insert(index, sceneActor);
 
-        }
-        if (actor)
-        {
-            actorlocationinfo.location = location;
-            actorlocationinfo.direction = direction;
         }
 
     }
 
     public void setactor(Actor actor, Vector2 direction)
     {
-        SceneActorData actorlocationinfo;
-        foreach (SceneActorData actorinscene in actordatainfo)
+        int index = findactor(actor);
+        if (index >= 0)
         {
-            if (actorinscene.actor == actor)
-            {
-                actorlocationinfo = actorinscene;
-                break;
-            }
+            SceneActorData sceneActor = actordatainfo[index];
+            sceneActor.direction = direction;
+            removeactor(actor);
+            actordatainfo.Insert(index, sceneActor);
 
         }
-        if (actor)
-        {
-            actorlocationinfo.direction = direction;
-        }
-        
+
     }
     public void removeactor(Actor actor)
     {

@@ -65,7 +65,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Hey there. I'm Lilia, who are you?
+          m_StringArgument: ' I''m Lilia, who are you?'
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &-7850368787842027058
@@ -93,10 +93,10 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ...
+          m_StringArgument: Hey there.
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11400000, guid: 84ac8ef57481d184fa09b45ec1255fc3, type: 2}
         m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
