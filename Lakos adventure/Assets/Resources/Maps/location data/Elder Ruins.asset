@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314ce08402db9cb4483548aff60ca761, type: 3}
   m_Name: Elder Ruins
   m_EditorClassIdentifier: 
+  toLoad: 2
   actordatainfo:
   - actor: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
     interaction: {fileID: 0}

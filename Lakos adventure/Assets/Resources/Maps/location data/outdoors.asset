@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314ce08402db9cb4483548aff60ca761, type: 3}
   m_Name: outdoors
   m_EditorClassIdentifier: 
+  toLoad: 1
   actordatainfo:
   - actor: {fileID: 11400000, guid: 1d725a1c7c0fd5444a703bd4574e8a08, type: 2}
     interaction: {fileID: 0}
