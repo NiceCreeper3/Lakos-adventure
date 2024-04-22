@@ -21,7 +21,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void load()
     {
-        SaveToFile.loadgame(0);
+        SaveToFile.savegame();
     }
     public void quit()
     {

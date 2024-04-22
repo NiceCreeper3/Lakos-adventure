@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public static class SaveToFile
 {
@@ -71,6 +72,25 @@ public static class SaveToFile
         Debug.Log(playboxJsonString);
 
         File.WriteAllText(Path.Combine(savePath, "MyBox.json"), playboxJsonString);
+
+        // adds some extra data that doesn't change the ingame world
+        List<string> extrtdata = new List<string>();
+        LocationHandeler handeler = null;
+        foreach (GameObject game in SceneManager.GetActiveScene().GetRootGameObjects())
+        {
+            handeler = game.GetComponent<LocationHandeler>();
+            if (handeler)
+            {
+                extrtdata.Add(handeler.data.toLoad.ToString());
+            }
+
+        }
+        if (!handeler)
+        {
+            extrtdata.Add("--");
+        }
+        extrtdata.Add(playedsave.ToString());
+        File.WriteAllLines(Path.Combine(savePath, "ExtraData.txt"),extrtdata);
     }
 
     private static void validatesaves()
@@ -145,8 +165,23 @@ public static class SaveToFile
         Debug.Log(playboxJsonString);
         
         File.WriteAllText(Path.Combine(savePath, "MyBox.json"), playboxJsonString);
+
+        List<string> extrtdata = new List<string>();
+        LocationHandeler handeler = null;
+        foreach (GameObject game in SceneManager.GetActiveScene().GetRootGameObjects())
+        {
+            handeler = game.GetComponent<LocationHandeler>();
+            if (handeler)
+            {
+                extrtdata.Add(handeler.data.toLoad.ToString());
+            }
+
+        }
         
-        
+        extrtdata.Add(index.ToString());
+        File.WriteAllText(Path.Combine(savePath, "ExtraData.txt"), string.Join(" ",extrtdata));
+
+
 
     }
 
@@ -173,6 +208,7 @@ public static class SaveToFile
         pomonteam[] teams = Resources.LoadAll<pomonteam>("Player");
         foreach (pomonteam team in teams)
         {
+            team.team.Clear();
             if (team.name == "players team")
             {
                 string[] splitmons = loadfile(Path.Combine(savePath, "/MyTeam.json"));
