@@ -21,6 +21,8 @@ public class savefileveiwer : MonoBehaviour
 
     public void loadgame()
     {
+        SceneLoader.ScenesToLoad toLoad = (SceneLoader.ScenesToLoad)file;
         SaveToFile.loadgame(file);
+        SceneLoader.ChageScene(toLoad);
     }
 }

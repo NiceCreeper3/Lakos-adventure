@@ -6,7 +6,7 @@ using System.IO;
 public class savelist : MonoBehaviour
 {
 
-    private GameObject saveObject;
+    [SerializeField]private GameObject saveObject;
     // Start is called before the first frame update
     void Awake()
     {

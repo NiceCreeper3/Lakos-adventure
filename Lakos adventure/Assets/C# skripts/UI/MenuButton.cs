@@ -8,12 +8,22 @@ public class MenuButton : MonoBehaviour
     [SerializeField] private Canvas canvas;
     public void Dexopen(GameObject thisdex)
     {
-        menu.killmovement();
-        menu.enabled = false;
+        disablemenu();
         Instantiate(thisdex, canvas.transform);
     }
     public void leave()
     {
         SceneLoader.ChageScene(SceneLoader.ScenesToLoad.MainMenu);
+    }
+    public void enablemenu()
+    {
+        
+        menu.enabled = true;
+        menu.revidedmovement();
+    }
+    public void disablemenu()
+    {
+        menu.killmovement();
+        menu.enabled = false;
     }
 }

@@ -177,9 +177,12 @@ public static class SaveToFile
             }
 
         }
-        
+        if (!handeler)
+        {
+            extrtdata.Add("--");
+        }
         extrtdata.Add(index.ToString());
-        File.WriteAllText(Path.Combine(savePath, "ExtraData.txt"), string.Join(" ",extrtdata));
+        File.WriteAllLines(Path.Combine(savePath, "ExtraData.txt"), extrtdata);
 
 
 
