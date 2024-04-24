@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -18,6 +16,8 @@ public class ShowPomonInfo : MonoBehaviour
     [SerializeField] private TMP_Text _showAttack;
     [SerializeField] private TMP_Text _showDefens;
     [SerializeField] private TMP_Text _showSpeed;
+
+    [SerializeField] private GameObject[] _elementImages;
 
     private void Awake()
     {
@@ -41,10 +41,34 @@ public class ShowPomonInfo : MonoBehaviour
     {     
         Image.sprite = pomonToShow.Spesies.front;
         _flaverText.text = pomonToShow.Spesies.description;
-        _showHealt.text = $"{pomonToShow.CurrentHealt}Hp/{pomonToShow.MaxHealt}HP";
+
+        #region Pomon states
+        _showHealt.text = $"HP\n{pomonToShow.CurrentHealt}/{pomonToShow.MaxHealt}";
         _showAttack.text = $"Attack:({pomonToShow.Attack})";
         _showDefens.text = $"Defense:({pomonToShow.Defense})";
         _showSpeed.text = $"Speed:({pomonToShow.Speed})";
+        #endregion
+
+        // rundes fruge a the elements the pomon has
+        // it runds fruge det images array inset of the elemets array 
+        for (int i = 0; i < _elementImages.Length; i++)
+        {
+            // Check if the index is within the bounds of pomonToShow.Spesies.PomonElemet
+            // checks if there is a element to put indto the image space.
+            // it does this by cheking if the row in image array is bigger then the amout of elements the pokemon has
+            if (pomonToShow.Spesies.PomonElemet.Length > i)
+            {
+                // shows the elements the Pomon has
+                _elementImages[i].GetComponent<Image>().sprite = pomonToShow.Spesies.PomonElemet[i].ElementIcon;
+                _elementImages[i].SetActive(true);
+            }
+            else
+            {
+                _elementImages[i].SetActive(false);
+            }
+        }
+
+
     }
 
     private void turnOnOffConfurm(bool trunOnOff)
