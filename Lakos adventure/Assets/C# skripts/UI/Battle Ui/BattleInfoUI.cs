@@ -9,6 +9,7 @@ public class BattleInfoUI : MonoBehaviour
     [SerializeField] private Image _playerImage;
     [SerializeField] private Image _enemyImage;
 
+    [Header("Pomons to refedes")]
     [SerializeField] private BattelLingMons _playerMon;
     [SerializeField] private BattelLingMons _enemyPomon;
 

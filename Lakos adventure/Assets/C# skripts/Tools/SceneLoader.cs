@@ -51,6 +51,21 @@ public static class SceneLoader
         return sceneName;
     }
 
+    // converets 
+    #region Convert
+    public static ScenesToLoad Convert(int toConvert)
+    {
+        ScenesToLoad converted = (ScenesToLoad)toConvert;
+        return converted;
+    }
+
+    public static int Convert(ScenesToLoad toConvert)
+    {
+        int converted = (int)toConvert;
+        return converted;
+    }
+    #endregion
+
     // is four when we need to load a spisifk scene
     public static void ChageScene(ScenesToLoad sceneToLoad)
     {
@@ -60,21 +75,12 @@ public static class SceneLoader
         PreviesScene = SavePreviesScene();
     }
 
-    // is four when we need to load a spisifk scene
-    public static void ChageScene(int sceneToLoad)
-    {
-        ScenesToLoad sceneToLoad2 = (ScenesToLoad)sceneToLoad;
-        SceneManager.LoadScene(FindeLoad(sceneToLoad2));
-
-        PreviesScene = SavePreviesScene();
-    }
-
-
     // closes the aplication
     public static void close()
     {
         Application.Quit();
     }
+
     /// <summary>
     /// returns you to the prives scene was 
     /// </summary>
