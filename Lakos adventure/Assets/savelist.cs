@@ -15,6 +15,7 @@ public class savelist : MonoBehaviour
         {
             savefileveiwer game = Instantiate(saveObject, transform).GetComponent<savefileveiwer>();
             game.file = int.Parse(File.ReadAllLines(Path.Combine(save, "ExtraData.txt"))[1]);
+            game.visualize();
 
         }
     }

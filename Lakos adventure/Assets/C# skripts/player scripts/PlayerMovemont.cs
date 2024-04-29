@@ -35,7 +35,11 @@ public class PlayerMovemont : MonoBehaviour
             }
             if (isempty)
             {
-                movepoint.actor.movey((int)Input.GetAxis("Vertical"));
+                if((int)Input.GetAxis("Vertical") != 0)
+                {
+                    movepoint.actor.movey((int)Input.GetAxis("Vertical"));
+                }
+                
             }
             
 
@@ -58,7 +62,10 @@ public class PlayerMovemont : MonoBehaviour
                 }
                 if (isempty)
                 {
-                    movepoint.actor.movex((int)Input.GetAxis("Horizontal"));
+                    if ((int)Input.GetAxis("Horizontal") != 0)
+                    {
+                        movepoint.actor.movex((int)Input.GetAxis("Horizontal"));
+                    }
                 }
                 
                 

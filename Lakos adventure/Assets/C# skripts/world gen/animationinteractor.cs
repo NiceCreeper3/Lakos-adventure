@@ -76,19 +76,22 @@ public class animationinteractor : MonoBehaviour
             if (grid)
             {
                 actorscript.grid = grid;
-                
+                loads++;
+
             }
             if (Lock)
             {
                 Lock.player = person;
+                loads++;
 
             }
             if (menu)
             {
                 menu.player = actorscript.GetComponent<PlayerMovemont>();
+                loads++;
 
             }
-            if (loads == 2)
+            if (loads == 3)
             {
                 break;
             }

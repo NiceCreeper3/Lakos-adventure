@@ -21,10 +21,18 @@ public class Actor : ScriptableObject
     {
         LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
+        
         if (index != -1)
         {
+            
             LocationData.SceneActorData actorData = data.actordatainfo[index];
-            actorData.location.x += length;
+            if (length != 0)
+            {
+                Debug.Log(actorData.location.x + length);
+            }
+
+            int change = actorData.location.x + length;
+            data.setactor(this,new Vector2Int(change, actorData.location.y));
         }
         
 
@@ -45,8 +53,15 @@ public class Actor : ScriptableObject
         int index = data.findactor(this);
         if (index != -1)
         {
+
             LocationData.SceneActorData actorData = data.actordatainfo[index];
-            actorData.location.y += length;
+            if (length != 0)
+            {
+                Debug.Log(actorData.location.x + length);
+            }
+
+            int change = actorData.location.x + length;
+            data.setactor(this, new Vector2Int(change, actorData.location.y));
         }
 
         if (length < 0)
@@ -68,7 +83,8 @@ public class Actor : ScriptableObject
         if (index != -1)
         {
             LocationData.SceneActorData actorData = data.actordatainfo[index];
-            actorData.location.x = location ;
+            int change = actorData.location.x;
+            data.setactor(this, new Vector2Int(change, actorData.location.y));
         }
         
     }
@@ -78,8 +94,12 @@ public class Actor : ScriptableObject
         body.movepoint = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.31f, 0);
         body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.31f, 0);
         int index = data.findactor(this);
-        LocationData.SceneActorData actorData = data.actordatainfo[index];
-        actorData.location.x = location;
+        if (index != -1)
+        {
+            LocationData.SceneActorData actorData = data.actordatainfo[index];
+            int change = actorData.location.x;
+            data.setactor(this, new Vector2Int(actorData.location.x, change));
+        }
     }
     public void turn(int direction)
     {

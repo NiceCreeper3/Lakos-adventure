@@ -76,16 +76,18 @@ public static class SaveToFile
         // adds some extra data that doesn't change the ingame world
         List<string> extrtdata = new List<string>();
         LocationHandeler handeler = null;
+        bool handelerfound = false;
         foreach (GameObject game in SceneManager.GetActiveScene().GetRootGameObjects())
         {
-            handeler = game.GetComponent<LocationHandeler>();
+            handeler = game.GetComponentInChildren<LocationHandeler>();
             if (handeler)
             {
-                extrtdata.Add(handeler.data.toLoad.ToString());
+                extrtdata.Add(SceneLoader.Convert(handeler.data.toLoad).ToString());
+                handelerfound = true;
             }
 
         }
-        if (!handeler)
+        if (!handelerfound)
         {
             extrtdata.Add("--");
         }
@@ -168,16 +170,18 @@ public static class SaveToFile
 
         List<string> extrtdata = new List<string>();
         LocationHandeler handeler = null;
+        bool handelerfound = false;
         foreach (GameObject game in SceneManager.GetActiveScene().GetRootGameObjects())
         {
-            handeler = game.GetComponent<LocationHandeler>();
+            handeler = game.GetComponentInChildren<LocationHandeler>();
             if (handeler)
             {
-                extrtdata.Add(handeler.data.toLoad.ToString());
+                extrtdata.Add(SceneLoader.Convert(handeler.data.toLoad).ToString());
+                handelerfound = true;
             }
 
         }
-        if (!handeler)
+        if (!handelerfound)
         {
             extrtdata.Add("--");
         }
@@ -198,23 +202,28 @@ public static class SaveToFile
             Debug.Log(file);
             LocationData data = ScriptableObject.CreateInstance<LocationData>();
             JsonUtility.FromJsonOverwrite(file, data);
+            Debug.Log(data.toLoad);
             foreach (LocationData location in locationDatas)
             {
+                Debug.Log(location.toLoad);
                 if (location.toLoad == data.toLoad)
                 {
+                    Debug.Log("Found");
                     JsonUtility.FromJsonOverwrite(file, location);
+                    break;
                 }
             }
-            GameObject.Destroy(data);
+            Object.Destroy(data);
         }
 
+        savePath = Path.Combine(Application.dataPath, "saves", "save" + save);
         pomonteam[] teams = Resources.LoadAll<pomonteam>("Player");
         foreach (pomonteam team in teams)
         {
             team.team.Clear();
             if (team.name == "players team")
             {
-                string[] splitmons = loadfile(Path.Combine(savePath, "/MyTeam.json"));
+                string[] splitmons = loadfile(Path.Combine(savePath, "MyTeam.json"));
                 foreach (string file in splitmons)
                 {
                     Pomons mon = ScriptableObject.CreateInstance<Pomons>();
@@ -224,7 +233,7 @@ public static class SaveToFile
             }
             else if(team.name == "THE BOX")
             {
-                string[] splitmons = loadfile(Path.Combine(savePath, "/MyBox.json"));
+                string[] splitmons = loadfile(Path.Combine(savePath, "MyBox.json"));
                 foreach (string file in splitmons)
                 {
                     Pomons mon = ScriptableObject.CreateInstance<Pomons>();
