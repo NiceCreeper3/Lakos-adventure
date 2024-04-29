@@ -10,7 +10,6 @@ public class ShowPomonInfo : MonoBehaviour
 
     [Header("Where to show info")]
     [SerializeField] private Image Image;
-    //[SerializeField] private Image _pictureOfPomon;
     [SerializeField] private TMP_Text _flaverText;
     [SerializeField] private TMP_Text _showHealt;
     [SerializeField] private TMP_Text _showAttack;

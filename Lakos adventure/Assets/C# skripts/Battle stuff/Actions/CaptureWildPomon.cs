@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CaptureWildPomon : MonoBehaviour
 {
-    [SerializeField] private static pomonteam _playerPomonTeam;
+    [SerializeField] private pomonteam _playerPomonTeam;
+    [SerializeField] private pomonteam _theBox;
+    [SerializeField] private int playerMaxTeam = 6;
 
     private static Pomons _currentCapture;
 
@@ -14,13 +16,7 @@ public class CaptureWildPomon : MonoBehaviour
     {
         // subscribs to the event
         OnPomonSwich = GetComponent<SwichePomon>();
-
         OnPomonSwich.OnPomonSwiching += OnPomonSwich_OnPomonSwiching;
-    }
-
-    public static void SetplayerTeam(pomonteam pomonteam)
-    {
-        _playerPomonTeam = pomonteam;
     }
 
     // updates what pomon we are etmting to capture
@@ -30,20 +26,21 @@ public class CaptureWildPomon : MonoBehaviour
     }
 
     // is called when player clikes on the capture button
-    public static void CapturePomon()
+    public void CapturePomon()
     {
         Debug.Log($"attemting to capture {_currentCapture}");
 
-        int playerMaxTeam = 6;
 
         int chansesToCapture = 3;
 
         // checkes if we can capture. fist checking if this is a trainer fight (indekated by if there is a trainer sprite), and then checks if we have spase four ned pomon
-        if (MapToBattel.IsTranerBattle == null && _playerPomonTeam.team.Count != playerMaxTeam)
+        if (MapToBattel.IsTranerBattle == null)
         {
             // rolles 3 times to see if the player chaptures the pomon
             for (int i = 0; i <= chansesToCapture; i++)
             {
+                RollUtilatyes.Chanse(1);
+
                 int Chapture = Random.Range(_currentCapture.Spesies.CaptureChanse, 101);
 
                 Debug.Log("player rolled " + Chapture + " On Chapture");
@@ -57,11 +54,20 @@ public class CaptureWildPomon : MonoBehaviour
         }
     }
 
-    private static void PomonCaptured()
+    private void PomonCaptured()
     {
         Debug.Log("Pomon captured");
 
-        _playerPomonTeam.team.Add(_currentCapture);
+        // if the player allrede has up to his max number of pomones ind his team. then the chaptured Pomon is sent to the box list
+        if (_playerPomonTeam.team.Count >= playerMaxTeam)
+        {
+            _theBox.team.Add(_currentCapture);
+        }
+        else
+        {
+            _playerPomonTeam.team.Add(_currentCapture);
+        }
+        
 
         //return to previes
         SceneLoader.ChageScene();

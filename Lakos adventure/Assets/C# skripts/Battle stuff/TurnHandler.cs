@@ -19,6 +19,9 @@ public class TurnHandler : MonoBehaviour
 
     [SerializeField] private BattelLingMons _player, _enemy;
 
+    [Header("chapture refends")]
+    [SerializeField] private CaptureWildPomon _chapturePomon;
+
     [Header("refrends to event")]
     [SerializeField] private SwichePomon _onEnemySwiche;
 
@@ -65,7 +68,7 @@ public class TurnHandler : MonoBehaviour
                 break;
 
             case PlayerActionType.Orb:
-                _playerAction = CaptureWildPomon.CapturePomon;
+                _playerAction = _chapturePomon.CapturePomon;
                 
                 break;
 

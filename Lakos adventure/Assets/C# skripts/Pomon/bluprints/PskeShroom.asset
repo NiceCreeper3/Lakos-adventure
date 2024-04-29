@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: PskeShroom
   m_EditorClassIdentifier: 
   name: PskeShroom
-  front: {fileID: 21300000, guid: 4286bd870661ecd49b68d8fa0f55d52b, type: 3}
-  back: {fileID: 21300000, guid: a2580df563ccb8146bb839a9c936082a, type: 3}
+  front: {fileID: 21300000, guid: 02183ad728d00164d8cf7b99dfdea30a, type: 3}
+  back: {fileID: 21300000, guid: 324fd3582dd0673469286c7cf363048a, type: 3}
   description: 
   genderratio: 50
+  BackAniasonAT: {fileID: 11400000, guid: 8c83295e03532a44a9f98bedce370aa1, type: 2}
+  FrontAnimasonAT: {fileID: 11400000, guid: 96f1f70fcd9648d488d35d16bb6b1d1a, type: 2}
   MinHealt: 125
   MaxHealt: 125
   healthgrow: 1

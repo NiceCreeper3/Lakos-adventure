@@ -29,6 +29,7 @@ public class MoveLookSetUp : MonoBehaviour
     // turns all the buttons off to start of with
     private void SetMoveToDefalt()
     {
+        // sets the moves to be off by defalt
         foreach (GameObject move in _moveAprends)
             move.SetActive(false);
     }

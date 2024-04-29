@@ -37,8 +37,6 @@ public class MoveButtonAperends : MonoBehaviour
 
     private void SetColorAndIcon()
     {
-        //_buttonPlate.onClick
-
         // gets a tempurary refrends to the moves element
         ElementObjecks element = MoveToRepresent.MoveElement;
 
