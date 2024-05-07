@@ -7,6 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pomon", menuName = "Pomon/Pomon Bluprint")]
 public class PomonsBluPrint : ScriptableObject
 {
+    #region
     [Header("Flaver")]
     public new string name;
 
@@ -19,6 +20,7 @@ public class PomonsBluPrint : ScriptableObject
 
     public Animasons BackAniasonAT;
     public Animasons FrontAnimasonAT;
+    #endregion
 
     #region
     [Header("Genral states")]

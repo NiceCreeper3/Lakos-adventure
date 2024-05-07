@@ -20,6 +20,10 @@ public class LevelSystem
         _experienceToNextLevel = 100 * level * 2;
     }
 
+    /// <summary>
+    /// adds XP 
+    /// </summary>
+    /// <param name="xp"> amount xp to add</param>
     public void GetXP(int xp)
     {
         _experience += xp;

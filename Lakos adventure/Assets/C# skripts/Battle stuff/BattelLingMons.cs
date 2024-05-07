@@ -149,7 +149,7 @@ public class BattelLingMons : MonoBehaviour
         OnHealhtChange?.Invoke(howToChange);
 
         // checks if the pomon has negetive healt. if so then its considered dead.
-        // and its hp is put to 0 as it is nicer to look at
+        // and its hp is put to 0 so that healt inde catores don,t bug out
         if (CurrentMon.CurrentHealt <= 0)
         {
             CurrentMon.CurrentHealt = 0;

@@ -9,16 +9,9 @@ public class ShowPomonSpriteUI : MonoBehaviour
     [Header("Pomons to refedes")]
     [SerializeField] private BattelLingMons[] _pomosToDisplay;
 
-
-    [SerializeField] private BattelLingMons I1;
-    [SerializeField] private BattelLingMons I2;
-
-    [SerializeField] private Image T3;
-    [SerializeField] private Image T4;
-
     private void OnEnable()
     {
-        teast();
+        UpdatePomonImage();
         //UpdatePomonImage();
     }
 
@@ -35,11 +28,5 @@ public class ShowPomonSpriteUI : MonoBehaviour
                 _imagesAvabol[i].sprite = _pomosToDisplay[i].CurrentMon.Spesies.front;
             }
         }
-    }
-
-    private void teast()
-    {
-        T3.sprite = I1.CurrentMon.Spesies.front;
-        T4.sprite = I2.CurrentMon.Spesies.front;
     }
 }
