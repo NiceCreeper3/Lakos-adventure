@@ -156,7 +156,7 @@ public class TurnHandler : MonoBehaviour
                 foreach (GameObject visubol in _makevisubolDurring)
                     visubol.SetActive(true);*/
 
-        Debug.Log($"attacks the fist:{fistsOrder} Secound:{secundOrder}");
+        //Debug.Log($"attacks the fist:{fistsOrder} Secound:{secundOrder}");
 
         fistsOrder();
         yield return new WaitForSecondsRealtime(1); // time four animason to play

@@ -26,9 +26,10 @@ public class BattelLingMons : MonoBehaviour
     private SwichePomon OnSwitch;
 
     // represents buffs
-    private DamageMath.StatsBuff _buffs;
+    private StatesBuff.StatsBuffs _buffs;
 
     // evnets
+    public event Action<StatesBuff.StatsBuffs> OnPomonBuff;
     public event Action<int> OnHealhtChange;
     public event Action OnPomonSwicheNeeded;
 
@@ -55,7 +56,8 @@ public class BattelLingMons : MonoBehaviour
 
     public int ReturnSpeed()
     {
-        return (int)(CurrentMon.Speed * _buffs.SpeedBuff);
+
+        return (int)(CurrentMon.Speed * _buffs.SpeedBuff + CurrentMon.Speed);
     }
 
     // triggeres chosen attacks BeforeAblity
@@ -65,37 +67,17 @@ public class BattelLingMons : MonoBehaviour
         CurrentMon.PomonMoves[attackPicked].AbilityBeforeTargetEnemy(aponent);
     }
 
-    // adds stats "stabs". aka buffs
-    public void StatesBuff(double buffTimes, Buffs whatToBuff)
+    // buff one of the states
+    public void BuffPomon(double buffTimes, StatesBuff.Buff whatToBuff)
     {
-        // the max amount of times we can buff
-        short maxBuffAmount = 2;
+        // buffs one of the 
+       _buffs = StatesBuff.BuffSates(_buffs, buffTimes, whatToBuff);
 
-        switch (whatToBuff)
-        {
-            case Buffs.AttackBuff:
-                _buffs.AttackBuff += buffTimes;
-                break;
+        // shows
+        OnPomonBuff?.Invoke(_buffs);
 
-            case Buffs.SpeedBuff:
-                _buffs.SpeedBuff += buffTimes;
-                break;
-
-            case Buffs.DefenseBuff:
-                _buffs.DefenseBuff += buffTimes;
-                break;
-        }
-
-        // make it beater latter
-        // adds a buff cap. so you can only have buffed [maxBuffTimes]. the + 2 is to acount four the buffes starting at 1
-        if (maxBuffAmount <_buffs.AttackBuff)
-            _buffs.AttackBuff = maxBuffAmount;
-        if (maxBuffAmount < _buffs.SpeedBuff)
-            _buffs.SpeedBuff = maxBuffAmount;
-        if (maxBuffAmount < _buffs.DefenseBuff)
-            _buffs.DefenseBuff = maxBuffAmount;
-
-        Debug.Log($"has buffed/debuffed {CurrentMon.PomonName}s {whatToBuff} by {buffTimes}");
+        Debug.Log($"has buffed/debuffed {CurrentMon.PomonName}s {whatToBuff} by {buffTimes}\n" +
+            $"Attack buff:{_buffs.AttackBuff} Defends buff:{_buffs.DefenseBuff} Speed buff:{_buffs.SpeedBuff}");
     }
 
     // calkulates damige and and  sends it to the (attckTarget)
@@ -125,7 +107,7 @@ public class BattelLingMons : MonoBehaviour
                 damage = DamageMath.DefenderMath(attckTarget.CurrentMon, damage, attckTarget._buffs);
 
                 // thanges the healt of the enemy pomon
-                attckTarget.ChangeHealt(-damage);
+                attckTarget.ChangeHealt(damage);
             }
 
             // playes a animason when the Pomon Attacks
@@ -178,7 +160,7 @@ public class BattelLingMons : MonoBehaviour
     #endregion
 
 
-    // is goving to handel swithing ind a new pokemon
+    // Swices the pomon. (will be callled by Swicing scripts. or by TurnHandler)
     private void SwitchPomon(Pomons swichingPomons, bool isPlayerMon)
     {
         if (CurrentMon != null)
@@ -191,17 +173,19 @@ public class BattelLingMons : MonoBehaviour
         CurrentMon = swichingPomons;
 
         // sets buff amount
-        _buffs = new DamageMath.StatsBuff(1,1,1);
+        _buffs = new StatesBuff.StatsBuffs(0,0,0);
 
         foreach (Moves moves in swichingPomons.PomonMoves)
             moves.AbilityActivated();
             
-
         // insertes the sprite ind its plase. and if its the player mekes sure it is the back sprite 
         if (isPlayerMon)
             pomonImgeDissplay.sprite = CurrentMon.Spesies.back;
         else
             pomonImgeDissplay.sprite = CurrentMon.Spesies.front;
+
+        if (TurnHandler.FreeAction == true)
+            TurnHandler.FreeAction = false;
     }
     #endregion
 }

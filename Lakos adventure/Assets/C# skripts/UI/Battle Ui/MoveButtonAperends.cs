@@ -25,7 +25,6 @@ public class MoveButtonAperends : MonoBehaviour
     private void OnEnable()
     {
         // setting Button aperends
-        Debug.Log($"Set Button aprends using {MoveToRepresent.MoveName}");
         SetText();
         SetColorAndIcon();
     }

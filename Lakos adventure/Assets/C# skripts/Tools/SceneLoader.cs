@@ -51,21 +51,6 @@ public static class SceneLoader
         return sceneName;
     }
 
-    // converets 
-    #region Convert
-    public static ScenesToLoad Convert(int toConvert)
-    {
-        ScenesToLoad converted = (ScenesToLoad)toConvert;
-        return converted;
-    }
-
-    public static int Convert(ScenesToLoad toConvert)
-    {
-        int converted = (int)toConvert;
-        return converted;
-    }
-    #endregion
-
     // is four when we need to load a spisifk scene
     public static void ChageScene(ScenesToLoad sceneToLoad)
     {
@@ -97,6 +82,32 @@ public static class SceneLoader
             Debug.Log("Missing a previes scene to load");
         }
     }
+
+    // converets int to Scene enum. and vise versa
+    #region Convert
+
+    /// <summary>
+    /// converts int to Scene enum
+    /// </summary>
+    /// <param name="toConvert"></param>
+    /// <returns></returns>
+    public static ScenesToLoad Convert(int toConvert)
+    {
+        ScenesToLoad converted = (ScenesToLoad)toConvert;
+        return converted;
+    }
+
+    /// <summary>
+    /// converts Scene enum to int
+    /// </summary>
+    /// <param name="toConvert"></param>
+    /// <returns></returns>
+    public static int Convert(ScenesToLoad toConvert)
+    {
+        int converted = (int)toConvert;
+        return converted;
+    }
+    #endregion
 
     public static void Battle(pomonteam pomons)
     {

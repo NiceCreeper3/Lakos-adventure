@@ -8,7 +8,6 @@ public class EnemySwiching : SwichePomon
         if (_pomonTeam == null)
             _pomonTeam = MapToBattel.enemyPomons;
 
-
         base.Awake();
     }
 

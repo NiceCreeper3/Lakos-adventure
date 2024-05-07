@@ -5,7 +5,7 @@ public static class BuffingMoves
     [System.Serializable]
     public struct BuffInfo
     {
-        public BattelLingMons.Buffs WhatToBuff;
+        public StatesBuff.Buff WhatToBuff;
         public HowToBuff HowToBuff;     
     }
 
@@ -25,7 +25,7 @@ public static class BuffingMoves
     {
         foreach (BuffInfo buff in buffing)
         {
-            interragsen.StatesBuff(HowToStat(buff.HowToBuff), buff.WhatToBuff);
+            interragsen.BuffPomon(HowToStat(buff.HowToBuff), buff.WhatToBuff);
         }
     }
 
