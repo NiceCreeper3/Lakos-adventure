@@ -35,19 +35,25 @@ public class textinteractor: ScriptableObject
     }
     public Actorscript Generateactor(Actor person)
     {
-        
-        if (person.GetType() == new playeractor().GetType())
+        Debug.Log(person.name);
+        if (!person.body)
         {
-            return interactor.generateplayer(person);
+            if (person as playeractor == person)
+            {
+                return interactor.generateplayer(person);
+            }
+            else if (person as trainer == person)
+            {
+                return interactor.generatetrainer(person);
+            }
+            else
+            {
+                return interactor.generateactor(person);
+            }
         }
-        else if(person.GetType() == new trainer().GetType())
-        {
-            return interactor.generatetrainer(person);
-        }
-        else
-        {
-            return interactor.generateactor(person);
-        }
+        else return person.body;
+
+
     }
 
 

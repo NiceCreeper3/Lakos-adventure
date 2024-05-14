@@ -45,24 +45,15 @@ public class TypeWriterEffect : MonoBehaviour
 
     public void UpdateFullText()
     {
-
         if (isCoroutineRunning == true)
         {
             isCoroutineRunning = false;
-
             GetComponentInChildren<TMP_Text>().text = fullText;
         }
         else
         {
-            if (ineracor)
-                ineracor.enabled = true;
-            if (player)
-                player.enabled = true;
-            if(anim)
-                anim.SetTrigger("continue");
-
+            anim.SetTrigger("continue");
             gameObject.SetActive(false);
-
         }
     }
 
@@ -70,12 +61,6 @@ public class TypeWriterEffect : MonoBehaviour
 
     public void CallUpdateFullText(string str)
     {
-        if (ineracor)
-            ineracor.enabled = false;
-        if (player)
-            player.enabled = false;
-
-
         fullText = str;
         StartCoroutine(ShowText()); // the new line to load, TODO: make list or document with lines
     }

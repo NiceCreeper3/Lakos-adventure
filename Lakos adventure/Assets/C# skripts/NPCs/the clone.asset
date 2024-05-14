@@ -14,10 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: the clone
   sprites:
-  - {fileID: 859353918, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
-  - {fileID: -626840361, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
-  - {fileID: -712862093, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
-  - {fileID: 1424064128, guid: 746ebdbaf5279f144a892218ac083827, type: 3}
+  - {fileID: -103754446, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 1600402407, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: -59459178, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 576393203, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 1567134464, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 814127, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: -829965931, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 2110533585, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 1217145586, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 860847573, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: -1402200548, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
+  - {fileID: 1170295298, guid: 78bc2fbf0fa7bb747b77c4b778d66ce4, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

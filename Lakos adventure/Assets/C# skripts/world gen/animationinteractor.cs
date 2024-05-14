@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class animationinteractor : MonoBehaviour
 {
-    [SerializeField] private textinteractor handler;
+    [SerializeField] public textinteractor handler;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform actorlayer; 
     [SerializeField] private GameObject actorprephap;
