@@ -16,11 +16,11 @@ public class PlayerMovemont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position == movepoint.movepoint)
+        if (transform.position == (new Vector3(movepoint.movepoint.x, movepoint.movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f))
         {
             bool isempty = true;
             RaycastHit2D[] hit = new RaycastHit2D[2];
-            col.Raycast(new Vector2(0,(int)Input.GetAxis("Vertical")), hit, 0.63f);
+            col.Raycast(new Vector2(0,(int)Input.GetAxis("Vertical")), hit, 0.64f);
             foreach (RaycastHit2D raycastHit in hit)
             {
                 if (raycastHit)
@@ -42,12 +42,13 @@ public class PlayerMovemont : MonoBehaviour
                 
             }
             
+            
 
 
-            if (transform.position == movepoint.movepoint)
+            if (transform.position == (new Vector3(movepoint.movepoint.x, movepoint.movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f))
             {
                 isempty = true;
-                col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 0.63f);
+                col.Raycast(new Vector2((int)Input.GetAxis("Horizontal"), 0), hit, 0.64f);
                 foreach (RaycastHit2D raycastHit in hit)
                 {
                     if (raycastHit)

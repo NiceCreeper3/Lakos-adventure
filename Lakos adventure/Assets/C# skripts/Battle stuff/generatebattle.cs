@@ -18,7 +18,6 @@ public class generatebattle : StateMachineBehaviour
             wild.team.RemoveAt(0);
         }
         wild.team.Add(monster.generateMon(level));
-        InfoSaved.playerlocation = player.body.grid.WorldToCell(player.body.transform.position);
         SceneLoader.Battle(wild);
     }
 

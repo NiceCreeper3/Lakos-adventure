@@ -81,7 +81,7 @@ public class animationinteractor : MonoBehaviour
             }
             if (Lock)
             {
-                Lock.player = person;
+                Lock.player = actorscript;
                 loads++;
 
             }

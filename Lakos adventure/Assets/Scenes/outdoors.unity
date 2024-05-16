@@ -1634,11 +1634,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 922378219200316755, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: exitlocation.x
-      value: 4
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 922378219200316755, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: exitlocation.y
-      value: 5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1128797934028800552, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: player

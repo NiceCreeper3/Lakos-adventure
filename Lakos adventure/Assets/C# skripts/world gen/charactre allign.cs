@@ -30,7 +30,7 @@ public class charactreallign : MonoBehaviour
         Actorscript actor = GetComponent<Actorscript>();
         if (actor)
         {
-            actor.movepoint = transform.position;
+            actor.movepoint = new Vector2Int((int)transform.position.x, (int)transform.position.y);
         }
     }
 }

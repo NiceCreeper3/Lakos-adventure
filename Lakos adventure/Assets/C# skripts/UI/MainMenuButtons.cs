@@ -18,7 +18,10 @@ public class MainMenuButtons : MonoBehaviour
         startarea.addactor(player, startlocation, null, new Vector2(0,-1));
         SceneLoader.ChageScene(StartScenes);
     }
-
+    private void Start()
+    {
+        InfoSaved.Loadlocations();
+    }
     public void load()
     {
         SaveToFile.savegame();

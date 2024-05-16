@@ -11,8 +11,8 @@ public class WorldTrainerScript : MonoBehaviour
     [SerializeField] private Actorscript actorscript;
     private void Start()
     {
-        actorscript.movepoint = actorscript.grid.CellToWorld(actorscript.grid.WorldToCell(transform.position)) + new Vector3(0.31f, 0.31f, 0);
-        transform.position = actorscript.movepoint;
+        actorscript.movepoint = new Vector2Int(actorscript.grid.WorldToCell(transform.position).x, actorscript.grid.WorldToCell(transform.position).y);
+        transform.position = new Vector3(actorscript.movepoint.x, actorscript.movepoint.y) * 0.64f;
         Trainer = actorscript.actor as trainer;
         Debug.Log(Trainer.trainerTeam);
         actorscript.load();
@@ -64,7 +64,6 @@ public class WorldTrainerScript : MonoBehaviour
     }
     public void triggeractive()
     {
-        InfoSaved.playerlocation = actorscript.grid.WorldToCell(player.position);
         Trainer.ineract();
         
     }

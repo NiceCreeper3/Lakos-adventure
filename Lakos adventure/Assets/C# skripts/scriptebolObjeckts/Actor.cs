@@ -45,7 +45,7 @@ public class Actor : ScriptableObject
         {
             turn(4);
         }
-        body.movepoint += new Vector3(0.64f * length, 0, 0);
+        body.movepoint += new Vector2Int(length, 0);
     }
     public void movey(int length)
     {
@@ -57,11 +57,11 @@ public class Actor : ScriptableObject
             LocationData.SceneActorData actorData = data.actordatainfo[index];
             if (length != 0)
             {
-                Debug.Log(actorData.location.x + length);
+                Debug.Log(actorData.location.y + length);
             }
 
-            int change = actorData.location.x + length;
-            data.setactor(this, new Vector2Int(change, actorData.location.y));
+            int change = actorData.location.y + length;
+            data.setactor(this, new Vector2Int(actorData.location.x, change));
         }
 
         if (length < 0)
@@ -72,18 +72,18 @@ public class Actor : ScriptableObject
         {
             turn(1);
         }
-        body.movepoint += new Vector3(0, 0.64f * length, 0);
+        body.movepoint += new Vector2Int(0, length);
     }
     public void setx(int location)
     {
         LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
-        body.movepoint = new Vector3((0.64f * location) + 0.31f, body.gameObject.transform.position.y , 0);
-        body.gameObject.transform.position = new Vector3((0.64f * location) + 0.31f, body.gameObject.transform.position.y, 0);
+        body.movepoint = new Vector2Int(location, body.movepoint.y);
+        body.gameObject.transform.position = new Vector3((0.64f * location) + 0.32f, body.gameObject.transform.position.y, 0);
         int index = data.findactor(this);
         if (index != -1)
         {
             LocationData.SceneActorData actorData = data.actordatainfo[index];
-            int change = actorData.location.x;
+            int change = location;
             data.setactor(this, new Vector2Int(change, actorData.location.y));
         }
         
@@ -91,13 +91,14 @@ public class Actor : ScriptableObject
     public void sety(int location)
     {
         LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
-        body.movepoint = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.31f, 0);
-        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.31f, 0);
+        body.movepoint = new Vector2Int(body.movepoint.x, location);
+        body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.32f, 0);
         int index = data.findactor(this);
         if (index != -1)
         {
             LocationData.SceneActorData actorData = data.actordatainfo[index];
-            int change = actorData.location.x;
+
+            int change = location;
             data.setactor(this, new Vector2Int(actorData.location.x, change));
         }
     }

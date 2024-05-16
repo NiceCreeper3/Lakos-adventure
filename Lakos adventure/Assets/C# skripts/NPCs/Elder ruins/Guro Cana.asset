@@ -14,13 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   sprites:
-  - {fileID: 377906539, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: 1364996734, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: 802170816, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: -1420240216, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
+  - {fileID: 48782004, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: 327340958, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: 2086224278, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -1453152293, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -770702203, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: 621512076, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -1744489313, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: 983055238, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -826136701, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -1090308627, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -1828893145, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
+  - {fileID: -1157067657, guid: cdf5709ac59d7f54d921180a1f5d62c2, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  interaction: {fileID: 0}
+  interaction: {fileID: 9100000, guid: 111d18baeb1023744837abd005608a5f, type: 2}
   battlesprite: {fileID: 21300000, guid: 5ff419845cc2bb34fa121cc07040c2d3, type: 3}
   Seaching: 0
   defeated: 0

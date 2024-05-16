@@ -18,14 +18,26 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
         m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
+        m_MethodName: changeanim
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ...
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
+        m_TargetAssemblyTypeName: trainer, Assembly-CSharp
+        m_MethodName: attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1102 &-5272213860847750372
@@ -120,7 +132,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

@@ -4,5 +4,10 @@ using UnityEngine;
 
 static public class InfoSaved
 {
-    static public Vector3Int playerlocation;
+    static public LocationData[] areasexplored;
+
+    public static void Loadlocations()
+    {
+        areasexplored = Resources.LoadAll<LocationData>("Maps/location data");
+    }
 }

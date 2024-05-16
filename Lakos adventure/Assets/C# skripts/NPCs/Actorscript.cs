@@ -9,7 +9,7 @@ public class Actorscript : MonoBehaviour
     [SerializeField] public Actor actor;
     [SerializeField] public Vector2 diretion;
     [SerializeField] public Grid grid;
-    [SerializeField] public Vector3 movepoint;
+    [SerializeField] public Vector2Int movepoint;
     
     private void Start()
     {
@@ -22,9 +22,9 @@ public class Actorscript : MonoBehaviour
         while(true)
         {
             
-            yield return new WaitUntil(() => transform.position != movepoint);
+            yield return new WaitUntil(() => transform.position != (new Vector3(movepoint.x, movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f));
             yield return new WaitForSeconds(0.3f);
-            if (transform.position != movepoint)
+            if (transform.position != (new Vector3(movepoint.x, movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f))
             {
 
                 if (diretion.y != 0)
@@ -132,12 +132,12 @@ public class Actorscript : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position,movepoint, 1 * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, (new Vector3(movepoint.x, movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f), 1 * Time.deltaTime);
         
     }
     public void load()
     {
-        gameObject.transform.position = movepoint;
+        gameObject.transform.position = (new Vector3(movepoint.x, movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f);
         actor.body = this;
         GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
         foreach (GameObject game in objectsinscene)
