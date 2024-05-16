@@ -3,7 +3,7 @@ using UnityEngine;
 public static class RollUtilatyes
 {
     /// <summary>
-    /// 
+    /// gets a chance and Sees if we hit it or not
     /// </summary>
     /// <param name="chanse">the chanse to hit the desired reasult</param>
     /// <param name="extendRollLengt">ind case you want to lower chanse to the 0.x numberes so fx(5, 1 == 0.5Chanse)</param>

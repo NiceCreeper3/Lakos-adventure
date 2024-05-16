@@ -30,7 +30,7 @@ public class EnemySwiching : SwichePomon
 
         // ends the battle with a win. if enemy has no Pomon left
         if (outOfPomon)
-            BattelWin();
+            BattelWin(_pomonTeam.team);
     }
 
     protected override void SwichePickMetthod()

@@ -42,3 +42,109 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 03629c03d668513448298632893a57d4, type: 2}
   - {fileID: 11400000, guid: beab2f67874542249a5e4ff1b36f4dde, type: 2}
   - {fileID: 11400000, guid: ce09a2f2552be514b9ced8ff9c4567d4, type: 2}
+  StatesGrows:
+  - HealtUp: 25
+    AttackUp: 12
+    DefendesUp: 5
+    SpeedUp: 13
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 7
+    DefendesUp: 17
+    SpeedUp: 6
+    NewAttack: {fileID: 0}
+  - HealtUp: 18
+    AttackUp: 13
+    DefendesUp: 8
+    SpeedUp: 16
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}

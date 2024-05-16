@@ -23,7 +23,7 @@ public class Pomons : ScriptableObject
 
     [Space(10)]
 
-    public int level = 1;
+    public LevelSystem level;
 
     [Header("States and Moves")]
 

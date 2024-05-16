@@ -12,19 +12,17 @@ public class ShowPomonSpriteUI : MonoBehaviour
     private void OnEnable()
     {
         UpdatePomonImage();
-        //UpdatePomonImage();
     }
 
     void UpdatePomonImage()
     {
-        Debug.Log($"YYYYYYYYY: {_imagesAvabol.Length}      {_pomosToDisplay.Length}");
+        // runds fruge all the images and adds a pomon sprite to them
         for (int i = 0; i < _imagesAvabol.Length; i++)
         {
             Debug.Log(i);
 
             if (_pomosToDisplay.Length > i)
             {
-                //
                 _imagesAvabol[i].sprite = _pomosToDisplay[i].CurrentMon.Spesies.front;
             }
         }

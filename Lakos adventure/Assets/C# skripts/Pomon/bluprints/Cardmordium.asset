@@ -17,6 +17,8 @@ MonoBehaviour:
   back: {fileID: 21300000, guid: d38f1bae68ba740489b5806fd333735f, type: 3}
   description: if you see Creams real body you will die a horroble death
   genderratio: 50
+  BackAniasonAT: {fileID: 0}
+  FrontAnimasonAT: {fileID: 0}
   MinHealt: 125
   MaxHealt: 125
   healthgrow: 1
@@ -35,3 +37,109 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern:
   - {fileID: 11400000, guid: 745e175b22884b645934ff53f69d2506, type: 2}
+  StatesGrows:
+  - HealtUp: 25
+    AttackUp: 0
+    DefendesUp: 0
+    SpeedUp: 0
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 0
+    DefendesUp: 0
+    SpeedUp: 0
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 0
+    DefendesUp: 0
+    SpeedUp: 0
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
+    NewAttack: {fileID: 0}

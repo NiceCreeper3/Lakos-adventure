@@ -18,11 +18,18 @@ public class MoveLookSetUp : MonoBehaviour
         // turns all the buttons off to start of with
         SetMoveToDefalt();
 
-        EventRefends.OnPomonSelket += EventRefends_OnPomonSelket;
+        if (EventRefends != null)
+            EventRefends.OnPomonSelket += EventRefends_OnPomonSelket;
     }
 
     private void EventRefends_OnPomonSelket(Pomons pomon)
     {
+        TurnOnOrOffMoves(pomon);
+    }
+
+    public void CallMoveLook(Pomons pomon)
+    {
+        Debug.Log($"the Pomon:{pomon}");
         TurnOnOrOffMoves(pomon);
     }
 

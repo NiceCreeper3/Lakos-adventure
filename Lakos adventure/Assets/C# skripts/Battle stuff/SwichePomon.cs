@@ -14,6 +14,7 @@ public class SwichePomon : MonoBehaviour
 
     public event Action<Pomons> OnPomonSelket;
     public event Action<Pomons, bool> OnPomonSwiching;
+    public event Action OnBattleOver;
 
     private BattelLingMons onNeededSwiche;
 
@@ -86,14 +87,28 @@ public class SwichePomon : MonoBehaviour
     }
 
 
-    protected void BattelWin()
+    protected void BattelWin(List<Pomons> pomonsTeam)
     {
+        ushort levelUps = 0;
+
+        // gives the playeres Linkens XP 
+        foreach (Pomons pomon in _pomonTeam.team)
+        {
+            levelUps = pomon.level.GiveXP(100 * pomonsTeam.Count);
+            pomon.level.IncreseStates(pomon, levelUps);
+        }
+
+        // shows
+
+        // remove this after and have it indsted show all the Pomon that leveled up
         StartCoroutine(WaitFouraBit());
     }
 
     private IEnumerator WaitFouraBit()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        OnBattleOver?.Invoke();
+
         SceneLoader.ChageScene();
     }
 
