@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3850a751faf0ba4baf31918090612d4, type: 3}
   m_Name: Guard Gu
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Gu
   sprites:
-  - {fileID: 377906539, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: 1364996734, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: 802170816, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: -1420240216, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
+  - {fileID: -895840016, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -1859016174, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -1049460216, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -695767474, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: 1471242171, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -1585091475, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -1186577791, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -1437296985, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: 1086323734, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: -567935917, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: 180181984, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
+  - {fileID: 984241721, guid: b3f07842ec934054ba06b4fc91b3a0e2, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

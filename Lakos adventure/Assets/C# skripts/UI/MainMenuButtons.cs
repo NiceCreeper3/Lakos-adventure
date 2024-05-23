@@ -10,11 +10,11 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] private LocationData  startarea;
     [SerializeField] private SceneLoader.ScenesToLoad StartScenes;
     [SerializeField] private RuntimeAnimatorController openingcutscene;
-    [SerializeField] private textinteractor texter;
+
 
     public void play()
     {
-        texter.controller = openingcutscene;
+        textinteractor.controller = openingcutscene;
         startarea.addactor(player, startlocation, null, new Vector2(0,-1));
         SceneLoader.ChageScene(StartScenes);
     }

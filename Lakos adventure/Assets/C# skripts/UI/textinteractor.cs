@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
-[CreateAssetMenu(fileName = "textbox indecator", menuName = "textindecator")]
-public class textinteractor: ScriptableObject
+public static class textinteractor
 {
-    public TypeWriterEffect textboxinsceene;
-    public GameObject box;
+    public static TypeWriterEffect textboxinsceene;
+    public static GameObject box;
 
-    public RuntimeAnimatorController controller;
-    public animationinteractor interactor;
-    public pomonteam wild;
+    public static RuntimeAnimatorController controller;
+    public static animationinteractor interactor;
 
-    public void RunTextBox(string text)
+    public static void RunTextBox(string text)
     {
         if (interactor)
         {
@@ -23,17 +21,17 @@ public class textinteractor: ScriptableObject
     }
 
 
-    public void changeanim(RuntimeAnimatorController animator)
+    public static void changeanim(RuntimeAnimatorController animator)
     {
         controller = animator;
         interactor.setcontroller();
     }
-    public void changeanim()
+    public static void changeanim()
     {
         controller = null;
         interactor.setcontroller();
     }
-    public Actorscript Generateactor(Actor person)
+    public static Actorscript Generateactor(Actor person)
     {
         Debug.Log(person.name);
         if (!person.body)

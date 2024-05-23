@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class animationinteractor : MonoBehaviour
 {
-    [SerializeField] public textinteractor handler;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform actorlayer; 
     [SerializeField] private GameObject actorprephap;
@@ -16,15 +15,15 @@ public class animationinteractor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
    {
-        handler.interactor = this;
-        animator.runtimeAnimatorController = handler.controller;
+        textinteractor.interactor = this;
+        animator.runtimeAnimatorController = textinteractor.controller;
         GetComponent<LocationHandeler>().Loadall();
    }
 
     // Update is called once per frame
     public void setcontroller()
     {
-        animator.runtimeAnimatorController = handler.controller;
+        animator.runtimeAnimatorController = textinteractor.controller;
     }
     
     public Actorscript generateactor(Actor person)

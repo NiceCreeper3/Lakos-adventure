@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3850a751faf0ba4baf31918090612d4, type: 3}
   m_Name: Guard Joe
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Joe
   sprites:
-  - {fileID: 377906539, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: 1364996734, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: 802170816, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
-  - {fileID: -1420240216, guid: bb7723bb766c5c24c8d90b6e7f8dd592, type: 3}
+  - {fileID: 1665367312, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: -1017460109, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: 327486996, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: -378162082, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: 1466778320, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: -553320558, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: 26220619, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: -1252858693, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: 979596970, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: -1550444907, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: -2011074868, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
+  - {fileID: 960961772, guid: 19ebacc2cb951264f9261940074350f1, type: 3}
   body: {fileID: 0}
   Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

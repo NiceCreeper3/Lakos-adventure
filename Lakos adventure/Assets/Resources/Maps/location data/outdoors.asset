@@ -18,3 +18,7 @@ MonoBehaviour:
     interaction: {fileID: 9100000, guid: 4d66f57d54fdbab4ca58be703e7ab964, type: 2}
     location: {x: 3, y: 3}
     direction: {x: 0, y: -1}
+  - actor: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
+    interaction: {fileID: 0}
+    location: {x: -5, y: -5}
+    direction: {x: 0, y: -1}

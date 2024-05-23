@@ -21,19 +21,26 @@ public class Generateinlocation : StateMachineBehaviour
         
         foreach (GameObject game in @object)
         {
-            LocationHandeler handeler1 = game.GetComponentInChildren<LocationHandeler>();
-
-            if (handeler1.data == data)
+            LocationHandeler handeler1 = game.GetComponent<LocationHandeler>();
+            if (handeler1)
             {
-                handeler1.GetComponent<animationinteractor>().handler.Generateactor(actor);
-                actor.setx(location.x);
-                actor.sety(location.y);
-                actor.turn(direction);
-                actor.interaction = interact;
-                break;
+                
+                if (handeler1.data == data)
+                {
+                    textinteractor.Generateactor(actor);
+                    actor.setx(location.x);
+                    actor.sety(location.y);
+                    actor.turn(direction);
+                    actor.interaction = interact;
+                    animator.SetTrigger("continue");
+                    break;
+                }
             }
+            
 
 
         }
+        animator.SetTrigger("continue");
+
     }
 }

@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toLoad: 2
   actordatainfo:
-  - actor: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
-    interaction: {fileID: 9100000, guid: c4335633cda0a4d4c8ae9fd972dc01db, type: 2}
-    location: {x: 2, y: 4}
-    direction: {x: -1, y: 0}
   - actor: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
     interaction: {fileID: 9100000, guid: 3b67549f222694e47a0fd28eb0e095f7, type: 2}
+    location: {x: 2, y: 4}
+    direction: {x: -1, y: 0}
+  - actor: {fileID: 11400000, guid: 3ac9b012367ca104f924ba89666342cc, type: 2}
+    interaction: {fileID: 9100000, guid: c4335633cda0a4d4c8ae9fd972dc01db, type: 2}
     location: {x: 13, y: -3}
     direction: {x: 1, y: 0}
-  - actor: {fileID: 11400000, guid: 0087515bdb9f3a04aaeeea5d6b5c8d19, type: 2}
-    interaction: {fileID: 9100000, guid: 111d18baeb1023744837abd005608a5f, type: 2}
+  - actor: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
+    interaction: {fileID: 9100000, guid: 34ecab16592e1024a94c848aa13e6108, type: 2}
     location: {x: 17, y: 1}
     direction: {x: 0, y: 0}
   - actor: {fileID: 11400000, guid: 039779dfa2331724c940f80b4e32c46e, type: 2}
     interaction: {fileID: 9100000, guid: 7469e748686a75140871fd719729718a, type: 2}
     location: {x: 5, y: -16}
     direction: {x: 1, y: 0}
-  - actor: {fileID: 11400000, guid: d35264dac5c1644488b86c63f8b98592, type: 2}
-    interaction: {fileID: 9100000, guid: 34ecab16592e1024a94c848aa13e6108, type: 2}
+  - actor: {fileID: 11400000, guid: 0087515bdb9f3a04aaeeea5d6b5c8d19, type: 2}
+    interaction: {fileID: 9100000, guid: 111d18baeb1023744837abd005608a5f, type: 2}
     location: {x: 17, y: -8}
     direction: {x: -1, y: 0}

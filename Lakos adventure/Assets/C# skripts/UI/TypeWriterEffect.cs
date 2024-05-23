@@ -11,15 +11,14 @@ public class TypeWriterEffect : MonoBehaviour
     public string fullText;
     private string currentText = "";
     private bool isCoroutineRunning;
-    [SerializeField] private textinteractor Texter;
     [SerializeField] private PlayerMovemont player;
     [SerializeField] private playerinteract ineracor;
     [SerializeField] public Animator anim;
 
     void Start()
     {
-        Texter.textboxinsceene = this;
-        Texter.box = gameObject;
+        textinteractor.textboxinsceene = this;
+        textinteractor.box = gameObject;
         gameObject.SetActive(false);
     }
 
@@ -52,7 +51,11 @@ public class TypeWriterEffect : MonoBehaviour
         }
         else
         {
-            anim.SetTrigger("continue");
+            if (anim)
+            {
+                anim.SetTrigger("continue");
+            }
+            
             gameObject.SetActive(false);
         }
     }

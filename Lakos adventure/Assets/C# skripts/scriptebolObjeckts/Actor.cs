@@ -12,14 +12,13 @@ public class Actor : ScriptableObject
     public Sprite[] sprites;
 
     [HideInInspector] public Actorscript body;
-    [SerializeField] public textinteractor Textinteractor;
 
     public RuntimeAnimatorController interaction;
 
 
     public void movex(int length)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
         
         if (index != -1)
@@ -49,7 +48,7 @@ public class Actor : ScriptableObject
     }
     public void movey(int length)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
         if (index != -1)
         {
@@ -76,7 +75,7 @@ public class Actor : ScriptableObject
     }
     public void setx(int location)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         body.movepoint = new Vector2Int(location, body.movepoint.y);
         body.gameObject.transform.position = new Vector3((0.64f * location) + 0.32f, body.gameObject.transform.position.y, 0);
         int index = data.findactor(this);
@@ -90,7 +89,7 @@ public class Actor : ScriptableObject
     }
     public void sety(int location)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         body.movepoint = new Vector2Int(body.movepoint.x, location);
         body.gameObject.transform.position = new Vector3(body.gameObject.transform.position.x, (0.64f * location) + 0.32f, 0);
         int index = data.findactor(this);
@@ -104,7 +103,7 @@ public class Actor : ScriptableObject
     }
     public void turn(int direction)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
         LocationData.SceneActorData actorData = data.actordatainfo[index];
 
@@ -164,7 +163,7 @@ public class Actor : ScriptableObject
     }
     public void turn(Vector2 direction)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
         LocationData.SceneActorData actorData = data.actordatainfo[index];
         actorData.direction = direction;
@@ -201,11 +200,11 @@ public class Actor : ScriptableObject
 
     public void ineract()
     {
-        Textinteractor.changeanim(interaction);
+        textinteractor.changeanim(interaction);
     }
     public void changeinteraction(RuntimeAnimatorController animatorController)
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
         LocationData.SceneActorData actorData = data.actordatainfo[index];
         interaction = animatorController;
@@ -225,7 +224,7 @@ public class Actor : ScriptableObject
     }
     public void kill()
     {
-        LocationData data = Textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         data.removeactor(this);
         if (body)
         {
