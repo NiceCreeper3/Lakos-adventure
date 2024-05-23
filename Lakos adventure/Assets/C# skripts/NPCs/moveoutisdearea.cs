@@ -24,6 +24,7 @@ public class Generateinlocation : StateMachineBehaviour
             LocationHandeler handeler1 = game.GetComponent<LocationHandeler>();
             if (handeler1)
             {
+                textinteractor.RunTextBox("handler found");
                 
                 if (handeler1.data == data)
                 {

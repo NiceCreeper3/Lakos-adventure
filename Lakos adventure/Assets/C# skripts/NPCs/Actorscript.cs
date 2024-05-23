@@ -186,6 +186,6 @@ public class Actorscript : MonoBehaviour
     }
     public void interact()
     {
-        actor.Textinteractor.changeanim(actor.interaction);
+        textinteractor.changeanim(actor.interaction);
     }
 }

@@ -14,11 +14,11 @@ public class animationinteractor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-   {
+    {
         textinteractor.interactor = this;
         animator.runtimeAnimatorController = textinteractor.controller;
         GetComponent<LocationHandeler>().Loadall();
-   }
+    }
 
     // Update is called once per frame
     public void setcontroller()

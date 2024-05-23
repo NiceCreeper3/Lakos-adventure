@@ -19,9 +19,6 @@ public class BattelLingMons : MonoBehaviour
     [Header("Reference to aesthetic stuff")]
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
-    [Header("Text box")]
-    [SerializeField] private textinteractor _textBox;
-
     [HideInInspector] public Pomons CurrentMon;
     private SwichePomon OnSwitch;
 
@@ -122,7 +119,7 @@ public class BattelLingMons : MonoBehaviour
 
             // writes what move the enemy used as well as a short deskripson of what it does
             if (!_isPlayerMon)
-                _textBox.RunTextBox($" ({CurrentMon.PomonName} used {move.MoveName}) \n {move.MoveDiskrepseon}");
+                textinteractor.RunTextBox($" ({CurrentMon.PomonName} used {move.MoveName}) \n {move.MoveDiskrepseon}");
 
             Debug.Log("_______________[end of attack]_______________");
         }
