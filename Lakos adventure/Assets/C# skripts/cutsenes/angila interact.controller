@@ -1,30 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1101 &-8150906437620601659
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: continue
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -3554833348349863688}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!114 &-7545605120494446535
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37,22 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 0}
   actions:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: hello again
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
         m_TargetAssemblyTypeName: playeractor, Assembly-CSharp
         m_MethodName: KillControl
@@ -79,6 +41,7 @@ AnimatorState:
   - {fileID: 2551026995495046455}
   m_StateMachineBehaviours:
   - {fileID: -7545605120494446535}
+  - {fileID: -2599207030562691916}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -93,6 +56,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-4506029339954291295
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 
 --- !u!1102 &-3675251144300186358
 AnimatorState:
   serializedVersion: 6
@@ -106,7 +82,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 731034781360505805}
   m_StateMachineBehaviours:
-  - {fileID: 7173547283937467377}
+  - {fileID: -3596344625514436395}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -121,6 +97,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-3596344625514436395
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 
 --- !u!1102 &-3554833348349863688
 AnimatorState:
   serializedVersion: 6
@@ -148,6 +137,44 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-2599207030562691916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 
+--- !u!1101 &-2369780658171216972
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: continue
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 6040777144158827892}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-295235165702810193
 AnimatorState:
   serializedVersion: 6
@@ -159,9 +186,9 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: -8150906437620601659}
+  - {fileID: -2369780658171216972}
   m_StateMachineBehaviours:
-  - {fileID: 8040664632063744341}
+  - {fileID: 2853453485494624785}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -249,7 +276,10 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3554833348349863688}
-    m_Position: {x: 350, y: 330, z: 0}
+    m_Position: {x: 540, y: 480, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 6040777144158827892}
+    m_Position: {x: 420, y: 340, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -285,7 +315,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &7173547283937467377
+--- !u!114 &2853453485494624785
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,55 +324,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 0}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: you might be able to find some more linkins in the tall
-            grass over there
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8040664632063744341
-MonoBehaviour:
+  text: 
+--- !u!1101 &5868926907649648811
+AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  typeWriter: {fileID: 0}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: or whatever foliage there is in the areas you decide
-            to explore
-          m_BoolArgument: 0
-        m_CallState: 2
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: continue
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -3554833348349863688}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &6040777144158827892
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New State 3
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 5868926907649648811}
+  m_StateMachineBehaviours:
+  - {fileID: -4506029339954291295}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 0
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!114 &9045753212623145488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,7 +393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 0}
   actions:
     m_PersistentCalls:
       m_Calls:
@@ -369,17 +406,5 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: hello again
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: changeanim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

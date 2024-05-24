@@ -27,7 +27,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &-8625924935403530161
+--- !u!114 &-5631350707114732708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,27 +36,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 'great now i am pissed. leats fight. can,t Banish me
-            twice '
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &-5387282501131943075
+  text: great. now I'm pissed. can't banish me twice anyway. let's fight
+--- !u!114 &-5482860565522488108
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,26 +49,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: soft banishment. as ind my vilage is to kind to say i
-            am Banished so they say "set me to do archaeology"
-          m_BoolArgument: 0
-        m_CallState: 2
+  text: ...
 --- !u!1102 &-3485840100943519778
 AnimatorState:
   serializedVersion: 6
@@ -98,7 +66,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 2691092150704348583}
   m_StateMachineBehaviours:
-  - {fileID: -5387282501131943075}
+  - {fileID: 4784411712594581238}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -113,34 +81,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &-3179177562977533766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ...
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1102 &-1335283401893937166
 AnimatorState:
   serializedVersion: 6
@@ -154,7 +94,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 2555785000257131525}
   m_StateMachineBehaviours:
-  - {fileID: -8625924935403530161}
+  - {fileID: -5631350707114732708}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -169,6 +109,20 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-1040694963486352458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: oh hi. don't mind me I'm only here cause i am in soft banishment from my
+    village.
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -217,7 +171,7 @@ AnimatorStateMachine:
     m_Position: {x: 360, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4937170298475220905}
-    m_Position: {x: 240, y: 130, z: 0}
+    m_Position: {x: 220, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5486532084133367538}
     m_Position: {x: 90, y: 180, z: 0}
@@ -306,6 +260,20 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &4784411712594581238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'soft banishment. as in my village is to kind to say I''m banished so they
+    sent me to "do archaeology" '
 --- !u!1102 &4937170298475220905
 AnimatorState:
   serializedVersion: 6
@@ -319,7 +287,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 4537718723255356368}
   m_StateMachineBehaviours:
-  - {fileID: -3179177562977533766}
+  - {fileID: -5482860565522488108}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -346,7 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   actions:
     m_PersistentCalls:
       m_Calls:
@@ -360,18 +327,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ...
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: changeanim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1102 &5486532084133367538
@@ -388,6 +343,7 @@ AnimatorState:
   - {fileID: 5532177710987743988}
   m_StateMachineBehaviours:
   - {fileID: 5806005780467301171}
+  - {fileID: -1040694963486352458}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -439,14 +395,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   actions:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
+        m_TargetAssemblyTypeName: playeractor, Assembly-CSharp
+        m_MethodName: KillControl
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
