@@ -1,4 +1,9 @@
-public class EnemySwiching : SwichePomon
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemySwiching : Switching
 {
     protected override void Awake()
     {
@@ -9,6 +14,13 @@ public class EnemySwiching : SwichePomon
             _pomonTeam = MapToBattel.enemyPomons;
 
         base.Awake();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+
+        AIPickMon();
     }
 
     public void AIPickMon()
@@ -28,9 +40,8 @@ public class EnemySwiching : SwichePomon
             }
         }
 
-        // ends the battle with a win. if enemy has no Pomon left
         if (outOfPomon)
-            BattelWin(_pomonTeam.team);
+            EndBattle((ushort)_pomonTeam.team.Count);
     }
 
     protected override void SwichePickMetthod()

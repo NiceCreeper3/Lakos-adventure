@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class tester : MonoBehaviour
 {
+
     private void Awake()
     {
         MYList<tester> my = new MYList<tester>();

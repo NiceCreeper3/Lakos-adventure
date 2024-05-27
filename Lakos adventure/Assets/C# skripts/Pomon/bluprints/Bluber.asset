@@ -58,10 +58,10 @@ MonoBehaviour:
     DefendesUp: 8
     SpeedUp: 16
     NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
+  - HealtUp: 20
+    AttackUp: 12
     DefendesUp: 10
-    SpeedUp: 10
+    SpeedUp: 13
     NewAttack: {fileID: 0}
   - HealtUp: 25
     AttackUp: 10

@@ -84,14 +84,13 @@ public class PomonsBluPrint : ScriptableObject
         {
             mon.IsDude = true;
         }
+
         /*
         mon.Attack = Random.Range(MinAttack, MaxAttack+1) + (attackgrow * (level - 1));
         mon.Defense = Random.Range(MinDefense, MaxDefense+1) + (Defensegrow * (level - 1));
         mon.MaxHealt = Random.Range(MinHealt, MaxHealt+1) + (healthgrow * (level-1));
         mon.Speed = Random.Range(MinSpeed, MaxSpeed+1) + (speedgrow * (level - 1));
         mon.CurrentHealt = mon.MaxHealt;*/
-
-
 
         mon.MaxHealt = Random.Range(MinHealt, MaxHealt);
         mon.Attack = Random.Range(MinAttack, MaxAttack);

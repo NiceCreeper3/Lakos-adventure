@@ -20,8 +20,8 @@ public class BattelLingMons : MonoBehaviour
     [SerializeField] private SpriteRenderer pomonImgeDissplay; // mite move after 
 
     [HideInInspector] public Pomons CurrentMon;
-    private SwichePomon OnSwitch;
-
+    private Switching OnSwitch;
+    
     // represents buffs
     private StatesBuff.StatsBuffs _buffs;
 
@@ -37,7 +37,7 @@ public class BattelLingMons : MonoBehaviour
     private void Awake()
     {
         // gets refrends to swichePomon
-        OnSwitch = GetComponent<SwichePomon>();
+        OnSwitch = GetComponent<Switching>();
 
         // gets a refrends to Pomon swiching
         OnSwitch.OnPomonSwiching += OnSwiche_OnPomonSwiching;

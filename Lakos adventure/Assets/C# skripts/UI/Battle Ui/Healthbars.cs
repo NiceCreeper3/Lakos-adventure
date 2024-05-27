@@ -7,7 +7,7 @@ public class Healthbars : MonoBehaviour
     #region
     [Header("The health bar parts")]
     [SerializeField] private BattelLingMons _battelLingEvents;
-    [SerializeField] private SwichePomon _omSwiche;
+    [SerializeField] private Switching _omSwiche;
     [SerializeField] private Slider _healhtSlider;
     [SerializeField] private Image _fillColor;
 
@@ -22,7 +22,6 @@ public class Healthbars : MonoBehaviour
         // subskribes to the BattelLingMons events 
         _battelLingEvents.OnHealhtChange += BattelLing_OnHealhtChange;
         _omSwiche.OnPomonSwiching += _omSwiche_OnPomonSwiching;
-        //_battelLingEvents.OnPomonSwiche += _battelLing_OnPomonSwiche;
     }
 
     private void _omSwiche_OnPomonSwiching(Pomons arg1, bool arg2)
