@@ -20,7 +20,6 @@ public class Actor : ScriptableObject
     {
         LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
         int index = data.findactor(this);
-        
         if (index != -1)
         {
             
@@ -72,6 +71,18 @@ public class Actor : ScriptableObject
             turn(1);
         }
         body.movepoint += new Vector2Int(0, length);
+    }
+    public void set(Vector2Int location)
+    {
+        LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        body.movepoint = new Vector2Int(location.x, location.y);
+        body.gameObject.transform.position = new Vector3((0.64f * location.x) + 0.32f, (0.64f * location.y) + 0.32f, 0);
+        int index = data.findactor(this);
+        if (index != -1)
+        {
+            LocationData.SceneActorData actorData = data.actordatainfo[index];
+            data.setactor(this, new Vector2Int(location.x, location.y));
+        }
     }
     public void setx(int location)
     {

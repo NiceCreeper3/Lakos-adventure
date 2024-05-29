@@ -11,7 +11,7 @@ public class Actorscript : MonoBehaviour
     [SerializeField] public Grid grid;
     [SerializeField] public Vector2Int movepoint;
     
-    private void Start()
+    private void Awake()
     {
         StartCoroutine(drawframe());
     }

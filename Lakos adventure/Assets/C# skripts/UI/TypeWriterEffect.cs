@@ -19,6 +19,7 @@ public class TypeWriterEffect : MonoBehaviour
     {
         textinteractor.textboxinsceene = this;
         textinteractor.box = gameObject;
+        anim = textinteractor.interactor.animator;
         gameObject.SetActive(false);
     }
 

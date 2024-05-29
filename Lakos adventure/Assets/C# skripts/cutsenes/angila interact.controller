@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 
+  text: 'you might find '
 --- !u!1102 &-3554833348349863688
 AnimatorState:
   serializedVersion: 6
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: 
+  text: hello again lakos. have you looked around?
 --- !u!1101 &-2369780658171216972
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

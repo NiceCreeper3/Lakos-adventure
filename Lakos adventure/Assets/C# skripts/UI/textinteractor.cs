@@ -31,22 +31,22 @@ public static class textinteractor
         controller = null;
         interactor.setcontroller();
     }
-    public static Actorscript Generateactor(Actor person)
+    public static Actorscript Generateactor(Actor person, Vector2 direction, Vector2Int location)
     {
         Debug.Log(person.name);
         if (!person.body)
         {
             if (person as playeractor == person)
             {
-                return interactor.generateplayer(person);
+                return interactor.generateplayer(person,direction, location);
             }
             else if (person as trainer == person)
             {
-                return interactor.generatetrainer(person);
+                return interactor.generatetrainer(person, direction, location);
             }
             else
             {
-                return interactor.generateactor(person);
+                return interactor.generateactor(person, direction, location);
             }
         }
         else return person.body;

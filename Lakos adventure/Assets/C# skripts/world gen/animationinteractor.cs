@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class animationinteractor : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] public Animator animator;
     [SerializeField] private Transform actorlayer; 
     [SerializeField] private GameObject actorprephap;
     [SerializeField] private GameObject trainerprephap;
@@ -26,15 +26,15 @@ public class animationinteractor : MonoBehaviour
         animator.runtimeAnimatorController = textinteractor.controller;
     }
     
-    public Actorscript generateactor(Actor person)
+    public Actorscript generateactor(Actor person, Vector2 direction, Vector2Int location)
     {
         LocationData data = GetComponent<LocationHandeler>().data;
         int index = data.findactor(person);
-        if (index == -1)
-        {
-            data.addactor(person, new Vector2Int(), null, new Vector2(0, -1));
-        }
+        data.addactor(person, location, null, direction);
+        
         Actorscript actorscript = Instantiate(actorprephap, actorlayer).GetComponent<Actorscript>();
+        actorscript.movepoint = data.actordatainfo[index].location;
+        actorscript.diretion = direction;
         actorscript.actor = person;
         GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
 
@@ -49,20 +49,21 @@ public class animationinteractor : MonoBehaviour
             }
 
         }
+        actorscript.gameObject.SetActive(true);
+        actorscript.load();
         return actorscript;
     }
-
-    public Actorscript generateplayer(Actor person)
+    public Actorscript generateplayer(Actor person, Vector2 direction, Vector2Int location)
     {
 
 
         LocationData data = GetComponent<LocationHandeler>().data;
         int index = data.findactor(person);
-        if (index == -1)
-        {
-            data.addactor(person, new Vector2Int(), null, new Vector2(0, -1));
-        }
+        data.addactor(person, location, null, direction);
+
         Actorscript actorscript = Instantiate(playerprephap, actorlayer).GetComponent<Actorscript>();
+        actorscript.movepoint = data.actordatainfo[index].location;
+        actorscript.diretion = direction;
         actorscript.actor = person;
 
         GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
@@ -95,28 +96,22 @@ public class animationinteractor : MonoBehaviour
                 break;
             }
 
-        }
-        foreach (GameObject game in @object)
-        {
-            
 
         }
-
+        actorscript.gameObject.SetActive(true);
+        actorscript.load();
         return actorscript;
     }
-    public Actorscript generatetrainer(Actor person)
+    public Actorscript generatetrainer(Actor person, Vector2 direction, Vector2Int location)
     {
         LocationData data = GetComponent<LocationHandeler>().data;
         int index = data.findactor(person);
-        if (index == -1)
-        {
-            data.addactor(person,new Vector2Int(), null,new Vector2(0,-1));
-        }
+        data.addactor(person, location, null, direction);
 
-
-        
         GameObject newtrainer = Instantiate(trainerprephap, actorlayer);
         Actorscript actorscript = newtrainer.GetComponent<Actorscript>();
+        actorscript.movepoint = data.actordatainfo[index].location;
+        actorscript.diretion = direction;
         actorscript.actor = person;
         GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
 
@@ -131,6 +126,8 @@ public class animationinteractor : MonoBehaviour
             }
 
         }
+        newtrainer.SetActive(true);
+        actorscript.load();
         return actorscript;
     }
 }
