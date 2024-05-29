@@ -44,19 +44,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}
   StatesGrows:
   - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
+    AttackUp: 10
+    DefendesUp: 10
+    SpeedUp: 10
     NewAttack: {fileID: 0}
   - HealtUp: 25
     AttackUp: 10

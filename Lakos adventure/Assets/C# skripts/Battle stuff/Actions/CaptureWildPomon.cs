@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CaptureWildPomon : MonoBehaviour
@@ -10,12 +8,12 @@ public class CaptureWildPomon : MonoBehaviour
 
     private static Pomons _currentCapture;
 
-    private SwichePomon OnPomonSwich;
+    private Switching OnPomonSwich;
 
     private void Awake()
     {
         // subscribs to the event
-        OnPomonSwich = GetComponent<SwichePomon>();
+        OnPomonSwich = GetComponent<Switching>();
         OnPomonSwich.OnPomonSwiching += OnPomonSwich_OnPomonSwiching;
     }
 

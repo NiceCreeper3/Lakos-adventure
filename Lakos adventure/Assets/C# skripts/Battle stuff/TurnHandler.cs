@@ -23,13 +23,12 @@ public class TurnHandler : MonoBehaviour
     [SerializeField] private CaptureWildPomon _chapturePomon;
 
     [Header("refrends to event")]
-    [SerializeField] private SwichePomon _onEnemySwiche;
+    [SerializeField] private Switching _onEnemySwiche;
 
     public static bool FreeAction;
 
     public delegate void TurnAction();
     private TurnAction _playerAction, _enemyAction;
-
 
     private ushort _playerAttack;
 

@@ -11,6 +11,7 @@ public class ShowPomonInfo : MonoBehaviour
     [Header("Where to show info")]
     [SerializeField] private Image Image;
     [SerializeField] private TMP_Text _flaverText;
+    [SerializeField] private TMP_Text _showLevel;
     [SerializeField] private TMP_Text _showHealt;
     [SerializeField] private TMP_Text _showAttack;
     [SerializeField] private TMP_Text _showDefens;
@@ -37,12 +38,15 @@ public class ShowPomonInfo : MonoBehaviour
     }
 
     private void ShowInfo(Pomons pomonToShow)
-    {     
+    {   
+        // Info
         Image.sprite = pomonToShow.Spesies.front;
+        if (pomonToShow.level != null)
+            _showLevel.text = $"({pomonToShow.level.GetLevelNumber()})";
         _flaverText.text = pomonToShow.Spesies.description;
 
         #region Pomon states
-        _showHealt.text = $"HP\n{pomonToShow.CurrentHealt}/{pomonToShow.MaxHealt}";
+        _showHealt.text = $"({pomonToShow.CurrentHealt}/{pomonToShow.MaxHealt})";
         _showAttack.text = $"Attack:({pomonToShow.Attack})";
         _showDefens.text = $"Defense:({pomonToShow.Defense})";
         _showSpeed.text = $"Speed:({pomonToShow.Speed})";

@@ -38,10 +38,9 @@ public class LevelSystem
 
         _experience += xp;
 
-        Debug.Log($" Level({_level}), XP To level({_experienceToNextLevel}), Xp granted({xp})");
-
         while (_experience >= _experienceToNextLevel && _experience != 0)
         {
+            Debug.Log($" Level({_level}), XP To level({_experienceToNextLevel}), Xp granted({xp}/{_experience})");
 
             if (_level > _maxLevel)
             {
@@ -59,8 +58,10 @@ public class LevelSystem
                 timesItLevel++;
 
                 OnLevelChanged?.Invoke(this, EventArgs.Empty);
-            }
+            }          
         }
+
+        Debug.Log($" Level({_level}), XP To level({_experienceToNextLevel}), Xp granted({xp}/{_experience})");
 
         OnExperienceChanged?.Invoke(this, EventArgs.Empty);
 
@@ -73,10 +74,7 @@ public class LevelSystem
         int baseMultiplyer = 100;
         int ToNewLevel = 0;
 
-        if (levelMath <= 0)
-            levelMath = 1;
-
-        ToNewLevel = baseMultiplyer * levelMath;
+        ToNewLevel = (1 + levelMath) * baseMultiplyer;
 
         return ToNewLevel;
     }
@@ -90,13 +88,11 @@ public class LevelSystem
     public void IncreseStates(Pomons pomon, int levelUp)
     {
         PomonsBluPrint.Statgrow[] states = pomon.Spesies.StatesGrows;
-
-        Debug.Log(states + "III" + states[1].HealtUp + "III" + states.Length);
         
         // increse the Pomons states using its states growf and how mane leves it went up
         for (int i = 0; i < levelUp; i++)
         {
-            Debug.Log(i + _level);
+            Debug.Log($"Level to stat increse {1 - i + _level}");
 
             pomon.MaxHealt += states[i + _level].HealtUp;
             pomon.Attack += states[i + _level].AttackUp;
@@ -113,7 +109,8 @@ public class LevelSystem
 
     public float GetExperienceNormalizez()
     {
-        return (float)_experience / _experienceToNextLevel;
+        //return (float)_experience / _experienceToNextLevel;
+        return _experience;
     }
 
     public int GetExpirenceOntilNextLevel()
