@@ -38,6 +38,6 @@ public class Generateinlocation : StateMachineBehaviour
 
 
         }
-
+        animator.SetTrigger("continue");
     }
 }

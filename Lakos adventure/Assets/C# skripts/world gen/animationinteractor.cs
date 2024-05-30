@@ -26,12 +26,13 @@ public class animationinteractor : MonoBehaviour
         animator.runtimeAnimatorController = textinteractor.controller;
     }
     
-    public Actorscript generateactor(Actor person, Vector2 direction, Vector2Int location)
+    public Actorscript generateactor(Actor person, Vector2 direction, Vector2Int location) 
     {
         LocationData data = GetComponent<LocationHandeler>().data;
-        int index = data.findactor(person);
-        data.addactor(person, location, null, direction);
         
+        data.addactor(person, location, null, direction);
+        int index = data.findactor(person);
+
         Actorscript actorscript = Instantiate(actorprephap, actorlayer).GetComponent<Actorscript>();
         actorscript.movepoint = data.actordatainfo[index].location;
         actorscript.diretion = direction;
@@ -58,8 +59,9 @@ public class animationinteractor : MonoBehaviour
 
 
         LocationData data = GetComponent<LocationHandeler>().data;
-        int index = data.findactor(person);
+        
         data.addactor(person, location, null, direction);
+        int index = data.findactor(person);
 
         Actorscript actorscript = Instantiate(playerprephap, actorlayer).GetComponent<Actorscript>();
         actorscript.movepoint = data.actordatainfo[index].location;
@@ -105,8 +107,9 @@ public class animationinteractor : MonoBehaviour
     public Actorscript generatetrainer(Actor person, Vector2 direction, Vector2Int location)
     {
         LocationData data = GetComponent<LocationHandeler>().data;
-        int index = data.findactor(person);
+
         data.addactor(person, location, null, direction);
+        int index = data.findactor(person);
 
         GameObject newtrainer = Instantiate(trainerprephap, actorlayer);
         Actorscript actorscript = newtrainer.GetComponent<Actorscript>();

@@ -137,6 +137,8 @@ public class Actorscript : MonoBehaviour
     }
     public void load()
     {
+        int index = grid.GetComponent<LocationHandeler>().data.findactor(actor);
+
         gameObject.transform.position = (new Vector3(movepoint.x, movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f);
         actor.body = this;
         GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
