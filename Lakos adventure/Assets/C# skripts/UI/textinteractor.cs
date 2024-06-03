@@ -49,7 +49,12 @@ public static class textinteractor
                 return interactor.generateactor(person, direction, location);
             }
         }
-        else return person.body;
+        else
+        {
+            person.set(location);
+            person.turn(direction);
+        }
+        return person.body;
 
 
     }

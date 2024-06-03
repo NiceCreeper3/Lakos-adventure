@@ -32,17 +32,8 @@ public class Actor : ScriptableObject
             int change = actorData.location.x + length;
             data.setactor(this,new Vector2Int(change, actorData.location.y));
         }
-        
 
-        
-        if (length < 0)
-        {
-            turn(3);
-        }
-        else if (length > 0)
-        {
-            turn(4);
-        }
+        turn(new Vector2(length,0));
         body.movepoint += new Vector2Int(length, 0);
     }
     public void movey(int length)
@@ -61,15 +52,7 @@ public class Actor : ScriptableObject
             int change = actorData.location.y + length;
             data.setactor(this, new Vector2Int(actorData.location.x, change));
         }
-
-        if (length < 0)
-        {
-            turn(2);
-        }
-        else if (length > 0)
-        {
-            turn(1);
-        }
+        turn(new Vector2(0, length));
         body.movepoint += new Vector2Int(0, length);
     }
     public void set(Vector2Int location)
