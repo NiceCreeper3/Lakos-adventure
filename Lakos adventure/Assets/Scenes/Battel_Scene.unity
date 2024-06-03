@@ -6888,7 +6888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.89329875, g: 0.8962264, b: 0.30015132, a: 1}
+  m_Color: {r: 0.6194533, g: 0.6226415, b: 0.13803844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17799,7 +17799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f6be9bb054f2540be32be632179ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pomonTeam: {fileID: 11400000, guid: c1602a223994be9468b3fe93138b2f5c, type: 2}
+  _pomonTeam: {fileID: 0}
   _isPlayer: 0
 --- !u!1 &2089643338
 GameObject:

@@ -74,6 +74,7 @@ public class LevelSystem
         int baseMultiplyer = 100;
         int ToNewLevel = 0;
 
+
         ToNewLevel = (1 + levelMath) * baseMultiplyer;
 
         return ToNewLevel;

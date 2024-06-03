@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94bd3097e5303f49b3cf644d39066d5, type: 3}
-  m_Name: Teast
+  m_Name: "\xCDIIIII"
   m_EditorClassIdentifier: 
-  PomonName: H
-  Spesies: {fileID: 11400000, guid: 3f9da5a69dba8e94eafd4b261a48ff15, type: 2}
+  PomonName: IIIIIIIIII
+  Spesies: {fileID: 11400000, guid: 2a55a190731c67a42b84e2457471839d, type: 2}
   IsDude: 0
-  MaxHealt: 125
-  CurrentHealt: 125
-  Attack: 37
-  Speed: 36
-  Defense: 47
+  MaxHealt: 100
+  CurrentHealt: 0
+  Attack: 12
+  Speed: 12
+  Defense: 12
   PomonMoves:
+  - {fileID: 11400000, guid: a776e9c4348b6b649b964eba16ba23ef, type: 2}
   - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
-  - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}
-  - {fileID: 11400000, guid: ce09a2f2552be514b9ced8ff9c4567d4, type: 2}
