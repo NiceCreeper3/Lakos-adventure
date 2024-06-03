@@ -15,13 +15,15 @@ public class Generateinlocation : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        string debugText = "the @objeck array: ";
         
 
         GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
-        
+   
         foreach (GameObject game in @object)
         {
+            debugText += game.name + ", "; 
+
             data.addactor(actor, location, interact, direction);
             LocationHandeler handeler1 = game.GetComponent<LocationHandeler>();
             if (handeler1)
@@ -34,10 +36,14 @@ public class Generateinlocation : StateMachineBehaviour
                     break;
                 }
             }
+            else 
+            {
+                Debug.Log("Error code not finde LocationHandeler");
+            }
             
-
-
         }
+
+        Debug.Log(debugText);
         animator.SetTrigger("continue");
     }
 }

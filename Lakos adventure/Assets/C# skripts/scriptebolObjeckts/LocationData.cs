@@ -14,6 +14,14 @@ public class LocationData : ScriptableObject
         public RuntimeAnimatorController interaction;
         public Vector2Int location;
         public Vector2 direction;
+
+        public SceneActorData(Actor actor = default, RuntimeAnimatorController interaction = default, Vector2Int location = default, Vector2 direction = default)
+        {
+            this.actor = actor;
+            this.interaction = interaction;
+            this.location = location;
+            this.direction = direction;
+        }
     }
 
     public SceneLoader.ScenesToLoad toLoad;
@@ -52,14 +60,8 @@ public class LocationData : ScriptableObject
         }
         if (!existsts)
         {
-
-            SceneActorData data = new SceneActorData();
-            data.actor = actor;
-            data.direction = direction;
-            data.location = location;
-            data.interaction = interaction;
+            SceneActorData data = new SceneActorData(actor, interaction, location, direction);
             actordatainfo.Add(data);
-
         }
 
     }
