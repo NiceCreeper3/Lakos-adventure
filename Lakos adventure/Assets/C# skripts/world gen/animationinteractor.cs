@@ -34,7 +34,7 @@ public class animationinteractor : MonoBehaviour
         int index = data.findactor(person);
 
         Actorscript actorscript = Instantiate(actorprephap, actorlayer).GetComponent<Actorscript>();
-        actorscript.movepoint = data.actordatainfo[index].location;
+        actorscript.movepoint = location;
         actorscript.diretion = direction;
         actorscript.actor = person;
         GameObject[] @object = SceneManager.GetActiveScene().GetRootGameObjects();
