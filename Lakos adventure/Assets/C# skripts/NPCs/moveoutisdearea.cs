@@ -24,7 +24,9 @@ public class Generateinlocation : StateMachineBehaviour
         {
             debugText += game.name + ", "; 
 
+            // Error breacks the code
             data.addactor(actor, location, interact, direction);
+
             LocationHandeler handeler1 = game.GetComponent<LocationHandeler>();
             if (handeler1)
             {
