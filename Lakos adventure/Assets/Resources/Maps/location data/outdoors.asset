@@ -22,3 +22,7 @@ MonoBehaviour:
     interaction: {fileID: 0}
     location: {x: -5, y: -5}
     direction: {x: 0, y: -1}
+  - actor: {fileID: 11400000, guid: 84ac8ef57481d184fa09b45ec1255fc3, type: 2}
+    interaction: {fileID: 0}
+    location: {x: -8, y: -5}
+    direction: {x: -1, y: 0}
