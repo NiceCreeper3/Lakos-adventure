@@ -26,13 +26,15 @@ public class animationinteractor : MonoBehaviour
         animator.runtimeAnimatorController = textinteractor.controller;
     }
     
-    public Actorscript generateactor(Actor person, Vector2 direction, Vector2Int location) 
+    public Actorscript generateactor(Actor person, Vector2 direction, Vector2Int location, RuntimeAnimatorController interaction) 
     {
         LocationData data = GetComponent<LocationHandeler>().data;
-        data.addactor(person, location, null, direction);
+        data.addactor(person, location, interaction, direction);
         Actorscript actorscript = Instantiate(actorprephap, actorlayer).GetComponent<Actorscript>();
         actorscript.actor = person;
+        actorscript.actor.interaction = interaction;
 
+        
         actorscript.grid = GetComponent<Grid>();
 
         actorscript.gameObject.SetActive(true);
@@ -79,15 +81,16 @@ public class animationinteractor : MonoBehaviour
         actorscript.load();
         return actorscript;
     }
-    public Actorscript generatetrainer(Actor person, Vector2 direction, Vector2Int location)
+    public Actorscript generatetrainer(Actor person, Vector2 direction, Vector2Int location, RuntimeAnimatorController interaction)
     {
         LocationData data = GetComponent<LocationHandeler>().data;
 
-        data.addactor(person, location, null, direction);
+        data.addactor(person, location, interaction, direction);
 
         GameObject newtrainer = Instantiate(trainerprephap, actorlayer);
         Actorscript actorscript = newtrainer.GetComponent<Actorscript>();
         actorscript.actor = person;
+        actorscript.actor.interaction = interaction;
 
         actorscript.grid = GetComponent<Grid>();
         newtrainer.SetActive(true);

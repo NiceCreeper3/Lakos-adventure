@@ -11,7 +11,7 @@ public class LocationHandeler : MonoBehaviour
         LocationData.SceneActorData[] truedata = data.actordatainfo.ToArray();
         foreach (LocationData.SceneActorData sceneActor in truedata)
         {
-            sceneActor.actor.body = textinteractor.Generateactor(sceneActor.actor, sceneActor.direction, sceneActor.location);
+            sceneActor.actor.body = textinteractor.Generateactor(sceneActor.actor, sceneActor.direction, sceneActor.location,sceneActor.interaction);
             sceneActor.actor.interaction = sceneActor.interaction;
         }
     }

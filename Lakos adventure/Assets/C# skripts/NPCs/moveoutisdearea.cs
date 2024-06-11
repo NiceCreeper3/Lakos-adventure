@@ -32,7 +32,7 @@ public class Generateinlocation : StateMachineBehaviour
 
                 if (handeler1.data == data)
                 {
-                    Actorscript actorscript = textinteractor.Generateactor(actor, direction, location);
+                    Actorscript actorscript = textinteractor.Generateactor(actor, direction, location, interact);
                     actorscript.actor.changeinteraction(interact);
                     break;
                 }

@@ -31,7 +31,7 @@ public static class textinteractor
         controller = null;
         interactor.setcontroller();
     }
-    public static Actorscript Generateactor(Actor person, Vector2 direction, Vector2Int location)
+    public static Actorscript Generateactor(Actor person, Vector2 direction, Vector2Int location, RuntimeAnimatorController interaction)
     {
         Debug.Log(person.name + " at: " + location);
         if (!person.body)
@@ -41,20 +41,23 @@ public static class textinteractor
                 Actorscript actorscript = interactor.generateplayer(person,direction, location);
                 person.set(location);
                 person.turn(direction);
+                person.changeinteraction(interaction);
                 return actorscript;
             }
             else if (person as trainer == person)
             {
-                Actorscript actorscript = interactor.generatetrainer(person, direction, location);
+                Actorscript actorscript = interactor.generatetrainer(person, direction, location, interaction);
                 person.set(location);
                 person.turn(direction);
+                person.changeinteraction(interaction);
                 return actorscript;
             }
             else
             {
-                Actorscript actorscript = interactor.generateactor(person, direction, location);
+                Actorscript actorscript = interactor.generateactor(person, direction, location, interaction);
                 person.set(location);
                 person.turn(direction);
+                person.changeinteraction(interaction);
                 return actorscript;
             }
         }
@@ -62,6 +65,7 @@ public static class textinteractor
         {
             person.set(location);
             person.turn(direction);
+            person.changeinteraction(interaction);
             return person.body;
         }
 
