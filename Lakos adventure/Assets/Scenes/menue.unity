@@ -159,7 +159,6 @@ MonoBehaviour:
   startarea: {fileID: 11400000, guid: 26cf0d81c9371354087eb38fed7ef77b, type: 2}
   StartScenes: 1
   openingcutscene: {fileID: 9100000, guid: f8952ff7daa43e74d8dd7d69d15f1ca2, type: 2}
-  texter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
 --- !u!114 &58692251
 MonoBehaviour:
   m_ObjectHideFlags: 0

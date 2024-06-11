@@ -630,8 +630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  grid: {fileID: 2300091223189497660}
-  warparea: 0
+  exitlocation: {x: 0, y: 0}
+  location: {fileID: 0}
 --- !u!114 &6749735000976432288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +711,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6963296493486582039}
   m_Enabled: 1
-  m_CellSize: {x: 0.63, y: 0.63, z: 0}
+  m_CellSize: {x: 0.64, y: 0.64, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -748,11 +748,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c15dabf20e693a48b17b2334adb007f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handler: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   animator: {fileID: 5998923698747512450}
   actorlayer: {fileID: 0}
   actorprephap: {fileID: 5811109040177542217, guid: aa5cb5808e082e44c96a753259a25d0b, type: 3}
   trainerprephap: {fileID: 2390608917331487456, guid: 69b706f2e936a38468993672d14e42a9, type: 3}
+  playerprephap: {fileID: 0}
 --- !u!114 &4695674146003077600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,4 +766,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 0}
-  inizilizer: {fileID: 0}

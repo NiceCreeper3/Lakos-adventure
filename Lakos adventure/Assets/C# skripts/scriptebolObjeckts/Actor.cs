@@ -57,15 +57,12 @@ public class Actor : ScriptableObject
     }
     public void set(Vector2Int location)
     {
+        
         LocationData data = textinteractor.interactor.GetComponent<LocationHandeler>().data;
+        Debug.Log(name + " at: " + location);
         body.movepoint = new Vector2Int(location.x, location.y);
         body.gameObject.transform.position = new Vector3((0.64f * location.x) + 0.32f, (0.64f * location.y) + 0.32f, 0);
-        int index = data.findactor(this);
-        if (index != -1)
-        {
-            LocationData.SceneActorData actorData = data.actordatainfo[index];
-            data.setactor(this, new Vector2Int(location.x, location.y));
-        }
+        data.setactor(this, new Vector2Int(location.x, location.y));
     }
     public void setx(int location)
     {
@@ -164,22 +161,23 @@ public class Actor : ScriptableObject
         if (body)
         {
             SpriteRenderer renderer = body.GetComponentInChildren<SpriteRenderer>();
-            if (direction == new Vector2(0, 1))
+            direction.Normalize();
+            if (direction.y == 1)
             {
                 body.diretion = new Vector2(0, 1);
                 renderer.sprite = Getsprite("forward");
             }
-            else if (direction == new Vector2(0, -1))
+            else if (direction.y == -1)
             {
                 body.diretion = new Vector2(0, -1);
                 renderer.sprite = Getsprite("back");
             }
-            else if (direction == new Vector2(-1, 0))
+            else if (direction.x == -1)
             {
                 body.diretion = new Vector2(-1, 0);
                 renderer.sprite = Getsprite("left");
             }
-            else if (direction == new Vector2(1, 0))
+            else if (direction.x == 1)
             {
                 body.diretion = new Vector2(1, 0);
                 renderer.sprite = Getsprite("right");

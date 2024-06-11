@@ -137,54 +137,13 @@ public class Actorscript : MonoBehaviour
     }
     public void load()
     {
-        int index = grid.GetComponent<LocationHandeler>().data.findactor(actor);
 
         gameObject.transform.position = (new Vector3(movepoint.x, movepoint.y) * 0.64f) + new Vector3(0.32f, 0.32f);
         actor.body = this;
-        GameObject[] objectsinscene = SceneManager.GetActiveScene().GetRootGameObjects();
-        foreach (GameObject game in objectsinscene)
-        {
-            try
-            {
-                grid = game.GetComponent<Grid>();
-            }
-            catch
-            {
 
-            }
-            
-            if (grid)
-            {
-                break;
-            }
-        }
-        
+        grid = textinteractor.interactor.GetComponent<Grid>();
 
-        if (diretion.y != 0)
-        {
-            if (diretion.y >= 0)
-            {
-                actor.turn(1);
-            }
-            else
-            {
-                actor.turn(2);
-            }
-
-        }
-        else if (0 != diretion.x)
-        {
-            if (diretion.x >= 0)
-            {
-                actor.turn(4);
-            }
-            else
-            {
-                actor.turn(3);
-            }
-
-
-        }
+        actor.turn(diretion);
     }
     public void interact()
     {

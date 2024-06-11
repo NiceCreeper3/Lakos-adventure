@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a4771f154b6bc4ca61e9ba901d9f69, type: 3}
   m_Name: angila
   m_EditorClassIdentifier: 
-  Name: mc newbe
+  Name: angila
   sprites:
   - {fileID: 645713976, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
   - {fileID: 229635972, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
@@ -27,5 +27,4 @@ MonoBehaviour:
   - {fileID: 1425919287, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
   - {fileID: -112018892, guid: 3be28efdcdc8d0d4699fd89a021ad4de, type: 3}
   body: {fileID: 0}
-  Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

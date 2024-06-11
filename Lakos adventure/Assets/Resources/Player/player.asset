@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c42ac3e01970e745be091c44ac636fe, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
-  Name: max
+  Name: lakos
   sprites:
   - {fileID: 884876923, guid: 344ed321561419b498b90bae12653863, type: 3}
   - {fileID: 518400372, guid: 344ed321561419b498b90bae12653863, type: 3}
@@ -27,5 +27,4 @@ MonoBehaviour:
   - {fileID: 1363018722, guid: 344ed321561419b498b90bae12653863, type: 3}
   - {fileID: 1506008552, guid: 344ed321561419b498b90bae12653863, type: 3}
   body: {fileID: 0}
-  Textinteractor: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   interaction: {fileID: 0}

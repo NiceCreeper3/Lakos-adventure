@@ -33,28 +33,39 @@ public static class textinteractor
     }
     public static Actorscript Generateactor(Actor person, Vector2 direction, Vector2Int location)
     {
-        Debug.Log(person.name);
+        Debug.Log(person.name + " at: " + location);
         if (!person.body)
         {
             if (person as playeractor == person)
             {
-                return interactor.generateplayer(person,direction, location);
+                Actorscript actorscript = interactor.generateplayer(person,direction, location);
+                person.set(location);
+                person.turn(direction);
+                return actorscript;
             }
             else if (person as trainer == person)
             {
-                return interactor.generatetrainer(person, direction, location);
+                Actorscript actorscript = interactor.generatetrainer(person, direction, location);
+                person.set(location);
+                person.turn(direction);
+                return actorscript;
             }
             else
             {
-                return interactor.generateactor(person, direction, location);
+                Actorscript actorscript = interactor.generateactor(person, direction, location);
+                person.set(location);
+                person.turn(direction);
+                return actorscript;
             }
         }
         else
         {
             person.set(location);
             person.turn(direction);
+            return person.body;
         }
-        return person.body;
+
+
 
 
     }

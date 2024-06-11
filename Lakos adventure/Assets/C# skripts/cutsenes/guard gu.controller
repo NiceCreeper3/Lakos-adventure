@@ -12,22 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
   actions:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: changeanim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ...
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 575513a388224ed4480081f9e477cc46, type: 2}
         m_TargetAssemblyTypeName: trainer, Assembly-CSharp
         m_MethodName: attack
@@ -53,7 +40,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 4281270617802088522}
   m_StateMachineBehaviours:
-  - {fileID: 5076127731610032847}
+  - {fileID: -4865247397170629521}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -68,6 +55,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-4865247397170629521
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: hey. you! you need to show some identification
 --- !u!1101 &-4277422101284415195
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -146,6 +146,19 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &995040800998130073
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: wait you're the guy who's been increasing the swoink population.
 --- !u!1102 &3796555593152887913
 AnimatorState:
   serializedVersion: 6
@@ -159,7 +172,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -748919000331863692}
   m_StateMachineBehaviours:
-  - {fileID: 6918570653101024006}
+  - {fileID: 6285578047837249408}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -201,6 +214,20 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &4179532381184819038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: we already have difficulty keeping their numbers at a managable level. your
+    under arrest.
 --- !u!1101 &4281270617802088522
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -246,7 +273,7 @@ AnimatorStateMachine:
     m_Position: {x: 380, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3796555593152887913}
-    m_Position: {x: 260, y: 120, z: 0}
+    m_Position: {x: 250, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5272213860847750372}
     m_Position: {x: 110, y: 170, z: 0}
@@ -260,62 +287,6 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -5272213860847750372}
---- !u!114 &5076127731610032847
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: hey. do you have proper idetntification.
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5098814915879737223
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: i'm going to have to take you in
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1101 &6029437603943491124
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -341,6 +312,19 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &6285578047837249408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: you don't have any?
 --- !u!1102 &6695949784550716047
 AnimatorState:
   serializedVersion: 6
@@ -354,7 +338,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 6029437603943491124}
   m_StateMachineBehaviours:
-  - {fileID: 7817694412259852904}
+  - {fileID: 995040800998130073}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -369,63 +353,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &6918570653101024006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: then i can't let you in i'm affraid.
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &7817694412259852904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1f8ce93591c5c4b9be06a777ee39da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeWriter: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-  actions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b7e1700b3e06faa4ea2dbcd8b2bf4cb7, type: 2}
-        m_TargetAssemblyTypeName: textinteractor, Assembly-CSharp
-        m_MethodName: RunTextBox
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: wait, your the guy who keeps releasing swoinks aren't
-            you
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1102 &9059849467338710242
 AnimatorState:
   serializedVersion: 6
@@ -439,7 +366,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -4277422101284415195}
   m_StateMachineBehaviours:
-  - {fileID: 5098814915879737223}
+  - {fileID: 4179532381184819038}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

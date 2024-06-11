@@ -7,6 +7,8 @@ public class MainMenuButtons : MonoBehaviour
     [Header("new game peramiters")]
     [SerializeField] private Vector2Int startlocation;
     [SerializeField] private playeractor player;
+    [SerializeField] private pomonlist generate;
+    [SerializeField] private int level;
     [SerializeField] private LocationData  startarea;
     [SerializeField] private SceneLoader.ScenesToLoad StartScenes;
     [SerializeField] private RuntimeAnimatorController openingcutscene;

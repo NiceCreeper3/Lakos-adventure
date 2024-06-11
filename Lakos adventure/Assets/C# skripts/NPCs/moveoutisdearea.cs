@@ -24,8 +24,7 @@ public class Generateinlocation : StateMachineBehaviour
         {
             debugText += game.name + ", "; 
 
-            // Error breacks the code
-            data.addactor(actor, location, interact, direction);
+            
 
             LocationHandeler handeler1 = game.GetComponent<LocationHandeler>();
             if (handeler1)
@@ -37,10 +36,10 @@ public class Generateinlocation : StateMachineBehaviour
                     actorscript.actor.changeinteraction(interact);
                     break;
                 }
-            }
-            else 
-            {
-                Debug.Log("Error code not finde LocationHandeler");
+                else
+                {
+                    data.addactor(actor, location, interact, direction);
+                }
             }
             
         }

@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 1677980464166054219}
   - component: {fileID: 2587593765236307850}
   - component: {fileID: 282440323438178109}
-  - component: {fileID: 6011829335878820820}
   m_Layer: 0
   m_Name: actor
   m_TagString: Untagged
@@ -197,17 +196,4 @@ MonoBehaviour:
   actor: {fileID: 0}
   diretion: {x: 0, y: 0}
   grid: {fileID: 0}
-  movepoint: {x: 0.31, y: 0.31, z: 0}
---- !u!114 &6011829335878820820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5811109040177542217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b6f8edda9e7cd43bf01703576789d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
+  movepoint: {x: 0, y: 0}

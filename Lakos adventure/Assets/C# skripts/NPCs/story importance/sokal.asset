@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3850a751faf0ba4baf31918090612d4, type: 3}
+  m_Name: sokal
+  m_EditorClassIdentifier: 
+  Name: Socal
+  sprites:
+  - {fileID: 29084008, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: 727870300, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: -1379707097, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: -2111532363, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: -1319374491, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: -1475073245, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: 1542548041, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: -1952587200, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: 1164637902, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: -935914089, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: 997126816, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  - {fileID: 1970793269, guid: 892feb9c4f8d91141ace62514f5086a1, type: 3}
+  body: {fileID: 0}
+  interaction: {fileID: 0}
+  battlesprite: {fileID: 0}
+  Seaching: 0
+  defeated: 0
+  trainerTeam: {fileID: 0}
