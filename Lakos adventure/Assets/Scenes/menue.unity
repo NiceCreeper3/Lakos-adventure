@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startlocation: {x: -5, y: -5}
   player: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
+  generate: {fileID: 0}
+  level: 0
   startarea: {fileID: 11400000, guid: 26cf0d81c9371354087eb38fed7ef77b, type: 2}
   StartScenes: 1
   openingcutscene: {fileID: 9100000, guid: f8952ff7daa43e74d8dd7d69d15f1ca2, type: 2}
@@ -243,11 +245,11 @@ RectTransform:
   - {fileID: 166119642}
   m_Father: {fileID: 1215329382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -236.89716, y: 161.54}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -84.92999, y: 31.539993}
   m_SizeDelta: {x: 66.0657, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &162141875
 MonoBehaviour:
   m_ObjectHideFlags: 0

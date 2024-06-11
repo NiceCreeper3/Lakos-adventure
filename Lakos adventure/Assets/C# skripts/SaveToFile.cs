@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public static class SaveToFile
 {
-   public static int saveplayed;
+   public static int saveplayed = -1; 
    public static void savefile()
    {
         savegame(saveplayed);
@@ -19,8 +19,12 @@ public static class SaveToFile
 
     public static void savegame(int playedsave)
     {
-        
-            
+
+        if (saveplayed < 0)
+        {
+            savegame();
+            return;
+        }    
         string savePath = Path.Combine(Application.dataPath, "saves", "save"+playedsave);
         if (!Directory.Exists(savePath))
         {

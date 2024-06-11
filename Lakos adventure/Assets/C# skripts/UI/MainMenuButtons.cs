@@ -18,6 +18,7 @@ public class MainMenuButtons : MonoBehaviour
     {
         textinteractor.controller = openingcutscene;
         startarea.addactor(player, startlocation, null, new Vector2(0,-1));
+        SaveToFile.saveplayed = -1;
         SceneLoader.ChageScene(StartScenes);
     }
     private void Start()

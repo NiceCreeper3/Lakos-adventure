@@ -20,5 +20,5 @@ MonoBehaviour:
     direction: {x: 0, y: -1}
   - actor: {fileID: 11400000, guid: c42a55268d4580545a891dd16996dd0e, type: 2}
     interaction: {fileID: 0}
-    location: {x: -5, y: -5}
+    location: {x: 2, y: -5}
     direction: {x: 0, y: -1}
