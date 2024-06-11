@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee459f978958b4498418d71781a5783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: ill be standing over there if you need anymore any help.
+  text: ill be standing over there if you need anymore help.
 --- !u!1101 &3060549589303149903
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
