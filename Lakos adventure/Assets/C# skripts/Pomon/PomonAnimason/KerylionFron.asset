@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83171c6b0e4ce6045b17d252ed892be2, type: 3}
+  m_Name: KerylionFron
+  m_EditorClassIdentifier: 
+  AnimasonFrames:
+  - Fram: {fileID: 21300000, guid: 028f693520155fb4fb4bc03b7f5e2bad, type: 3}
+    TimeOnTilNextFrame: 0
+  - Fram: {fileID: 21300000, guid: 08f46364a4fb7c64e9d1d7bba81f8b31, type: 3}
+    TimeOnTilNextFrame: 0.25
+  - Fram: {fileID: 21300000, guid: 028f693520155fb4fb4bc03b7f5e2bad, type: 3}
+    TimeOnTilNextFrame: 1
+  - Fram: {fileID: 21300000, guid: ff1d2cfbcbd30324ba6a672e17c855bd, type: 3}
+    TimeOnTilNextFrame: 2

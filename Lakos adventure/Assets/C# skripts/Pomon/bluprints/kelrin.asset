@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: kelrin
   m_EditorClassIdentifier: 
   name: kelrin
-  front: {fileID: 21300000, guid: af07f0624ff74ce4f9d7dca25c004829, type: 3}
-  back: {fileID: 21300000, guid: af07f0624ff74ce4f9d7dca25c004829, type: 3}
+  front: {fileID: 21300000, guid: ff1d2cfbcbd30324ba6a672e17c855bd, type: 3}
+  back: {fileID: 21300000, guid: 08f46364a4fb7c64e9d1d7bba81f8b31, type: 3}
   description: '[insert kelrin flavior text]'
   genderratio: 65
-  BackAniasonAT: {fileID: 0}
-  FrontAnimasonAT: {fileID: 0}
+  BackAniasonAT: {fileID: 11400000, guid: 666e33abee6af9b49aa60dfd631a1940, type: 2}
+  FrontAnimasonAT: {fileID: 11400000, guid: 6f5a2ff08bb5a154f83076d35f3c9e4c, type: 2}
   MinHealt: 135
   MaxHealt: 142
   healthgrow: 1
