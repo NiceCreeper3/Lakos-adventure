@@ -19,12 +19,12 @@ public static class SaveToFile
 
     public static void savegame(int playedsave)
     {
-
+        validatesaves();
         if (saveplayed < 0)
         {
             savegame();
             return;
-        }    
+        }
         string savePath = Path.Combine(Application.dataPath, "saves", "save"+playedsave);
         if (!Directory.Exists(savePath))
         {
@@ -97,6 +97,7 @@ public static class SaveToFile
         }
         extrtdata.Add(playedsave.ToString());
         File.WriteAllLines(Path.Combine(savePath, "ExtraData.txt"),extrtdata);
+        saveplayed = playedsave;
     }
 
     private static void validatesaves()
