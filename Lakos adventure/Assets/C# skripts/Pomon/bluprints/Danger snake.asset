@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Snappersapper
   front: {fileID: 21300000, guid: c96030c7c9ddeb74f9bf63e465064cd3, type: 3}
   back: {fileID: 21300000, guid: af846ea45be354f4db7351f7f66a0221, type: 3}
-  description: 
+  description: they aren't dangerus but swoinks seem to fear them for some unkown
+    reason.
   genderratio: 45
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}

@@ -15,8 +15,9 @@ MonoBehaviour:
   name: Carbon head
   front: {fileID: 21300000, guid: 14b29848c0d7f754d957767d42fc4db7, type: 3}
   back: {fileID: 21300000, guid: 14b29848c0d7f754d957767d42fc4db7, type: 3}
-  description: 
-  genderratio: 45
+  description: carbon heads are commonly found in anchent ruins or places with lots
+    of people. it is suspected that carbon heads are made of actual skeletons
+  genderratio: 50
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}
   MinHealt: 125

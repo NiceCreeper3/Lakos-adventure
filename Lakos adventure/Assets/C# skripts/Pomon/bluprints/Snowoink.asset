@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Snowoink
   front: {fileID: 21300000, guid: 54966c9f39badf842a3c63ad8a9beae8, type: 3}
   back: {fileID: 21300000, guid: 203b15da8508c6843b3e4884901e9032, type: 3}
-  description: if you have ever sean only one sowoink. its cose you are hafe blind
+  description: swoinks reproduce incredibly quick. a swoink can have up to five offspring
+    in a day.if you have ever sean only one sowoink. its cause you're hafe blind.
   genderratio: 50
   BackAniasonAT: {fileID: 11400000, guid: 1659831372904ad47b03b81f1bb872e4, type: 2}
   FrontAnimasonAT: {fileID: 11400000, guid: 282b94d402619a3438720728dcd1df6c, type: 2}

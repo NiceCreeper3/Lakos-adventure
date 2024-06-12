@@ -15,7 +15,9 @@ MonoBehaviour:
   name: Krownflowrey
   front: {fileID: 21300000, guid: b4e414f5fc33fcf47a4fa8633753710b, type: 3}
   back: {fileID: 21300000, guid: 6d1c7cb277f76e049bd6f3c6dcaf774c, type: 3}
-  description: 
+  description: childrens tales say these linken are princes from a far away land
+    cursed till a pure maiden frees him with a kiss. this is not true Krownflowereies
+    are poisonus and you should not get them anywear near your mouth.
   genderratio: 57
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}

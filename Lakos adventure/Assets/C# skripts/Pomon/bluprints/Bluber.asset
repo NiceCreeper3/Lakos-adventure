@@ -15,7 +15,10 @@ MonoBehaviour:
   name: Bluber
   front: {fileID: 21300000, guid: f8518c655a40d744ba615a25a2c6089d, type: 3}
   back: {fileID: 21300000, guid: a21982875ce09c449b9286df932eeb1f, type: 3}
-  description: 
+  description: 'bluders are  blue birds that drain the liquid from living things
+    they often  steal water from each other sometimes leading to the death of one.
+    when preducing offspring the male offers his moisture to the female to sustane
+    the child '
   genderratio: 50
   BackAniasonAT: {fileID: 11400000, guid: 685841239d4fd004f9c1a1334fc884ab, type: 2}
   FrontAnimasonAT: {fileID: 11400000, guid: e1b6c6230dd4b6f4c8903797bc57ae90, type: 2}

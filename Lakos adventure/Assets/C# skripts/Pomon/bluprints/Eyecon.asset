@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Eyecon
   front: {fileID: 21300000, guid: f3abc56aa646aea4baa69291e4dac9c6, type: 3}
   back: {fileID: 21300000, guid: 3a85a24346694c0419bf960f8403ec11, type: 3}
-  description: 
+  description: seen as an improant religius fixure in multiple religions. it tastes
+    kind of like blueberries
   genderratio: 52
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}

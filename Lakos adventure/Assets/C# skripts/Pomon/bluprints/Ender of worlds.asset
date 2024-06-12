@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Ender Of Worlds
   front: {fileID: 21300000, guid: ef3a56ca1c98eb9428a0027728a31518, type: 3}
   back: {fileID: 21300000, guid: ef3a56ca1c98eb9428a0027728a31518, type: 3}
-  description: 
+  description: people say this linken will be the fall of humanity, there is no proof
+    of that however.
   genderratio: 50
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}

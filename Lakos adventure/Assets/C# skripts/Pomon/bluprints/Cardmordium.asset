@@ -15,8 +15,9 @@ MonoBehaviour:
   name: Cardmordium
   front: {fileID: 21300000, guid: 5efbc24661ca042489c1b85c03d67a5a, type: 3}
   back: {fileID: 21300000, guid: d38f1bae68ba740489b5806fd333735f, type: 3}
-  description: if you see Creams real body you will die a horroble death
-  genderratio: 50
+  description: THIS THING ISN'T A LINKEN. NO WE DON'T KNOW WHY YOU CAN BIND IT. STOP.
+    ASKING
+  genderratio: 0
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}
   MinHealt: 125
