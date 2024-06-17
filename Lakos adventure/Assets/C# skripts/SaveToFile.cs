@@ -98,10 +98,13 @@ public static class SaveToFile
         extrtdata.Add(playedsave.ToString());
         File.WriteAllLines(Path.Combine(savePath, "ExtraData.txt"),extrtdata);
         saveplayed = playedsave;
+
+        
     }
 
     private static void validatesaves()
     {
+        
         if (Directory.Exists(Path.Combine(Application.dataPath, "saves")))
         {
             Directory.CreateDirectory(Path.Combine(Application.dataPath, "saves"));

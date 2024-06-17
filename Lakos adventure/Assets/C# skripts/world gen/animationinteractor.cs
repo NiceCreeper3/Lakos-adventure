@@ -7,7 +7,12 @@ using UnityEngine.SceneManagement;
 public class animationinteractor : MonoBehaviour
 {
     [SerializeField] public Animator animator;
-    [SerializeField] private Transform actorlayer; 
+
+    //the layer actors will be generated on
+    [SerializeField] private Transform actorlayer;
+
+
+    //the prephap foe actors
     [SerializeField] private GameObject actorprephap;
     [SerializeField] private GameObject trainerprephap;
     [SerializeField] private GameObject playerprephap;
@@ -20,12 +25,13 @@ public class animationinteractor : MonoBehaviour
         GetComponent<LocationHandeler>().Loadall();
     }
 
-    // Update is called once per frame
+    // activate and deactivates cutsceenes
     public void setcontroller()
     {
         animator.runtimeAnimatorController = textinteractor.controller;
     }
     
+    //ganerate actor in scene
     public Actorscript generateactor(Actor person, Vector2 direction, Vector2Int location, RuntimeAnimatorController interaction) 
     {
         LocationData data = GetComponent<LocationHandeler>().data;

@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Soulfire
   front: {fileID: 21300000, guid: b736eeef011e68f4dae1e7900e97f80a, type: 3}
   back: {fileID: 21300000, guid: fa22deaef1743174eb3d5bc4f8bbf5c7, type: 3}
-  description: 
+  description: soulfires are usualy seen near newly decieced individuals. they aren't
+    particularly hostile
   genderratio: 46
   BackAniasonAT: {fileID: 0}
   FrontAnimasonAT: {fileID: 0}

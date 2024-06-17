@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Generateinlocation : StateMachineBehaviour
 {
+
     [SerializeField] private Actor actor;
     [SerializeField] private Vector2Int location;
     [SerializeField] private Vector2 direction;
@@ -12,7 +13,7 @@ public class Generateinlocation : StateMachineBehaviour
     [SerializeField] private RuntimeAnimatorController interact;
 
 
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    // generates actor in location when called
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         string debugText = "the @objeck array: ";

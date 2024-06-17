@@ -11,6 +11,7 @@ public static class textinteractor
     public static RuntimeAnimatorController controller;
     public static animationinteractor interactor;
 
+    //plays text in the text box
     public static void RunTextBox(string text)
     {
         if (interactor)
@@ -20,17 +21,21 @@ public static class textinteractor
         }
     }
 
-
+    // activate cutsceenes
     public static void changeanim(RuntimeAnimatorController animator)
     {
         controller = animator;
         interactor.setcontroller();
     }
+
+    //deactivates cutsceenes
     public static void changeanim()
     {
         controller = null;
         interactor.setcontroller();
     }
+
+    //generates actor in current scene
     public static Actorscript Generateactor(Actor person, Vector2 direction, Vector2Int location, RuntimeAnimatorController interaction)
     {
         Debug.Log(person.name + " at: " + location);
