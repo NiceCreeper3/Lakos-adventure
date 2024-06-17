@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExitWindowKeybordButton : MonoBehaviour
+public class ExitPanelKeybordButton : MonoBehaviour
 {
     // turns off the UI part its on
     private void Update()

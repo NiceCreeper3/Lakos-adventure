@@ -29,7 +29,7 @@ public class BattelLingMons : MonoBehaviour
     public event Action<StatesBuff.StatsBuffs> OnPomonBuff;
     public event Action<int> OnHealhtChange;
     public event Action OnPomonSwicheNeeded;
-
+    public event Action<string> OnLineknMove;
     
     #endregion
 
@@ -115,11 +115,9 @@ public class BattelLingMons : MonoBehaviour
                 else
                     AnimasonRunner.RunAnimason(pomonImgeDissplay, CurrentMon.Spesies.FrontAnimasonAT);
             }
-                
 
-            // writes what move the enemy used as well as a short deskripson of what it does
-            if (!_isPlayerMon)
-                textinteractor.RunTextBox($" ({CurrentMon.PomonName} used {move.MoveName}) \n {move.MoveDiskrepseon}");
+            // writes what moves used ind the fight as well who used them
+            OnLineknMove?.Invoke($" ({CurrentMon.PomonName} used {move.MoveName}) \n {move.MoveDiskrepseon}");
 
             Debug.Log("_______________[end of attack]_______________");
         }
