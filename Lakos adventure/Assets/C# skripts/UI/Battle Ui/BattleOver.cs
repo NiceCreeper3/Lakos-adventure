@@ -71,11 +71,9 @@ public class BattleOver : MonoBehaviour
 
     private void SetLevel(Pomons pomon, ushort arg2)
     {
-<<<<<<< Updated upstream
-        _linkenInfo.Add(new LinkenLevelInfo(pomon.Spesies.front, arg2, pomon.level.GetExperienceNormalizez(), pomon.level.GetExpirenceOntilNextLevel()));
-=======
+
         _linkenInfo.Add(new LinkenLevelInfo(pomon.Spesies.front, arg2, pomon.Level, pomon.Expirence));
->>>>>>> Stashed changes
+
     }
 
     private void InsertInfoIntoBoxes()

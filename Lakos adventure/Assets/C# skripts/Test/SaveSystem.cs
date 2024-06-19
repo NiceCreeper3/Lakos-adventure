@@ -3,54 +3,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class SaveSystem
+namespace SaveSystemRD
 {
-    public enum SaveFilles
+    public static class SaveSystem
     {
-        PlayerStuff,
-        Box,
-        Linkens
-    }
-
-
-    private struct SaveObjeck
-    {
-       public int teast;
-    }
-
-    private static readonly string saveFolder = Application.dataPath + "/Save/";
-
-
-    public static void Init()
-    {
-        if (!Directory.Exists(saveFolder))
+        public enum SaveFilles
         {
-            Directory.CreateDirectory(saveFolder);
+            PlayerStuff,
+            Box,
+            Linkens
         }
-    }
 
-    public static void Save(SaveFilles fillName, string data)
-    {
+        private static readonly string saveFolder = Application.dataPath + "/Save/";
 
-        ///        SaveObjeck saveObjeck = new SaveObjeck
-        ///        {
-        ///           teast = 2,
-        ///        };
-        ///        string json = JsonUtility.ToJson(save);
 
-        File.WriteAllText(saveFolder + "save_" + fillName + ".txt", data);
-    } 
-
-    public static string Load(SaveFilles fill)
-    {
-        if (!File.Exists(saveFolder + "/save_" + fill + ".txt"))
+        public static void Init()
         {
-            string saveString = File.ReadAllText(saveFolder + "/save_" + fill + ".txt");
-            return saveString;
+            // Checks if the save folder exists. If it doesn't, it makes a save folder
+            if (!Directory.Exists(saveFolder))
+            {
+                // Makes save folder
+                Directory.CreateDirectory(saveFolder);
+            }
         }
-        else
+
+        public static void Save(SaveFilles fillName, string data)
         {
-            return null;
+
+            ///        SaveObjeck saveObjeck = new SaveObjeck
+            ///        {
+            ///           teast = 2,
+            ///        };
+            ///        string json = JsonUtility.ToJson(save);
+
+            File.WriteAllText(saveFolder + "save_" + fillName + ".txt", data);
+        }
+
+        public static string Load(SaveFilles fillName)
+        {
+            /*            string saveString = SaveSystem.Load(SaveFilles.Linkens);
+                        if (saveString != null)
+                        {
+                            SaveObjeck saveObjeck = JsonUtility.FromJson<SaveObjeck>(saveString);
+                            teast = saveObjeck.teast;
+                        }*/
+
+            string filePath = Path.Combine(saveFolder, "Save_" + fillName + ".txt");
+            if (File.Exists(filePath))
+            {
+                string saveString = File.ReadAllText(filePath);
+                return saveString;
+            }
+            else
+            {
+                Debug.Log("Can NOT find file: " + filePath);
+                return null;
+            }
         }
     }
 }
+
+
+

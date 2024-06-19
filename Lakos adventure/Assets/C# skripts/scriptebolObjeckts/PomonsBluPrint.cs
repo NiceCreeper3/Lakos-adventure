@@ -69,13 +69,9 @@ public class PomonsBluPrint : ScriptableObject
         
         Pomons mon = CreateInstance<Pomons>();
 
-<<<<<<< Updated upstream
-        // creates a levelsystem and linkes it to the Linkens
-        LevelSystem levelSystem = new LevelSystem((ushort)level);
-        mon.level = levelSystem;
-=======
+
         mon.Level = level;
->>>>>>> Stashed changes
+
 
         mon.name = name + level;
         mon.Spesies = this;
@@ -109,7 +105,7 @@ public class PomonsBluPrint : ScriptableObject
             mon.PomonMoves.Add(MovesCanLern[rand]);
 
         }
-        Debug.Log(name + " generated at level:" + mon.level);
+        Debug.Log(name + " generated at level:" + mon.Level);
         Debug.Log($"attack:{mon.Attack} defense:{mon.Defense} speed:{mon.Speed} health:{mon.MaxHealt}");
 
         return mon;

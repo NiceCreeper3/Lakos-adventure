@@ -37,18 +37,18 @@ public class SaveThing : MonoBehaviour
 
         json = string.Join(" ", lik);
 
-        SaveSystem.Save(SaveFilles.LinkensTeam , json);
+       // SaveSystem.Save(SaveFilles , json);
     }
 
     public void LoadStuff()
     {
-        string saveStringTeam = SaveSystem.Load(SaveFilles.LinkensTeam);
+        //string saveStringTeam = SaveSystem.Load(SaveFilles.LinkensTeam);
         //string saveStringBox = SaveSystem.Load(SaveFilles.LinkensBox);
-
+/*
         if (saveStringTeam != null)
         {
             MakePomonGroup(saveStringTeam, _playerTream.team);
-        }
+        }*/
 /*        if (saveStringBox != null)
         {
             MakePomonGroup(saveStringBox, _playerTream.team);
