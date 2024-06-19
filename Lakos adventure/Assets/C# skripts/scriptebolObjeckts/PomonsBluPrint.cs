@@ -69,9 +69,13 @@ public class PomonsBluPrint : ScriptableObject
         
         Pomons mon = CreateInstance<Pomons>();
 
+<<<<<<< Updated upstream
         // creates a levelsystem and linkes it to the Linkens
         LevelSystem levelSystem = new LevelSystem((ushort)level);
         mon.level = levelSystem;
+=======
+        mon.Level = level;
+>>>>>>> Stashed changes
 
         mon.name = name + level;
         mon.Spesies = this;
@@ -97,7 +101,7 @@ public class PomonsBluPrint : ScriptableObject
         mon.Defense = Random.Range(MinDefense, MaxDefense);
         mon.Speed = Random.Range(MinSpeed, MaxSpeed);
 
-        levelSystem.IncreseStates(mon, level);
+        LevelChalkulater.IncreseStates(mon, level);
 
         for (int i = 0; i < 4; i++)
         {

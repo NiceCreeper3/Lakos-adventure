@@ -27,6 +27,7 @@ public class XpHandler : MonoBehaviour
     {
 
         Debug.Log($"give xp multiplayer:{multiplayer}");
+
         ushort levelUps = 0;
 
         // gives the playeres Linkens XP 
@@ -34,6 +35,7 @@ public class XpHandler : MonoBehaviour
         {
             levelUps = 0;
 
+<<<<<<< Updated upstream
             // this is only indcase of debug where the game does not make a levelsystem ind a prebild Linkens
             if (pomon.level != null)
             {
@@ -46,6 +48,10 @@ public class XpHandler : MonoBehaviour
                 levelUps = pomon.level.GiveXP(100 * multiplayer);
                 pomon.level.IncreseStates(pomon, levelUps);
             }
+=======
+            pomon.Level += 100 * multiplayer;
+            levelUps = (ushort)LevelChalkulater.LinkenXP(pomon);
+>>>>>>> Stashed changes
 
             OnPomonLevel?.Invoke(pomon, levelUps);
 

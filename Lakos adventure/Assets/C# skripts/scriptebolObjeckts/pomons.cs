@@ -23,7 +23,15 @@ public class Pomons : ScriptableObject
 
     [Space(10)]
 
+<<<<<<< Updated upstream
     public LevelSystem level;
+=======
+    //public LevelSystem Level;
+    [Header("Level system")]
+    public int Level;
+    public int Expirence;
+
+>>>>>>> Stashed changes
 
     [Header("States and Moves")]
 
@@ -45,6 +53,7 @@ public class Pomons : ScriptableObject
     public List<Moves> PomonMoves = new List<Moves>();
 
     #endregion
+<<<<<<< Updated upstream
     public void levelcalc(int amount)
     {
         Attack = Spesies.attackgrow * amount;
@@ -52,4 +61,19 @@ public class Pomons : ScriptableObject
         Speed = Spesies.speedgrow * amount;
         Defense = Spesies.Defensegrow*amount;
     }
+=======
+/*
+    public override string ToString()
+    {
+        string movesString = "[";
+
+        foreach (Moves move in PomonMoves)
+            movesString += $"{move.MoveName},";
+
+        movesString += "]";
+
+        return $"Name:{PomonName}, Spsises:{Spesies}, is a dude:{IsDude}, Level{Level.GetLevelNumber()}, HP:{MaxHealt}/{CurrentHealt}, Attack:{Attack}, Speed:{Speed}, Defends{Defense} Moves:{movesString}";
+        //return $"{PomonName}, {Spesies}, {IsDude}, {Level.GetLevelNumber()}, {MaxHealt}, {CurrentHealt}, {Attack}, {Speed}, {Defense}";
+    }*/
+>>>>>>> Stashed changes
 }

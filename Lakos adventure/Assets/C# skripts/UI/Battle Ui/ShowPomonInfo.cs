@@ -41,8 +41,13 @@ public class ShowPomonInfo : MonoBehaviour
     {   
         // Info
         Image.sprite = pomonToShow.Spesies.front;
+<<<<<<< Updated upstream
         if (pomonToShow.level != null)
             _showLevel.text = $"({pomonToShow.level.GetLevelNumber()})";
+=======
+        
+        _showLevel.text = $"({pomonToShow.Level})";
+>>>>>>> Stashed changes
         _flaverText.text = pomonToShow.Spesies.description;
 
         #region Pomon states
