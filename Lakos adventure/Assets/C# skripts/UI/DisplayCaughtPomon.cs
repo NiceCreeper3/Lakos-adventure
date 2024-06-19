@@ -31,7 +31,7 @@ public class DisplayCaughtPomon : MonoBehaviour
         attack.text = "Attack:" + pomon.Attack;
         defece.text = "Defence:" + pomon.Defense;
         speed.text = "speed:" + pomon.Speed;
-        level_text.text = pomon.level + " lv.";
+        level_text.text = pomon.Level + " lv.";
         if (pomon.IsDude)
         {
             gender.sprite = dude;

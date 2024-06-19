@@ -35,16 +35,16 @@ public class XpHandler : MonoBehaviour
             levelUps = 0;
 
             // this is only indcase of debug where the game does not make a levelsystem ind a prebild Linkens
-            if (pomon.level != null)
+            if (pomon.Level != null)
             {
-                levelUps = pomon.level.GiveXP(100 * multiplayer);
-                pomon.level.IncreseStates(pomon, levelUps);
+                levelUps = pomon.Level.GiveXP(100 * multiplayer);
+                pomon.Level.IncreseStates(pomon, levelUps);
             }
             else
             {
-                pomon.level = new LevelSystem();
-                levelUps = pomon.level.GiveXP(100 * multiplayer);
-                pomon.level.IncreseStates(pomon, levelUps);
+                pomon.Level = new LevelSystem();
+                levelUps = pomon.Level.GiveXP(100 * multiplayer);
+                pomon.Level.IncreseStates(pomon, levelUps);
             }
 
             OnPomonLevel?.Invoke(pomon, levelUps);

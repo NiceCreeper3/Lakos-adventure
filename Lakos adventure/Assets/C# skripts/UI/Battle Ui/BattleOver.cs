@@ -71,7 +71,7 @@ public class BattleOver : MonoBehaviour
 
     private void SetLevel(Pomons pomon, ushort arg2)
     {
-        _linkenInfo.Add(new LinkenLevelInfo(pomon.Spesies.front, arg2, pomon.level.GetExperienceNormalizez(), pomon.level.GetExpirenceOntilNextLevel()));
+        _linkenInfo.Add(new LinkenLevelInfo(pomon.Spesies.front, arg2, pomon.Level.GetExperienceNormalizez(), pomon.Level.GetExpirenceOntilNextLevel()));
     }
 
     private void InsertInfoIntoBoxes()
@@ -117,6 +117,7 @@ public class BattleOver : MonoBehaviour
         }
     }
 
+    // is called by button
     public void QuitGame()
     {
         SceneLoader.ChageScene();

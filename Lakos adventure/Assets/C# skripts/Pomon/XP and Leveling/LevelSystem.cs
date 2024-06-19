@@ -9,7 +9,7 @@ public class LevelSystem
     public event EventHandler OnLevelChanged;
 
     private ushort _maxLevel;
-    private ushort _level;
+    private int _level;
     private int _experience;
     private int _experienceToNextLevel;
 
@@ -18,7 +18,7 @@ public class LevelSystem
     /// </summary>
     /// <param name="level"></param>
     /// <param name="experience"></param>
-    public LevelSystem(ushort level = 0, int experience = 0)
+    public LevelSystem(int level = 0, int experience = 0)
     {
         _maxLevel = 20;
         _level = level;
@@ -69,7 +69,7 @@ public class LevelSystem
 
     }
 
-    private int SetExpinceToNextLevel(ushort levelMath)
+    private int SetExpinceToNextLevel(int levelMath)
     {
         int baseMultiplyer = 100;
         int ToNewLevel = 0;
@@ -108,7 +108,7 @@ public class LevelSystem
         return _level;
     }
 
-    public float GetExperienceNormalizez()
+    public int GetExperienceNormalizez()
     {
         //return (float)_experience / _experienceToNextLevel;
         return _experience;
