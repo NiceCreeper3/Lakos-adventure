@@ -15,12 +15,12 @@ MonoBehaviour:
   MoveName: Face plant
   MoveDiskrepseon: the pomon falls and tackes 20 damage. yeas tackes not deal
   MoveSound: 0
-  power: 0
+  power: 1
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
   AddedAbilityes:
   - AbilityEffects: 0
     CallAfterAttack: 1
     TargetSelf: 1
-  _healtChangeAmount: -20
+  _healtChangeAmount: -50
   _healthChangePressentige: 0
   _getBoffings: []

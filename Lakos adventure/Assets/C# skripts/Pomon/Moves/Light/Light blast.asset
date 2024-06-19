@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Light blast
   m_EditorClassIdentifier: 
   MoveName: Light blast
-  MoveDiskrepseon: 
+  MoveDiskrepseon: fires a blast of light hurting the enemy
   MoveSound: 0
   power: 40
   MoveElement: {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}
   AddedAbilityes: []
-  _healPower: 0
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0
   _getBoffings: []

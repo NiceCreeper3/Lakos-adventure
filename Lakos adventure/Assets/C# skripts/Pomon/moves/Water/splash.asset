@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
-  m_Name: Suffekate
+  m_Name: splash
   m_EditorClassIdentifier: 
-  MoveName: Suffekate
-  MoveDiskrepseon: the user makes a suffekating cloud of smok. this damages the user
-    a bit
+  MoveName: Splase
+  MoveDiskrepseon: 
   MoveSound: 0
-  power: 70
-  MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
-  AddedAbilityes:
-  - AbilityEffects: 0
-    CallAfterAttack: 0
-    TargetSelf: 0
-  _healtChangeAmount: -30
-  _healthChangePressentige: 0
+  power: 40
+  MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}
+  AddedAbilityes: []
+  _healPower: 0
   _getBoffings: []
