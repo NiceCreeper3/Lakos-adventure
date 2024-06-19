@@ -8,6 +8,7 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] private Vector2Int startlocation;
     [SerializeField] private playeractor player;
     [SerializeField] private pomonlist generate;
+    [SerializeField] private pomonteam PlayersTeam;
     [SerializeField] private int level;
     [SerializeField] private LocationData  startarea;
     [SerializeField] private SceneLoader.ScenesToLoad StartScenes;
@@ -18,8 +19,19 @@ public class MainMenuButtons : MonoBehaviour
     {
         textinteractor.controller = openingcutscene;
         startarea.addactor(player, startlocation, null, new Vector2(0,-1));
+        Generateteam();
         SaveToFile.saveplayed = -1;
         SceneLoader.ChageScene(StartScenes);
+    }
+
+    private void Generateteam()
+    {
+        foreach(PomonsBluPrint bluPrint in generate.bluPrint)
+        {
+            Pomons linken = bluPrint.generateMon(level);
+            Debug.Log(linken);
+            PlayersTeam.team.Add(linken);
+        }
     }
     private void Start()
     {

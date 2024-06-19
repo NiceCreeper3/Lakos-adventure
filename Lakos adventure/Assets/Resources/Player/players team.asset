@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5102f1f28945aa249a733b202ed4946c, type: 3}
   m_Name: players team
   m_EditorClassIdentifier: 
-  team:
-  - {fileID: 11400000, guid: b6e463f4259fc7b42b74c01ea7f016a3, type: 2}
+  team: []

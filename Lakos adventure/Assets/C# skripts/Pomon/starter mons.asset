@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bluPrint:
   - {fileID: 11400000, guid: eaab8cbdbd111b644b6d77542b92adc0, type: 2}
+  - {fileID: 11400000, guid: 3d33a9eaf8868ee48baf348107e4eab5, type: 2}

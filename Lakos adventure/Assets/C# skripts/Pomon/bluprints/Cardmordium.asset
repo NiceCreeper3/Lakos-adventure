@@ -24,13 +24,13 @@ MonoBehaviour:
   MaxHealt: 125
   healthgrow: 1
   MinAttack: 1
-  MaxAttack: 1
+  MaxAttack: 10
   attackgrow: 1
-  MinSpeed: 1
-  MaxSpeed: 1
+  MinSpeed: 4
+  MaxSpeed: 10
   speedgrow: 1
-  MinDefense: 1
-  MaxDefense: 1
+  MinDefense: 10
+  MaxDefense: 20
   Defensegrow: 1
   CaptureChanse: 99
   PomonElemet:
@@ -38,109 +38,110 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   MovesCanLern:
   - {fileID: 11400000, guid: 745e175b22884b645934ff53f69d2506, type: 2}
+  - {fileID: 11400000, guid: 508b237f9ce60874093a5bb7bc6e3c1c, type: 2}
   StatesGrows:
   - HealtUp: 25
+    AttackUp: 5
+    DefendesUp: 20
+    SpeedUp: 5
+    NewAttack: {fileID: 0}
+  - HealtUp: 30
+    AttackUp: 5
+    DefendesUp: 15
+    SpeedUp: 5
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 2
+    DefendesUp: 27
+    SpeedUp: 1
+    NewAttack: {fileID: 0}
+  - HealtUp: 75
+    AttackUp: 0
+    DefendesUp: 18
+    SpeedUp: 2
+    NewAttack: {fileID: 0}
+  - HealtUp: 65
+    AttackUp: 1
+    DefendesUp: 20
+    SpeedUp: 1
+    NewAttack: {fileID: 0}
+  - HealtUp: 125
     AttackUp: 0
     DefendesUp: 0
     SpeedUp: 0
     NewAttack: {fileID: 0}
-  - HealtUp: 25
+  - HealtUp: 30
     AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
+    DefendesUp: 20
+    SpeedUp: 9
     NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
+  - HealtUp: 65
+    AttackUp: 3
+    DefendesUp: 17
+    SpeedUp: 2
     NewAttack: {fileID: 0}
   - HealtUp: 25
     AttackUp: 10
     DefendesUp: 10
     SpeedUp: 10
     NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+  - HealtUp: 50
+    AttackUp: 5
+    DefendesUp: 15
+    SpeedUp: 5
+    NewAttack: {fileID: 0}
+  - HealtUp: 50
+    AttackUp: 3
+    DefendesUp: 17
+    SpeedUp: 5
+    NewAttack: {fileID: 0}
+  - HealtUp: 50
+    AttackUp: 4
+    DefendesUp: 18
+    SpeedUp: 3
+    NewAttack: {fileID: 0}
+  - HealtUp: 50
+    AttackUp: 5
+    DefendesUp: 15
+    SpeedUp: 5
+    NewAttack: {fileID: 0}
+  - HealtUp: 75
+    AttackUp: 0
+    DefendesUp: 20
+    SpeedUp: 0
+    NewAttack: {fileID: 0}
+  - HealtUp: 50
+    AttackUp: 5
+    DefendesUp: 15
+    SpeedUp: 5
     NewAttack: {fileID: 0}
   - HealtUp: 25
     AttackUp: 0
-    DefendesUp: 0
+    DefendesUp: 15
+    SpeedUp: 15
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 0
+    DefendesUp: 30
+    SpeedUp: 0
+    NewAttack: {fileID: 0}
+  - HealtUp: 0
+    AttackUp: 0
+    DefendesUp: 15
+    SpeedUp: 20
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 15
+    DefendesUp: 15
     SpeedUp: 0
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 0
+    AttackUp: 30
     DefendesUp: 0
     SpeedUp: 0
     NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
-    DefendesUp: 0
-    SpeedUp: 0
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 0
+  - HealtUp: 0
+    AttackUp: 35
     DefendesUp: 0
     SpeedUp: 0
     NewAttack: {fileID: 0}

@@ -45,6 +45,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 03629c03d668513448298632893a57d4, type: 2}
   - {fileID: 11400000, guid: beab2f67874542249a5e4ff1b36f4dde, type: 2}
   - {fileID: 11400000, guid: ce09a2f2552be514b9ced8ff9c4567d4, type: 2}
+  - {fileID: 11400000, guid: e710805638a5c244b94e9eab42ebcfc5, type: 2}
   StatesGrows:
   - HealtUp: 25
     AttackUp: 12
