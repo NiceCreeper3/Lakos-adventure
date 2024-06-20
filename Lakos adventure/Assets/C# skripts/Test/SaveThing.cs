@@ -37,42 +37,35 @@ public class SaveThing : MonoBehaviour
 
         json = string.Join(" ", lik);
 
-       // SaveSystem.Save(SaveFilles , json);
+       SaveSystem.Save(SaveFilles.Linkens , json);
     }
 
     public void LoadStuff()
     {
-        //string saveStringTeam = SaveSystem.Load(SaveFilles.LinkensTeam);
-        //string saveStringBox = SaveSystem.Load(SaveFilles.LinkensBox);
-/*
+        string saveStringTeam = SaveSystem.Load(SaveFilles.LinkensTeam);
+        string saveStringBox = SaveSystem.Load(SaveFilles.LinkensBox);
+
         if (saveStringTeam != null)
         {
             MakePomonGroup(saveStringTeam, _playerTream.team);
-        }*/
-/*        if (saveStringBox != null)
+        }
+        if (saveStringBox != null)
         {
             MakePomonGroup(saveStringBox, _playerTream.team);
-        }*/
+        }
 
     }
 
     private void MakePomonGroup(string fillPath, List<Pomons> linkenGroup)
     {
+        // split the words ind the fille indto a array
         string[] Linkens = fillPath.Split(" ");
-
-        //LinkenGroups saveObjeck = JsonUtility.FromJson<LinkenGroups>(fillPath);
-
-        //Debug.Log(saveObjeck.ListOfLinkens[0]);
 
         foreach (string jsonLinkens in Linkens)
         {
             Pomons linken = ScriptableObject.CreateInstance<Pomons>();
 
             JsonUtility.FromJsonOverwrite(jsonLinkens, linken);
-
-            LevelSystem SSSS = new LevelSystem(6);
-
-            
 
             //Debug.Log(pomon);
             linkenGroup.Add(linken);
@@ -83,10 +76,5 @@ public class SaveThing : MonoBehaviour
             
             Debug.Log(pomons);
         }
-    }
-
-    private class LinkenGroups
-    {
-        public List<string> ListOfLinkens = new List<string>();
     }
 }

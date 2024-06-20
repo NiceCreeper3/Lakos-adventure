@@ -5,14 +5,17 @@ using UnityEngine;
 
 namespace SaveSystemRD
 {
+    public enum SaveFilles
+    {
+        PlayerStuff,
+        LinkensTeam,
+        LinkensBox,
+
+        Linkens
+    }
+
     public static class SaveSystem
     {
-        public enum SaveFilles
-        {
-            PlayerStuff,
-            Box,
-            Linkens
-        }
 
         private static readonly string saveFolder = Application.dataPath + "/Save/";
 

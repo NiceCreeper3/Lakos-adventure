@@ -59,13 +59,10 @@ public static class LevelChalkulater
         }
     }
 
-
-
-    private static int ExpinseToNextLevel(int Level)
+    public static int ExpinseToNextLevel(int Level)
     {
         int baseMultiplyer = 100;
         int ToNewLevel = 0;
-
 
         ToNewLevel = (1 + Level) * baseMultiplyer;
 

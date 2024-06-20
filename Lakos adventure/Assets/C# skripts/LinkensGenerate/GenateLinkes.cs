@@ -38,15 +38,13 @@ public class GenateLinkes : MonoBehaviour
 
     public void InCressLevel()
     {
-        int xpToLevel = 100;
-
-        _pomonGenrated.Expirence += xpToLevel;
+        
 
         // incres the level of a Pomon
         for (int i = 0; i <= howMutheToLevel; i++)
         {
-
             // increses the states
+            _pomonGenrated.Expirence += LevelChalkulater.ExpinseToNextLevel(_pomonGenrated.Level);
             LevelChalkulater.LinkenXP(_pomonGenrated);
         }
 
@@ -58,7 +56,6 @@ public class GenateLinkes : MonoBehaviour
     {
 
         _texts[0].text = $"Level: {pomon.Level}";
-
 
         // states
         _texts[1].text = $"Healt: {pomon.MaxHealt}";
