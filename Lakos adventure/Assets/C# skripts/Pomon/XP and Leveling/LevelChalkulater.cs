@@ -50,12 +50,16 @@ public static class LevelChalkulater
         // increse the Pomons states using its states growf and how mane leves it went up
         for (int i = 0; i < leveledUPTimes; i++)
         {
-            Debug.Log($"Level to stat increse {1 - i + pomon.Level}");
 
-            pomon.MaxHealt += states[i + pomon.Level].HealtUp;
-            pomon.Attack += states[i + pomon.Level].AttackUp;
-            pomon.Defense += states[i + pomon.Level].DefendesUp;
-            pomon.Speed += states[i + pomon.Level].SpeedUp;
+            if (pomon.Level > _maxLevel)
+            {
+                Debug.Log($"Level to stat increse {i + pomon.Level}");
+
+                pomon.MaxHealt += states[i + pomon.Level].HealtUp;
+                pomon.Attack += states[i + pomon.Level].AttackUp;
+                pomon.Defense += states[i + pomon.Level].DefendesUp;
+                pomon.Speed += states[i + pomon.Level].SpeedUp;
+            }
         }
     }
 
