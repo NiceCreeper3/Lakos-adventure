@@ -105,7 +105,7 @@ public static class SaveToFile
     private static void validatesaves()
     {
         
-        if (Directory.Exists(Path.Combine(Application.dataPath, "saves")))
+        if (!Directory.Exists(Path.Combine(Application.dataPath, "saves")))
         {
             Directory.CreateDirectory(Path.Combine(Application.dataPath, "saves"));
         }

@@ -44,104 +44,104 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb3e452a25a79114485056367c68bc4d, type: 2}
   StatesGrows:
   - HealtUp: 25
-    AttackUp: 10
+    AttackUp: 17
+    DefendesUp: 11
+    SpeedUp: 3
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 12
+    DefendesUp: 14
+    SpeedUp: 9
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 9
+    DefendesUp: 17
+    SpeedUp: 14
+    NewAttack: {fileID: 0}
+  - HealtUp: 15
+    AttackUp: 8
     DefendesUp: 10
+    SpeedUp: 26
+    NewAttack: {fileID: 0}
+  - HealtUp: 45
+    AttackUp: 5
+    DefendesUp: 2
+    SpeedUp: 18
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 14
+    DefendesUp: 3
+    SpeedUp: 15
+    NewAttack: {fileID: 0}
+  - HealtUp: 55
+    AttackUp: 13
+    DefendesUp: 3
+    SpeedUp: 12
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 20
+    DefendesUp: 12
+    SpeedUp: 23
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 12
+    DefendesUp: 7
+    SpeedUp: 16
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 4
+    DefendesUp: 16
+    SpeedUp: 20
+    NewAttack: {fileID: 0}
+  - HealtUp: 25
+    AttackUp: 7
+    DefendesUp: 13
     SpeedUp: 10
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 4
+    DefendesUp: 13
+    SpeedUp: 13
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 6
+    DefendesUp: 14
+    SpeedUp: 23
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 3
+    DefendesUp: 4
+    SpeedUp: 21
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 12
+    DefendesUp: 13
+    SpeedUp: 14
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 2
+    DefendesUp: 15
+    SpeedUp: 14
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 12
+    DefendesUp: 5
+    SpeedUp: 12
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 12
+    DefendesUp: 23
+    SpeedUp: 11
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 4
+    DefendesUp: 5
+    SpeedUp: 16
     NewAttack: {fileID: 0}
   - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
-    NewAttack: {fileID: 0}
-  - HealtUp: 25
-    AttackUp: 10
-    DefendesUp: 10
-    SpeedUp: 10
+    AttackUp: 14
+    DefendesUp: 21
+    SpeedUp: 11
     NewAttack: {fileID: 0}
   - HealtUp: 25
     AttackUp: 10

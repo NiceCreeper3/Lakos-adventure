@@ -1724,6 +1724,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1128797934028800552, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: maxlevel
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128797934028800552, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
+      propertyPath: minlevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128797934028800552, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: posiblemons
       value: 
       objectReference: {fileID: 11400000, guid: 70586d64c95d2384e9becad1eaf3c1c8, type: 2}
@@ -1801,11 +1809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: maxlevel
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: minlevel
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6749735000976432288, guid: 9621757aa8b425845bb250915b6e3cda, type: 3}
       propertyPath: posiblemons
@@ -34518,8 +34526,8 @@ MonoBehaviour:
         m_CallState: 2
   player: {fileID: 0}
   propability: 2
-  minlevel: 17
-  maxlevel: 30
+  minlevel: 10
+  maxlevel: 20
   posiblemons: {fileID: 11400000, guid: 95d01f543abcdb645b323c5d2efb92d5, type: 2}
 --- !u!114 &1207292376
 MonoBehaviour:
