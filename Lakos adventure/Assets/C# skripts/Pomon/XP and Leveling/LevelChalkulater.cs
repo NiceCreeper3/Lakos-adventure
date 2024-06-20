@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class LevelChalkulater
 {
-    private static byte _maxLevel;
+    private static byte _maxLevel = 20;
 
     /// <summary>
     /// 
@@ -17,20 +17,22 @@ public static class LevelChalkulater
 
         while (pomon.Expirence >= ExpinseToNextLevel(pomon.Level))
         {
-            Debug.Log($" Level({pomon.Level}), XP To level({ExpinseToNextLevel(pomon.Level)}), Xp is: {pomon.Expirence}");
-
             if (pomon.Level > _maxLevel)
             {
                 pomon.Level = _maxLevel;
+                pomon.Expirence -= ExpinseToNextLevel(pomon.Level);
+                break;
             }
             else
             {
                 // Enough experience to level up
-                pomon.Expirence -= ExpinseToNextLevel(pomon.Expirence);
+                pomon.Expirence -= ExpinseToNextLevel(pomon.Level);
                 pomon.Level++;
 
                 timesItLevel++;
             }
+
+            Debug.Log($" Level({pomon.Level}), XP To next level({ExpinseToNextLevel(pomon.Level)}), Xp is: {pomon.Expirence}");
         }
 
         IncreseStates(pomon, timesItLevel);
@@ -51,7 +53,7 @@ public static class LevelChalkulater
         for (int i = 0; i < leveledUPTimes; i++)
         {
 
-            if (pomon.Level > _maxLevel)
+            if (pomon.Level < _maxLevel)
             {
                 Debug.Log($"Level to stat increse {i + pomon.Level}");
 

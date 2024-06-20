@@ -35,7 +35,7 @@ public class XpHandler : MonoBehaviour
         {
             levelUps = 0;
 
-            pomon.Level += 100 * multiplayer;
+            pomon.Expirence += 100 * multiplayer;
             levelUps = (ushort)LevelChalkulater.LinkenXP(pomon);
 
             OnPomonLevel?.Invoke(pomon, levelUps);
