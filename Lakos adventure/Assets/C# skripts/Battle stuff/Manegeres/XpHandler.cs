@@ -7,6 +7,7 @@ public class XpHandler : MonoBehaviour
 {
     // basik verson. can make it beader
     [SerializeField] private pomonteam PlayerLinkens;
+    [SerializeField] private GivePlayerTeam OnGiveTeam;
 
     [SerializeField] private Switching[] EventRefendes;
 
@@ -14,8 +15,15 @@ public class XpHandler : MonoBehaviour
 
     private void Awake()
     {
+        OnGiveTeam.GiveTeamIndUse += OnGiveTeam_GiveTeamIndUse;
+
         foreach (Switching switchingEvent in EventRefendes)
-            switchingEvent.OnGiveXP += SwitchingEvent_OnGiveXP;
+            switchingEvent.OnGiveXP += SwitchingEvent_OnGiveXP;  
+    }
+
+    private void OnGiveTeam_GiveTeamIndUse(pomonteam PlayerTeam)
+    {
+        PlayerLinkens = PlayerTeam;
     }
 
     private void SwitchingEvent_OnGiveXP(ushort obj)

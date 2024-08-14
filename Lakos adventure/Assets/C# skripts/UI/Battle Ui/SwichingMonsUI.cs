@@ -3,17 +3,23 @@ using UnityEngine;
 using TMPro;
 
 public class SwichingMonsUI : MonoBehaviour
-{
-    [SerializeField] private pomonteam _playerPomonTeam;
+{  
+    [SerializeField] private GivePlayerTeam OnGetPlayerTeam;
+    private pomonteam _playerPomonTeam;
 
     [SerializeField] private Transform _seleketPannel;
     [SerializeField] private SwichePomon _swichePomon;
     [SerializeField] private GameObject[] _PomonTextPlate;
     [SerializeField] private List<TMP_Text> _pomonNameText;
 
+    private void Awake()
+    {
+        OnGetPlayerTeam.GiveTeamIndUse += OnGetPlayerTeam_GiveTeamIndUse;
+        gameObject.SetActive(false);
+    }
+
     private void OnEnable()
     {
-        _swichePomon.OnPomonSwiching += SwichePomon_OnPomonSwiching;
         _swichePomon.OnPomonSelket += SwichePomon_OnPomonSelket;
 
         _pomonNameText = new List<TMP_Text>();
@@ -27,15 +33,13 @@ public class SwichingMonsUI : MonoBehaviour
 
     private void OnDisable()
     {
-        _swichePomon.OnPomonSwiching -= SwichePomon_OnPomonSwiching;
         _swichePomon.OnPomonSelket -= SwichePomon_OnPomonSelket;
     }
 
-    private void SwichePomon_OnPomonSwiching(Pomons arg1, bool arg2)
+    private void OnGetPlayerTeam_GiveTeamIndUse(pomonteam playerTeam)
     {
-
+        _playerPomonTeam = playerTeam;
     }
-
 
     private void SwichePomon_OnPomonSelket(Pomons obj)
     {

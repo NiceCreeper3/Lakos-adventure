@@ -6,10 +6,19 @@ using UnityEngine;
 public class SwichePomon : Switching
 {
     [Header("the team of pomon chosen to battel")]
-    [SerializeField] private GameObject PicPomonUI;
+    [SerializeField] private GameObject _PicPomonUI;
+
+    [SerializeField] private GivePlayerTeam _onGetPlayerTeam;
 
     public event Action<Pomons> OnPomonSelket;
     #region setups
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        _onGetPlayerTeam.GiveTeamIndUse += _onGetPlayerTeam_GiveTeamIndUse;
+    }
 
     protected override void Start()
     {
@@ -19,6 +28,11 @@ public class SwichePomon : Switching
 
         _seletedPomon = 0; // seltes one that does not have Zero HP
         SwitchPomonConfurmt();
+    }
+
+    private void _onGetPlayerTeam_GiveTeamIndUse(pomonteam playerTeam)
+    {
+        _pomonTeam = playerTeam;
     }
     #endregion
 
@@ -30,7 +44,7 @@ public class SwichePomon : Switching
         RemoveDeadPomons();
 
         if (StillHasPomonLeft())
-            PicPomonUI.SetActive(true);
+            _PicPomonUI.SetActive(true);
         else
             EndBattle(0);
     }

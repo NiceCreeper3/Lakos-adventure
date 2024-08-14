@@ -15,14 +15,15 @@ MonoBehaviour:
   PomonName: Carbon Head
   Spesies: {fileID: 11400000, guid: 2a55a190731c67a42b84e2457471839d, type: 2}
   IsDude: 0
-  level: 1
-  MaxHealt: 125
+  Level: 18
+  Expirence: 0
+  MaxHealt: 615
   CurrentHealt: 0
-  Attack: 19
-  Speed: 25
-  Defense: 26
+  Attack: 175
+  Speed: 307
+  Defense: 214
   PomonMoves:
-  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
+  - {fileID: 11400000, guid: 2cbc8c5899bdaa34f8681724bbb7399a, type: 2}
   - {fileID: 11400000, guid: 68a3490c6034b154cab53329a6dc634f, type: 2}
+  - {fileID: 11400000, guid: ef08c19043206224d846ea6deed5ee55, type: 2}
   - {fileID: 11400000, guid: bccda2bdacee59f45a151f8a3cf10bc1, type: 2}
-  - {fileID: 11400000, guid: fb3e452a25a79114485056367c68bc4d, type: 2}

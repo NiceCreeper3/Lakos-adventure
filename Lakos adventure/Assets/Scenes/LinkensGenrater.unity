@@ -2464,7 +2464,7 @@ GameObject:
   - component: {fileID: 1960298346}
   - component: {fileID: 1960298347}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GenerateHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2544,7 +2544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6253ae906ffd8498c200dc5443438f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pomonToGenrate: {fileID: 11400000, guid: eaab8cbdbd111b644b6d77542b92adc0, type: 2}
+  _pomonToGenrate: {fileID: 11400000, guid: 2a55a190731c67a42b84e2457471839d, type: 2}
   howMutheToLevel: 0
   _pomonGenrated: {fileID: 0}
   _texts:
