@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
   m_Name: Consentrate
   m_EditorClassIdentifier: 
-  MoveName: Consentrate
-  MoveDiskrepseon: the user tages a deep breath and sets it self up. this buffes
-    the users speed and defends by a thiny amount
+  MoveName: Concentrate
+  MoveDiskrepseon: the linken takes a deep breath and focuses on the battle, increasing
+    speed and defense slightly
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}

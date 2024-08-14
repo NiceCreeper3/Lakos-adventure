@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Killer Wave
   m_EditorClassIdentifier: 
   MoveName: Killer wave
-  MoveDiskrepseon: the user flods the interare battel fild. dekrising the useres
-    speed
+  MoveDiskrepseon: the linken floods the entire field with water dealing good damage
   MoveSound: 0
   power: 55
   MoveElement: {fileID: 11400000, guid: 44d1918287c6f7549ad2386bef7ed78b, type: 2}

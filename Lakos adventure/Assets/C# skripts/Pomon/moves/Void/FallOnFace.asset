@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: FallOnFace
   m_EditorClassIdentifier: 
   MoveName: Face plant
-  MoveDiskrepseon: the pomon falls and tackes 20 damage. yeas tackes not deal
+  MoveDiskrepseon: "it\u2019s simple, your linken faceplants and getting hurt, what
+    did you expect"
   MoveSound: 0
   power: 1
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}

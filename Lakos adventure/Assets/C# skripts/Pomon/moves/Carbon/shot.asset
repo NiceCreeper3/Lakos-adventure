@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: shot
   m_EditorClassIdentifier: 
   MoveName: Shot
-  MoveDiskrepseon: Do i enven have to explane what dis does?
+  MoveDiskrepseon: the linken throws a rock at its opponent dealing good damage.
   MoveSound: 0
   power: 40
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   AddedAbilityes: []
-  _healPower: 0
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0
   _getBoffings: []

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Knife shot
   m_EditorClassIdentifier: 
   MoveName: Knife Shot
-  MoveDiskrepseon: The pomon will sharpen its claws, increasing its attack slightly.
-    Also - it chucks the knife used
+  MoveDiskrepseon: "The linken will sharpen its claws, teeth or other sharp appendages
+    to increasing its attack slightly. oh  and don\u2019t forget- it chucks the knife
+    it used at the opponent.no, i don\u2019t know where it got it from."
   MoveSound: 0
   power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

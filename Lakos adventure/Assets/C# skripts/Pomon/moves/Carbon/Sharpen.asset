@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sharpen
   m_EditorClassIdentifier: 
   MoveName: Sharpen
-  MoveDiskrepseon: inkresise the useres attack damge
+  MoveDiskrepseon: the linken sharpens its claws, teeth or other sharp appendages
+    to  increase attack damage.
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

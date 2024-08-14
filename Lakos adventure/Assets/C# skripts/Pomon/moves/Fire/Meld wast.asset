@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
   m_Name: Meld wast
   m_EditorClassIdentifier: 
-  MoveName: Meld wast
-  MoveDiskrepseon: Perhaps make this attack damage the user aswell as buffing
+  MoveName: Moten claw
+  MoveDiskrepseon: the linken heats up its claws giving a slight decrease in defense,
+    this process hurts the linken but granting a major increase in attack damage
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}

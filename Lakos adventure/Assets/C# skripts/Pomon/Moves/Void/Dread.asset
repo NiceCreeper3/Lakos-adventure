@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dread
   m_EditorClassIdentifier: 
   MoveName: Dread
-  MoveDiskrepseon: reaminds the aponnet that we all die one day, Dekresises the apponents
-    defends by a lot
+  MoveDiskrepseon: 'your linken reaminds its opponent that we all die one day, causing
+    them to give the fight less effort, Decreasing their defense by a lot. '
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}

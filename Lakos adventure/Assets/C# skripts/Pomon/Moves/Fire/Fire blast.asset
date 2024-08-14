@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Fire blast
   m_EditorClassIdentifier: 
   MoveName: Fire blast
-  MoveDiskrepseon: 
+  MoveDiskrepseon: ' the linken fires a blast of fire at the enemy dealing damage'
   MoveSound: 0
   power: 45
   MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}
   AddedAbilityes: []
-  _healPower: 0
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0
   _getBoffings: []

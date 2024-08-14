@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Light cure
   m_EditorClassIdentifier: 
   MoveName: Light cure
-  MoveDiskrepseon: restores 15% of the useres health
+  MoveDiskrepseon: "the linken envelopes itself in a bright light  restoring 15%
+    of its health. we don\u2019t lnow how this works, we haven\u2019t figured it
+    out"
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: 11c8e62c31d4b3b438c9d9682c918aee, type: 2}

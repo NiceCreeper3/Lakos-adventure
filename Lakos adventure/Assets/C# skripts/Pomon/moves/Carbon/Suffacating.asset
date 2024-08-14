@@ -13,15 +13,14 @@ MonoBehaviour:
   m_Name: Suffacating
   m_EditorClassIdentifier: 
   MoveName: Suffekate
-  MoveDiskrepseon: the user makes a suffacating cloud of smok. this damages the user
-    a bit
+  MoveDiskrepseon: conjures a cloud of smoke, suffocating itself and  the opponent.
   MoveSound: 0
   power: 70
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}
   AddedAbilityes:
   - AbilityEffects: 0
     CallAfterAttack: 0
-    TargetSelf: 0
+    TargetSelf: 1
   _healtChangeAmount: -30
   _healthChangePressentige: 0
   _getBoffings: []

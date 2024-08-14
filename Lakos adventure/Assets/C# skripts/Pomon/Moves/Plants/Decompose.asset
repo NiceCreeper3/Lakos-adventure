@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Decompose
   m_EditorClassIdentifier: 
   MoveName: Decompose
-  MoveDiskrepseon: 
+  MoveDiskrepseon: 'the linken spews spores that causes the enemy to decompose '
   MoveSound: 0
   power: 40
   MoveElement: {fileID: 11400000, guid: d5b57324ae724fa458f70a06549e5fab, type: 2}
   AddedAbilityes: []
-  _healPower: 0
+  _healtChangeAmount: 0
+  _healthChangePressentige: 0
   _getBoffings: []

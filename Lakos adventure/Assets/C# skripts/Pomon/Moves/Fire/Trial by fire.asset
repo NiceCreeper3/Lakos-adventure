@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Trial by fire
   m_EditorClassIdentifier: 
   MoveName: Trial by fire
-  MoveDiskrepseon: the user lights them sefl ablase dealing hafe there max healt
-    as damage to itself, and giving a massive buff to all states
+  MoveDiskrepseon: linken lights it self ablaze dealing half their max health as
+    damage to itself, and giving a massive increase to all stats
   MoveSound: 0
   power: 0
   MoveElement: {fileID: 11400000, guid: c4bd7bc2ff27d494c991ef64aad494ad, type: 2}

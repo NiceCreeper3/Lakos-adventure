@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: bring into void
   m_EditorClassIdentifier: 
   MoveName: Bring into void
-  MoveDiskrepseon: obsorbs som of the enemys life. the user also gains som whagt
-    and duse losses som speed
+  MoveDiskrepseon: the linken opens a gateway to the void using its lifeforce and
+    pushes its opponent inside dealing a lot of damage, but it takes a toll on the
+    linken causing it get a decrease in speed
   MoveSound: 0
   power: 60
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Atom storm
   m_EditorClassIdentifier: 
   MoveName: Atom Storm
-  MoveDiskrepseon: 'Causes a thick storm of dust. Uses it to shield itself thus raising
-    defense '
+  MoveDiskrepseon: conjures a thin storm of dust. Uses it to shield itself, raising
+    its defense slightly
   MoveSound: 0
   power: 20
   MoveElement: {fileID: 11400000, guid: 7fcd97c7563864644a93ecf3015d3103, type: 2}

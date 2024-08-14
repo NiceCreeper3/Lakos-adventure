@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2f8affc70dfff44ad56c15e5f6a8ff, type: 3}
   m_Name: absorb
   m_EditorClassIdentifier: 
-  MoveName: Obsorb
-  MoveDiskrepseon: 
+  MoveName: Absorb
+  MoveDiskrepseon: using the power of the void the linken absorbs the lifeforce of
+    its enemy healing itself
   MoveSound: 0
   power: 20
   MoveElement: {fileID: 11400000, guid: dd23f7b8200f6b34782257f4b6eece5d, type: 2}
