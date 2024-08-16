@@ -10,7 +10,8 @@ public class ElementDisplay : MonoBehaviour
     public void loadtype(ElementObjecks element)
     {
         type = element;
-        image.color = element.ElementColor;
+        GetComponent<Image>().color = element.ElementColor;
+        image.sprite = element.ElementIcon;
     }
 
     // Update is called once per frame

@@ -11,6 +11,7 @@ public class VisualMove : MonoBehaviour
     [SerializeField] private TMP_Text nametext;
     [SerializeField] private TMP_Text powertext;
     [SerializeField] private TMP_Text disc;
+    [SerializeField] private Image typecolor;
     [SerializeField] private Image typeIMG;
 
 
@@ -25,6 +26,7 @@ public class VisualMove : MonoBehaviour
             powertext.text = move.power.ToString();
         }
         disc.text = move.MoveDiskrepseon;
-        typeIMG.color = move.MoveElement.ElementColor;
+        typecolor.color = move.MoveElement.ElementColor;
+        typeIMG.sprite = move.MoveElement.ElementIcon;
     }
 }
